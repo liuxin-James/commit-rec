@@ -1,0 +1,19 @@
+from nltk import sent_tokenize
+from sentence_transformers import SentenceTransformer,util
+
+model = SentenceTransformer("all-MiniLM-L6-v2")
+
+def compute_text_similarity(sentence1:str,sentence2:str):
+    sentence1 = sent_tokenize(preprocess_sentence(sentence1))
+    sentence2 = sent_tokenize(preprocess_sentence(sentence2))
+
+    embedding1 = model.encode(sentences=sentence1,convert_to_tensor=True)
+    embedding2 = model.encode(sentences=sentence2,convert_to_tensor=True)
+
+    cosine_scores = util.cos_sim(embedding1,embedding2)
+
+
+# filter stop word & truncate sentence length
+def preprocess_sentence(sentence:str):
+    pass
+
