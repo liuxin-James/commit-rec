@@ -14,11 +14,12 @@ class Commit:
     changed_files: list = None
     add_lines: list = None
     rm_lines: list = None
-    f_nums: int = 0
-    i_nums: int = 0
-    d_nums: int = 0
-    m_name: list = None
-    m_nums: int = 0
+    a_file_nums: int = 0
+    i_line_nums: int = 0
+    d_line_nums: int = 0
+    a_line_nums: int = 0
+    method_name: list = None
+    a_method_nums: int = 0
 
 
 class CommitUtils:
@@ -62,7 +63,7 @@ class CommitUtils:
 
     # extract vulnerability type & impact & function
     def get_commit_info(self, repos, commit_id):
-        commit_info = self.mining_commit_information(repos,commit_id)[0]
+        commit_info = self.mining_commit_information(repos, commit_id)[0]
         return commit_info
 
     # mining commit information
@@ -70,23 +71,30 @@ class CommitUtils:
         commit_info_list = []
         for commit in Repository(path_to_repo=repos, only_commits=[commit_id]).traverse_commits():
             subject = commit.msg
-            i_nums = 0
-            d_nums = 0
-            m_name = []
+            a_line_nums = commit.lines
+            i_line_nums = 0
+            d_line_nums = 0
+            method_name = []
             changed_files = []
-            f_nums = len(commit.modified_files)
+            a_file_nums = len(commit.modified_files)
             for files in commit.modified_files:
-                i_nums += files.added_lines
-                d_nums += files.deleted_lines
+                i_line_nums += files.added_lines
+                d_line_nums += files.deleted_lines
                 for method in files.changed_methods:
-                    m_name.append(method.name)
+                    method_name.append(method.name)
                 changed_files.append(files.filename)
-            m_nums = len(m_name)
+            a_method_nums = len(method_name)
             commit_info_list.append(
-                Commit(subject=subject, changed_files=changed_files, i_nums=i_nums, d_nums=d_nums, m_name=m_name, f_nums=f_nums, m_nums=m_nums))
+                Commit(subject=subject, 
+                       changed_files=changed_files, 
+                       a_line_nums=a_line_nums,
+                       i_line_nums=i_line_nums, 
+                       d_line_nums=d_line_nums, 
+                       method_name=method_name, 
+                       a_file_nums=a_file_nums, 
+                       a_method_nums=a_method_nums))
         return commit_info_list
 
     # utilize CodeBert to compute patch probability
-
     def compute_patch_prob(self, rm_lines: list, add_lines: list):
         pass
