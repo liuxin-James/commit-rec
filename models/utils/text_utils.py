@@ -4,7 +4,7 @@ from sentence_transformers import SentenceTransformer, util
 
 model = SentenceTransformer("all-MiniLM-L6-v2")
 
-
+# compute text similarity; return torch
 def compute_text_similarity(sentence1: str, sentence2: str):
     sentence1 = sent_tokenize(preprocess_sentence(sentence1))
     sentence2 = sent_tokenize(preprocess_sentence(sentence2))
@@ -17,7 +17,7 @@ def compute_text_similarity(sentence1: str, sentence2: str):
     return cosine_scores
 
 
-# filter stop word & truncate sentence length ;return torch
+# preprocess for sentence
 def preprocess_sentence(sentence: str):
     before_words = word_tokenize(sentence)
     after_words = [
