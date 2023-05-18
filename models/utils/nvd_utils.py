@@ -1,14 +1,25 @@
 import re
-class NvdPage:
-    def __init__(self,cve_id:str,description:str,pub_date=None,repos=None) -> None:
-        self.cve_di = cve_id
-        self.description = description.lower()
-        self.pub_date=pub_date
-        self.repos = repos
-        self.files = self._extract_files()
-        
-    
-    def _extract_files(self):
+
+from dataclasses import dataclass
+
+@dataclass
+class NVD:
+    cve_id: str = None
+    description: str = None
+    pub_date: str = None
+    cwe_type: str = None
+    repos: str = None
+    files: list = None
+
+
+class NvdUtils:
+
+    # gain nvd information by cve id
+    def gain_nvd_information(self, cve_id: str, repos: str) -> NVD:
+        pass
+
+    # extract files information by the description of NVD
+    def _extract_files(self, description: str):
         pattern = r"[a-zA-Z_0-9]+\.[a-zA-Z]+"
-        files = re.findall(pattern,self.description)
+        files = re.findall(pattern, description)
         return files
