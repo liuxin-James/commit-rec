@@ -22,7 +22,7 @@ project_samples = ["FFmpeg",
                    "tcpdump"]
 
 cols = ["share_files_nums", "share_files_rate", "only_commit_files_nums", "exist_cve",
-        "insert_loc_nums", "delete_loc_nums", "all_loc_nums", "all_method_nums","commit_msg","cve_desc","commit_id","is_right"]
+        "insert_loc_nums", "delete_loc_nums", "all_loc_nums", "all_method_nums", "commit_msg", "cve_desc", "commit_id", "is_right"]
 
 
 def merge_featrue(nvd: NVD, commit: Commit):
@@ -30,15 +30,14 @@ def merge_featrue(nvd: NVD, commit: Commit):
     featrues = []
 
     # text similarity (featrues:1)
-    text_sim = compute_text_similarity(nvd.description, commit.subject)
+    # text_sim = compute_text_similarity(nvd.description, commit.subject)
 
     # handle files (featrues:3)
     share_files = list(set(nvd.files) & set(commit.changed_files))
     share_files_nums = len(share_files)
-    only_commit_files_nums = len(
-        list(set(commit.changed_files))) - share_files_nums
+    only_commit_files_nums = commit.a_file_nums - share_files_nums
     share_files_rate = round(
-        share_files_nums / len(list(set(commit.changed_files))), 2)
+        share_files_nums / commit.a_file_nums, 2) if commit.a_file_nums > 0 else 0
 
     featrues = featrues + [share_files_nums,
                            share_files_rate, only_commit_files_nums]
@@ -118,14 +117,14 @@ def build_train_dataset():
     with open(data_source_path, 'r', encoding='utf-8') as f:
         nvds = json.load(f)
     featrues = []
-    for nvd in tqdm(nvds,desc="nvd nums"):
+    for nvd in tqdm(nvds, desc="nvd nums"):
         for p in nvd["project_name"]:
             if p in project_samples:
                 n = NVD(
                     cve_id=nvd["vul_id"], description=nvd["description"], pub_date=nvd["publish_date"], files=nvd_utils.extract_files(nvd["description"]))
                 commits = commit_utils.get_commits(
                     nvd_page=n, repos_path=f"repos/{p}")
-                for commit in tqdm(commits,desc=f"{n.cve_id}'s commit"):
+                for commit in tqdm(commits, desc=f"{n.cve_id}'s commit"):
                     cmt = commit_utils.get_commit_info(
                         repos=f"repos/{p}", commit_id=commit)
                     featrue = merge_featrue(n, cmt)
@@ -139,7 +138,8 @@ def build_train_dataset():
                     featrues.append(featrue)
                 if featrues:
                     df_data = pd.DataFrame(featrues)
-                    df_data.to_csv("train.csv", mode='a', header=True, index=None)
+                    df_data.to_csv("train.csv", mode='a',
+                                   header=True, index=None)
                 featrues.clear()
     print("done!")
 
