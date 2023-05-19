@@ -1,8 +1,28 @@
+import json
+import pandas as pd
+
+from tqdm import tqdm
 from utils.git_utils import CommitUtils, Commit
 from utils.nvd_utils import NvdUtils, NVD
 from utils.text_utils import compute_text_similarity
 commit_utils = CommitUtils()
 nvd_utils = NvdUtils()
+
+data_source_path = "models/data_source/ext_vul.json"
+
+project_samples = ["FFmpeg",
+                   "ImageMagick",
+                   "microweber",
+                   "MISP",
+                   "mruby",
+                   "openemr",
+                   "openssl",
+                   "radare2",
+                   "showdoc",
+                   "tcpdump"]
+
+cols = ["share_files_nums", "share_files_rate", "only_commit_files_nums", "exist_cve",
+        "insert_loc_nums", "delete_loc_nums", "all_loc_nums", "all_method_nums","commit_msg","cve_desc","commit_id","is_right"]
 
 
 def merge_featrue(nvd: NVD, commit: Commit):
@@ -71,9 +91,10 @@ def gen_dataset(cve_id: str, repos_path: str, rec_commit: list) -> list:
         featrues.append(featrue)
     return featrues
 
-def gen_dataset(cve_info:dict[str,str], rec_commit: list) -> list:
+
+def gen_dataset(cve_info: dict[str, str], rec_commit: list) -> list:
     datasets = []
-    for cve_id,repos_path in cve_info:
+    for cve_id, repos_path in cve_info:
         nvd = nvd_utils.gain_nvd_information(cve_id=cve_id)
         commits = commit_utils.get_commits(nvd_page=nvd, repos_path=repos_path)
 
@@ -90,3 +111,36 @@ def gen_dataset(cve_info:dict[str,str], rec_commit: list) -> list:
             featrues.append(featrue)
         datasets.append(featrues)
     return datasets
+
+
+def build_train_dataset():
+    nvds = None
+    with open(data_source_path, 'r', encoding='utf-8') as f:
+        nvds = json.load(f)
+    featrues = []
+    for nvd in tqdm(nvds):
+        for p in nvd["project_name"]:
+            if p in project_samples:
+                n = NVD(
+                    cve_id=nvd["vul_id"], description=nvd["description"], pub_date=nvd["publish_date"], files=nvd_utils.extract_files(nvd["description"]))
+                commits = commit_utils.get_commits(
+                    nvd_page=n, repos_path=f"repos/{p}")
+                for commit in commits:
+                    cmt = commit_utils.get_commit_info(
+                        repos=f"repos/{p}", commit_id=commit)
+                    featrue = merge_featrue(n, cmt)
+                    featrue.append(cmt.subject)
+                    featrue.append(n.description)
+                    featrue.append(cmt.commit_id)
+                    if cmt.commit_id in nvd["commit_id"]:
+                        featrue.append(1)
+                    else:
+                        featrue.append(0)
+                    featrues.append(featrue)
+    df_data = pd.DataFrame(featrues,columns=cols)
+    df_data.to_csv("train.csv", mode='a', header=True, index=None)
+    print("done!")
+
+
+if __name__ == "__main__":
+    build_train_dataset()

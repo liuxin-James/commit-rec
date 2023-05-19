@@ -35,12 +35,9 @@ class CommitUtils:
         to = datetime.datetime.strptime(
             pub_date, "%Y-%m-%d") + datetime.timedelta(days=self.time_delta)
 
-        since = str(since).split(" ")[0]
-        to = str(to).split(" ")[0]
-
-        cmd = f"git log  --pretty=format:'%H' --since={since} --until={to}"
-        commits = self.__excute_git_cmd(repos_path, cmd)
-        commits = commits.split("\n")
+        commits=[]
+        for commit in Repository(path_to_repo=repos_path, since=since,to=to).traverse_commits():
+            commits.append(commit.hash)
 
         return list(set(commits))
 

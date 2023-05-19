@@ -19,7 +19,7 @@ class NvdUtils:
         pass
 
     # extract files information by the description of NVD
-    def _extract_files(self, description: str):
+    def extract_files(self, description: str):
         pattern = r"[a-zA-Z_0-9]+\.[a-zA-Z]+"
         files = re.findall(pattern, description)
         return files
