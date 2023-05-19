@@ -15,7 +15,7 @@ class NVD:
 class NvdUtils:
 
     # gain nvd information by cve id
-    def gain_nvd_information(self, cve_id: str, repos: str) -> NVD:
+    def gain_nvd_information(self, cve_id: str, repos: str=None) -> NVD:
         pass
 
     # extract files information by the description of NVD

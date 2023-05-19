@@ -10,6 +10,7 @@ from pydriller import Repository
 
 @dataclass
 class Commit:
+    commit_id: str = None
     subject: str = None
     changed_files: list = None
     add_lines: list = None
@@ -27,7 +28,7 @@ class CommitUtils:
     REPOS_PATH = "./repos"
 
     # gain commits id list by nvd publish date
-    def get_commits(self, nvd_page: NVD):
+    def get_commits(self, nvd_page: NVD, repos_path: str):
         pub_date = nvd_page.pub_date.split(" ")[0]
         since = datetime.datetime.strptime(
             pub_date, "%Y-%m-%d") - datetime.timedelta(days=self.time_delta)
@@ -36,10 +37,9 @@ class CommitUtils:
 
         since = str(since).split(" ")[0]
         to = str(to).split(" ")[0]
-        repos = nvd_page.repos
 
         cmd = f"git log  --pretty=format:'%H' --since={since} --until={to}"
-        commits = self.__excute_git_cmd(self.REPOS_PATH, repos, cmd)
+        commits = self.__excute_git_cmd(repos_path, cmd)
         commits = commits.split("\n")
 
         return list(set(commits))
@@ -53,9 +53,9 @@ class CommitUtils:
         return p
 
     # excute git command
-    def __excute_git_cmd(self, repos_path: str, repos: str, cmd: str):
+    def __excute_git_cmd(self, repos_path: str, cmd: str):
         pwd = os.getcwd()
-        os.chdir(os.path.join(repos_path, repos))
+        os.chdir(repos_path)
         output = subprocess.check_output(
             cmd, shell=True).decode("utf-8", errors="ignore")
         os.chdir(pwd)
@@ -85,7 +85,8 @@ class CommitUtils:
                 changed_files.append(files.filename)
             a_method_nums = len(method_name)
             commit_info_list.append(
-                Commit(subject=subject,
+                Commit(commit_id=commit.hash,
+                       subject=subject,
                        changed_files=changed_files,
                        a_line_nums=a_line_nums,
                        i_line_nums=i_line_nums,
