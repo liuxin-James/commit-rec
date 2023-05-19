@@ -118,14 +118,14 @@ def build_train_dataset():
     with open(data_source_path, 'r', encoding='utf-8') as f:
         nvds = json.load(f)
     featrues = []
-    for nvd in tqdm(nvds):
+    for nvd in tqdm(nvds,desc="nvd nums"):
         for p in nvd["project_name"]:
             if p in project_samples:
                 n = NVD(
                     cve_id=nvd["vul_id"], description=nvd["description"], pub_date=nvd["publish_date"], files=nvd_utils.extract_files(nvd["description"]))
                 commits = commit_utils.get_commits(
                     nvd_page=n, repos_path=f"repos/{p}")
-                for commit in commits:
+                for commit in tqdm(commits,desc=f"{n.cve_id}'s commit"):
                     cmt = commit_utils.get_commit_info(
                         repos=f"repos/{p}", commit_id=commit)
                     featrue = merge_featrue(n, cmt)
@@ -137,8 +137,10 @@ def build_train_dataset():
                     else:
                         featrue.append(0)
                     featrues.append(featrue)
-    df_data = pd.DataFrame(featrues,columns=cols)
-    df_data.to_csv("train.csv", mode='a', header=True, index=None)
+                if featrues:
+                    df_data = pd.DataFrame(featrues)
+                    df_data.to_csv("train.csv", mode='a', header=True, index=None)
+                featrues.clear()
     print("done!")
 
 

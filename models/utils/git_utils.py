@@ -24,7 +24,7 @@ class Commit:
 
 
 class CommitUtils:
-    time_delta = 100
+    time_delta = 90
     REPOS_PATH = "./repos"
 
     # gain commits id list by nvd publish date
