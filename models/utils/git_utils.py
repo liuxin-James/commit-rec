@@ -11,7 +11,7 @@ from pydriller import Repository
 @dataclass
 class Commit:
     commit_id: str = None
-    subject: str = None
+    subject: str = ""
     changed_files: list = None
     add_lines: list = None
     rm_lines: list = None
@@ -24,7 +24,7 @@ class Commit:
 
 
 class CommitUtils:
-    time_delta = 90
+    time_delta = 7
     REPOS_PATH = "./repos"
 
     # gain commits id list by nvd publish date
@@ -35,8 +35,8 @@ class CommitUtils:
         to = datetime.datetime.strptime(
             pub_date, "%Y-%m-%d") + datetime.timedelta(days=self.time_delta)
 
-        commits=[]
-        for commit in Repository(path_to_repo=repos_path, since=since,to=to).traverse_commits():
+        commits = []
+        for commit in Repository(path_to_repo=repos_path, since=since, to=to).traverse_commits():
             commits.append(commit.hash)
 
         return list(set(commits))
@@ -60,27 +60,38 @@ class CommitUtils:
 
     # extract vulnerability type & impact & function
     def get_commit_info(self, repos, commit_id) -> Commit:
-        commit_info = self.mining_commit_information(repos, commit_id)[0]
+        commit_info = self.mining_commit_information(repos, commit_id)
+        if len(commit_info) == 0:
+            commit_info = Commit(commit_id=commit_id, changed_files=[
+            ], method_name=[], add_lines=[], rm_lines=[])
+        else:
+            commit_info = commit_info[0]
         return commit_info
 
     # mining commit information
     def mining_commit_information(self, repos: str, commit_id) -> list[Commit]:
         commit_info_list = []
         for commit in Repository(path_to_repo=repos, only_commits=[commit_id]).traverse_commits():
+            if not commit.in_main_branch:
+                continue
             subject = commit.msg
             a_line_nums = commit.lines
-            i_line_nums = 0
-            d_line_nums = 0
+            i_line_nums = commit.insertions
+            d_line_nums = commit.deletions
             method_name = []
             changed_files = []
-            a_file_nums = len(commit.modified_files)
-            for files in commit.modified_files:
-                i_line_nums += files.added_lines
-                d_line_nums += files.deleted_lines
-                for method in files.changed_methods:
-                    method_name.append(method.name)
+            a_file_nums = commit.files
+
+            try:
+                for files in commit.modified_files:
+                    for method in files.changed_methods:
+                        method_name.append(method.name)
                 changed_files.append(files.filename)
-            a_method_nums = len(method_name)
+                a_method_nums = len(method_name)
+            except Exception as ex:
+                a_file_nums = 0
+                a_method_nums = 0
+
             commit_info_list.append(
                 Commit(commit_id=commit.hash,
                        subject=subject,

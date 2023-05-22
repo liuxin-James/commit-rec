@@ -20,10 +20,10 @@ def do_eval():
 
 if __name__ == "__main__":
     # data part
-    path = "./train.csv"
-    df = pd.read_csv(path)
+    path = "./trainx.csv"
+    df = pd.read_csv(path,encoding='gbk')
     df_train, df_test = train_test_split(
-        df, test_size=0.2, stratify=df.income_label)
+        df, test_size=0.2, stratify=df.is_right)
 
     wide_cols = ["share_files_nums", "share_files_rate", "only_commit_files_nums",
                  "exist_cve", "insert_loc_nums", "delete_loc_nums", "all_loc_nums", "all_method_nums"]
@@ -47,7 +47,7 @@ if __name__ == "__main__":
     bert_model = BertModel(freeze_bert=True)
 
     model = WideDeep(wide=wide, deeptext=bert_model,
-                     head_hidden_dims=[256, 128, 64], pred_dim=2)
+                     head_hidden_dims=[256, 128, 64], pred_dim=1)
 
     trainer = Trainer(model, objective="binary", metrics=[Precision])
 
@@ -56,7 +56,7 @@ if __name__ == "__main__":
         X_text=X_bert_tr,
         target=target,
         n_epochs=5,
-        batch_size=256,
+        batch_size=4,
     )
 
     # deep testing data preprocess
