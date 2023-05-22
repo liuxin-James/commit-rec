@@ -1,3 +1,4 @@
+import torch
 import pandas as pd
 import numpy as np
 
@@ -8,7 +9,13 @@ from pytorch_widedeep import Trainer
 from pytorch_widedeep.metrics import Accuracy, Precision
 from pytorch_widedeep.models import Wide, WideDeep
 from pytorch_widedeep.preprocessing import WidePreprocessor
-
+from sklearn.metrics import (
+    f1_score,
+    recall_score,
+    accuracy_score,
+    precision_score,
+    confusion_matrix,
+)
 
 def do_train():
     pass
@@ -43,11 +50,11 @@ if __name__ == "__main__":
     X_bert_tr = bert_tokenizer.fit_transform(df_train["cve_desc"].tolist())
 
     # model part-> build model
-    wide = Wide(input_dim=np.unique(X_wide).shape[0], pred_dim=1)
+    wide = Wide(input_dim=np.unique(X_wide).shape[0], pred_dim=2)
     bert_model = BertModel(freeze_bert=True)
 
     model = WideDeep(wide=wide, deeptext=bert_model,
-                     head_hidden_dims=[256, 128, 64], pred_dim=1)
+                     head_hidden_dims=[256, 128, 64], pred_dim=2)
 
     trainer = Trainer(model, objective="binary", metrics=[Precision])
 
@@ -62,3 +69,17 @@ if __name__ == "__main__":
     # deep testing data preprocess
     X_wide_te = wide_preprocessor.transform(df_test)
     X_bert_te = bert_tokenizer.transform(df_test["cve_desc"].tolist())
+
+    preds = trainer.predict_proba(X_wide=X_wide_te,X_text=X_bert_te)
+    pred_text_class = np.argmax(preds, 1)
+
+    acc_score = accuracy_score(df_test.is_right, pred_text_class)
+    f1_value = f1_score(df_test.is_right, pred_text_class, average="weighted")
+    prec_score = precision_score(df_test.is_right, pred_text_class, average="weighted")
+    rec_score = recall_score(df_test.is_right, pred_text_class, average="weighted")
+    con_matrix = confusion_matrix(df_test.is_right, pred_text_class)
+
+    print(f'accuracy_score:{acc_score},f1:{f1_value},precision_score:{prec_score},recall_score:{rec_score}')
+    print(f"confusion_matrix:{con_matrix}")
+
+    torch.save(model.state_dict(),"model_weights/wd_model.pt")
