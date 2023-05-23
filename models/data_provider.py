@@ -152,27 +152,26 @@ def build_positive_dataset():
 
     for nvd in tqdm(nvds, desc="nvd nums"):
         for p in nvd["project_name"]:
-            if p in project_samples:
-                n = NVD(
-                    cve_id=nvd["vul_id"], description=nvd["description"], pub_date=nvd["publish_date"], files=nvd_utils.extract_files(nvd["description"]))
-                for commit in nvd["commit_id"]:
-                    cmt = commit_utils.get_commit_info(
-                            repos=f"repos/{p}", commit_id=commit)
-                    featrue = merge_featrue(n, cmt)
-                    featrue.append(cmt.subject)
-                    featrue.append(n.description)
-                    featrue.append(cmt.commit_id)
-                    if cmt.commit_id in nvd["commit_id"]:
-                        featrue.append(1)
-                    else:
-                        featrue.append(0)
-                    featrues.append(featrue)
-                if featrues:
-                    df_data = pd.DataFrame(featrues)
-                    df_data.to_csv("train.csv", mode='a',
-                                    header=False, index=None)
-                featrues.clear()
+            n = NVD(
+                cve_id=nvd["vul_id"], description=nvd["description"], pub_date=nvd["publish_date"], files=nvd_utils.extract_files(nvd["description"]))
+            for commit in nvd["commit_id"]:
+                cmt = commit_utils.get_commit_info(
+                        repos=f"repos/{p}", commit_id=commit)
+                featrue = merge_featrue(n, cmt)
+                featrue.append(cmt.subject)
+                featrue.append(n.description)
+                featrue.append(cmt.commit_id)
+                if cmt.commit_id in nvd["commit_id"]:
+                    featrue.append(1)
+                else:
+                    featrue.append(0)
+                featrues.append(featrue)
+            if featrues:
+                df_data = pd.DataFrame(featrues)
+                df_data.to_csv("train.csv", mode='a',
+                                header=False, index=None)
+            featrues.clear()
     print("done!")
 if __name__ == "__main__":
     build_positive_dataset()
-    build_train_dataset()
+    # build_train_dataset()

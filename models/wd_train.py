@@ -82,4 +82,4 @@ if __name__ == "__main__":
     print(f'accuracy_score:{acc_score},f1:{f1_value},precision_score:{prec_score},recall_score:{rec_score}')
     print(f"confusion_matrix:{con_matrix}")
 
-    torch.save(model.state_dict(),"model_weights/wd_model.pt")
+    torch.save(model.state_dict(),"models/model_weights/wd_model.pt")

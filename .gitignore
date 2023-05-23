@@ -3,3 +3,4 @@ venv/
 model_cache/
 __pycache__/
 repos/
+models/base-models/
