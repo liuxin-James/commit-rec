@@ -50,11 +50,11 @@ if __name__ == "__main__":
     X_bert_tr = bert_tokenizer.fit_transform(df_train["cve_desc"].tolist())
 
     # model part-> build model
-    wide = Wide(input_dim=np.unique(X_wide).shape[0], pred_dim=2)
+    wide = Wide(input_dim=np.unique(X_wide).shape[0], pred_dim=1)
     bert_model = BertModel(freeze_bert=True)
 
     model = WideDeep(wide=wide, deeptext=bert_model,
-                     head_hidden_dims=[256, 128, 64], pred_dim=2)
+                     head_hidden_dims=[256, 128, 64], pred_dim=1)
 
     trainer = Trainer(model, objective="binary", metrics=[Precision])
 
