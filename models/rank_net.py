@@ -13,7 +13,7 @@ from pytorch_widedeep.utils.fastai_transforms import (
 class BertTokenizer(object):
     def __init__(
         self,
-        pretrained_tokenizer="distilbert-base-uncased",
+        pretrained_tokenizer="models/base-models/distilbert-base-uncased",
         do_lower_case=True,
         max_length=90,
     ):
@@ -53,7 +53,7 @@ class BertTokenizer(object):
 class BertModel(nn.Module):
     def __init__(
         self,
-        model_name: str = "distilbert-base-uncased",
+        model_name: str = "models/base-models/distilbert-base-uncased",
         freeze_bert: bool = False,
     ):
         super(BertModel, self).__init__()
