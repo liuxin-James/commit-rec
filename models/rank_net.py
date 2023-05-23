@@ -3,7 +3,7 @@ import numpy as np
 import torch.nn as nn
 
 from torch import Tensor, nn
-from transformers import BertModel,DistilBertModel,DistilBertTokenizer
+from transformers import DistilBertModel,DistilBertTokenizer
 from pytorch_widedeep.utils.fastai_transforms import (
     fix_html,
     spec_add_spaces,
@@ -77,20 +77,6 @@ class BertModel(nn.Module):
         # have a 'output_dim' property so the WideDeep class knows the incoming dims
         # from the custom model. in this case, I hardcoded it
         return 768
-
-
-class DeepBert(nn.Module):
-    def __ini__(self, name_or_path, freeze_bert: bool = True):
-        super(DeepBert, self).__init__()
-        self.bert = BertModel.from_pretrained(name_or_path)
-
-        if freeze_bert:
-            for param in self.bert.parameters():
-                param.requires_grad = False
-
-    def forward(self, inputs):
-        outputs = self.bert(**inputs)
-
 
 class MLPNet(nn.Module):
     def __init__(self, n_features) -> None:
