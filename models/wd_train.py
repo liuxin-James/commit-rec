@@ -1,6 +1,7 @@
 import torch
 import pandas as pd
 import numpy as np
+import bentoml
 
 from rank_net import BertModel, BertTokenizer
 from sklearn.model_selection import train_test_split
@@ -17,6 +18,7 @@ from sklearn.metrics import (
     confusion_matrix,
 )
 
+
 def do_train():
     pass
 
@@ -27,8 +29,8 @@ def do_eval():
 
 if __name__ == "__main__":
     # data part
-    path = "./trainx.csv"
-    df = pd.read_csv(path,encoding='gbk')
+    path = "./train_dataset.csv"
+    df = pd.read_csv(path, encoding='utf-8')
     df_train, df_test = train_test_split(
         df, test_size=0.2, stratify=df.is_right)
 
@@ -51,6 +53,8 @@ if __name__ == "__main__":
 
     # model part-> build model
     wide = Wide(input_dim=np.unique(X_wide).shape[0], pred_dim=1)
+    print(f"wide input dim {wide.input_dim}")
+
     bert_model = BertModel(freeze_bert=True)
 
     model = WideDeep(wide=wide, deeptext=bert_model,
@@ -70,16 +74,20 @@ if __name__ == "__main__":
     X_wide_te = wide_preprocessor.transform(df_test)
     X_bert_te = bert_tokenizer.transform(df_test["cve_desc"].tolist())
 
-    preds = trainer.predict_proba(X_wide=X_wide_te,X_text=X_bert_te)
+    preds = trainer.predict_proba(X_wide=X_wide_te, X_text=X_bert_te)
     pred_text_class = np.argmax(preds, 1)
 
     acc_score = accuracy_score(df_test.is_right, pred_text_class)
     f1_value = f1_score(df_test.is_right, pred_text_class, average="weighted")
-    prec_score = precision_score(df_test.is_right, pred_text_class, average="weighted")
-    rec_score = recall_score(df_test.is_right, pred_text_class, average="weighted")
+    prec_score = precision_score(
+        df_test.is_right, pred_text_class, average="weighted")
+    rec_score = recall_score(
+        df_test.is_right, pred_text_class, average="weighted")
     con_matrix = confusion_matrix(df_test.is_right, pred_text_class)
 
-    print(f'accuracy_score:{acc_score},f1:{f1_value},precision_score:{prec_score},recall_score:{rec_score}')
+    print(
+        f'accuracy_score:{acc_score},f1:{f1_value},precision_score:{prec_score},recall_score:{rec_score}')
     print(f"confusion_matrix:{con_matrix}")
 
-    torch.save(model.state_dict(),"models/model_weights/wd_model.pt")
+    torch.save(model.state_dict(), "models/model_weights/wd_model.pt")
+    save_wd = bentoml.pytorch.save_model("widedeep", model=model)
