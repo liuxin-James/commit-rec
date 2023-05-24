@@ -60,7 +60,10 @@ if __name__ == "__main__":
     model = WideDeep(wide=wide, deeptext=bert_model,
                      head_hidden_dims=[256, 128, 64], pred_dim=1)
 
-    trainer = Trainer(model, objective="binary", metrics=[Precision])
+    device = "gpu" if torch.cuda.is_available else "cpu"
+
+    trainer = Trainer(model, objective="binary",
+                      metrics=[Precision], device=device)
 
     trainer.fit(
         X_wide=X_wide,
