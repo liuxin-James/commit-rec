@@ -69,8 +69,8 @@ class CommitUtils:
         return commit_info
 
     # mining commit information
-    def mining_commit_information(self, repos: str, commit_id) -> list[Commit]:
-        commit_info_list = []
+    def mining_single_commit_information(self, repos: str, commit_id) -> Commit:
+        commit = None
         for commit in Repository(path_to_repo=repos, only_commits=[commit_id]).traverse_commits():
             if not commit.in_main_branch:
                 continue
@@ -92,7 +92,50 @@ class CommitUtils:
                 a_file_nums = 0
                 a_method_nums = 0
 
-            commit_info_list.append(
+            commit = Commit(commit_id=commit.hash,
+                            subject=subject,
+                            changed_files=changed_files,
+                            a_line_nums=a_line_nums,
+                            i_line_nums=i_line_nums,
+                            d_line_nums=d_line_nums,
+                            method_name=method_name,
+                            a_file_nums=a_file_nums,
+                            a_method_nums=a_method_nums)
+        return commit
+
+    # utilize CodeBert to compute patch probability
+    def __compute_patch_prob(self, rm_lines: list, add_lines: list):
+        pass
+
+    def mining_commit_information(self, nvd: NVD, repos_path: str) -> list[Commit]:
+        pub_date = nvd.pub_date.split(" ")[0]
+        since = datetime.datetime.strptime(
+            pub_date, "%Y-%m-%d") - datetime.timedelta(days=self.time_delta)
+        to = datetime.datetime.strptime(
+            pub_date, "%Y-%m-%d") + datetime.timedelta(days=self.time_delta)
+
+        commits = []
+        for commit in Repository(path_to_repo=repos_path, since=since, to=to).traverse_commits():
+            if not commit.in_main_branch:
+                continue
+            subject = commit.msg
+            a_line_nums = commit.lines
+            i_line_nums = commit.insertions
+            d_line_nums = commit.deletions
+            method_name = []
+            changed_files = []
+            a_file_nums = commit.files
+            try:
+                for files in commit.modified_files:
+                    for method in files.changed_methods:
+                        method_name.append(method.name)
+                changed_files.append(files.filename)
+                a_method_nums = len(method_name)
+            except Exception as ex:
+                a_file_nums = 0
+                a_method_nums = 0
+
+            commits.append(
                 Commit(commit_id=commit.hash,
                        subject=subject,
                        changed_files=changed_files,
@@ -102,8 +145,4 @@ class CommitUtils:
                        method_name=method_name,
                        a_file_nums=a_file_nums,
                        a_method_nums=a_method_nums))
-        return commit_info_list
-
-    # utilize CodeBert to compute patch probability
-    def __compute_patch_prob(self, rm_lines: list, add_lines: list):
-        pass
+        return commits
