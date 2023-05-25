@@ -95,7 +95,7 @@ if __name__ == "__main__":
 
     if not os.path.exists(saved_path):
         os.makedirs(saved_path)
-    torch.save(model.state_dict(), saved_path+"wd_model.pt")
+    torch.save(model, saved_path+"wd_model.pt")
 
     with open(saved_path+"wide_preprocess.pkl","wb") as f:
         pickle.dump(wide_preprocessor,f)
