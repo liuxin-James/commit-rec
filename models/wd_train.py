@@ -99,5 +99,3 @@ if __name__ == "__main__":
 
     with open(saved_path+"wide_preprocess.pkl","wb") as f:
         pickle.dump(wide_preprocessor,f)
-
-    save_wd = bentoml.pytorch.save_model("widedeep", model=model)
