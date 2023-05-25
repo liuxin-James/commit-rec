@@ -63,7 +63,7 @@ if __name__ == "__main__":
     model = WideDeep(wide=wide, deeptext=bert_model,
                      head_hidden_dims=[256, 128, 64], pred_dim=1)
 
-
+    print(f"widedeep:{model}")
     trainer = Trainer(model, objective="binary",metrics=[Precision])
 
     trainer.fit(
@@ -95,7 +95,7 @@ if __name__ == "__main__":
 
     if not os.path.exists(saved_path):
         os.makedirs(saved_path)
-    torch.save(model, saved_path+"wd_model.pt")
+    torch.save(model.state_dict(), saved_path+"wd_model.pt")
 
     with open(saved_path+"wide_preprocess.pkl","wb") as f:
         pickle.dump(wide_preprocessor,f)
