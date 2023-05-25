@@ -158,6 +158,8 @@ def build_positive_dataset():
                 for commit in nvd["commit_id"]:
                     cmt = commit_utils.mining_single_commit_information(
                         repos=f"repos/{p}", commit_id=commit)
+                    if not cmt:
+                        continue
                     featrue = merge_featrue(n, cmt)
                     featrue.append(cmt.subject)
                     featrue.append(n.description)

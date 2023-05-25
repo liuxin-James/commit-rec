@@ -1,3 +1,5 @@
+import os
+import pickle
 import torch
 import pandas as pd
 import numpy as np
@@ -18,6 +20,7 @@ from sklearn.metrics import (
     confusion_matrix,
 )
 
+saved_path = "./models/trained/wd/"
 
 def do_train():
     pass
@@ -60,10 +63,8 @@ if __name__ == "__main__":
     model = WideDeep(wide=wide, deeptext=bert_model,
                      head_hidden_dims=[256, 128, 64], pred_dim=1)
 
-    device = "gpu" if torch.cuda.is_available else "cpu"
 
-    trainer = Trainer(model, objective="binary",
-                      metrics=[Precision], device=device)
+    trainer = Trainer(model, objective="binary",metrics=[Precision])
 
     trainer.fit(
         X_wide=X_wide,
@@ -92,5 +93,11 @@ if __name__ == "__main__":
         f'accuracy_score:{acc_score},f1:{f1_value},precision_score:{prec_score},recall_score:{rec_score}')
     print(f"confusion_matrix:{con_matrix}")
 
-    torch.save(model.state_dict(), "models/model_weights/wd_model.pt")
+    if not os.path.exists(saved_path):
+        os.makedirs(saved_path)
+    torch.save(model.state_dict(), saved_path+"wd_model.pt")
+
+    with open(saved_path+"wide_preprocess.pkl","wb") as f:
+        pickle.dump(wide_preprocessor,f)
+
     save_wd = bentoml.pytorch.save_model("widedeep", model=model)
