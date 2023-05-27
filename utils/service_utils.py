@@ -14,6 +14,7 @@ def gen_input_data(request:RequestData):
         featrue.append(commit_info.subject)
         featrue.append(request.description)
         featrue.append(commit_info.commit_id)
+        featrues.append(featrue)
     return featrues
 
 def merge_featrue(request:RequestData,commit:Commit)->list:
