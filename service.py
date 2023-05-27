@@ -75,5 +75,5 @@ def __check_inputs(input: dict):
 @svc.api(input=JSON(), output=JSON(), route=ROUTE+"rank")
 def rank(request: dict):
     request = RequestData(**request)
-    proba = commit_rec_runner.widedeep_do.async_run(request)
+    proba = commit_rec_runner.widedeep_do.run(request)
     print(proba)
