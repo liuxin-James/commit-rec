@@ -21,6 +21,9 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 #load widedeep model
 widedeep.load_state_dict(torch.load("./models/trained/wd/wd_model.pt",map_location=device))
 
+# load wide model
+wide.load_state_dict(torch.load("./models/trained/wd/wide_model.pt",map_location=device))
+
 # load sbert model
 model = AutoModel.from_pretrained("models/base-models/sentence-transformers/all-MiniLM-L6-v2")
 tokenizer = AutoModel.from_pretrained("models/base-models/sentence-transformers/all-MiniLM-L6-v2")
@@ -29,6 +32,8 @@ tokenizer = AutoModel.from_pretrained("models/base-models/sentence-transformers/
 saved_model = bentoml.transformers.save_model("sbert",model)
 saved_tokenizer = bentoml.transformers.save_model("sbert-tokenizer",tokenizer)
 saved_wd = bentoml.pytorch.save_model("widedeep", model=model)
+saved_wide = bentoml.pytorch.save_model("wide",wide)
+saved_deep = bentoml.pytorch.save_model("deep",bert_model)
 
 
 print(f"model saved:{saved_model},tokenizer saved:{saved_tokenizer},widedeep saved:{saved_wd}")

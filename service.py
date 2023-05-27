@@ -6,6 +6,7 @@ import pandas as pd
 from bentoml.io import JSON
 from pytorch_widedeep import Trainer
 from pytorch_widedeep.metrics import Precision
+from pytorch_widedeep.models import WideDeep
 from utils.service_data import RequestData
 from sentence_transformers import util
 from utils.service_utils import gen_input_data
@@ -14,6 +15,8 @@ from utils.service_utils import gen_input_data
 sbert_ref = bentoml.models.get("sbert:latest")
 tokenizer_ref = bentoml.models.get("sbert-tokenizer:latest")
 wd_ref = bentoml.models.get("widedeep:latest")
+wide_ref = bentoml.models.get("wide:latest")
+deep_ref = bentoml.models.get("deep:latest")
 
 # define api route
 ROUTE = "api/v1/commit/"
@@ -36,7 +39,10 @@ class CommitRecRunnable(bentoml.Runnable):
 
     def __init__(self):
         self.sbert = bentoml.transformers.load_model(sbert_ref)
-        self.widedeep = bentoml.pytorch.load_model(wd_ref)
+        self.wide = bentoml.pytorch.load_model(wide_ref)
+        self.deep = bentoml.pytorch.load_model(deep_ref)
+        self.widedeep = WideDeep(wide=self.wide, deeptext=self.deep, head_hidden_dims=[
+                                 256, 128, 64], pred_dim=1)
 
     @bentoml.Runnable.method(batchable=False)
     def compute_text_sim(self, commit_msg: str, cve_desc: str):
@@ -44,7 +50,7 @@ class CommitRecRunnable(bentoml.Runnable):
         cve_embed = self.sbert.encode(cve_desc)
         sim = util.cos_sim(commit_embed, cve_embed)
         return sim
-    
+
     @bentoml.Runnable.method(batchable=False)
     def widedeep_do(self, request: RequestData):
         featrues = gen_input_data(request=request)
