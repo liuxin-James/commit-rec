@@ -2,7 +2,7 @@ from nltk.corpus import stopwords
 from nltk import sent_tokenize, word_tokenize
 from sentence_transformers import SentenceTransformer, util
 
-model = SentenceTransformer("all-MiniLM-L6-v2")
+model = SentenceTransformer("models/base-models/sentence-transformers/all-MiniLM-L6-v2")
 
 # compute text similarity; return torch
 def compute_text_similarity(sentence1: str, sentence2: str):
@@ -24,4 +24,3 @@ def preprocess_sentence(sentence: str):
         word for word in before_words if word not in stopwords.words("english")]
     sentence_ = " ".join(after_words)
     return sentence_
-
