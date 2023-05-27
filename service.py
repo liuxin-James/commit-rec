@@ -10,7 +10,7 @@ sbert_ref = bentoml.models.get("sbert:latest")
 tokenizer_ref = bentoml.models.get("sbert-tokenizer:latest")
 wd_ref = bentoml.models.get("widedeep:latest")
 
-ROUTE = "api/v1/rec/"
+ROUTE = "api/v1/commit/"
 class CommitRecRunnable(bentoml.Runnable):
     SUPPORTED_RESOURCES = ("cuda" if torch.cuda.is_available() else "cpu")
     SUPPORTS_CPU_MULTI_THREADING = False
@@ -35,7 +35,7 @@ svc  = bentoml.Service("commit_rec",runners=[commit_rec_runner,wd_runner])
 def __check_inputs(input:dict):
     pass
 
-@svc.api(input=JSON(),output=JSON(),route=ROUTE+"commit")
+@svc.api(input=JSON(),output=JSON(),route=ROUTE+"rank")
 def rank(request:RequestData):
     featrues = gen_input_data(request=request)
     s = wd_runner.run(featrues)
