@@ -45,7 +45,8 @@ class CommitRecRunnable(bentoml.Runnable):
     def __init__(self):
         self.sbert = bentoml.transformers.load_model(sbert_ref)
         self.wide = bentoml.pytorch.load_model(wide_ref)
-        self.deep = bentoml.pytorch.load_model(deep_ref)
+        self.deep = BertModel(freeze_bert=True)
+        self.wd = bentoml.pytorch.load_model(wd_ref)
         self.tokenizer = bentoml.transformers.load_model(tokenizer_ref)
         self.widedeep = WideDeep(wide=self.wide, deeptext=self.deep, head_hidden_dims=[
                                  256, 128, 64], pred_dim=1)
@@ -61,9 +62,9 @@ class CommitRecRunnable(bentoml.Runnable):
     def widedeep_do(self, request: RequestData):
         featrues = gen_input_data(request=request)
         df_data = pd.DataFrame(featrues, columns=cols)
-        X_wide = wide_preprocess.fit_transform(df_data)
+        X_wide = wide_preprocess.transform(df_data)
 
-        X_text = tokenizer_z.fit_transform(df_data["cve_desc"].tolist())
+        X_text = tokenizer_z.fit(df_data["cve_desc"].tolist()).transform(df_data["cve_desc"].tolist())
         trainer = Trainer(self.widedeep, objective="binary",metrics=[Precision])
         preds = trainer.predict_proba(X_wide=X_wide,X_text=X_text)
 
@@ -72,7 +73,7 @@ class CommitRecRunnable(bentoml.Runnable):
 
 # load custom commit rec runner
 commit_rec_runner = bentoml.Runner(
-    CommitRecRunnable, name="commit_rec_runner", models=[sbert_ref, tokenizer_ref, wide_ref, deep_ref])
+    CommitRecRunnable, name="commit_rec_runner", models=[sbert_ref, tokenizer_ref, wide_ref, deep_ref,wd_ref])
 
 svc = bentoml.Service("commit_rec", runners=[commit_rec_runner])
 
