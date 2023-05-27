@@ -36,7 +36,8 @@ def __check_inputs(input:dict):
     pass
 
 @svc.api(input=JSON(),output=JSON(),route=ROUTE+"rank")
-def rank(request:RequestData):
+def rank(request:dict):
+    request = RequestData(**request)
     featrues = gen_input_data(request=request)
     s = wd_runner.run(featrues)
     print(s)
