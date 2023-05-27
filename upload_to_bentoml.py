@@ -26,7 +26,7 @@ wide.load_state_dict(torch.load("./models/trained/wd/wide_model.pt",map_location
 
 # load sbert model
 model = AutoModel.from_pretrained("models/base-models/sentence-transformers/all-MiniLM-L6-v2")
-tokenizer = AutoModel.from_pretrained("models/base-models/sentence-transformers/all-MiniLM-L6-v2")
+tokenizer = AutoTokenizer.from_pretrained("models/base-models/sentence-transformers/all-MiniLM-L6-v2")
 
 # upload to bentoml
 saved_model = bentoml.transformers.save_model("sbert",model)

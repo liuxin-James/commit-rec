@@ -10,6 +10,8 @@ from pytorch_widedeep.models import WideDeep
 from utils.service_data import RequestData
 from sentence_transformers import util
 from utils.service_utils import gen_input_data
+from nltk import sent_tokenize
+from models.rank_net import BertTokenizer
 
 # get model ref from bentoml
 sbert_ref = bentoml.models.get("sbert:latest")
@@ -41,6 +43,7 @@ class CommitRecRunnable(bentoml.Runnable):
         self.sbert = bentoml.transformers.load_model(sbert_ref)
         self.wide = bentoml.pytorch.load_model(wide_ref)
         self.deep = bentoml.pytorch.load_model(deep_ref)
+        self.tokenizer = bentoml.transformers.load_model(tokenizer_ref)
         self.widedeep = WideDeep(wide=self.wide, deeptext=self.deep, head_hidden_dims=[
                                  256, 128, 64], pred_dim=1)
 
@@ -58,16 +61,17 @@ class CommitRecRunnable(bentoml.Runnable):
         X_wide = wide_preprocess.fit_transform(df_data)
         trainer = Trainer(model=self.widedeep,
                           objective="binary", metrics=[Precision])
-        cve_embed = self.sbert.encode(df_data["cve_desc"].tolist())
-
-        preds = trainer.predict_proba(X_wide=X_wide, X_text=cve_embed)
+        sentences = df_data["cve_desc"].tolist()
+        cve_embed = self.tokenizer.encode(request.description)
+        sentences_embedding = [ cve_embed for i in range(len(sentences))]
+        preds = trainer.predict_proba(X_wide=X_wide, X_text=sentences_embedding)
 
         return preds
 
 
 # load custom commit rec runner
 commit_rec_runner = bentoml.Runner(
-    CommitRecRunnable, name="commit_rec_runner", models=[sbert_ref, tokenizer_ref, wd_ref])
+    CommitRecRunnable, name="commit_rec_runner", models=[sbert_ref, tokenizer_ref, wide_ref, deep_ref])
 
 svc = bentoml.Service("commit_rec", runners=[commit_rec_runner])
 
