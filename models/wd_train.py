@@ -95,7 +95,16 @@ if __name__ == "__main__":
 
     if not os.path.exists(saved_path):
         os.makedirs(saved_path)
+    
+    # save widedeep
     torch.save(model.state_dict(), saved_path+"wd_model.pt")
-
+    
+    # save wide preprocess
     with open(saved_path+"wide_preprocess.pkl","wb") as f:
         pickle.dump(wide_preprocessor,f)
+    
+    # save wide model
+    torch.save(model.wide.state_dict(),saved_path+"wide_model.pt")
+
+    # save deep model
+    torch.save(model.deeptext.state_dict(),saved_path+"deep_model.pt")
