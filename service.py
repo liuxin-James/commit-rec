@@ -11,7 +11,8 @@ from utils.service_data import RequestData
 from sentence_transformers import util
 from utils.service_utils import gen_input_data
 from nltk import sent_tokenize
-from models.rank_net import BertTokenizer
+from models.rank_net import BertTokenizer,BertModel
+from sentence_transformers import SentenceTransformer
 
 # get model ref from bentoml
 sbert_ref = bentoml.models.get("sbert:latest")
@@ -20,6 +21,8 @@ wd_ref = bentoml.models.get("widedeep:latest")
 wide_ref = bentoml.models.get("wide:latest")
 deep_ref = bentoml.models.get("deep:latest")
 
+sentence_bert =  SentenceTransformer("models/base-models/sentence-transformers/all-MiniLM-L6-v2")
+tokenizer_z = BertTokenizer()
 # define api route
 ROUTE = "api/v1/commit/"
 
@@ -59,12 +62,10 @@ class CommitRecRunnable(bentoml.Runnable):
         featrues = gen_input_data(request=request)
         df_data = pd.DataFrame(featrues, columns=cols)
         X_wide = wide_preprocess.fit_transform(df_data)
-        trainer = Trainer(model=self.widedeep,
-                          objective="binary", metrics=[Precision])
-        sentences = df_data["cve_desc"].tolist()
-        cve_embed = self.tokenizer.encode(request.description)
-        sentences_embedding = [ cve_embed for i in range(len(sentences))]
-        preds = trainer.predict_proba(X_wide=X_wide, X_text=sentences_embedding)
+
+        X_text = tokenizer_z.fit_transform(df_data["cve_desc"].tolist())
+        trainer = Trainer(self.widedeep, objective="binary",metrics=[Precision])
+        preds = trainer.predict_proba(X_wide=X_wide,X_text=X_text)
 
         return preds
 
