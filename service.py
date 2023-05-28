@@ -1,6 +1,7 @@
 import bentoml
 import torch
 import pickle
+import numpy as np
 import pandas as pd
 
 from bentoml.io import JSON
@@ -64,11 +65,20 @@ class CommitRecRunnable(bentoml.Runnable):
         df_data = pd.DataFrame(featrues, columns=cols)
         X_wide = wide_preprocess.transform(df_data)
 
+        res_df = df_data[["commit_id","commit_msg"]]
+
         X_text = tokenizer_z.fit(df_data["cve_desc"].tolist()).transform(df_data["cve_desc"].tolist())
         trainer = Trainer(self.widedeep, objective="binary",metrics=[Precision])
         preds = trainer.predict_proba(X_wide=X_wide,X_text=X_text)
+        
+        pred_commit_class = np.argmax(preds, 1).reshape(-1,1)
+        pred_prob = np.max(preds,axis=1).reshape(-1,1)
+        res_df["class"] = pred_commit_class
+        res_df["prob"] = pred_prob
+        # class_with_prob = np.concatenate((pred_commit_class,pred_prob),axis=1).tolist()
+        # wd_result = pd.DataFrame(class_with_prob,columns=["class","prob"])
 
-        return preds
+        return res_df
 
 
 # load custom commit rec runner
@@ -87,5 +97,10 @@ def __check_inputs(input: dict):
 @svc.api(input=JSON(), output=JSON(), route=ROUTE+"rank")
 def rank(request: dict):
     request = RequestData(**request)
-    proba = commit_rec_runner.widedeep_do.run(request)
-    print(proba)
+    res_df = commit_rec_runner.widedeep_do.run(request)
+    # filter class is 1
+    # sorted by prob
+    # select Top-N commit
+    # compute text similarity between commit msg and nvd description
+    # select Top-N
+    # return it
