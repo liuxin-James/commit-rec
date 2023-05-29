@@ -1,4 +1,5 @@
 import re
+import os
 import json
 import pandas as pd
 
@@ -149,10 +150,10 @@ def build_positive_dataset():
     with open(data_source_path, 'r', encoding='utf-8') as f:
         nvds = json.load(f)
     featrues = []
-
     for nvd in tqdm(nvds, desc="nvd nums"):
         for p in nvd["project_name"]:
-            if p in project_samples:
+
+            if os.path.exists(f'repos/{p}'):
                 n = NVD(
                     cve_id=nvd["vul_id"], description=nvd["description"], pub_date=nvd["publish_date"], files=nvd_utils.extract_files(nvd["description"]))
                 for commit in nvd["commit_id"]:

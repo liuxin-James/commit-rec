@@ -5,3 +5,4 @@ __pycache__/
 repos/
 models/base-models/
 models/trained/
+train.csv

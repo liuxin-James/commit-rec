@@ -5,11 +5,11 @@ if __name__ == "__main__":
         runner.init_local()
 
     request = {
-        "cve_id": "CVE-2021-31780",
-        "description": "In app/Model/MispObject.php in MISP 2.4.141, an incorrect sharing group association could lead to information disclosure on an event edit. When an object has a sharing group associated with an event edit, the sharing group object is ignored and instead the passed local ID is reused.",
-        "pub_date": "2021-04-24 04:15:00",
-        "cwe_type": ["CWE-212"],
-        "repos": "repos/MISP",
+        "cve_id": "CVE-2023-0464",
+        "description": "A security vulnerability has been identified in all supported versions of OpenSSL related to the verification of X.509 certificate chains that include policy constraints. Attackers may be able to exploit this vulnerability by creating a malicious certificate chain that triggers exponential use of computational resources, leading to a denial-of-service (DoS) attack on affected systems. Policy processing is disabled by default but can be enabled by passing the `-policy' argument to the command line utilities or by calling the `X509_VERIFY_PARAM_set1_policies()' function.",
+        "pub_date": "2023-03-22 04:15:00",
+        "cwe_type": ["CWE-295"],
+        "repos": "repos/openssl",
         "files": []
     }
 

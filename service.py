@@ -98,6 +98,7 @@ def __check_inputs(input: dict):
 def rank(request: dict):
     request = RequestData(**request)
     res_df = commit_rec_runner.widedeep_do.run(request)
+    print(res_df)
     # filter class is 1
     # sorted by prob
     # select Top-N commit
