@@ -14,6 +14,7 @@ from utils.service_utils import gen_input_data
 from nltk import sent_tokenize
 from models.rank_net import BertTokenizer,BertModel
 from sentence_transformers import SentenceTransformer
+from models.utils.text_utils import compute_text_similarity
 
 # get model ref from bentoml
 sbert_ref = bentoml.models.get("sbert:latest")
@@ -37,7 +38,7 @@ with open("models/trained/wd/wide_preprocess.pkl", "rb") as f:
     wide_preprocess = pickle.load(f)
 
 # define custom commit rec runner
-
+prob_threshold = 0.4
 
 class CommitRecRunnable(bentoml.Runnable):
     SUPPORTED_RESOURCES = ("cuda" if torch.cuda.is_available() else "cpu")
@@ -64,6 +65,10 @@ class CommitRecRunnable(bentoml.Runnable):
         featrues = gen_input_data(request=request)
         df_data = pd.DataFrame(featrues, columns=cols)
         X_wide = wide_preprocess.transform(df_data)
+
+        sent_sim = []
+        for commit_msg in df_data["commit_msg"].tolist():
+            sent_sim.append(compute_text_similarity(commit_msg,request.description).mean().numpy())
 
         res_df = df_data[["commit_id","commit_msg"]]
 
