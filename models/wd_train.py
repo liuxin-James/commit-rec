@@ -33,7 +33,7 @@ def do_eval():
 if __name__ == "__main__":
     # data part
     path = "./train_dataset.csv"
-    df = pd.read_csv(path, encoding='utf-8')
+    df = pd.read_csv(path, encoding='ISO-8859-1')
     df_train, df_test = train_test_split(
         df, test_size=0.2, stratify=df.is_right)
 
