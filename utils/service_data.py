@@ -1,4 +1,6 @@
+from enum import Enum
 from dataclasses import dataclass
+
 
 @dataclass
 class RequestData:
@@ -23,3 +25,17 @@ class Commit:
     a_line_nums: int = 0
     method_name: list = None
     a_method_nums: int = 0
+
+
+class ResponseCode(Enum):
+    Fail = 0
+    Success = 1
+    Exception = 4
+
+
+@dataclass
+class Response:
+    def __init__(self, status=ResponseCode.Fail.value, result=None, msg=None):
+        self.status = status
+        self.result = result
+        self.msg = msg

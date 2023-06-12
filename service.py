@@ -15,7 +15,7 @@ from nltk import sent_tokenize
 from models.rank_net import BertTokenizer, BertModel
 from sentence_transformers import SentenceTransformer
 from models.utils.text_utils import compute_text_similarity
-
+from utils.service_data import ResponseCode,Response
 # get model ref from bentoml
 sbert_ref = bentoml.models.get("sbert:latest")
 tokenizer_ref = bentoml.models.get("sbert-tokenizer:latest")
@@ -126,5 +126,14 @@ def __check_inputs(input: dict):
 @svc.api(input=JSON(), output=JSON(), route=ROUTE+"rank")
 def rank(request: dict):
     request = RequestData(**request)
-    res_df = commit_rec_runner.rec.run(request)
-    return res_df
+    response = Response()
+    res_df = None
+    try:
+        res_df = commit_rec_runner.rec.run(request)
+        response.status = ResponseCode.Success.value
+        response.msg = "Success"
+        response.result = res_df
+    except Exception as ex:
+        response.status = ResponseCode.Exception.value
+        response.msg = str(ex)
+    return response
