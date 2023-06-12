@@ -15,7 +15,7 @@ from nltk import sent_tokenize
 from models.rank_net import BertTokenizer, BertModel
 from sentence_transformers import SentenceTransformer
 from models.utils.text_utils import compute_text_similarity
-from utils.service_data import ResponseCode,Response
+from utils.service_data import ResponseCode, Response
 # get model ref from bentoml
 sbert_ref = bentoml.models.get("sbert:latest")
 tokenizer_ref = bentoml.models.get("sbert-tokenizer:latest")
@@ -67,7 +67,7 @@ class CommitRecRunnable(bentoml.Runnable):
 
     def rough_sort(self, df_data: pd.DataFrame):
         sent_sim = []
-        for index,row in df_data.iterrows():
+        for index, row in df_data.iterrows():
             sent_sim.append(compute_text_similarity(
                 row["commit_msg"], row["cve_desc"]).mean().numpy())
         df_data["text_sim"] = sent_sim
@@ -101,13 +101,16 @@ class CommitRecRunnable(bentoml.Runnable):
 
         X_text = tokenizer_z.fit(df_data["cve_desc"].tolist()).transform(
             df_data["cve_desc"].tolist())
-        
-        res_df = self.fine_sort(X_wide=X_wide,X_text=X_text,y_df=res_df)
+
+        res_df = self.fine_sort(X_wide=X_wide, X_text=X_text, y_df=res_df)
 
         res_df.drop(res_df[res_df.klass == 0].index, inplace=True)
         res_df.sort_values(by="prob", ascending=False)
-
-        return res_df.to_json(orient='records')
+        results = []
+        for index, row in res_df.iterrows():
+            results.append(
+                {"commit_id": row["commit_id"], "prob": row["prob"], "klass": row["klass"]})
+        return results
 
 
 # load custom commit rec runner
