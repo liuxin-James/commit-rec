@@ -40,7 +40,7 @@ with open("models/trained/wd/wide_preprocess.pkl", "rb") as f:
 
 
 prob_threshold = 0.4
-sim_threshold = 0.4
+sim_threshold = 0.25
 rough_n_top = 10
 fine_n_top = 5
 
@@ -69,7 +69,7 @@ class CommitRecRunnable(bentoml.Runnable):
         sent_sim = []
         for index, row in df_data.iterrows():
             sent_sim.append(compute_text_similarity(
-                row["commit_msg"], row["cve_desc"]).mean().numpy())
+                row["commit_msg"], row["cve_desc"]).data.cpu().mean().numpy())
         df_data["text_sim"] = sent_sim
         df_data = df_data.sort_values(by="text_sim", ascending=False)
         return df_data
@@ -97,7 +97,7 @@ class CommitRecRunnable(bentoml.Runnable):
 
         X_wide = wide_preprocess.transform(n_top_data)
 
-        res_df = df_data[["commit_id", "commit_msg"]]
+        res_df = n_top_data[["commit_id", "commit_msg"]]
 
         X_text = tokenizer_z.fit(df_data["cve_desc"].tolist()).transform(
             df_data["cve_desc"].tolist())

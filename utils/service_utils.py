@@ -4,7 +4,7 @@ import datetime
 from utils.service_data import RequestData,Commit
 from pydriller import Repository
 
-time_delta = 3
+time_delta = 5
 
 def gen_input_data(request:RequestData):
     commits_info = get_commits_info(request.pub_date,request.repos)
