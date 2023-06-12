@@ -40,7 +40,7 @@ with open("models/trained/wd/wide_preprocess.pkl", "rb") as f:
 
 
 prob_threshold = 0.4
-sim_threshold = 0.5
+sim_threshold = 0.4
 rough_n_top = 10
 fine_n_top = 5
 
@@ -67,14 +67,14 @@ class CommitRecRunnable(bentoml.Runnable):
 
     def rough_sort(self, df_data: pd.DataFrame):
         sent_sim = []
-        for row in df_data.iterrows():
+        for index,row in df_data.iterrows():
             sent_sim.append(compute_text_similarity(
                 row["commit_msg"], row["cve_desc"]).mean().numpy())
         df_data["text_sim"] = sent_sim
         df_data = df_data.sort_values(by="text_sim", ascending=False)
         return df_data
 
-    def fine_sort(self, X_wide, X_text, y_df, prob_threshold):
+    def fine_sort(self, X_wide, X_text, y_df):
         trainer = Trainer(self.widedeep, objective="binary",
                           metrics=[Precision])
         preds = trainer.predict_proba(X_wide=X_wide, X_text=X_text)
@@ -127,4 +127,4 @@ def __check_inputs(input: dict):
 def rank(request: dict):
     request = RequestData(**request)
     res_df = commit_rec_runner.rec.run(request)
-    print(res_df)
+    return res_df
