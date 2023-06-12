@@ -136,4 +136,4 @@ def rank(request: dict):
     except Exception as ex:
         response.status = ResponseCode.Exception.value
         response.msg = str(ex)
-    return response
+    return response.__dict__
