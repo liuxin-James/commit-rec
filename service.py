@@ -93,11 +93,10 @@ class CommitRecRunnable(bentoml.Runnable):
         df_data = self.rough_sort(df_data=df_data)
         df_data.drop(df_data[df_data.text_sim <
                      sim_threshold].index, inplace=True)
-        n_top_data = df_data.iloc[:rough_n_top, :]
 
-        X_wide = wide_preprocess.transform(n_top_data)
+        X_wide = wide_preprocess.transform(df_data)
 
-        res_df = n_top_data[["commit_id", "commit_msg"]]
+        res_df = df_data[["commit_id", "commit_msg"]]
 
         X_text = tokenizer_z.fit(df_data["cve_desc"].tolist()).transform(
             df_data["cve_desc"].tolist())
@@ -106,8 +105,11 @@ class CommitRecRunnable(bentoml.Runnable):
 
         res_df.drop(res_df[res_df.klass == 0].index, inplace=True)
         res_df.sort_values(by="prob", ascending=False)
+        
+        fine_sort_top_n = res_df.iloc[:fine_n_top,:]
+        
         results = []
-        for index, row in res_df.iterrows():
+        for index, row in fine_sort_top_n.iterrows():
             results.append(
                 {"commit_id": row["commit_id"], "prob": row["prob"], "klass": row["klass"]})
         return results
