@@ -114,8 +114,6 @@ class CommitUtils:
 
         commits = []
         for commit in Repository(path_to_repo=repos_path, since=since, to=to).traverse_commits():
-            if not commit.in_main_branch:
-                continue
             subject = commit.msg
             a_line_nums = commit.lines
             i_line_nums = commit.insertions
