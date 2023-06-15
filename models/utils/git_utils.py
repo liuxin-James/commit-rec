@@ -40,15 +40,6 @@ class CommitUtils:
 
         return list(set(commits))
 
-    # excute git command
-    def __excute_git_cmd(self, repos_path: str, cmd: str):
-        pwd = os.getcwd()
-        os.chdir(repos_path)
-        output = subprocess.check_output(
-            cmd, shell=True).decode("utf-8", errors="ignore")
-        os.chdir(pwd)
-        return output
-
     # extract vulnerability type & impact & function
     def get_commit_info(self, repos, commit_id) -> Commit:
         commit_info = self.mining_commit_information(repos, commit_id)
