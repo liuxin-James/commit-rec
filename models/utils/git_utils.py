@@ -72,8 +72,6 @@ class CommitUtils:
     def mining_single_commit_information(self, repos: str, commit_id) -> Commit:
         commit = None
         for commit in Repository(path_to_repo=repos, single=commit_id).traverse_commits():
-            if not commit.in_main_branch:
-                continue
             subject = commit.msg
             a_line_nums = commit.lines
             i_line_nums = commit.insertions
