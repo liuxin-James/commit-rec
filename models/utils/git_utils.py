@@ -25,8 +25,7 @@ class Commit:
 
 class CommitUtils:
     time_delta = 7
-    REPOS_PATH = "./repos"
-
+    
     # gain commits id list by nvd publish date
     def get_commits(self, nvd_page: NVD, repos_path: str):
         pub_date = nvd_page.pub_date.split(" ")[0]
@@ -40,14 +39,6 @@ class CommitUtils:
             commits.append(commit.hash)
 
         return list(set(commits))
-
-    # gain patch information by commit id
-    def __get_patch(self, repos, commit_id):
-        cmd = f"git format-patch -1 --stdout {commit_id}"
-
-        p = self.__excute_git_cmd(self.REPOS_PATH, repos, cmd)
-
-        return p
 
     # excute git command
     def __excute_git_cmd(self, repos_path: str, cmd: str):
