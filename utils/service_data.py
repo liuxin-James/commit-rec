@@ -9,6 +9,10 @@ class RequestData:
     pub_date: str = None
     cwe_type: str = None
     repos: str = None
+    from_tag:str = None
+    to_tag:str = None
+    from_time:str = None
+    to_time:str = None
     files: list = None
 
 

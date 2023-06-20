@@ -8,8 +8,8 @@ from nltk import sent_tokenize, word_tokenize
 
 from sentence_transformers import SentenceTransformer, util
 
-# model = SentenceTransformer(
-#     "models/base-models/sentence-transformers/all-MiniLM-L6-v2")
+model = SentenceTransformer(
+    "models/base-models/sentence-transformers/all-MiniLM-L6-v2")
 
 TIME_DELTA = 3
 

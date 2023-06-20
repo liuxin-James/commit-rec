@@ -124,16 +124,21 @@ svc = bentoml.Service("commit_rec", runners=[commit_rec_runner])
 # check request parameters TODO
 
 
-def __check_inputs(input: dict):
-    pass
-
+def __check_inputs(request:RequestData):
+    if not request.cve_id:
+        raise ValueError("cve_id is invalid!please check...")
+    if not request.repos:
+        raise ValueError("repos is invalid!please check...")
+    
 
 @svc.api(input=JSON(), output=JSON(), route=ROUTE+"rank")
 def rank(request: dict):
     request = RequestData(**request)
     response = Response()
     res_df = None
+
     try:
+        __check_inputs(request=request)
         res_df = commit_rec_runner.rec.run(request)
         response.status = ResponseCode.Success.value
         response.msg = "Success"
