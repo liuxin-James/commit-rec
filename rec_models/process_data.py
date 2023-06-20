@@ -1,14 +1,16 @@
 import os
 import re
+import time
 import json
 import pandas as pd
+import concurrent.futures
 
 from tqdm import tqdm
-from utils.class_data import NVD
-from utils.utils import extract_files, mining_commit_single, merge_featrue, mining_commit
+from utils.class_data import NVD,Commit
+from utils.utils import extract_files, mining_commit_single, merge_feature, mining_commit
 
-FILE_PATH = "data_source/b_ext_vul.json"
-OUT_FILE_PATH = "data_source/ext_vul.json"
+FILE_PATH = "rec_models/data_source/b_ext_vul.json"
+OUT_FILE_PATH = "rec_models/data_source/ext_vul.json"
 
 PRJ_SAMPLES = ["FFmpeg",
                "ImageMagick",
@@ -21,8 +23,10 @@ PRJ_SAMPLES = ["FFmpeg",
                "showdoc",
                "tcpdump"]
 
-COLS = ["text_sim","share_files_nums", "share_files_rate", "only_commit_files_nums", "exist_cve",
+COLS = ["text_sim", "share_files_nums", "share_files_rate", "only_commit_files_nums", "exist_cve",
         "insert_loc_nums", "delete_loc_nums", "all_loc_nums", "all_method_nums", "commit_msg", "cve_desc", "commit_id", "is_right"]
+
+max_workers = 5
 
 
 def extract_commit_id():
@@ -57,7 +61,7 @@ def extract_commit_id():
     for nvd in nvd_information:
         removed_list = []
         for commit_id in nvd["commit_id"]:
-            if len(commit_id)!=40:
+            if len(commit_id) != 40:
                 removed_list.append(commit_id)
         for rm in removed_list:
             nvd["commit_id"].remove(rm)
@@ -81,31 +85,22 @@ def build_positive_dataset():
     with open(OUT_FILE_PATH, "r", encoding="utf-8") as f:
         nvds = json.load(f)
 
-    featrues = []
-
-    for p, vuls in nvds.items():
-        if os.path.exists(f"repos/{p}"):
-            for vul in tqdm(vuls,desc=f"{p}: vuls"):
-                nvd = NVD(
-                    cve_id=vul["vul_id"], description=vul["description"], pub_date=vul["publish_date"], files=extract_files(vul["description"]))
-                for commit_id in vul["commit_id"]:
-                    commit_data = mining_commit_single(
-                        repos=f"repos/{p}", commit_id=commit_id)
-                    if commit_data:
-                        featrue = merge_featrue(nvd, commit=commit_data)
-                        featrue.append(commit_data.subject)
-                        featrue.append(nvd.description)
-                        featrue.append(commit_data.commit_id)
-                        if commit_data.commit_id in vul["commit_id"]:
-                            featrue.append(1)
-                        else:
-                            featrue.append(0)
-                        featrues.append(featrue)
-            if featrues:
-                df_data = pd.DataFrame(featrues)
+    features = []
+    start_time = time.perf_counter()
+    with concurrent.futures.ProcessPoolExecutor(max_workers=max_workers) as executor:
+        to_do = []
+        for p, vuls in nvds.items():
+            if os.path.exists(f"repos/{p}"):
+                future = executor.submit(do_mining, p, vuls, True)
+                to_do.append(future)
+        for future in concurrent.futures.as_completed(to_do):
+            features = future.result()
+            if features:
+                df_data = pd.DataFrame(features)
                 df_data.to_csv("train_positive.csv", mode='a',
-                            header=False, index=None)
-            featrues.clear()
+                               header=False, index=None)
+    end_time = time.perf_counter()
+    print(f"mining {len(nvds)} projects in {end_time-start_time} seconds")
 
 
 def build_train_dataset():
@@ -115,30 +110,78 @@ def build_train_dataset():
 
     featrues = []
 
-    for p, vuls in nvds.items():
-        if os.path.exists(f"repos/{p}"):
-            for vul in vuls:
-                nvd = NVD(
-                    cve_id=vul["vul_id"], description=vul["description"], pub_date=vul["publish_date"], files=extract_files(vul["description"]))
-                for commit_id in vul["commit_id"]:
-                    commit_data = mining_commit(
-                        nvd=nvd, repos=f"repos/{p}")
-                    if commit_data:
-                        featrue = merge_featrue(nvd, commit=commit_data)
-                        featrue.append(commit_data.subject)
-                        featrue.append(nvd.description)
-                        featrue.append(commit_data.commit_id)
-                        if commit_data.commit_id in vul["commit_id"]:
-                            featrue.append(1)
-                        else:
-                            featrue.append(0)
-                        featrues.append(featrue)
-        if featrues:
-            df_data = pd.DataFrame(featrues)
-            df_data.to_csv("train.csv", mode='a',
-                           header=False, index=None)
-        featrues.clear()
+    start_time = time.perf_counter()
+    with concurrent.futures.ProcessPoolExecutor(max_workers=max_workers) as executor:
+        to_do = []
+        for p, vuls in nvds.items():
+            if os.path.exists(f"repos/{p}"):
+                future = executor.submit(do_mining, p, vuls, False)
+                to_do.append(future)
+        for future in concurrent.futures.as_completed(to_do):
+            features = future.result()
+            if features:
+                df_data = pd.DataFrame(features)
+                df_data.to_csv("train_all.csv", mode='a',
+                               header=False, index=None)
+    end_time = time.perf_counter()
+    print(f"mining {len(nvds)} projects in {end_time-start_time} seconds")
 
+
+def build_dataset(max_workers,out_path, is_positive=True):
+    nvds = None
+    with open(OUT_FILE_PATH, "r", encoding="utf-8") as f:
+        nvds = json.load(f)
+
+    features = []
+
+    start_time = time.perf_counter()
+    with concurrent.futures.ProcessPoolExecutor(max_workers=max_workers) as executor:
+        to_do = []
+        for p, vuls in nvds.items():
+            if os.path.exists(f"repos/{p}"):
+                future = executor.submit(do_mining, p, vuls, is_positive)
+                to_do.append(future)
+        for future in concurrent.futures.as_completed(to_do):
+            features = future.result()
+            if features:
+                df_data = pd.DataFrame(features)
+                df_data.to_csv(out_path, mode='a',
+                               header=False, index=None)
+    end_time = time.perf_counter()
+    print(f"mining {len(nvds)} projects in {end_time-start_time} seconds")
+
+
+def do_mining(proj: str, vuls: list[dict], is_single=True):
+    featrues = []
+    for vul in tqdm(vuls, desc=f"{proj}: vuls", ncols=100):
+        nvd = NVD(cve_id=vul["vul_id"], description=vul["description"],
+                  pub_date=vul["publish_date"], files=extract_files(vul["description"]))
+        for commit_id in vul["commit_id"]:
+            commit_data = None
+            if is_single:
+                commit_data = mining_commit_single(
+                    repos=f"repos/{proj}", commit_id=commit_id)
+                if commit_data:
+                    featrue = build_features(nvd,commit_data,vul)
+                    featrues.append(featrue)
+            else:
+                commit_data = mining_commit(
+                    nvd=nvd, repos=f"repos/{proj}")
+                for commit in commit_data:
+                    featrue = build_features(nvd,commit,vul)
+                    featrues.append(featrue)
+    return featrues
+
+def build_features(nvd:NVD,commit:Commit,vul:dict):
+    featrue = merge_feature(nvd, commit=commit)
+    featrue.append(commit.subject)
+    featrue.append(nvd.description)
+    featrue.append(commit.commit_id)
+    if commit.commit_id in vul["commit_id"]:
+        featrue.append(1)
+    else:
+        featrue.append(0)
+    return featrue
 
 if __name__ == "__main__":
-    extract_commit_id()
+    build_dataset(max_workers=5,out_path="train_p_bak.csv",is_positive=False)

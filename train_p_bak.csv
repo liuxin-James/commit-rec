@@ -1,0 +1,791 @@
+0.0085427425801754,0,0.0,1,0,2,2,4,1,fix crash when ENV['NOTIFY_SOCKET'] is not set,Cross-site request forgery (CSRF) vulnerability in pcsd web UI in pcs before 0.9.149.,3113da8b6d6c82c136a0229fef381e9930fbeb63,0
+0.03491124510765076,0,0.0,1,0,2,2,4,0,Merge branch 'fix-systemd-notify',Cross-site request forgery (CSRF) vulnerability in pcsd web UI in pcs before 0.9.149.,ed05f05bee804a216526959adb9da9d4c2ab0cdc,0
+0.14058443903923035,0,0.0,2,0,3,3,6,1,doc: fix discrepancies between usage and man page,Cross-site request forgery (CSRF) vulnerability in pcsd web UI in pcs before 0.9.149.,4c127b8775ed4bb36a931f4facc2e5ae86ed847f,0
+0.19101059436798096,0,0.0,1,0,2,2,4,1,fix crash when ENV['NOTIFY_SOCKET'] is not set,Session fixation vulnerability in pcsd in pcs before 0.9.157.,3113da8b6d6c82c136a0229fef381e9930fbeb63,0
+0.23842012882232666,0,0.0,1,0,2,2,4,0,Merge branch 'fix-systemd-notify',Session fixation vulnerability in pcsd in pcs before 0.9.157.,ed05f05bee804a216526959adb9da9d4c2ab0cdc,0
+0.2283601015806198,0,0.0,2,0,3,3,6,1,doc: fix discrepancies between usage and man page,Session fixation vulnerability in pcsd in pcs before 0.9.157.,4c127b8775ed4bb36a931f4facc2e5ae86ed847f,0
+0.19101059436798096,0,0.0,1,0,2,2,4,1,fix crash when ENV['NOTIFY_SOCKET'] is not set,Session fixation vulnerability in pcsd in pcs before 0.9.157.,3113da8b6d6c82c136a0229fef381e9930fbeb63,0
+0.23842012882232666,0,0.0,1,0,2,2,4,0,Merge branch 'fix-systemd-notify',Session fixation vulnerability in pcsd in pcs before 0.9.157.,ed05f05bee804a216526959adb9da9d4c2ab0cdc,0
+0.2283601015806198,0,0.0,2,0,3,3,6,1,doc: fix discrepancies between usage and man page,Session fixation vulnerability in pcsd in pcs before 0.9.157.,4c127b8775ed4bb36a931f4facc2e5ae86ed847f,0
+0.19101059436798096,0,0.0,1,0,2,2,4,1,fix crash when ENV['NOTIFY_SOCKET'] is not set,Session fixation vulnerability in pcsd in pcs before 0.9.157.,3113da8b6d6c82c136a0229fef381e9930fbeb63,0
+0.23842012882232666,0,0.0,1,0,2,2,4,0,Merge branch 'fix-systemd-notify',Session fixation vulnerability in pcsd in pcs before 0.9.157.,ed05f05bee804a216526959adb9da9d4c2ab0cdc,0
+0.2283601015806198,0,0.0,2,0,3,3,6,1,doc: fix discrepancies between usage and man page,Session fixation vulnerability in pcsd in pcs before 0.9.157.,4c127b8775ed4bb36a931f4facc2e5ae86ed847f,0
+0.22949877381324768,0,0.0,1,0,0,0,0,0,rename test module to be discoverable,ClusterLabs pcs before version 0.9.157 is vulnerable to a cross-site scripting vulnerability due to improper validation of Node name field when creating new cluster or adding existing cluster.,d0e547cba107b2fca9c30f7fd13c6c35f0117404,0
+0.31472545862197876,0,0.0,1,0,7,15,22,0,Combined identical error messages in _imaging,Buffer overflow in the ImagingFliDecode function in libImaging/FliDecode.c in Pillow before 3.1.1 allows remote attackers to cause a denial of service (crash) via a crafted FLI file.,d6846403dd04981e0d04550a47155e5079343276,0
+0.25512629747390747,0,0.0,1,0,7,15,22,0,"Merge pull request #1825 from radarhere/imaging
+
+Combined identical error messages in _imaging",Buffer overflow in the ImagingFliDecode function in libImaging/FliDecode.c in Pillow before 3.1.1 allows remote attackers to cause a denial of service (crash) via a crafted FLI file.,8fb400653020b51b6d7bf358f7e050a23fd52331,0
+0.1050545945763588,0,0.0,1,0,0,1,1,0,"Merge pull request #1823 from radarhere/classifier
+
+Removed outdated classifier",Buffer overflow in the ImagingFliDecode function in libImaging/FliDecode.c in Pillow before 3.1.1 allows remote attackers to cause a denial of service (crash) via a crafted FLI file.,371e981628239c5fee5745cc2ab33bb73f2861ff,0
+0.00036156148416921496,0,0.0,1,0,6,0,6,0,Update CHANGES.rst [ci skip],Buffer overflow in the ImagingFliDecode function in libImaging/FliDecode.c in Pillow before 3.1.1 allows remote attackers to cause a denial of service (crash) via a crafted FLI file.,c43106374a2112f85b047a399840cbfbeac074c1,0
+0.054712604731321335,0,0.0,1,0,1,1,2,1,Fixed typo,Buffer overflow in the ImagingFliDecode function in libImaging/FliDecode.c in Pillow before 3.1.1 allows remote attackers to cause a denial of service (crash) via a crafted FLI file.,435858afaa3088d54dc280f4a512786f0e404177,0
+0.08073157072067261,0,0.0,3,0,7,1,8,1,Added CMYK mode for opening EPS files,Buffer overflow in the ImagingFliDecode function in libImaging/FliDecode.c in Pillow before 3.1.1 allows remote attackers to cause a denial of service (crash) via a crafted FLI file.,392d5673523973d3a421e958f369a046391931cf,0
+0.09100212156772614,0,0.0,1,0,1,1,2,0,"Merge pull request #1829 from radarhere/typo
+
+Fixed typo",Buffer overflow in the ImagingFliDecode function in libImaging/FliDecode.c in Pillow before 3.1.1 allows remote attackers to cause a denial of service (crash) via a crafted FLI file.,ac6e1ef949b085417bc2364b6f2553e23447e4f2,0
+0.010062645189464092,0,0.0,1,0,1,1,2,1,Minor grammar fix,Buffer overflow in the ImagingFliDecode function in libImaging/FliDecode.c in Pillow before 3.1.1 allows remote attackers to cause a denial of service (crash) via a crafted FLI file.,47379441974436fef90c7af2ba81b6311d40b682,0
+0.2706744968891144,0,0.0,1,0,12,30,42,1,Removed duplicate code in ImagePalette,Buffer overflow in the ImagingFliDecode function in libImaging/FliDecode.c in Pillow before 3.1.1 allows remote attackers to cause a denial of service (crash) via a crafted FLI file.,f9b3a5dbe4893c24002c8253f0473d40890d85b0,0
+-0.03581460937857628,0,0.0,1,0,1,1,2,0,Updated redirected URL,Buffer overflow in the ImagingFliDecode function in libImaging/FliDecode.c in Pillow before 3.1.1 allows remote attackers to cause a denial of service (crash) via a crafted FLI file.,89901e089c1737c7dda547b9eac3d02a2c345d02,0
+0.1820569932460785,0,0.0,1,0,5,16,21,0,Changed documentation to refer to ImageSequence Iterator class [ci skip],Buffer overflow in the ImagingFliDecode function in libImaging/FliDecode.c in Pillow before 3.1.1 allows remote attackers to cause a denial of service (crash) via a crafted FLI file.,ea3dcfda0ca48998de9bebc801d843172a9a9e33,0
+0.3480665385723114,0,0.0,1,0,7,15,22,0,Combined identical error messages in _imaging,Buffer overflow in the ImagingLibTiffDecode function in libImaging/TiffDecode.c in Pillow before 3.1.1 allows remote attackers to overwrite memory via a crafted TIFF file.,d6846403dd04981e0d04550a47155e5079343276,0
+0.2696898877620697,0,0.0,1,0,7,15,22,0,"Merge pull request #1825 from radarhere/imaging
+
+Combined identical error messages in _imaging",Buffer overflow in the ImagingLibTiffDecode function in libImaging/TiffDecode.c in Pillow before 3.1.1 allows remote attackers to overwrite memory via a crafted TIFF file.,8fb400653020b51b6d7bf358f7e050a23fd52331,0
+0.08904460817575455,0,0.0,1,0,0,1,1,0,"Merge pull request #1823 from radarhere/classifier
+
+Removed outdated classifier",Buffer overflow in the ImagingLibTiffDecode function in libImaging/TiffDecode.c in Pillow before 3.1.1 allows remote attackers to overwrite memory via a crafted TIFF file.,371e981628239c5fee5745cc2ab33bb73f2861ff,0
+0.04503811150789261,0,0.0,1,0,6,0,6,0,Update CHANGES.rst [ci skip],Buffer overflow in the ImagingLibTiffDecode function in libImaging/TiffDecode.c in Pillow before 3.1.1 allows remote attackers to overwrite memory via a crafted TIFF file.,c43106374a2112f85b047a399840cbfbeac074c1,0
+-0.013878119178116322,0,0.0,1,0,1,1,2,1,Fixed typo,Buffer overflow in the ImagingLibTiffDecode function in libImaging/TiffDecode.c in Pillow before 3.1.1 allows remote attackers to overwrite memory via a crafted TIFF file.,435858afaa3088d54dc280f4a512786f0e404177,0
+0.14594238996505737,0,0.0,3,0,7,1,8,1,Added CMYK mode for opening EPS files,Buffer overflow in the ImagingLibTiffDecode function in libImaging/TiffDecode.c in Pillow before 3.1.1 allows remote attackers to overwrite memory via a crafted TIFF file.,392d5673523973d3a421e958f369a046391931cf,0
+0.06621288508176804,0,0.0,1,0,1,1,2,0,"Merge pull request #1829 from radarhere/typo
+
+Fixed typo",Buffer overflow in the ImagingLibTiffDecode function in libImaging/TiffDecode.c in Pillow before 3.1.1 allows remote attackers to overwrite memory via a crafted TIFF file.,ac6e1ef949b085417bc2364b6f2553e23447e4f2,0
+-0.0036934842355549335,0,0.0,1,0,1,1,2,1,Minor grammar fix,Buffer overflow in the ImagingLibTiffDecode function in libImaging/TiffDecode.c in Pillow before 3.1.1 allows remote attackers to overwrite memory via a crafted TIFF file.,47379441974436fef90c7af2ba81b6311d40b682,0
+0.33386579155921936,0,0.0,1,0,12,30,42,1,Removed duplicate code in ImagePalette,Buffer overflow in the ImagingLibTiffDecode function in libImaging/TiffDecode.c in Pillow before 3.1.1 allows remote attackers to overwrite memory via a crafted TIFF file.,f9b3a5dbe4893c24002c8253f0473d40890d85b0,0
+0.010386206209659576,0,0.0,1,0,1,1,2,0,Updated redirected URL,Buffer overflow in the ImagingLibTiffDecode function in libImaging/TiffDecode.c in Pillow before 3.1.1 allows remote attackers to overwrite memory via a crafted TIFF file.,89901e089c1737c7dda547b9eac3d02a2c345d02,0
+0.22388878464698792,0,0.0,1,0,5,16,21,0,Changed documentation to refer to ImageSequence Iterator class [ci skip],Buffer overflow in the ImagingLibTiffDecode function in libImaging/TiffDecode.c in Pillow before 3.1.1 allows remote attackers to overwrite memory via a crafted TIFF file.,ea3dcfda0ca48998de9bebc801d843172a9a9e33,0
+-0.08307187259197235,0,0.0,0,0,11783,7318,19101,0,Merge from master,PIL/IcnsImagePlugin.py in Python Imaging Library (PIL) and Pillow before 2.3.2 and 2.5.x before 2.5.2 allows remote attackers to cause a denial of service via a crafted block size.,c7b90f39f4427ce57fe9b14b3770907edcfe0396,0
+0.02742600440979004,0,0.0,2,0,50,20,70,6,working lcms2 build,PIL/IcnsImagePlugin.py in Python Imaging Library (PIL) and Pillow before 2.3.2 and 2.5.x before 2.5.2 allows remote attackers to cause a denial of service via a crafted block size.,b2ea0941f7428d0684c447d89834a495459c5821,0
+0.1602906733751297,0,0.0,1,0,6,0,6,1,backup implementation of Round for windows platforms,PIL/IcnsImagePlugin.py in Python Imaging Library (PIL) and Pillow before 2.3.2 and 2.5.x before 2.5.2 allows remote attackers to cause a denial of service via a crafted block size.,97b5c72630c553722ed79bc5ac152633f95be28a,0
+0.06198517978191376,0,0.0,1,0,2,2,4,0,mp is a little twitchy on windows,PIL/IcnsImagePlugin.py in Python Imaging Library (PIL) and Pillow before 2.3.2 and 2.5.x before 2.5.2 allows remote attackers to cause a denial of service via a crafted block size.,cd44e1427a6437aea03a72612bd728cf563e09aa,0
+0.07910051941871643,0,0.0,1,0,12,0,12,0,new openjpeg2k,PIL/IcnsImagePlugin.py in Python Imaging Library (PIL) and Pillow before 2.3.2 and 2.5.x before 2.5.2 allows remote attackers to cause a denial of service via a crafted block size.,f6dd5d3dbb05c7ed113b635d3f76383b44f7e4e8,0
+0.07213865220546722,0,0.0,1,0,8,3,11,1,allowing for libwebp* library names,PIL/IcnsImagePlugin.py in Python Imaging Library (PIL) and Pillow before 2.3.2 and 2.5.x before 2.5.2 allows remote attackers to cause a denial of service via a crafted block size.,aa105bf89d1f83001c83896eb7193198a0a0f2f7,0
+0.03461550176143646,0,0.0,1,0,5,4,9,1,working webp build,PIL/IcnsImagePlugin.py in Python Imaging Library (PIL) and Pillow before 2.3.2 and 2.5.x before 2.5.2 allows remote attackers to cause a denial of service via a crafted block size.,e99631125df736b711d8b91f55845200a36f5210,0
+0.27377405762672424,0,0.0,1,0,1,1,2,1,only build tiff libs,PIL/IcnsImagePlugin.py in Python Imaging Library (PIL) and Pillow before 2.3.2 and 2.5.x before 2.5.2 allows remote attackers to cause a denial of service via a crafted block size.,c95515ec528a44167903db14fbfeb3239c788136,0
+0.04087027907371521,0,0.0,1,0,1,0,1,1,clean all of lcms2,PIL/IcnsImagePlugin.py in Python Imaging Library (PIL) and Pillow before 2.3.2 and 2.5.x before 2.5.2 allows remote attackers to cause a denial of service via a crafted block size.,4e3bc5558dd51648df7e78051ffc2e2a8e6343c1,0
+0.2243642359972,0,0.0,1,0,5,2,7,1,Tests need to pass without imagemagick around,PIL/IcnsImagePlugin.py in Python Imaging Library (PIL) and Pillow before 2.3.2 and 2.5.x before 2.5.2 allows remote attackers to cause a denial of service via a crafted block size.,b14e3daea159b6636013ec64edf1f92c0b8d6a13,0
+0.12770003080368042,0,0.0,2,0,11,3,14,2,works with nose/unittest,PIL/IcnsImagePlugin.py in Python Imaging Library (PIL) and Pillow before 2.3.2 and 2.5.x before 2.5.2 allows remote attackers to cause a denial of service via a crafted block size.,9c6a9172c0e38b753eda817b00590539cb2f7f9c,0
+0.11484035104513168,0,0.0,1,0,2,2,4,1,"just build the libs, not the progs",PIL/IcnsImagePlugin.py in Python Imaging Library (PIL) and Pillow before 2.3.2 and 2.5.x before 2.5.2 allows remote attackers to cause a denial of service via a crafted block size.,3e219d818c2b59e44c342dc21331ead061ccb330,0
+-0.0016779836732894182,0,0.0,1,0,2,2,4,0,working build on all 4 compilers,PIL/IcnsImagePlugin.py in Python Imaging Library (PIL) and Pillow before 2.3.2 and 2.5.x before 2.5.2 allows remote attackers to cause a denial of service via a crafted block size.,304e8add466417d23c696622b5b0f98a8bca70ca,0
+0.1602906733751297,0,0.0,1,0,6,0,6,1,backup implementation of Round for windows platforms,PIL/IcnsImagePlugin.py in Python Imaging Library (PIL) and Pillow before 2.3.2 and 2.5.x before 2.5.2 allows remote attackers to cause a denial of service via a crafted block size.,9d00686f53296e7aafa9bd66789e7dce7367cc96,0
+0.06198517978191376,0,0.0,1,0,2,2,4,0,mp is a little twitchy on windows,PIL/IcnsImagePlugin.py in Python Imaging Library (PIL) and Pillow before 2.3.2 and 2.5.x before 2.5.2 allows remote attackers to cause a denial of service via a crafted block size.,1d58e711fede7059a9299a21f6121b9d41d44380,0
+0.07213865220546722,0,0.0,1,0,8,3,11,1,allowing for libwebp* library names,PIL/IcnsImagePlugin.py in Python Imaging Library (PIL) and Pillow before 2.3.2 and 2.5.x before 2.5.2 allows remote attackers to cause a denial of service via a crafted block size.,136345a5a57afb76d15090e4ec9296659e59e003,0
+0.10752879083156586,0,0.0,3,0,16,5,21,0,"Merge pull request #871 from wiredfool/windows_fixes2
+
+Windows fixes",PIL/IcnsImagePlugin.py in Python Imaging Library (PIL) and Pillow before 2.3.2 and 2.5.x before 2.5.2 allows remote attackers to cause a denial of service via a crafted block size.,4c26e08d8a0e331663f6f574ad2bddbef68b0d07,0
+0.023086296394467354,0,0.0,1,0,3,0,3,0,Update CHANGES.rst [CI skip],PIL/IcnsImagePlugin.py in Python Imaging Library (PIL) and Pillow before 2.3.2 and 2.5.x before 2.5.2 allows remote attackers to cause a denial of service via a crafted block size.,566448fbf0b2bb296c00664b65919039945c5c34,0
+0.042921919375658035,0,0.0,2,0,109,0,109,8,Tests for GimpGradientFile and a sample .ggr by me,PIL/IcnsImagePlugin.py in Python Imaging Library (PIL) and Pillow before 2.3.2 and 2.5.x before 2.5.2 allows remote attackers to cause a denial of service via a crafted block size.,674fd9744df001de0bd3a978a211ed424dd78f57,0
+0.026049258187413216,0,0.0,2,0,24,3,27,2,Add (failing) test for GIMP 1.3 gradient files and .ggr by me,PIL/IcnsImagePlugin.py in Python Imaging Library (PIL) and Pillow before 2.3.2 and 2.5.x before 2.5.2 allows remote attackers to cause a denial of service via a crafted block size.,dbf0ee3631c51aa376693311475d1425b1fbb9fa,0
+0.04009316861629486,0,0.0,1,0,7,1,8,1,Fix for GIMP 1.3 gradient files,PIL/IcnsImagePlugin.py in Python Imaging Library (PIL) and Pillow before 2.3.2 and 2.5.x before 2.5.2 allows remote attackers to cause a denial of service via a crafted block size.,6b5871a484057e82ff00907d4b84cfde2837a0ad,0
+0.12909212708473206,0,0.0,2,0,14,8,22,2,flake8,PIL/IcnsImagePlugin.py in Python Imaging Library (PIL) and Pillow before 2.3.2 and 2.5.x before 2.5.2 allows remote attackers to cause a denial of service via a crafted block size.,08499d35470013094cedc194fe079ab9589baef8,0
+0.14782896637916565,0,0.0,1,0,11,0,11,1,Test GimpGradientFile.sine(),PIL/IcnsImagePlugin.py in Python Imaging Library (PIL) and Pillow before 2.3.2 and 2.5.x before 2.5.2 allows remote attackers to cause a denial of service via a crafted block size.,0a3b25ef9ec73dec0c83a6d6e3887b7406fcb2cc,0
+0.16435299813747406,0,0.0,1,0,1,1,2,1,Fix for Python 3,PIL/IcnsImagePlugin.py in Python Imaging Library (PIL) and Pillow before 2.3.2 and 2.5.x before 2.5.2 allows remote attackers to cause a denial of service via a crafted block size.,998955b024fbd98255bf806f17e24dde639dc1a9,0
+-0.03622745722532272,0,0.0,2,0,8,4,12,2,Remove duplicate tag caused by typo in spec: http://www.asmail.be/msg0055321032.html,PIL/IcnsImagePlugin.py in Python Imaging Library (PIL) and Pillow before 2.3.2 and 2.5.x before 2.5.2 allows remote attackers to cause a denial of service via a crafted block size.,952d1d5bf515f57a62b11eb0e3d12da71e4fbbf0,0
+0.12909212708473206,0,0.0,1,0,5,5,10,0,flake8,PIL/IcnsImagePlugin.py in Python Imaging Library (PIL) and Pillow before 2.3.2 and 2.5.x before 2.5.2 allows remote attackers to cause a denial of service via a crafted block size.,ec2a225fff881be1bb89edd7fff398fdb196b313,0
+0.12909212708473206,0,0.0,56,0,646,432,1078,125,flake8,PIL/IcnsImagePlugin.py in Python Imaging Library (PIL) and Pillow before 2.3.2 and 2.5.x before 2.5.2 allows remote attackers to cause a denial of service via a crafted block size.,8de95676e0fd89f2326b3953488ab66ff29cd2d0,0
+-0.052604660391807556,0,0.0,2,0,8,11,19,0,"Merge pull request #864 from hugovk/make-j
+
+Update WebP and build it and OpenJPEG with 4 job slots",PIL/IcnsImagePlugin.py in Python Imaging Library (PIL) and Pillow before 2.3.2 and 2.5.x before 2.5.2 allows remote attackers to cause a denial of service via a crafted block size.,0c94adc53871835ef0180115e2ce420f75a1468c,0
+0.0697157084941864,0,0.0,2,0,5,6,11,0,Refactor inheritance tree of test_file_libtiff_small,PIL/IcnsImagePlugin.py in Python Imaging Library (PIL) and Pillow before 2.3.2 and 2.5.x before 2.5.2 allows remote attackers to cause a denial of service via a crafted block size.,3e361d800d99f056324e502c869f957076237f18,0
+0.11511542648077011,0,0.0,2,0,5,6,11,0,"Merge pull request #872 from wiredfool/test_libtiff_inheritance
+
+Refactor inheritance tree of test_file_libtiff_small",PIL/IcnsImagePlugin.py in Python Imaging Library (PIL) and Pillow before 2.3.2 and 2.5.x before 2.5.2 allows remote attackers to cause a denial of service via a crafted block size.,72909aac4e736affce1b954d63de2a565327cb83,0
+0.10388920456171036,0,0.0,1,0,3,0,3,0,Additional dependencies [ci skip],PIL/IcnsImagePlugin.py in Python Imaging Library (PIL) and Pillow before 2.3.2 and 2.5.x before 2.5.2 allows remote attackers to cause a denial of service via a crafted block size.,8b2e7ee48ac9317b79bb7f0053a9201ada8d7d08,0
+0.12934716045856476,0,0.0,2,0,11,2,13,1,Correct duplicate EXIF tags: http://www.exiv2.org/tags.html,PIL/IcnsImagePlugin.py in Python Imaging Library (PIL) and Pillow before 2.3.2 and 2.5.x before 2.5.2 allows remote attackers to cause a denial of service via a crafted block size.,d866a29bd8345e9877bd84f66cd995029cc32125,0
+0.12909212708473206,0,0.0,1,0,14,9,23,3,flake8,PIL/IcnsImagePlugin.py in Python Imaging Library (PIL) and Pillow before 2.3.2 and 2.5.x before 2.5.2 allows remote attackers to cause a denial of service via a crafted block size.,a428321bee180ee5c253bd49eb577f0a40066ee9,0
+0.20520596206188202,0,0.0,2,0,4,4,8,1,"Correct the correction: RelatedImageWidth=0x1001, RelatedImageLength=0x1002",PIL/IcnsImagePlugin.py in Python Imaging Library (PIL) and Pillow before 2.3.2 and 2.5.x before 2.5.2 allows remote attackers to cause a denial of service via a crafted block size.,c2f09036275861d08382d82feba11532f9dd941d,0
+0.3534654378890991,0,0.0,1,0,7,15,22,0,Combined identical error messages in _imaging,Buffer overflow in the ImagingPcdDecode function in PcdDecode.c in Pillow before 3.1.1 and Python Imaging Library (PIL) 1.1.7 and earlier allows remote attackers to cause a denial of service (crash) via a crafted PhotoCD file.,d6846403dd04981e0d04550a47155e5079343276,0
+0.27469831705093384,0,0.0,1,0,7,15,22,0,"Merge pull request #1825 from radarhere/imaging
+
+Combined identical error messages in _imaging",Buffer overflow in the ImagingPcdDecode function in PcdDecode.c in Pillow before 3.1.1 and Python Imaging Library (PIL) 1.1.7 and earlier allows remote attackers to cause a denial of service (crash) via a crafted PhotoCD file.,8fb400653020b51b6d7bf358f7e050a23fd52331,0
+0.036703288555145264,0,0.0,1,0,0,1,1,0,"Merge pull request #1823 from radarhere/classifier
+
+Removed outdated classifier",Buffer overflow in the ImagingPcdDecode function in PcdDecode.c in Pillow before 3.1.1 and Python Imaging Library (PIL) 1.1.7 and earlier allows remote attackers to cause a denial of service (crash) via a crafted PhotoCD file.,371e981628239c5fee5745cc2ab33bb73f2861ff,0
+0.04102142155170441,0,0.0,1,0,6,0,6,0,Update CHANGES.rst [ci skip],Buffer overflow in the ImagingPcdDecode function in PcdDecode.c in Pillow before 3.1.1 and Python Imaging Library (PIL) 1.1.7 and earlier allows remote attackers to cause a denial of service (crash) via a crafted PhotoCD file.,c43106374a2112f85b047a399840cbfbeac074c1,0
+0.017021529376506805,0,0.0,1,0,1,1,2,1,Fixed typo,Buffer overflow in the ImagingPcdDecode function in PcdDecode.c in Pillow before 3.1.1 and Python Imaging Library (PIL) 1.1.7 and earlier allows remote attackers to cause a denial of service (crash) via a crafted PhotoCD file.,435858afaa3088d54dc280f4a512786f0e404177,0
+0.14653700590133667,0,0.0,3,0,7,1,8,1,Added CMYK mode for opening EPS files,Buffer overflow in the ImagingPcdDecode function in PcdDecode.c in Pillow before 3.1.1 and Python Imaging Library (PIL) 1.1.7 and earlier allows remote attackers to cause a denial of service (crash) via a crafted PhotoCD file.,392d5673523973d3a421e958f369a046391931cf,0
+0.04026615619659424,0,0.0,1,0,1,1,2,0,"Merge pull request #1829 from radarhere/typo
+
+Fixed typo",Buffer overflow in the ImagingPcdDecode function in PcdDecode.c in Pillow before 3.1.1 and Python Imaging Library (PIL) 1.1.7 and earlier allows remote attackers to cause a denial of service (crash) via a crafted PhotoCD file.,ac6e1ef949b085417bc2364b6f2553e23447e4f2,0
+-0.05206281691789627,0,0.0,1,0,1,1,2,1,Minor grammar fix,Buffer overflow in the ImagingPcdDecode function in PcdDecode.c in Pillow before 3.1.1 and Python Imaging Library (PIL) 1.1.7 and earlier allows remote attackers to cause a denial of service (crash) via a crafted PhotoCD file.,47379441974436fef90c7af2ba81b6311d40b682,0
+0.20261844992637634,0,0.0,1,0,12,30,42,1,Removed duplicate code in ImagePalette,Buffer overflow in the ImagingPcdDecode function in PcdDecode.c in Pillow before 3.1.1 and Python Imaging Library (PIL) 1.1.7 and earlier allows remote attackers to cause a denial of service (crash) via a crafted PhotoCD file.,f9b3a5dbe4893c24002c8253f0473d40890d85b0,0
+-0.002991884481161833,0,0.0,1,0,1,1,2,0,Updated redirected URL,Buffer overflow in the ImagingPcdDecode function in PcdDecode.c in Pillow before 3.1.1 and Python Imaging Library (PIL) 1.1.7 and earlier allows remote attackers to cause a denial of service (crash) via a crafted PhotoCD file.,89901e089c1737c7dda547b9eac3d02a2c345d02,0
+0.23115910589694977,0,0.0,1,0,5,16,21,0,Changed documentation to refer to ImageSequence Iterator class [ci skip],Buffer overflow in the ImagingPcdDecode function in PcdDecode.c in Pillow before 3.1.1 and Python Imaging Library (PIL) 1.1.7 and earlier allows remote attackers to cause a denial of service (crash) via a crafted PhotoCD file.,ea3dcfda0ca48998de9bebc801d843172a9a9e33,0
+0.3534654378890991,0,0.0,1,0,7,15,22,0,Combined identical error messages in _imaging,Buffer overflow in the ImagingPcdDecode function in PcdDecode.c in Pillow before 3.1.1 and Python Imaging Library (PIL) 1.1.7 and earlier allows remote attackers to cause a denial of service (crash) via a crafted PhotoCD file.,d6846403dd04981e0d04550a47155e5079343276,0
+0.27469831705093384,0,0.0,1,0,7,15,22,0,"Merge pull request #1825 from radarhere/imaging
+
+Combined identical error messages in _imaging",Buffer overflow in the ImagingPcdDecode function in PcdDecode.c in Pillow before 3.1.1 and Python Imaging Library (PIL) 1.1.7 and earlier allows remote attackers to cause a denial of service (crash) via a crafted PhotoCD file.,8fb400653020b51b6d7bf358f7e050a23fd52331,0
+0.036703288555145264,0,0.0,1,0,0,1,1,0,"Merge pull request #1823 from radarhere/classifier
+
+Removed outdated classifier",Buffer overflow in the ImagingPcdDecode function in PcdDecode.c in Pillow before 3.1.1 and Python Imaging Library (PIL) 1.1.7 and earlier allows remote attackers to cause a denial of service (crash) via a crafted PhotoCD file.,371e981628239c5fee5745cc2ab33bb73f2861ff,0
+0.04102142155170441,0,0.0,1,0,6,0,6,0,Update CHANGES.rst [ci skip],Buffer overflow in the ImagingPcdDecode function in PcdDecode.c in Pillow before 3.1.1 and Python Imaging Library (PIL) 1.1.7 and earlier allows remote attackers to cause a denial of service (crash) via a crafted PhotoCD file.,c43106374a2112f85b047a399840cbfbeac074c1,0
+0.017021529376506805,0,0.0,1,0,1,1,2,1,Fixed typo,Buffer overflow in the ImagingPcdDecode function in PcdDecode.c in Pillow before 3.1.1 and Python Imaging Library (PIL) 1.1.7 and earlier allows remote attackers to cause a denial of service (crash) via a crafted PhotoCD file.,435858afaa3088d54dc280f4a512786f0e404177,0
+0.14653700590133667,0,0.0,3,0,7,1,8,1,Added CMYK mode for opening EPS files,Buffer overflow in the ImagingPcdDecode function in PcdDecode.c in Pillow before 3.1.1 and Python Imaging Library (PIL) 1.1.7 and earlier allows remote attackers to cause a denial of service (crash) via a crafted PhotoCD file.,392d5673523973d3a421e958f369a046391931cf,0
+0.04026615619659424,0,0.0,1,0,1,1,2,0,"Merge pull request #1829 from radarhere/typo
+
+Fixed typo",Buffer overflow in the ImagingPcdDecode function in PcdDecode.c in Pillow before 3.1.1 and Python Imaging Library (PIL) 1.1.7 and earlier allows remote attackers to cause a denial of service (crash) via a crafted PhotoCD file.,ac6e1ef949b085417bc2364b6f2553e23447e4f2,0
+-0.05206281691789627,0,0.0,1,0,1,1,2,1,Minor grammar fix,Buffer overflow in the ImagingPcdDecode function in PcdDecode.c in Pillow before 3.1.1 and Python Imaging Library (PIL) 1.1.7 and earlier allows remote attackers to cause a denial of service (crash) via a crafted PhotoCD file.,47379441974436fef90c7af2ba81b6311d40b682,0
+0.20261844992637634,0,0.0,1,0,12,30,42,1,Removed duplicate code in ImagePalette,Buffer overflow in the ImagingPcdDecode function in PcdDecode.c in Pillow before 3.1.1 and Python Imaging Library (PIL) 1.1.7 and earlier allows remote attackers to cause a denial of service (crash) via a crafted PhotoCD file.,f9b3a5dbe4893c24002c8253f0473d40890d85b0,0
+-0.002991884481161833,0,0.0,1,0,1,1,2,0,Updated redirected URL,Buffer overflow in the ImagingPcdDecode function in PcdDecode.c in Pillow before 3.1.1 and Python Imaging Library (PIL) 1.1.7 and earlier allows remote attackers to cause a denial of service (crash) via a crafted PhotoCD file.,89901e089c1737c7dda547b9eac3d02a2c345d02,0
+0.23115910589694977,0,0.0,1,0,5,16,21,0,Changed documentation to refer to ImageSequence Iterator class [ci skip],Buffer overflow in the ImagingPcdDecode function in PcdDecode.c in Pillow before 3.1.1 and Python Imaging Library (PIL) 1.1.7 and earlier allows remote attackers to cause a denial of service (crash) via a crafted PhotoCD file.,ea3dcfda0ca48998de9bebc801d843172a9a9e33,0
+0.44634267687797546,0,0.0,1,0,4,2,6,0,Updated macOS tested Pillow versions [ci skip],Pillow before 9.3.0 allows denial of service via SAMPLESPERPIXEL.,99a11297b108c1427cef683d9dcd196f32794043,0
+0.08173329383134842,0,0.0,1,0,4,0,4,0,Added oss-fuzz badge,Pillow before 9.3.0 allows denial of service via SAMPLESPERPIXEL.,9fbfd3f00efbb6719bb35043315e457614617072,0
+0.3386985659599304,0,0.0,1,0,4,2,6,0,"Merge pull request #6734 from radarhere/python
+
+Updated macOS tested Pillow versions",Pillow before 9.3.0 allows denial of service via SAMPLESPERPIXEL.,7e4b28a20b52368cc86bb1a8ff15e7b09ace857d,0
+0.14155393838882446,0,0.0,2,0,7,0,7,0,"Merge pull request #6717 from wiredfool/oss-fuzz-badge
+
+Add oss-fuzz badge",Pillow before 9.3.0 allows denial of service via SAMPLESPERPIXEL.,b617943dca796fe42374bfddb36bb7df672ec12f,0
+0.07094752788543701,0,0.0,2,0,3,1,4,2,Added MP Format Version when saving,Pillow before 9.3.0 allows denial of service via SAMPLESPERPIXEL.,af317a696d181bfdbfc28aed44496915a26bc90f,0
+0.15824952721595764,0,0.0,1,0,22,40,62,4,remove unused ImagingAccess->line() method defs,Pillow before 9.3.0 allows denial of service via SAMPLESPERPIXEL.,20f17cc6a79881ba441adfb734e8dbe6901a9749,0
+0.1527082622051239,0,0.0,1,0,0,1,1,0,remove unused ImagingAccess->line() method def,Pillow before 9.3.0 allows denial of service via SAMPLESPERPIXEL.,16994ccc9b40f97113cb1c8f56abe9a37a2744fa,0
+0.06038690358400345,0,0.0,1,0,1,2,3,0,remove comment about Access.c line methods,Pillow before 9.3.0 allows denial of service via SAMPLESPERPIXEL.,55abf18f1020b456cd782ebfe94b5847148559f6,0
+0.054800331592559814,0,0.0,3,0,23,43,66,0,Merge pull request #6736 from Yay295/remove_line_access,Pillow before 9.3.0 allows denial of service via SAMPLESPERPIXEL.,2e2b7b6321e6d190a38b26799178784296a9ac17,0
+0.12580792605876923,0,0.0,2,0,3,1,4,0,Merge pull request #6735 from radarhere/mpformatversion,Pillow before 9.3.0 allows denial of service via SAMPLESPERPIXEL.,759b0301b97aef4307bbe744d6af3c929df05c31,0
+0.07213160395622253,0,0.0,1,0,3,0,3,0,Update CHANGES.rst [ci skip],Pillow before 9.3.0 allows denial of service via SAMPLESPERPIXEL.,21f202a22a712e0392c4ee148946967bd05eb936,0
+0.09994465857744217,0,0.0,1,0,3,3,6,0,Updated xz to 5.2.8,Pillow before 9.3.0 allows denial of service via SAMPLESPERPIXEL.,84458c3988ad22d82afaa33a4d66080a2a089908,0
+0.1130865216255188,0,0.0,1,0,3,3,6,0,"Merge pull request #6738 from radarhere/xz
+
+Updated xz to 5.2.8",Pillow before 9.3.0 allows denial of service via SAMPLESPERPIXEL.,a7008f9f2f423f6f2313573ed6d3ef3274d3e18d,0
+0.07427585124969482,0,0.0,1,0,0,36,36,0,"Remove Tidelift alignment action and badge
+
+Not sure if we still care about this? cf. #5762 #5763",Pillow before 9.3.0 allows denial of service via SAMPLESPERPIXEL.,8a3ba659450f2b46da7c0e4df92fa10dfc0a21d4,0
+0.09015432745218277,0,0.0,2,0,18,0,18,2,Fixed writing int as BYTE tag,Pillow before 9.3.0 allows denial of service via SAMPLESPERPIXEL.,70cc8a57415f6a9744cf4d4f0407a4415319dda2,0
+0.08754625916481018,0,0.0,1,0,0,4,4,0,"Revert ""Added Tidelift Align badge to docs""
+
+This reverts commit 06ab0324a3bb66965c7c1505dbdd0aa640ba308b.",Pillow before 9.3.0 allows denial of service via SAMPLESPERPIXEL.,ddc215ce3c6772a9b3aa6995f38c97ea922ecf48,0
+0.056285321712493896,0,0.0,1,0,0,3,3,0,"Revert ""Add tidelift alignment badge""
+
+This reverts commit c8822a6cac65bbe0a7d831ef2b8431435f1feb1d.",Pillow before 9.3.0 allows denial of service via SAMPLESPERPIXEL.,398bf1d7f31c96de94ca0f293892f4e4b4c34ec2,0
+0.17682680487632751,0,0.0,3,0,0,43,43,0,"Merge pull request #6739 from python-pillow/kill-align
+
+Remove Tidelift alignment action and badge",Pillow before 9.3.0 allows denial of service via SAMPLESPERPIXEL.,e134476cde9a147428815757fc4a5752fc8a8615,0
+0.41023871302604675,0,0.0,2,0,18,0,18,0,"Merge pull request #6740 from radarhere/tiff_byte
+
+Resolves https://github.com/python-pillow/Pillow/issues/6737",Pillow before 9.3.0 allows denial of service via SAMPLESPERPIXEL.,275d21b905142831b3063b62247f121651ab376f,0
+0.07213160395622253,0,0.0,1,0,3,0,3,0,Update CHANGES.rst [ci skip],Pillow before 9.3.0 allows denial of service via SAMPLESPERPIXEL.,d4c7bd7e19e926d5d47c70d04eaba86cf20a67a4,0
+-0.0766611322760582,0,0.0,1,0,10,0,10,2,"Added ""start"" argument to docstring",Pillow before 9.3.0 allows denial of service via SAMPLESPERPIXEL.,70c8e342a514815ae698a3fb22e2ab52f3c09d7f,0
+0.04264669492840767,0,0.0,2,0,55,0,55,0,Added release notes,Pillow before 9.3.0 allows denial of service via SAMPLESPERPIXEL.,62db04478733e9baddd41d365f96f9a8dbeb388d,0
+0.005506773013621569,0,0.0,2,0,3,0,3,0,Added Fedora 37,Pillow before 9.3.0 allows denial of service via SAMPLESPERPIXEL.,cb40f46ec13f2413163baa00e6e44958dd3f67f6,0
+0.2968730032444,0,0.0,18,0,119,8,127,0,"Merge pull request #6722 from radarhere/font_start
+
+Resolves https://github.com/python-pillow/Pillow/issues/3977",Pillow before 9.3.0 allows denial of service via SAMPLESPERPIXEL.,2b456236bb79ea6ef27eafc6ed38f7359deb6d3b,0
+0.09195965528488159,0,0.0,2,0,3,0,3,0,Merge pull request #6742 from radarhere/fedora,Pillow before 9.3.0 allows denial of service via SAMPLESPERPIXEL.,7b171f3131e42745c015d18577a1960960a0b252,0
+0.07213160395622253,0,0.0,1,0,3,0,3,0,Update CHANGES.rst [ci skip],Pillow before 9.3.0 allows denial of service via SAMPLESPERPIXEL.,df8e87291254dc22415a0c6e371950e79311dbf2,0
+0.44336986541748047,0,0.0,1,0,4,2,6,0,Updated macOS tested Pillow versions [ci skip],Pillow before 9.2.0 performs Improper Handling of Highly Compressed GIF Data (Data Amplification).,99a11297b108c1427cef683d9dcd196f32794043,0
+0.02426472119987011,0,0.0,1,0,4,0,4,0,Added oss-fuzz badge,Pillow before 9.2.0 performs Improper Handling of Highly Compressed GIF Data (Data Amplification).,9fbfd3f00efbb6719bb35043315e457614617072,0
+0.2791445255279541,0,0.0,1,0,4,2,6,0,"Merge pull request #6734 from radarhere/python
+
+Updated macOS tested Pillow versions",Pillow before 9.2.0 performs Improper Handling of Highly Compressed GIF Data (Data Amplification).,7e4b28a20b52368cc86bb1a8ff15e7b09ace857d,0
+0.002321033738553524,0,0.0,2,0,7,0,7,0,"Merge pull request #6717 from wiredfool/oss-fuzz-badge
+
+Add oss-fuzz badge",Pillow before 9.2.0 performs Improper Handling of Highly Compressed GIF Data (Data Amplification).,b617943dca796fe42374bfddb36bb7df672ec12f,0
+0.2206415981054306,0,0.0,2,0,3,1,4,2,Added MP Format Version when saving,Pillow before 9.2.0 performs Improper Handling of Highly Compressed GIF Data (Data Amplification).,af317a696d181bfdbfc28aed44496915a26bc90f,0
+0.2269674390554428,0,0.0,1,0,22,40,62,4,remove unused ImagingAccess->line() method defs,Pillow before 9.2.0 performs Improper Handling of Highly Compressed GIF Data (Data Amplification).,20f17cc6a79881ba441adfb734e8dbe6901a9749,0
+0.22756825387477875,0,0.0,1,0,0,1,1,0,remove unused ImagingAccess->line() method def,Pillow before 9.2.0 performs Improper Handling of Highly Compressed GIF Data (Data Amplification).,16994ccc9b40f97113cb1c8f56abe9a37a2744fa,0
+0.014003186486661434,0,0.0,1,0,1,2,3,0,remove comment about Access.c line methods,Pillow before 9.2.0 performs Improper Handling of Highly Compressed GIF Data (Data Amplification).,55abf18f1020b456cd782ebfe94b5847148559f6,0
+0.0309792198240757,0,0.0,3,0,23,43,66,0,Merge pull request #6736 from Yay295/remove_line_access,Pillow before 9.2.0 performs Improper Handling of Highly Compressed GIF Data (Data Amplification).,2e2b7b6321e6d190a38b26799178784296a9ac17,0
+0.11260757595300674,0,0.0,2,0,3,1,4,0,Merge pull request #6735 from radarhere/mpformatversion,Pillow before 9.2.0 performs Improper Handling of Highly Compressed GIF Data (Data Amplification).,759b0301b97aef4307bbe744d6af3c929df05c31,0
+0.03450801223516464,0,0.0,1,0,3,0,3,0,Update CHANGES.rst [ci skip],Pillow before 9.2.0 performs Improper Handling of Highly Compressed GIF Data (Data Amplification).,21f202a22a712e0392c4ee148946967bd05eb936,0
+0.11848830431699753,0,0.0,1,0,3,3,6,0,Updated xz to 5.2.8,Pillow before 9.2.0 performs Improper Handling of Highly Compressed GIF Data (Data Amplification).,84458c3988ad22d82afaa33a4d66080a2a089908,0
+0.01481460127979517,0,0.0,1,0,3,3,6,0,"Merge pull request #6738 from radarhere/xz
+
+Updated xz to 5.2.8",Pillow before 9.2.0 performs Improper Handling of Highly Compressed GIF Data (Data Amplification).,a7008f9f2f423f6f2313573ed6d3ef3274d3e18d,0
+0.11173807084560394,0,0.0,1,0,0,36,36,0,"Remove Tidelift alignment action and badge
+
+Not sure if we still care about this? cf. #5762 #5763",Pillow before 9.2.0 performs Improper Handling of Highly Compressed GIF Data (Data Amplification).,8a3ba659450f2b46da7c0e4df92fa10dfc0a21d4,0
+0.16371382772922516,0,0.0,2,0,18,0,18,2,Fixed writing int as BYTE tag,Pillow before 9.2.0 performs Improper Handling of Highly Compressed GIF Data (Data Amplification).,70cc8a57415f6a9744cf4d4f0407a4415319dda2,0
+0.10621307790279388,0,0.0,1,0,0,4,4,0,"Revert ""Added Tidelift Align badge to docs""
+
+This reverts commit 06ab0324a3bb66965c7c1505dbdd0aa640ba308b.",Pillow before 9.2.0 performs Improper Handling of Highly Compressed GIF Data (Data Amplification).,ddc215ce3c6772a9b3aa6995f38c97ea922ecf48,0
+0.1250808835029602,0,0.0,1,0,0,3,3,0,"Revert ""Add tidelift alignment badge""
+
+This reverts commit c8822a6cac65bbe0a7d831ef2b8431435f1feb1d.",Pillow before 9.2.0 performs Improper Handling of Highly Compressed GIF Data (Data Amplification).,398bf1d7f31c96de94ca0f293892f4e4b4c34ec2,0
+0.18361136317253113,0,0.0,3,0,0,43,43,0,"Merge pull request #6739 from python-pillow/kill-align
+
+Remove Tidelift alignment action and badge",Pillow before 9.2.0 performs Improper Handling of Highly Compressed GIF Data (Data Amplification).,e134476cde9a147428815757fc4a5752fc8a8615,0
+0.4758697748184204,0,0.0,2,0,18,0,18,0,"Merge pull request #6740 from radarhere/tiff_byte
+
+Resolves https://github.com/python-pillow/Pillow/issues/6737",Pillow before 9.2.0 performs Improper Handling of Highly Compressed GIF Data (Data Amplification).,275d21b905142831b3063b62247f121651ab376f,0
+0.03450801223516464,0,0.0,1,0,3,0,3,0,Update CHANGES.rst [ci skip],Pillow before 9.2.0 performs Improper Handling of Highly Compressed GIF Data (Data Amplification).,d4c7bd7e19e926d5d47c70d04eaba86cf20a67a4,0
+-0.04644184187054634,0,0.0,1,0,10,0,10,2,"Added ""start"" argument to docstring",Pillow before 9.2.0 performs Improper Handling of Highly Compressed GIF Data (Data Amplification).,70c8e342a514815ae698a3fb22e2ab52f3c09d7f,0
+-0.04865498095750809,0,0.0,2,0,55,0,55,0,Added release notes,Pillow before 9.2.0 performs Improper Handling of Highly Compressed GIF Data (Data Amplification).,62db04478733e9baddd41d365f96f9a8dbeb388d,0
+-0.052808720618486404,0,0.0,2,0,3,0,3,0,Added Fedora 37,Pillow before 9.2.0 performs Improper Handling of Highly Compressed GIF Data (Data Amplification).,cb40f46ec13f2413163baa00e6e44958dd3f67f6,0
+0.3684339225292206,0,0.0,18,0,119,8,127,0,"Merge pull request #6722 from radarhere/font_start
+
+Resolves https://github.com/python-pillow/Pillow/issues/3977",Pillow before 9.2.0 performs Improper Handling of Highly Compressed GIF Data (Data Amplification).,2b456236bb79ea6ef27eafc6ed38f7359deb6d3b,0
+-0.0008284036302939057,0,0.0,2,0,3,0,3,0,Merge pull request #6742 from radarhere/fedora,Pillow before 9.2.0 performs Improper Handling of Highly Compressed GIF Data (Data Amplification).,7b171f3131e42745c015d18577a1960960a0b252,0
+0.03450801223516464,0,0.0,1,0,3,0,3,0,Update CHANGES.rst [ci skip],Pillow before 9.2.0 performs Improper Handling of Highly Compressed GIF Data (Data Amplification).,df8e87291254dc22415a0c6e371950e79311dbf2,0
+0.33396443724632263,0,0.0,1,0,7,15,22,0,Combined identical error messages in _imaging,"Integer overflow in the ImagingResampleHorizontal function in libImaging/Resample.c in Pillow before 3.1.1 allows remote attackers to have unspecified impact via negative values of the new size, which triggers a heap-based buffer overflow.",d6846403dd04981e0d04550a47155e5079343276,0
+0.3012881577014923,0,0.0,1,0,7,15,22,0,"Merge pull request #1825 from radarhere/imaging
+
+Combined identical error messages in _imaging","Integer overflow in the ImagingResampleHorizontal function in libImaging/Resample.c in Pillow before 3.1.1 allows remote attackers to have unspecified impact via negative values of the new size, which triggers a heap-based buffer overflow.",8fb400653020b51b6d7bf358f7e050a23fd52331,0
+0.12042319029569626,0,0.0,1,0,0,1,1,0,"Merge pull request #1823 from radarhere/classifier
+
+Removed outdated classifier","Integer overflow in the ImagingResampleHorizontal function in libImaging/Resample.c in Pillow before 3.1.1 allows remote attackers to have unspecified impact via negative values of the new size, which triggers a heap-based buffer overflow.",371e981628239c5fee5745cc2ab33bb73f2861ff,0
+0.014653840102255344,0,0.0,1,0,6,0,6,0,Update CHANGES.rst [ci skip],"Integer overflow in the ImagingResampleHorizontal function in libImaging/Resample.c in Pillow before 3.1.1 allows remote attackers to have unspecified impact via negative values of the new size, which triggers a heap-based buffer overflow.",c43106374a2112f85b047a399840cbfbeac074c1,0
+0.04983875900506973,0,0.0,1,0,1,1,2,1,Fixed typo,"Integer overflow in the ImagingResampleHorizontal function in libImaging/Resample.c in Pillow before 3.1.1 allows remote attackers to have unspecified impact via negative values of the new size, which triggers a heap-based buffer overflow.",435858afaa3088d54dc280f4a512786f0e404177,0
+0.15626582503318787,0,0.0,3,0,7,1,8,1,Added CMYK mode for opening EPS files,"Integer overflow in the ImagingResampleHorizontal function in libImaging/Resample.c in Pillow before 3.1.1 allows remote attackers to have unspecified impact via negative values of the new size, which triggers a heap-based buffer overflow.",392d5673523973d3a421e958f369a046391931cf,0
+0.10466846823692322,0,0.0,1,0,1,1,2,0,"Merge pull request #1829 from radarhere/typo
+
+Fixed typo","Integer overflow in the ImagingResampleHorizontal function in libImaging/Resample.c in Pillow before 3.1.1 allows remote attackers to have unspecified impact via negative values of the new size, which triggers a heap-based buffer overflow.",ac6e1ef949b085417bc2364b6f2553e23447e4f2,0
+0.03758588805794716,0,0.0,1,0,1,1,2,1,Minor grammar fix,"Integer overflow in the ImagingResampleHorizontal function in libImaging/Resample.c in Pillow before 3.1.1 allows remote attackers to have unspecified impact via negative values of the new size, which triggers a heap-based buffer overflow.",47379441974436fef90c7af2ba81b6311d40b682,0
+0.17082582414150238,0,0.0,1,0,12,30,42,1,Removed duplicate code in ImagePalette,"Integer overflow in the ImagingResampleHorizontal function in libImaging/Resample.c in Pillow before 3.1.1 allows remote attackers to have unspecified impact via negative values of the new size, which triggers a heap-based buffer overflow.",f9b3a5dbe4893c24002c8253f0473d40890d85b0,0
+0.03545103222131729,0,0.0,1,0,1,1,2,0,Updated redirected URL,"Integer overflow in the ImagingResampleHorizontal function in libImaging/Resample.c in Pillow before 3.1.1 allows remote attackers to have unspecified impact via negative values of the new size, which triggers a heap-based buffer overflow.",89901e089c1737c7dda547b9eac3d02a2c345d02,0
+0.22107446193695068,0,0.0,1,0,5,16,21,0,Changed documentation to refer to ImageSequence Iterator class [ci skip],"Integer overflow in the ImagingResampleHorizontal function in libImaging/Resample.c in Pillow before 3.1.1 allows remote attackers to have unspecified impact via negative values of the new size, which triggers a heap-based buffer overflow.",ea3dcfda0ca48998de9bebc801d843172a9a9e33,0
+0.1997898668050766,0,0.0,0,0,3,3,6,0,"Merge pull request #4719 from radarhere/harfbuzz
+
+Updated harfbuzz to 2.6.8","In Pillow before 7.1.0, there are two Buffer Overflows in libImaging/TiffDecode.c.",2456601e6b15849c5a4a72548a73d29647771a37,0
+0.12104349583387375,0,0.0,11,0,12,13,25,11,Call _accept instead of duplicating code,"In Pillow before 7.1.0, there are two Buffer Overflows in libImaging/TiffDecode.c.",9b6fdd719f258c5a382e2cbf5f110f172f6542bd,0
+0.08640096336603165,0,0.0,1,0,1,1,2,1,"Simplified passing of data to _accept
+
+Co-authored-by: Hugo van Kemenade <hugovk@users.noreply.github.com>","In Pillow before 7.1.0, there are two Buffer Overflows in libImaging/TiffDecode.c.",6c2d575f9bf05a877a7c33e19ae9be14a1c73a71,0
+0.16960971057415009,0,0.0,11,0,12,13,25,0,"Merge pull request #4720 from radarhere/accept
+
+Call _accept instead of duplicating code","In Pillow before 7.1.0, there are two Buffer Overflows in libImaging/TiffDecode.c.",b667fd83cf3257e74ce5d49b334266688c1fed5c,0
+0.03450397029519081,0,0.0,3,0,14,1,15,2,Use hypot function,"In Pillow before 7.1.0, there are two Buffer Overflows in libImaging/TiffDecode.c.",c1fe0b4e0c4319926c3322ebf0ea60dd52b9c539,0
+0.16709041595458984,0,0.0,1,0,29,45,74,26,Replaced assert_image_similar with assert_image_similar_tofile,"In Pillow before 7.1.0, there are two Buffer Overflows in libImaging/TiffDecode.c.",b042483baadf505a23ffe188f5b4c6594c0d519f,0
+0.1277008056640625,0,0.0,3,0,32,5,37,0,"Merge pull request #4646 from nulano/show-command
+
+Deprecate Image.show(command=""..."")","In Pillow before 7.1.0, there are two Buffer Overflows in libImaging/TiffDecode.c.",9979efff120d281dd746f459d3c947d6f8f832b0,0
+0.06999032199382782,0,0.0,1,0,3,0,3,0,Updated CHANGES.rst [ci skip],"In Pillow before 7.1.0, there are two Buffer Overflows in libImaging/TiffDecode.c.",824f2930269bb7001642248582692b9178fe3f22,0
+0.07305452227592468,0,0.0,1,0,6,0,6,0,Added release notes for #4646 [ci skip],"In Pillow before 7.1.0, there are two Buffer Overflows in libImaging/TiffDecode.c.",d7b812fcb2c942b36787837ca165ff2473defd32,0
+0.07896517217159271,0,0.0,3,0,42,45,87,0,Merge pull request #4722 from radarhere/line,"In Pillow before 7.1.0, there are two Buffer Overflows in libImaging/TiffDecode.c.",71fadd5c6767a05e13d3752cd4c4b7dc381b71e7,0
+0.10344285517930984,0,0.0,1,0,6,0,6,0,Merge pull request #4723 from radarhere/releasenotes,"In Pillow before 7.1.0, there are two Buffer Overflows in libImaging/TiffDecode.c.",c9745f4b517127bd5090cc381aa1e67c0d780499,0
+0.1614057570695877,0,0.0,4,0,42,1,43,4,Deprecated _showxv,"In Pillow before 7.1.0, there are two Buffer Overflows in libImaging/TiffDecode.c.",ee06255ff0ee64f8d3d1062c75e455973cc9d2fc,0
+0.020023347809910774,0,0.0,1,0,1,1,2,1,Fix setting disposal,"In Pillow before 7.1.0, there are two Buffer Overflows in libImaging/TiffDecode.c.",bd466c41c141472f69318c46a7b3ed74d3f1b45d,0
+0.2903215289115906,0,0.0,4,0,34,4,38,0,"Merge pull request #4647 from radarhere/blocklist
+
+Allow libtiff to write COLORMAP tag","In Pillow before 7.1.0, there are two Buffer Overflows in libImaging/TiffDecode.c.",7dd8837967750379367dc3ff2efdc299774b22eb,0
+0.16471433639526367,0,0.0,4,0,42,1,43,0,"Merge pull request #4714 from radarhere/show
+
+Deprecated _showxv","In Pillow before 7.1.0, there are two Buffer Overflows in libImaging/TiffDecode.c.",f6cb5efa1522b7eadde2fcb75af2673f1f3f3002,0
+0.06999032199382782,0,0.0,1,0,3,0,3,0,Updated CHANGES.rst [ci skip],"In Pillow before 7.1.0, there are two Buffer Overflows in libImaging/TiffDecode.c.",685c0439b8ef3c0f9f7be4837a751d22f07cbb87,0
+0.14467518031597137,0,0.0,1,0,1,0,1,0,Fix isort,"In Pillow before 7.1.0, there are two Buffer Overflows in libImaging/TiffDecode.c.",d641bdc504a943b21eaa770e3a549dd6b33d15af,0
+0.0849495604634285,0,0.0,29,0,393,221,614,0,Merge pull request #4697 from nulano/docs-imageshow,"In Pillow before 7.1.0, there are two Buffer Overflows in libImaging/TiffDecode.c.",92561bdcdc0eea16ee89da4b5462cd1bb9fb1813,0
+0.07767423242330551,0,0.0,7,0,16,30,46,0,Merge pull request #4698 from nulano/skips,"In Pillow before 7.1.0, there are two Buffer Overflows in libImaging/TiffDecode.c.",b4e7202dcb7235642f6e6a050c9485070ae6ea4f,0
+0.2274451106786728,0,0.0,2,0,13,6,19,0,"fix ImageFile references
+
+(cherry picked from commit 6ac071782f820fa59acc91ff0fe0a697fc5f8cbe)","In Pillow before 7.1.0, there are two Buffer Overflows in libImaging/TiffDecode.c.",e4210eb8d776bdbe57a17bb4a256e64d4367dcc0,0
+0.09165312349796295,0,0.0,2,0,69,45,114,14,"fix PyCMSError references
+
+(cherry picked from commit 63d0fb4f7019a8423bb5c62ea7b225f437f823cf)","In Pillow before 7.1.0, there are two Buffer Overflows in libImaging/TiffDecode.c.",471f24f660c7d98023f0458853fc5548431d48b9,0
+0.18195556104183197,0,0.0,31,0,194,194,388,0,"fix module references
+
+(cherry picked from commit b077850baa60e413534defeab997a9b574daaa6e)","In Pillow before 7.1.0, there are two Buffer Overflows in libImaging/TiffDecode.c.",2761a02d130c53a1731439e571016ae286ba093d,0
+0.11541857570409775,0,0.0,1,0,57,82,139,0,"fix CmsProfile type references
+
+(cherry picked from commit 61966951562ac9c7f1dd7764d913c9166f642e45)","In Pillow before 7.1.0, there are two Buffer Overflows in libImaging/TiffDecode.c.",bd2c705606069cb29d466768f306a3a621c949e8,0
+0.18320125341415405,0,0.0,1,0,6,0,6,0,"fix ImageMath creating false index entries
+
+(cherry picked from commit eebecba3c20cde0aca126eaa081ebe8a49f7c659)","In Pillow before 7.1.0, there are two Buffer Overflows in libImaging/TiffDecode.c.",5e4c3ae5542437fd13ae5f022672c379ad75c1bd,0
+0.2285185307264328,0,0.0,1,0,16,24,40,0,"fix base Image attribute references
+
+(cherry picked from commit 07cc74d38bb1a1309e872d47a4a2d08bd97e9423)","In Pillow before 7.1.0, there are two Buffer Overflows in libImaging/TiffDecode.c.",8b005dfe333e0fb7c71119e734dd3362b2fef014,0
+0.27483248710632324,0,0.0,5,0,235,96,331,7,"fix Image constants references
+
+(cherry picked from commit 5511111f3b36890a64ec7b44368996f72ab4d876)","In Pillow before 7.1.0, there are two Buffer Overflows in libImaging/TiffDecode.c.",3342270947b6dd8442eaf9e14e7c34f9c017f507,0
+0.2044147402048111,0,0.0,2,0,12,12,24,1,"fix some function references
+
+(cherry picked from commit 9fb582940d577857d9034e0bf0c5cf5630c2d42e)","In Pillow before 7.1.0, there are two Buffer Overflows in libImaging/TiffDecode.c.",19dd5cbfab75f6d9e74349a611140a5aa2fcd85e,0
+0.16945083439350128,0,0.0,1,0,20,7,27,0,"add missing and sort Image functions
+
+(cherry picked from commit f31c786aa6dadfcd93596887bb67b1d9a776f8c6)","In Pillow before 7.1.0, there are two Buffer Overflows in libImaging/TiffDecode.c.",4f1ee7a881f2ce08ae8f37a0d49241050f2d55b7,0
+0.16495834290981293,0,0.0,2,0,37,0,37,2,document is_animated and n_frames,"In Pillow before 7.1.0, there are two Buffer Overflows in libImaging/TiffDecode.c.",f5b4565d8c163cc1c55ed9f5525ec5848915aaa0,0
+0.024926593527197838,0,0.0,1,0,1,0,1,0,add gitignore to winbuild build directory,"In Pillow before 7.1.0, there are two Buffer Overflows in libImaging/TiffDecode.c.",dc2201597363b262a0bf3f84a9132a21e254ee99,0
+0.225860133767128,0,0.0,26,0,125,123,248,0,"Merge pull request #4712 from cool-RR/2020-06-12-raise-from
+
+Fix exception causes all over the codebase","In Pillow before 7.1.0, there are two Buffer Overflows in libImaging/TiffDecode.c.",4ae694cd7b34b76a953ae4a9e338bb8eec6285cf,0
+0.1990935057401657,0,0.0,3,0,32,19,51,0,"Merge pull request #4737 from nulano/refs-image
+
+Fix documentation references: omitted Image functions","In Pillow before 7.1.0, there are two Buffer Overflows in libImaging/TiffDecode.c.",510307532e4b12a57bfead47ce2d0fadb3752ce3,0
+0.05684283375740051,0,0.0,80,0,775,466,1241,0,Merge branch 'master' into pre-commit-diff,"In Pillow before 7.1.0, there are two Buffer Overflows in libImaging/TiffDecode.c.",2d3fd6ea02fd8ec40b5cec22d6e4603e02866f0e,0
+0.05323982238769531,0,0.0,4,0,82,51,133,0,Merge pull request #4734 from nulano/refs-missing,"In Pillow before 7.1.0, there are two Buffer Overflows in libImaging/TiffDecode.c.",780294302da732b75acee0d1819299feddef7da9,0
+0.05696878582239151,0,0.0,3,0,79,106,185,0,Merge pull request #4735 from nulano/refs-type,"In Pillow before 7.1.0, there are two Buffer Overflows in libImaging/TiffDecode.c.",977094d4b5554dc575264800e787472d9343e390,0
+0.23335802555084229,0,0.0,2,0,21,0,21,2,Fixed ICNS file pointer saving,"In Pillow before 7.1.0, there are two Buffer Overflows in libImaging/TiffDecode.c.",1e8d418f4266ddd1a14e024f0997c76b8dc1ca9c,0
+0.023247940465807915,0,0.0,32,0,318,299,617,0,Merge branch 'master' into refs-const,"In Pillow before 7.1.0, there are two Buffer Overflows in libImaging/TiffDecode.c.",9019af5f3251702e37b55197873533c2b80f98ba,0
+0.08414597064256668,0,0.0,3,0,6,3,9,0,"Merge pull request #4716 from hugovk/pre-commit-diff
+
+CI: Show diff when pre-commit fails","In Pillow before 7.1.0, there are two Buffer Overflows in libImaging/TiffDecode.c.",77c098b01ffd599ec555d22ac76fd16563f4946f,0
+0.08812032639980316,0,0.0,0,0,3,3,6,0,"Merge pull request #4719 from radarhere/harfbuzz
+
+Updated harfbuzz to 2.6.8","In libImaging/PcxDecode.c in Pillow before 7.1.0, an out-of-bounds read can occur when reading PCX files where state->shuffle is instructed to read beyond state->buffer.",2456601e6b15849c5a4a72548a73d29647771a37,0
+0.042174480855464935,0,0.0,11,0,12,13,25,11,Call _accept instead of duplicating code,"In libImaging/PcxDecode.c in Pillow before 7.1.0, an out-of-bounds read can occur when reading PCX files where state->shuffle is instructed to read beyond state->buffer.",9b6fdd719f258c5a382e2cbf5f110f172f6542bd,0
+0.09514044225215912,0,0.0,1,0,1,1,2,1,"Simplified passing of data to _accept
+
+Co-authored-by: Hugo van Kemenade <hugovk@users.noreply.github.com>","In libImaging/PcxDecode.c in Pillow before 7.1.0, an out-of-bounds read can occur when reading PCX files where state->shuffle is instructed to read beyond state->buffer.",6c2d575f9bf05a877a7c33e19ae9be14a1c73a71,0
+0.10177485644817352,0,0.0,11,0,12,13,25,0,"Merge pull request #4720 from radarhere/accept
+
+Call _accept instead of duplicating code","In libImaging/PcxDecode.c in Pillow before 7.1.0, an out-of-bounds read can occur when reading PCX files where state->shuffle is instructed to read beyond state->buffer.",b667fd83cf3257e74ce5d49b334266688c1fed5c,0
+0.051710449159145355,0,0.0,3,0,14,1,15,2,Use hypot function,"In libImaging/PcxDecode.c in Pillow before 7.1.0, an out-of-bounds read can occur when reading PCX files where state->shuffle is instructed to read beyond state->buffer.",c1fe0b4e0c4319926c3322ebf0ea60dd52b9c539,0
+0.04210076481103897,0,0.0,1,0,29,45,74,26,Replaced assert_image_similar with assert_image_similar_tofile,"In libImaging/PcxDecode.c in Pillow before 7.1.0, an out-of-bounds read can occur when reading PCX files where state->shuffle is instructed to read beyond state->buffer.",b042483baadf505a23ffe188f5b4c6594c0d519f,0
+0.005024258513003588,0,0.0,3,0,32,5,37,0,"Merge pull request #4646 from nulano/show-command
+
+Deprecate Image.show(command=""..."")","In libImaging/PcxDecode.c in Pillow before 7.1.0, an out-of-bounds read can occur when reading PCX files where state->shuffle is instructed to read beyond state->buffer.",9979efff120d281dd746f459d3c947d6f8f832b0,0
+0.19279149174690247,0,0.0,1,0,3,0,3,0,Updated CHANGES.rst [ci skip],"In libImaging/PcxDecode.c in Pillow before 7.1.0, an out-of-bounds read can occur when reading PCX files where state->shuffle is instructed to read beyond state->buffer.",824f2930269bb7001642248582692b9178fe3f22,0
+0.18183594942092896,0,0.0,1,0,6,0,6,0,Added release notes for #4646 [ci skip],"In libImaging/PcxDecode.c in Pillow before 7.1.0, an out-of-bounds read can occur when reading PCX files where state->shuffle is instructed to read beyond state->buffer.",d7b812fcb2c942b36787837ca165ff2473defd32,0
+0.06955365836620331,0,0.0,3,0,42,45,87,0,Merge pull request #4722 from radarhere/line,"In libImaging/PcxDecode.c in Pillow before 7.1.0, an out-of-bounds read can occur when reading PCX files where state->shuffle is instructed to read beyond state->buffer.",71fadd5c6767a05e13d3752cd4c4b7dc381b71e7,0
+0.07400371879339218,0,0.0,1,0,6,0,6,0,Merge pull request #4723 from radarhere/releasenotes,"In libImaging/PcxDecode.c in Pillow before 7.1.0, an out-of-bounds read can occur when reading PCX files where state->shuffle is instructed to read beyond state->buffer.",c9745f4b517127bd5090cc381aa1e67c0d780499,0
+0.2573988437652588,0,0.0,4,0,42,1,43,4,Deprecated _showxv,"In libImaging/PcxDecode.c in Pillow before 7.1.0, an out-of-bounds read can occur when reading PCX files where state->shuffle is instructed to read beyond state->buffer.",ee06255ff0ee64f8d3d1062c75e455973cc9d2fc,0
+0.067591592669487,0,0.0,1,0,1,1,2,1,Fix setting disposal,"In libImaging/PcxDecode.c in Pillow before 7.1.0, an out-of-bounds read can occur when reading PCX files where state->shuffle is instructed to read beyond state->buffer.",bd466c41c141472f69318c46a7b3ed74d3f1b45d,0
+0.15319304168224335,0,0.0,4,0,34,4,38,0,"Merge pull request #4647 from radarhere/blocklist
+
+Allow libtiff to write COLORMAP tag","In libImaging/PcxDecode.c in Pillow before 7.1.0, an out-of-bounds read can occur when reading PCX files where state->shuffle is instructed to read beyond state->buffer.",7dd8837967750379367dc3ff2efdc299774b22eb,0
+0.18379801511764526,0,0.0,4,0,42,1,43,0,"Merge pull request #4714 from radarhere/show
+
+Deprecated _showxv","In libImaging/PcxDecode.c in Pillow before 7.1.0, an out-of-bounds read can occur when reading PCX files where state->shuffle is instructed to read beyond state->buffer.",f6cb5efa1522b7eadde2fcb75af2673f1f3f3002,0
+0.19279149174690247,0,0.0,1,0,3,0,3,0,Updated CHANGES.rst [ci skip],"In libImaging/PcxDecode.c in Pillow before 7.1.0, an out-of-bounds read can occur when reading PCX files where state->shuffle is instructed to read beyond state->buffer.",685c0439b8ef3c0f9f7be4837a751d22f07cbb87,0
+0.13514655828475952,0,0.0,1,0,1,0,1,0,Fix isort,"In libImaging/PcxDecode.c in Pillow before 7.1.0, an out-of-bounds read can occur when reading PCX files where state->shuffle is instructed to read beyond state->buffer.",d641bdc504a943b21eaa770e3a549dd6b33d15af,0
+0.000773369800299406,0,0.0,29,0,393,221,614,0,Merge pull request #4697 from nulano/docs-imageshow,"In libImaging/PcxDecode.c in Pillow before 7.1.0, an out-of-bounds read can occur when reading PCX files where state->shuffle is instructed to read beyond state->buffer.",92561bdcdc0eea16ee89da4b5462cd1bb9fb1813,0
+0.0873158723115921,0,0.0,7,0,16,30,46,0,Merge pull request #4698 from nulano/skips,"In libImaging/PcxDecode.c in Pillow before 7.1.0, an out-of-bounds read can occur when reading PCX files where state->shuffle is instructed to read beyond state->buffer.",b4e7202dcb7235642f6e6a050c9485070ae6ea4f,0
+0.16451424360275269,0,0.0,2,0,13,6,19,0,"fix ImageFile references
+
+(cherry picked from commit 6ac071782f820fa59acc91ff0fe0a697fc5f8cbe)","In libImaging/PcxDecode.c in Pillow before 7.1.0, an out-of-bounds read can occur when reading PCX files where state->shuffle is instructed to read beyond state->buffer.",e4210eb8d776bdbe57a17bb4a256e64d4367dcc0,0
+0.11098124086856842,0,0.0,2,0,69,45,114,14,"fix PyCMSError references
+
+(cherry picked from commit 63d0fb4f7019a8423bb5c62ea7b225f437f823cf)","In libImaging/PcxDecode.c in Pillow before 7.1.0, an out-of-bounds read can occur when reading PCX files where state->shuffle is instructed to read beyond state->buffer.",471f24f660c7d98023f0458853fc5548431d48b9,0
+0.1153203621506691,0,0.0,31,0,194,194,388,0,"fix module references
+
+(cherry picked from commit b077850baa60e413534defeab997a9b574daaa6e)","In libImaging/PcxDecode.c in Pillow before 7.1.0, an out-of-bounds read can occur when reading PCX files where state->shuffle is instructed to read beyond state->buffer.",2761a02d130c53a1731439e571016ae286ba093d,0
+0.12598185241222382,0,0.0,1,0,57,82,139,0,"fix CmsProfile type references
+
+(cherry picked from commit 61966951562ac9c7f1dd7764d913c9166f642e45)","In libImaging/PcxDecode.c in Pillow before 7.1.0, an out-of-bounds read can occur when reading PCX files where state->shuffle is instructed to read beyond state->buffer.",bd2c705606069cb29d466768f306a3a621c949e8,0
+0.16181868314743042,0,0.0,1,0,6,0,6,0,"fix ImageMath creating false index entries
+
+(cherry picked from commit eebecba3c20cde0aca126eaa081ebe8a49f7c659)","In libImaging/PcxDecode.c in Pillow before 7.1.0, an out-of-bounds read can occur when reading PCX files where state->shuffle is instructed to read beyond state->buffer.",5e4c3ae5542437fd13ae5f022672c379ad75c1bd,0
+0.11717011779546738,0,0.0,1,0,16,24,40,0,"fix base Image attribute references
+
+(cherry picked from commit 07cc74d38bb1a1309e872d47a4a2d08bd97e9423)","In libImaging/PcxDecode.c in Pillow before 7.1.0, an out-of-bounds read can occur when reading PCX files where state->shuffle is instructed to read beyond state->buffer.",8b005dfe333e0fb7c71119e734dd3362b2fef014,0
+0.20644669234752655,0,0.0,5,0,235,96,331,7,"fix Image constants references
+
+(cherry picked from commit 5511111f3b36890a64ec7b44368996f72ab4d876)","In libImaging/PcxDecode.c in Pillow before 7.1.0, an out-of-bounds read can occur when reading PCX files where state->shuffle is instructed to read beyond state->buffer.",3342270947b6dd8442eaf9e14e7c34f9c017f507,0
+0.15901556611061096,0,0.0,2,0,12,12,24,1,"fix some function references
+
+(cherry picked from commit 9fb582940d577857d9034e0bf0c5cf5630c2d42e)","In libImaging/PcxDecode.c in Pillow before 7.1.0, an out-of-bounds read can occur when reading PCX files where state->shuffle is instructed to read beyond state->buffer.",19dd5cbfab75f6d9e74349a611140a5aa2fcd85e,0
+0.14638163149356842,0,0.0,1,0,20,7,27,0,"add missing and sort Image functions
+
+(cherry picked from commit f31c786aa6dadfcd93596887bb67b1d9a776f8c6)","In libImaging/PcxDecode.c in Pillow before 7.1.0, an out-of-bounds read can occur when reading PCX files where state->shuffle is instructed to read beyond state->buffer.",4f1ee7a881f2ce08ae8f37a0d49241050f2d55b7,0
+0.1328524351119995,0,0.0,2,0,37,0,37,2,document is_animated and n_frames,"In libImaging/PcxDecode.c in Pillow before 7.1.0, an out-of-bounds read can occur when reading PCX files where state->shuffle is instructed to read beyond state->buffer.",f5b4565d8c163cc1c55ed9f5525ec5848915aaa0,0
+0.011090857908129692,0,0.0,1,0,1,0,1,0,add gitignore to winbuild build directory,"In libImaging/PcxDecode.c in Pillow before 7.1.0, an out-of-bounds read can occur when reading PCX files where state->shuffle is instructed to read beyond state->buffer.",dc2201597363b262a0bf3f84a9132a21e254ee99,0
+0.18583284318447113,0,0.0,26,0,125,123,248,0,"Merge pull request #4712 from cool-RR/2020-06-12-raise-from
+
+Fix exception causes all over the codebase","In libImaging/PcxDecode.c in Pillow before 7.1.0, an out-of-bounds read can occur when reading PCX files where state->shuffle is instructed to read beyond state->buffer.",4ae694cd7b34b76a953ae4a9e338bb8eec6285cf,0
+0.062459856271743774,0,0.0,3,0,32,19,51,0,"Merge pull request #4737 from nulano/refs-image
+
+Fix documentation references: omitted Image functions","In libImaging/PcxDecode.c in Pillow before 7.1.0, an out-of-bounds read can occur when reading PCX files where state->shuffle is instructed to read beyond state->buffer.",510307532e4b12a57bfead47ce2d0fadb3752ce3,0
+-0.01514396071434021,0,0.0,80,0,775,466,1241,0,Merge branch 'master' into pre-commit-diff,"In libImaging/PcxDecode.c in Pillow before 7.1.0, an out-of-bounds read can occur when reading PCX files where state->shuffle is instructed to read beyond state->buffer.",2d3fd6ea02fd8ec40b5cec22d6e4603e02866f0e,0
+0.0019069230183959007,0,0.0,4,0,82,51,133,0,Merge pull request #4734 from nulano/refs-missing,"In libImaging/PcxDecode.c in Pillow before 7.1.0, an out-of-bounds read can occur when reading PCX files where state->shuffle is instructed to read beyond state->buffer.",780294302da732b75acee0d1819299feddef7da9,0
+-0.01304583065211773,0,0.0,3,0,79,106,185,0,Merge pull request #4735 from nulano/refs-type,"In libImaging/PcxDecode.c in Pillow before 7.1.0, an out-of-bounds read can occur when reading PCX files where state->shuffle is instructed to read beyond state->buffer.",977094d4b5554dc575264800e787472d9343e390,0
+0.36389267444610596,0,0.0,2,0,21,0,21,2,Fixed ICNS file pointer saving,"In libImaging/PcxDecode.c in Pillow before 7.1.0, an out-of-bounds read can occur when reading PCX files where state->shuffle is instructed to read beyond state->buffer.",1e8d418f4266ddd1a14e024f0997c76b8dc1ca9c,0
+-0.00040927913505584,0,0.0,32,0,318,299,617,0,Merge branch 'master' into refs-const,"In libImaging/PcxDecode.c in Pillow before 7.1.0, an out-of-bounds read can occur when reading PCX files where state->shuffle is instructed to read beyond state->buffer.",9019af5f3251702e37b55197873533c2b80f98ba,0
+0.05353168398141861,0,0.0,3,0,6,3,9,0,"Merge pull request #4716 from hugovk/pre-commit-diff
+
+CI: Show diff when pre-commit fails","In libImaging/PcxDecode.c in Pillow before 7.1.0, an out-of-bounds read can occur when reading PCX files where state->shuffle is instructed to read beyond state->buffer.",77c098b01ffd599ec555d22ac76fd16563f4946f,0
+0.4757613241672516,0,0.0,1,0,2,2,4,0,Pillow 8.3.2 supports Python 3.10 [ci skip],The package pillow 5.2.0 and before 8.3.2 are vulnerable to Regular Expression Denial of Service (ReDoS) via the getrgb function.,9189c4b08bb5b239a708da5280d4ce4e4dad6a77,0
+0.1358497440814972,0,0.0,1,0,2,2,4,0,Merge pull request #5698 from radarhere/python310,The package pillow 5.2.0 and before 8.3.2 are vulnerable to Regular Expression Denial of Service (ReDoS) via the getrgb function.,5ef629069d47800734e3fa32882f547c18d02c48,0
+0.3500831723213196,0,0.0,2,0,28,0,28,0,Add release notes for Pillow 8.3.2,The package pillow 5.2.0 and before 8.3.2 are vulnerable to Regular Expression Denial of Service (ReDoS) via the getrgb function.,ad1522aa550257c2b9ea79aa1826e0c6316d12d4,0
+0.2665228545665741,0,0.0,2,0,6,2,8,0,"Merge pull request #5651 from nulano/5637
+
+Hide FriBiDi shim symbols to avoid conflict with real FriBiDi library",The package pillow 5.2.0 and before 8.3.2 are vulnerable to Regular Expression Denial of Service (ReDoS) via the getrgb function.,874118e343a420bf6d69f89d026487c344b64f21,0
+0.28975391387939453,0,0.0,2,0,28,0,28,0,"Merge pull request #5699 from hugovk/8.3.2-release-notes
+
+Add release notes for Pillow 8.3.2",The package pillow 5.2.0 and before 8.3.2 are vulnerable to Regular Expression Denial of Service (ReDoS) via the getrgb function.,07a76e1fa64d426ae1aaa1e1d2f10d7d744d998e,0
+0.16957233846187592,0,0.0,1,0,15,6,21,0,Add 8.3.2 (2021-09-02) [CI skip],The package pillow 5.2.0 and before 8.3.2 are vulnerable to Regular Expression Denial of Service (ReDoS) via the getrgb function.,ec1a00c7fe085bc47ff18f4f78b82e3916dde4af,0
+0.2721298336982727,0,0.0,1,0,8,1,9,1,Fix 6-byte OOB read in FliDecode,The package pillow 5.2.0 and before 8.3.2 are vulnerable to Regular Expression Denial of Service (ReDoS) via the getrgb function.,a20d45fc0b7c450ce56f9aaa28eb81e245b8b651,0
+0.2962171733379364,0,0.0,2,0,13,0,13,1,"FLI tests for Oss-fuzz crash.
+
+* Note, valgrind doesn't pick this up, it's only the oss-fuzz
+  reproducer that catches it OMM.",The package pillow 5.2.0 and before 8.3.2 are vulnerable to Regular Expression Denial of Service (ReDoS) via the getrgb function.,d5edc5ff09060281f49dcb49dec2e3ab4d88b07e,0
+0.2087295949459076,0,0.0,2,0,11,0,11,2,Raise ValueError if color specifier is too long,The package pillow 5.2.0 and before 8.3.2 are vulnerable to Regular Expression Denial of Service (ReDoS) via the getrgb function.,1dc6564eb7ee8f28fb16eeffaf3572f3e1d5aa29,0
+0.2604833245277405,0,0.0,1,0,1,1,2,1,"Update test case
+
+Co-authored-by: Andrew Murray <3112309+radarhere@users.noreply.github.com>",The package pillow 5.2.0 and before 8.3.2 are vulnerable to Regular Expression Denial of Service (ReDoS) via the getrgb function.,5d399603dbec531a6fd68da17cdbe6398a7a54ac,0
+0.05591592192649841,0,0.0,2,0,15,1,16,0,Update release notes,The package pillow 5.2.0 and before 8.3.2 are vulnerable to Regular Expression Denial of Service (ReDoS) via the getrgb function.,949503b160b64c5671c690dd42d544ef2b145088,0
+0.0536762960255146,0,0.0,1,0,6,0,6,0,Update CHANGES.rst,The package pillow 5.2.0 and before 8.3.2 are vulnerable to Regular Expression Denial of Service (ReDoS) via the getrgb function.,98319efcc5460e4d9a2c14e83f8fcdf082754918,0
+0.1311415135860443,0,0.0,1,0,2,1,3,0,Merge pull request #5659 from wiredfool/fli_framesize,The package pillow 5.2.0 and before 8.3.2 are vulnerable to Regular Expression Denial of Service (ReDoS) via the getrgb function.,65b5f91b609e8d58c3536dc8b632bd8912141afd,0
+0.1347174048423767,0,0.0,4,0,6,1,7,0,"Merge pull request #5667 from radarhere/ico
+
+Read ICO AND mask from end",The package pillow 5.2.0 and before 8.3.2 are vulnerable to Regular Expression Denial of Service (ReDoS) via the getrgb function.,a918186d92490412592855090d94754e1c179e45,0
+0.08019130676984787,0,0.0,1,0,6,0,6,0,Update CHANGES.rst [ci skip],The package pillow 5.2.0 and before 8.3.2 are vulnerable to Regular Expression Denial of Service (ReDoS) via the getrgb function.,ab90e939b53587bb6ca1e2709c797c0b9178c4e5,0
+0.05692044645547867,0,0.0,1,0,1,2,3,0,Install numpy on Python 3.10,The package pillow 5.2.0 and before 8.3.2 are vulnerable to Regular Expression Denial of Service (ReDoS) via the getrgb function.,632c11b2abe97bc80af696ace2da0bd8a6d74c74,0
+0.07252448052167892,0,0.0,1,0,1,2,3,0,"Merge pull request #5702 from radarhere/numpy
+
+Install numpy on Python 3.10",The package pillow 5.2.0 and before 8.3.2 are vulnerable to Regular Expression Denial of Service (ReDoS) via the getrgb function.,50d62549991543e35f782273f317e5f837d8892f,0
+0.10420095175504684,0,0.0,2,0,4,1,5,0,Merge pull request #5696 from radarhere/quantize_palette,The package pillow 5.2.0 and before 8.3.2 are vulnerable to Regular Expression Denial of Service (ReDoS) via the getrgb function.,869b786db158c869d0b771d4f546b6cf1d24e009,0
+0.08019130676984787,0,0.0,1,0,3,0,3,0,Update CHANGES.rst [ci skip],The package pillow 5.2.0 and before 8.3.2 are vulnerable to Regular Expression Denial of Service (ReDoS) via the getrgb function.,ecf3a34717f077045f8f473e17546477fc1f74ad,0
+0.023962244391441345,0,0.0,96,0,1013,346,1359,0,Merge branch 'master' into tiff_exif,The package pillow 5.2.0 and before 8.3.2 are vulnerable to Regular Expression Denial of Service (ReDoS) via the getrgb function.,3f3828040b2d460fa87eaf92ba6bb6dd8a594989,0
+0.12152156233787537,0,0.0,3,0,50,6,56,0,"Merge pull request #5575 from radarhere/tiff_exif
+
+ Added ""exif"" keyword argument to TIFF saving",The package pillow 5.2.0 and before 8.3.2 are vulnerable to Regular Expression Denial of Service (ReDoS) via the getrgb function.,ba7502c0567c57cab9a192df5dd2720743a042c0,0
+0.08019130676984787,0,0.0,1,0,3,0,3,0,Update CHANGES.rst [ci skip],The package pillow 5.2.0 and before 8.3.2 are vulnerable to Regular Expression Denial of Service (ReDoS) via the getrgb function.,75a2ece0d1a436bc18a2301ece11b2b800ca50d4,0
+0.08709061145782471,0,0.0,0,0,20,16,36,0,"Merge pull request #4305 from radarhere/remove_distutils
+
+Replaced distutils with C version check",libImaging/SgiRleDecode.c in Pillow before 6.2.2 has an SGI buffer overflow.,f72e866b5e9cd3c54424bd14786532135b4441b7,0
+0.25108179450035095,0,0.0,1,0,2,1,3,0,Fix rounding error on RGB to L conversion,libImaging/SgiRleDecode.c in Pillow before 6.2.2 has an SGI buffer overflow.,d68147ce8979b1da05884f98d5ba30d81ae0df2f,0
+0.0888984352350235,0,0.0,367,0,9404,6504,15908,0,Merge branch 'master' into exif-writing-fixes,libImaging/SgiRleDecode.c in Pillow before 6.2.2 has an SGI buffer overflow.,6d3fb7b08379f2af4921d369eaabd81778c95949,0
+0.16067849099636078,0,0.0,2,0,4,4,8,3,Lint fixes,libImaging/SgiRleDecode.c in Pillow before 6.2.2 has an SGI buffer overflow.,74d53bcd15303bc0cba6506a5c69d17f1a2d74cd,0
+0.11203176528215408,0,0.0,8,0,17,17,34,6,Fix wrong tests,libImaging/SgiRleDecode.c in Pillow before 6.2.2 has an SGI buffer overflow.,fa1deca144210e519acc71e8fa9c8e004fc6f760,0
+0.05209093913435936,0,0.0,1,0,13,1,14,1,Test out of bounds signed rational,libImaging/SgiRleDecode.c in Pillow before 6.2.2 has an SGI buffer overflow.,69fc0413994f76a3ed87c76de414d9893e64dfb2,0
+0.14227475225925446,0,0.0,2,0,12,14,26,3,Changed _limit_signed_rational,libImaging/SgiRleDecode.c in Pillow before 6.2.2 has an SGI buffer overflow.,8924054dd9ff1a13caea785bfd66210193de8a74,0
+0.17942029237747192,0,0.0,2,0,115,14,129,0,"Merge pull request #3980 from kkopachev/exif-writing-fixes
+
+Exif writing fixes: Rational boundaries and signed/unsigned types",libImaging/SgiRleDecode.c in Pillow before 6.2.2 has an SGI buffer overflow.,066cc1b2c7dfb35c65e7bfd18a2b58c0f615ca82,0
+0.10423588007688522,0,0.0,1,0,3,0,3,0,Updated CHANGES.rst [ci skip],libImaging/SgiRleDecode.c in Pillow before 6.2.2 has an SGI buffer overflow.,5223ba2f3533cf2d184fcad6e4122bd0422620b3,0
+0.03134729340672493,0,0.0,1,0,8,10,18,0,Python 2.7 support has been removed [ci skip],libImaging/SgiRleDecode.c in Pillow before 6.2.2 has an SGI buffer overflow.,d85ad58cb9477c10e6a8ded224fe880391a45f68,0
+0.07694680243730545,0,0.0,1,0,3,3,6,0,Moved Python 2.7 notice to the top [ci skip],libImaging/SgiRleDecode.c in Pillow before 6.2.2 has an SGI buffer overflow.,6996bf80bf7731c47391eb022061c242c5b297a1,0
+0.06712671369314194,0,0.0,2,0,11,13,24,0,"Merge pull request #4322 from radarhere/python27
+
+Python 2.7 end of support documentation in changelog and deprecations",libImaging/SgiRleDecode.c in Pillow before 6.2.2 has an SGI buffer overflow.,fd4bd90c0901bacdc52f4e146c19fedfe3eb9a46,0
+0.11311590671539307,0,0.0,1,0,3,1,4,1,bring ImageColor.getcolor into line with Convert.c implementation,libImaging/SgiRleDecode.c in Pillow before 6.2.2 has an SGI buffer overflow.,038f9daf2799caeeacfa0fefb3aa6750d4051872,0
+0.1455276757478714,0,0.0,1,0,2,2,4,1,fix deprecation warnings in test_file_wmf,libImaging/SgiRleDecode.c in Pillow before 6.2.2 has an SGI buffer overflow.,6bf7f6045d5e20ffa8bf836641ccd86ba101ac47,0
+0.13868840038776398,0,0.0,1,0,2,2,4,0,"Merge pull request #4323 from nulano/wmf-warning
+
+Fix deprecation warnings in test_file_wmf",libImaging/SgiRleDecode.c in Pillow before 6.2.2 has an SGI buffer overflow.,94ec95c571777cf5188c5b791957220d723194a1,0
+0.01887601427733898,0,0.0,3,0,3,3,6,0,Updated copyright year,libImaging/SgiRleDecode.c in Pillow before 6.2.2 has an SGI buffer overflow.,1ab85c885e3817da9b0f283be6813e3bbbe2b29f,0
+0.01262879092246294,0,0.0,2,0,14,7,21,2,Allow string comment when saving GIF,libImaging/SgiRleDecode.c in Pillow before 6.2.2 has an SGI buffer overflow.,e8bb2dd93ea7ca600e48589e4118ecea2426afbc,0
+0.05832807347178459,0,0.0,3,0,3,3,6,0,"Merge pull request #4324 from radarhere/copyright
+
+Updated copyright year",libImaging/SgiRleDecode.c in Pillow before 6.2.2 has an SGI buffer overflow.,4bc3b1cdb4c5aed351c973ada61a328369c41fa4,0
+0.0602850615978241,0,0.0,2,0,14,7,21,0,"Merge pull request #4326 from radarhere/comment
+
+Allow string comment when saving GIF",libImaging/SgiRleDecode.c in Pillow before 6.2.2 has an SGI buffer overflow.,bca14ebf1d3df6fb605ca6f7d37262babd188d6b,0
+0.23622040450572968,0,0.0,9,0,21,18,39,0,"Merge pull request #4320 from uploadcare/rgb2l-rounding-error
+
+Fix rounding error on RGB to L conversion",libImaging/SgiRleDecode.c in Pillow before 6.2.2 has an SGI buffer overflow.,4203845a244b7ba6bd528c648859962c926690ee,0
+0.10423588007688522,0,0.0,1,0,3,0,3,0,Updated CHANGES.rst [ci skip],libImaging/SgiRleDecode.c in Pillow before 6.2.2 has an SGI buffer overflow.,37f51a7ec4b7bd163723f3d518a6ef2c4898d813,0
+0.09622183442115784,0,0.0,1,0,21,0,21,0,Added security notes [ci skip],libImaging/SgiRleDecode.c in Pillow before 6.2.2 has an SGI buffer overflow.,2f508d4467dcf82db01a79f5b11e9244a91921f2,0
+0.12287180125713348,0,0.0,1,0,21,0,21,0,"Merge pull request #4327 from radarhere/releasenotes
+
+Added security changes to past release notes",libImaging/SgiRleDecode.c in Pillow before 6.2.2 has an SGI buffer overflow.,ac4b7082c1990c8e1ab31da6945776a3cb1aefda,0
+0.13371819257736206,0,0.0,3,0,10,1,11,2,Raise an error for an invalid number of bands in FPX image,libImaging/SgiRleDecode.c in Pillow before 6.2.2 has an SGI buffer overflow.,138bd714f5cb2346af71447f7ec52ed54037bc0b,0
+0.31129464507102966,0,0.0,3,0,12,2,14,2,Catch FLI buffer overrun,libImaging/SgiRleDecode.c in Pillow before 6.2.2 has an SGI buffer overflow.,c40bc258472c83168a997a9bf4e4b5934397774a,0
+0.2750978171825409,0,0.0,3,0,9,1,10,2,Catch PCX P mode buffer overrun,libImaging/SgiRleDecode.c in Pillow before 6.2.2 has an SGI buffer overflow.,8f0c8f731190f761180bed827d07b7a740d8555b,0
+0.615775465965271,1,0.25,3,0,19,6,25,6,Catch SGI buffer overruns,libImaging/SgiRleDecode.c in Pillow before 6.2.2 has an SGI buffer overflow.,be44f0d9923485f3ed3a7a9fd479cf8cf69d814a,0
+0.3513071537017822,0,0.0,3,0,24,3,27,2,Overflow checks for realloc for tiff decoding,libImaging/SgiRleDecode.c in Pillow before 6.2.2 has an SGI buffer overflow.,b9c68540dc7091c644860a7ed31ec4b79dd9363e,0
+0.10332167148590088,0,0.0,2,0,37,1,38,0,Added release notes [ci skip],libImaging/SgiRleDecode.c in Pillow before 6.2.2 has an SGI buffer overflow.,afc93b0d76f030694de5bbff581be9cd45ea1497,0
+0.12742552161216736,0,0.0,2,0,2,2,4,0,7.0.0 version bump,libImaging/SgiRleDecode.c in Pillow before 6.2.2 has an SGI buffer overflow.,37b1974d305440c3a8848416ec6f1d2aff96c17b,0
+0.18211570382118225,0,0.0,1,0,1,0,1,0,Release notes for 6.2.2,libImaging/SgiRleDecode.c in Pillow before 6.2.2 has an SGI buffer overflow.,1cecf08d16509c20473766b4cdb7a65169844819,0
+0.1933402419090271,0,0.0,1,0,1,1,2,0,7.1.0.dev0 version bump,libImaging/SgiRleDecode.c in Pillow before 6.2.2 has an SGI buffer overflow.,46b4caa8e3c47b9b11eb8b54cdad3e05d3ae579a,0
+0.041503772139549255,0,0.0,1,0,1,1,2,0,Fix typo,libImaging/SgiRleDecode.c in Pillow before 6.2.2 has an SGI buffer overflow.,2545e48079f3e5b8249c0afc5bf24d55043d15ed,0
+0.05645560473203659,0,0.0,1,0,0,1,1,0,Removed unnecessary line,libImaging/SgiRleDecode.c in Pillow before 6.2.2 has an SGI buffer overflow.,a27f7a72443fdb6b944f97fe9a9e948ac53d3558,0
+0.14507658779621124,0,0.0,1,0,0,1,1,0,"Merge pull request #4330 from radarhere/coverage
+
+Removed unnecessary coverage line",libImaging/SgiRleDecode.c in Pillow before 6.2.2 has an SGI buffer overflow.,1afc94fd11dafef772bc6add8eca11c7910980b3,0
+0.006110537797212601,0,0.0,2,0,9,10,19,0,Add assigned CVE numbers,libImaging/SgiRleDecode.c in Pillow before 6.2.2 has an SGI buffer overflow.,81126d147042bd3eaea5a47fdd7e2af32ef49052,0
+0.06589654088020325,0,0.0,2,0,9,10,19,0,"Merge pull request #4332 from hugovk/add-cve-numbers
+
+Add assigned CVE numbers",libImaging/SgiRleDecode.c in Pillow before 6.2.2 has an SGI buffer overflow.,bfc478c0dbb2cb8265c7787e426e759fb7cdcc16,0
+0.1395951509475708,0,0.0,2,0,4,27,31,0,"Remove Docker from Travis CI, they're run on GHA",libImaging/SgiRleDecode.c in Pillow before 6.2.2 has an SGI buffer overflow.,9e6b47296806fcb2897a868bd9749aae2d37b120,0
+0.03146248310804367,0,0.0,3,0,65,4,69,3,Only draw each polygon pixel once,libImaging/SgiRleDecode.c in Pillow before 6.2.2 has an SGI buffer overflow.,8e8f63d4a5408daf8b907163822cad76210da725,0
+0.12181024998426437,0,0.0,0,0,20,16,36,0,"Merge pull request #4305 from radarhere/remove_distutils
+
+Replaced distutils with C version check","libImaging/TiffDecode.c in Pillow before 6.2.2 has a TIFF decoding integer overflow, related to realloc.",f72e866b5e9cd3c54424bd14786532135b4441b7,0
+0.4033128619194031,0,0.0,1,0,2,1,3,0,Fix rounding error on RGB to L conversion,"libImaging/TiffDecode.c in Pillow before 6.2.2 has a TIFF decoding integer overflow, related to realloc.",d68147ce8979b1da05884f98d5ba30d81ae0df2f,0
+0.16326844692230225,0,0.0,367,0,9404,6504,15908,0,Merge branch 'master' into exif-writing-fixes,"libImaging/TiffDecode.c in Pillow before 6.2.2 has a TIFF decoding integer overflow, related to realloc.",6d3fb7b08379f2af4921d369eaabd81778c95949,0
+0.1339486986398697,0,0.0,2,0,4,4,8,3,Lint fixes,"libImaging/TiffDecode.c in Pillow before 6.2.2 has a TIFF decoding integer overflow, related to realloc.",74d53bcd15303bc0cba6506a5c69d17f1a2d74cd,0
+0.08509684354066849,0,0.0,8,0,17,17,34,6,Fix wrong tests,"libImaging/TiffDecode.c in Pillow before 6.2.2 has a TIFF decoding integer overflow, related to realloc.",fa1deca144210e519acc71e8fa9c8e004fc6f760,0
+0.2018267661333084,0,0.0,1,0,13,1,14,1,Test out of bounds signed rational,"libImaging/TiffDecode.c in Pillow before 6.2.2 has a TIFF decoding integer overflow, related to realloc.",69fc0413994f76a3ed87c76de414d9893e64dfb2,0
+0.2128753811120987,0,0.0,2,0,12,14,26,3,Changed _limit_signed_rational,"libImaging/TiffDecode.c in Pillow before 6.2.2 has a TIFF decoding integer overflow, related to realloc.",8924054dd9ff1a13caea785bfd66210193de8a74,0
+0.36031562089920044,0,0.0,2,0,115,14,129,0,"Merge pull request #3980 from kkopachev/exif-writing-fixes
+
+Exif writing fixes: Rational boundaries and signed/unsigned types","libImaging/TiffDecode.c in Pillow before 6.2.2 has a TIFF decoding integer overflow, related to realloc.",066cc1b2c7dfb35c65e7bfd18a2b58c0f615ca82,0
+0.08640144765377045,0,0.0,1,0,3,0,3,0,Updated CHANGES.rst [ci skip],"libImaging/TiffDecode.c in Pillow before 6.2.2 has a TIFF decoding integer overflow, related to realloc.",5223ba2f3533cf2d184fcad6e4122bd0422620b3,0
+0.06226468086242676,0,0.0,1,0,8,10,18,0,Python 2.7 support has been removed [ci skip],"libImaging/TiffDecode.c in Pillow before 6.2.2 has a TIFF decoding integer overflow, related to realloc.",d85ad58cb9477c10e6a8ded224fe880391a45f68,0
+0.1058860495686531,0,0.0,1,0,3,3,6,0,Moved Python 2.7 notice to the top [ci skip],"libImaging/TiffDecode.c in Pillow before 6.2.2 has a TIFF decoding integer overflow, related to realloc.",6996bf80bf7731c47391eb022061c242c5b297a1,0
+0.08116090297698975,0,0.0,2,0,11,13,24,0,"Merge pull request #4322 from radarhere/python27
+
+Python 2.7 end of support documentation in changelog and deprecations","libImaging/TiffDecode.c in Pillow before 6.2.2 has a TIFF decoding integer overflow, related to realloc.",fd4bd90c0901bacdc52f4e146c19fedfe3eb9a46,0
+0.1996486932039261,0,0.0,1,0,3,1,4,1,bring ImageColor.getcolor into line with Convert.c implementation,"libImaging/TiffDecode.c in Pillow before 6.2.2 has a TIFF decoding integer overflow, related to realloc.",038f9daf2799caeeacfa0fefb3aa6750d4051872,0
+0.16284391283988953,0,0.0,1,0,2,2,4,1,fix deprecation warnings in test_file_wmf,"libImaging/TiffDecode.c in Pillow before 6.2.2 has a TIFF decoding integer overflow, related to realloc.",6bf7f6045d5e20ffa8bf836641ccd86ba101ac47,0
+0.13330408930778503,0,0.0,1,0,2,2,4,0,"Merge pull request #4323 from nulano/wmf-warning
+
+Fix deprecation warnings in test_file_wmf","libImaging/TiffDecode.c in Pillow before 6.2.2 has a TIFF decoding integer overflow, related to realloc.",94ec95c571777cf5188c5b791957220d723194a1,0
+0.08513257652521133,0,0.0,3,0,3,3,6,0,Updated copyright year,"libImaging/TiffDecode.c in Pillow before 6.2.2 has a TIFF decoding integer overflow, related to realloc.",1ab85c885e3817da9b0f283be6813e3bbbe2b29f,0
+0.20035035908222198,0,0.0,2,0,14,7,21,2,Allow string comment when saving GIF,"libImaging/TiffDecode.c in Pillow before 6.2.2 has a TIFF decoding integer overflow, related to realloc.",e8bb2dd93ea7ca600e48589e4118ecea2426afbc,0
+0.09598051011562347,0,0.0,3,0,3,3,6,0,"Merge pull request #4324 from radarhere/copyright
+
+Updated copyright year","libImaging/TiffDecode.c in Pillow before 6.2.2 has a TIFF decoding integer overflow, related to realloc.",4bc3b1cdb4c5aed351c973ada61a328369c41fa4,0
+0.17492027580738068,0,0.0,2,0,14,7,21,0,"Merge pull request #4326 from radarhere/comment
+
+Allow string comment when saving GIF","libImaging/TiffDecode.c in Pillow before 6.2.2 has a TIFF decoding integer overflow, related to realloc.",bca14ebf1d3df6fb605ca6f7d37262babd188d6b,0
+0.33923277258872986,0,0.0,9,0,21,18,39,0,"Merge pull request #4320 from uploadcare/rgb2l-rounding-error
+
+Fix rounding error on RGB to L conversion","libImaging/TiffDecode.c in Pillow before 6.2.2 has a TIFF decoding integer overflow, related to realloc.",4203845a244b7ba6bd528c648859962c926690ee,0
+0.08640144765377045,0,0.0,1,0,3,0,3,0,Updated CHANGES.rst [ci skip],"libImaging/TiffDecode.c in Pillow before 6.2.2 has a TIFF decoding integer overflow, related to realloc.",37f51a7ec4b7bd163723f3d518a6ef2c4898d813,0
+0.02934413217008114,0,0.0,1,0,21,0,21,0,Added security notes [ci skip],"libImaging/TiffDecode.c in Pillow before 6.2.2 has a TIFF decoding integer overflow, related to realloc.",2f508d4467dcf82db01a79f5b11e9244a91921f2,0
+0.06165396422147751,0,0.0,1,0,21,0,21,0,"Merge pull request #4327 from radarhere/releasenotes
+
+Added security changes to past release notes","libImaging/TiffDecode.c in Pillow before 6.2.2 has a TIFF decoding integer overflow, related to realloc.",ac4b7082c1990c8e1ab31da6945776a3cb1aefda,0
+0.2758132517337799,0,0.0,3,0,10,1,11,2,Raise an error for an invalid number of bands in FPX image,"libImaging/TiffDecode.c in Pillow before 6.2.2 has a TIFF decoding integer overflow, related to realloc.",138bd714f5cb2346af71447f7ec52ed54037bc0b,0
+0.18576812744140625,0,0.0,3,0,12,2,14,2,Catch FLI buffer overrun,"libImaging/TiffDecode.c in Pillow before 6.2.2 has a TIFF decoding integer overflow, related to realloc.",c40bc258472c83168a997a9bf4e4b5934397774a,0
+0.10660336166620255,0,0.0,3,0,9,1,10,2,Catch PCX P mode buffer overrun,"libImaging/TiffDecode.c in Pillow before 6.2.2 has a TIFF decoding integer overflow, related to realloc.",8f0c8f731190f761180bed827d07b7a740d8555b,0
+0.2046602964401245,0,0.0,4,0,19,6,25,6,Catch SGI buffer overruns,"libImaging/TiffDecode.c in Pillow before 6.2.2 has a TIFF decoding integer overflow, related to realloc.",be44f0d9923485f3ed3a7a9fd479cf8cf69d814a,0
+0.7892818450927734,1,0.33,2,0,24,3,27,2,Overflow checks for realloc for tiff decoding,"libImaging/TiffDecode.c in Pillow before 6.2.2 has a TIFF decoding integer overflow, related to realloc.",b9c68540dc7091c644860a7ed31ec4b79dd9363e,0
+-0.01411862950772047,0,0.0,2,0,37,1,38,0,Added release notes [ci skip],"libImaging/TiffDecode.c in Pillow before 6.2.2 has a TIFF decoding integer overflow, related to realloc.",afc93b0d76f030694de5bbff581be9cd45ea1497,0
+0.11275333911180496,0,0.0,2,0,2,2,4,0,7.0.0 version bump,"libImaging/TiffDecode.c in Pillow before 6.2.2 has a TIFF decoding integer overflow, related to realloc.",37b1974d305440c3a8848416ec6f1d2aff96c17b,0
+0.06750714778900146,0,0.0,1,0,1,0,1,0,Release notes for 6.2.2,"libImaging/TiffDecode.c in Pillow before 6.2.2 has a TIFF decoding integer overflow, related to realloc.",1cecf08d16509c20473766b4cdb7a65169844819,0
+0.1318231076002121,0,0.0,1,0,1,1,2,0,7.1.0.dev0 version bump,"libImaging/TiffDecode.c in Pillow before 6.2.2 has a TIFF decoding integer overflow, related to realloc.",46b4caa8e3c47b9b11eb8b54cdad3e05d3ae579a,0
+0.048166822642087936,0,0.0,1,0,1,1,2,0,Fix typo,"libImaging/TiffDecode.c in Pillow before 6.2.2 has a TIFF decoding integer overflow, related to realloc.",2545e48079f3e5b8249c0afc5bf24d55043d15ed,0
+0.05051993206143379,0,0.0,1,0,0,1,1,0,Removed unnecessary line,"libImaging/TiffDecode.c in Pillow before 6.2.2 has a TIFF decoding integer overflow, related to realloc.",a27f7a72443fdb6b944f97fe9a9e948ac53d3558,0
+0.10614115744829178,0,0.0,1,0,0,1,1,0,"Merge pull request #4330 from radarhere/coverage
+
+Removed unnecessary coverage line","libImaging/TiffDecode.c in Pillow before 6.2.2 has a TIFF decoding integer overflow, related to realloc.",1afc94fd11dafef772bc6add8eca11c7910980b3,0
+0.08813218772411346,0,0.0,2,0,9,10,19,0,Add assigned CVE numbers,"libImaging/TiffDecode.c in Pillow before 6.2.2 has a TIFF decoding integer overflow, related to realloc.",81126d147042bd3eaea5a47fdd7e2af32ef49052,0
+0.0745638757944107,0,0.0,2,0,9,10,19,0,"Merge pull request #4332 from hugovk/add-cve-numbers
+
+Add assigned CVE numbers","libImaging/TiffDecode.c in Pillow before 6.2.2 has a TIFF decoding integer overflow, related to realloc.",bfc478c0dbb2cb8265c7787e426e759fb7cdcc16,0
+0.09062615036964417,0,0.0,2,0,4,27,31,0,"Remove Docker from Travis CI, they're run on GHA","libImaging/TiffDecode.c in Pillow before 6.2.2 has a TIFF decoding integer overflow, related to realloc.",9e6b47296806fcb2897a868bd9749aae2d37b120,0
+0.0826624259352684,0,0.0,3,0,65,4,69,3,Only draw each polygon pixel once,"libImaging/TiffDecode.c in Pillow before 6.2.2 has a TIFF decoding integer overflow, related to realloc.",8e8f63d4a5408daf8b907163822cad76210da725,0
+0.1256132870912552,0,0.0,0,0,20,16,36,0,"Merge pull request #4305 from radarhere/remove_distutils
+
+Replaced distutils with C version check",libImaging/FliDecode.c in Pillow before 6.2.2 has an FLI buffer overflow.,f72e866b5e9cd3c54424bd14786532135b4441b7,0
+0.2693842351436615,0,0.0,1,0,2,1,3,0,Fix rounding error on RGB to L conversion,libImaging/FliDecode.c in Pillow before 6.2.2 has an FLI buffer overflow.,d68147ce8979b1da05884f98d5ba30d81ae0df2f,0
+0.1498311161994934,0,0.0,367,0,9404,6504,15908,0,Merge branch 'master' into exif-writing-fixes,libImaging/FliDecode.c in Pillow before 6.2.2 has an FLI buffer overflow.,6d3fb7b08379f2af4921d369eaabd81778c95949,0
+0.1711525321006775,0,0.0,2,0,4,4,8,3,Lint fixes,libImaging/FliDecode.c in Pillow before 6.2.2 has an FLI buffer overflow.,74d53bcd15303bc0cba6506a5c69d17f1a2d74cd,0
+0.10196024924516678,0,0.0,8,0,17,17,34,6,Fix wrong tests,libImaging/FliDecode.c in Pillow before 6.2.2 has an FLI buffer overflow.,fa1deca144210e519acc71e8fa9c8e004fc6f760,0
+0.07927623391151428,0,0.0,1,0,13,1,14,1,Test out of bounds signed rational,libImaging/FliDecode.c in Pillow before 6.2.2 has an FLI buffer overflow.,69fc0413994f76a3ed87c76de414d9893e64dfb2,0
+0.17731218039989471,0,0.0,2,0,12,14,26,3,Changed _limit_signed_rational,libImaging/FliDecode.c in Pillow before 6.2.2 has an FLI buffer overflow.,8924054dd9ff1a13caea785bfd66210193de8a74,0
+0.2447977513074875,0,0.0,2,0,115,14,129,0,"Merge pull request #3980 from kkopachev/exif-writing-fixes
+
+Exif writing fixes: Rational boundaries and signed/unsigned types",libImaging/FliDecode.c in Pillow before 6.2.2 has an FLI buffer overflow.,066cc1b2c7dfb35c65e7bfd18a2b58c0f615ca82,0
+0.05055942013859749,0,0.0,1,0,3,0,3,0,Updated CHANGES.rst [ci skip],libImaging/FliDecode.c in Pillow before 6.2.2 has an FLI buffer overflow.,5223ba2f3533cf2d184fcad6e4122bd0422620b3,0
+0.05336889997124672,0,0.0,1,0,8,10,18,0,Python 2.7 support has been removed [ci skip],libImaging/FliDecode.c in Pillow before 6.2.2 has an FLI buffer overflow.,d85ad58cb9477c10e6a8ded224fe880391a45f68,0
+0.09598445892333984,0,0.0,1,0,3,3,6,0,Moved Python 2.7 notice to the top [ci skip],libImaging/FliDecode.c in Pillow before 6.2.2 has an FLI buffer overflow.,6996bf80bf7731c47391eb022061c242c5b297a1,0
+0.08948510140180588,0,0.0,2,0,11,13,24,0,"Merge pull request #4322 from radarhere/python27
+
+Python 2.7 end of support documentation in changelog and deprecations",libImaging/FliDecode.c in Pillow before 6.2.2 has an FLI buffer overflow.,fd4bd90c0901bacdc52f4e146c19fedfe3eb9a46,0
+0.14681397378444672,0,0.0,1,0,3,1,4,1,bring ImageColor.getcolor into line with Convert.c implementation,libImaging/FliDecode.c in Pillow before 6.2.2 has an FLI buffer overflow.,038f9daf2799caeeacfa0fefb3aa6750d4051872,0
+0.17219728231430054,0,0.0,1,0,2,2,4,1,fix deprecation warnings in test_file_wmf,libImaging/FliDecode.c in Pillow before 6.2.2 has an FLI buffer overflow.,6bf7f6045d5e20ffa8bf836641ccd86ba101ac47,0
+0.17448846995830536,0,0.0,1,0,2,2,4,0,"Merge pull request #4323 from nulano/wmf-warning
+
+Fix deprecation warnings in test_file_wmf",libImaging/FliDecode.c in Pillow before 6.2.2 has an FLI buffer overflow.,94ec95c571777cf5188c5b791957220d723194a1,0
+0.08424471318721771,0,0.0,3,0,3,3,6,0,Updated copyright year,libImaging/FliDecode.c in Pillow before 6.2.2 has an FLI buffer overflow.,1ab85c885e3817da9b0f283be6813e3bbbe2b29f,0
+0.08684705197811127,0,0.0,2,0,14,7,21,2,Allow string comment when saving GIF,libImaging/FliDecode.c in Pillow before 6.2.2 has an FLI buffer overflow.,e8bb2dd93ea7ca600e48589e4118ecea2426afbc,0
+0.11708586663007736,0,0.0,3,0,3,3,6,0,"Merge pull request #4324 from radarhere/copyright
+
+Updated copyright year",libImaging/FliDecode.c in Pillow before 6.2.2 has an FLI buffer overflow.,4bc3b1cdb4c5aed351c973ada61a328369c41fa4,0
+0.14516611397266388,0,0.0,2,0,14,7,21,0,"Merge pull request #4326 from radarhere/comment
+
+Allow string comment when saving GIF",libImaging/FliDecode.c in Pillow before 6.2.2 has an FLI buffer overflow.,bca14ebf1d3df6fb605ca6f7d37262babd188d6b,0
+0.2732556164264679,0,0.0,9,0,21,18,39,0,"Merge pull request #4320 from uploadcare/rgb2l-rounding-error
+
+Fix rounding error on RGB to L conversion",libImaging/FliDecode.c in Pillow before 6.2.2 has an FLI buffer overflow.,4203845a244b7ba6bd528c648859962c926690ee,0
+0.05055942013859749,0,0.0,1,0,3,0,3,0,Updated CHANGES.rst [ci skip],libImaging/FliDecode.c in Pillow before 6.2.2 has an FLI buffer overflow.,37f51a7ec4b7bd163723f3d518a6ef2c4898d813,0
+0.07194814085960388,0,0.0,1,0,21,0,21,0,Added security notes [ci skip],libImaging/FliDecode.c in Pillow before 6.2.2 has an FLI buffer overflow.,2f508d4467dcf82db01a79f5b11e9244a91921f2,0
+0.1367889642715454,0,0.0,1,0,21,0,21,0,"Merge pull request #4327 from radarhere/releasenotes
+
+Added security changes to past release notes",libImaging/FliDecode.c in Pillow before 6.2.2 has an FLI buffer overflow.,ac4b7082c1990c8e1ab31da6945776a3cb1aefda,0
+0.2239115834236145,0,0.0,3,0,10,1,11,2,Raise an error for an invalid number of bands in FPX image,libImaging/FliDecode.c in Pillow before 6.2.2 has an FLI buffer overflow.,138bd714f5cb2346af71447f7ec52ed54037bc0b,0
+0.592754602432251,1,0.33,2,0,12,2,14,2,Catch FLI buffer overrun,libImaging/FliDecode.c in Pillow before 6.2.2 has an FLI buffer overflow.,c40bc258472c83168a997a9bf4e4b5934397774a,0
+0.29163169860839844,0,0.0,3,0,9,1,10,2,Catch PCX P mode buffer overrun,libImaging/FliDecode.c in Pillow before 6.2.2 has an FLI buffer overflow.,8f0c8f731190f761180bed827d07b7a740d8555b,0
+0.3787058889865875,0,0.0,4,0,19,6,25,6,Catch SGI buffer overruns,libImaging/FliDecode.c in Pillow before 6.2.2 has an FLI buffer overflow.,be44f0d9923485f3ed3a7a9fd479cf8cf69d814a,0
+0.45671218633651733,0,0.0,3,0,24,3,27,2,Overflow checks for realloc for tiff decoding,libImaging/FliDecode.c in Pillow before 6.2.2 has an FLI buffer overflow.,b9c68540dc7091c644860a7ed31ec4b79dd9363e,0
+0.05799390748143196,0,0.0,2,0,37,1,38,0,Added release notes [ci skip],libImaging/FliDecode.c in Pillow before 6.2.2 has an FLI buffer overflow.,afc93b0d76f030694de5bbff581be9cd45ea1497,0
+0.11640208214521408,0,0.0,2,0,2,2,4,0,7.0.0 version bump,libImaging/FliDecode.c in Pillow before 6.2.2 has an FLI buffer overflow.,37b1974d305440c3a8848416ec6f1d2aff96c17b,0
+0.12593694031238556,0,0.0,1,0,1,0,1,0,Release notes for 6.2.2,libImaging/FliDecode.c in Pillow before 6.2.2 has an FLI buffer overflow.,1cecf08d16509c20473766b4cdb7a65169844819,0
+0.15485043823719025,0,0.0,1,0,1,1,2,0,7.1.0.dev0 version bump,libImaging/FliDecode.c in Pillow before 6.2.2 has an FLI buffer overflow.,46b4caa8e3c47b9b11eb8b54cdad3e05d3ae579a,0
+0.02483689785003662,0,0.0,1,0,1,1,2,0,Fix typo,libImaging/FliDecode.c in Pillow before 6.2.2 has an FLI buffer overflow.,2545e48079f3e5b8249c0afc5bf24d55043d15ed,0
+0.05845155194401741,0,0.0,1,0,0,1,1,0,Removed unnecessary line,libImaging/FliDecode.c in Pillow before 6.2.2 has an FLI buffer overflow.,a27f7a72443fdb6b944f97fe9a9e948ac53d3558,0
+0.179676815867424,0,0.0,1,0,0,1,1,0,"Merge pull request #4330 from radarhere/coverage
+
+Removed unnecessary coverage line",libImaging/FliDecode.c in Pillow before 6.2.2 has an FLI buffer overflow.,1afc94fd11dafef772bc6add8eca11c7910980b3,0
+-0.030954334884881973,0,0.0,2,0,9,10,19,0,Add assigned CVE numbers,libImaging/FliDecode.c in Pillow before 6.2.2 has an FLI buffer overflow.,81126d147042bd3eaea5a47fdd7e2af32ef49052,0
+0.027604570612311363,0,0.0,2,0,9,10,19,0,"Merge pull request #4332 from hugovk/add-cve-numbers
+
+Add assigned CVE numbers",libImaging/FliDecode.c in Pillow before 6.2.2 has an FLI buffer overflow.,bfc478c0dbb2cb8265c7787e426e759fb7cdcc16,0
+0.08446808159351349,0,0.0,2,0,4,27,31,0,"Remove Docker from Travis CI, they're run on GHA",libImaging/FliDecode.c in Pillow before 6.2.2 has an FLI buffer overflow.,9e6b47296806fcb2897a868bd9749aae2d37b120,0
+0.033850133419036865,0,0.0,3,0,65,4,69,3,Only draw each polygon pixel once,libImaging/FliDecode.c in Pillow before 6.2.2 has an FLI buffer overflow.,8e8f63d4a5408daf8b907163822cad76210da725,0
+0.11768289655447006,0,0.0,0,0,20,16,36,0,"Merge pull request #4305 from radarhere/remove_distutils
+
+Replaced distutils with C version check",libImaging/PcxDecode.c in Pillow before 6.2.2 has a PCX P mode buffer overflow.,f72e866b5e9cd3c54424bd14786532135b4441b7,0
+0.2742860019207001,0,0.0,1,0,2,1,3,0,Fix rounding error on RGB to L conversion,libImaging/PcxDecode.c in Pillow before 6.2.2 has a PCX P mode buffer overflow.,d68147ce8979b1da05884f98d5ba30d81ae0df2f,0
+0.07138849794864655,0,0.0,367,0,9404,6504,15908,0,Merge branch 'master' into exif-writing-fixes,libImaging/PcxDecode.c in Pillow before 6.2.2 has a PCX P mode buffer overflow.,6d3fb7b08379f2af4921d369eaabd81778c95949,0
+0.08363880217075348,0,0.0,2,0,4,4,8,3,Lint fixes,libImaging/PcxDecode.c in Pillow before 6.2.2 has a PCX P mode buffer overflow.,74d53bcd15303bc0cba6506a5c69d17f1a2d74cd,0
+0.08989304304122925,0,0.0,8,0,17,17,34,6,Fix wrong tests,libImaging/PcxDecode.c in Pillow before 6.2.2 has a PCX P mode buffer overflow.,fa1deca144210e519acc71e8fa9c8e004fc6f760,0
+0.08762723207473755,0,0.0,1,0,13,1,14,1,Test out of bounds signed rational,libImaging/PcxDecode.c in Pillow before 6.2.2 has a PCX P mode buffer overflow.,69fc0413994f76a3ed87c76de414d9893e64dfb2,0
+0.151726633310318,0,0.0,2,0,12,14,26,3,Changed _limit_signed_rational,libImaging/PcxDecode.c in Pillow before 6.2.2 has a PCX P mode buffer overflow.,8924054dd9ff1a13caea785bfd66210193de8a74,0
+0.23976658284664154,0,0.0,2,0,115,14,129,0,"Merge pull request #3980 from kkopachev/exif-writing-fixes
+
+Exif writing fixes: Rational boundaries and signed/unsigned types",libImaging/PcxDecode.c in Pillow before 6.2.2 has a PCX P mode buffer overflow.,066cc1b2c7dfb35c65e7bfd18a2b58c0f615ca82,0
+0.14980018138885498,0,0.0,1,0,3,0,3,0,Updated CHANGES.rst [ci skip],libImaging/PcxDecode.c in Pillow before 6.2.2 has a PCX P mode buffer overflow.,5223ba2f3533cf2d184fcad6e4122bd0422620b3,0
+0.10754899680614471,0,0.0,1,0,8,10,18,0,Python 2.7 support has been removed [ci skip],libImaging/PcxDecode.c in Pillow before 6.2.2 has a PCX P mode buffer overflow.,d85ad58cb9477c10e6a8ded224fe880391a45f68,0
+0.1433536261320114,0,0.0,1,0,3,3,6,0,Moved Python 2.7 notice to the top [ci skip],libImaging/PcxDecode.c in Pillow before 6.2.2 has a PCX P mode buffer overflow.,6996bf80bf7731c47391eb022061c242c5b297a1,0
+0.11894530057907104,0,0.0,2,0,11,13,24,0,"Merge pull request #4322 from radarhere/python27
+
+Python 2.7 end of support documentation in changelog and deprecations",libImaging/PcxDecode.c in Pillow before 6.2.2 has a PCX P mode buffer overflow.,fd4bd90c0901bacdc52f4e146c19fedfe3eb9a46,0
+0.15236951410770416,0,0.0,1,0,3,1,4,1,bring ImageColor.getcolor into line with Convert.c implementation,libImaging/PcxDecode.c in Pillow before 6.2.2 has a PCX P mode buffer overflow.,038f9daf2799caeeacfa0fefb3aa6750d4051872,0
+0.15655255317687988,0,0.0,1,0,2,2,4,1,fix deprecation warnings in test_file_wmf,libImaging/PcxDecode.c in Pillow before 6.2.2 has a PCX P mode buffer overflow.,6bf7f6045d5e20ffa8bf836641ccd86ba101ac47,0
+0.13063505291938782,0,0.0,1,0,2,2,4,0,"Merge pull request #4323 from nulano/wmf-warning
+
+Fix deprecation warnings in test_file_wmf",libImaging/PcxDecode.c in Pillow before 6.2.2 has a PCX P mode buffer overflow.,94ec95c571777cf5188c5b791957220d723194a1,0
+0.039565153419971466,0,0.0,3,0,3,3,6,0,Updated copyright year,libImaging/PcxDecode.c in Pillow before 6.2.2 has a PCX P mode buffer overflow.,1ab85c885e3817da9b0f283be6813e3bbbe2b29f,0
+0.103080615401268,0,0.0,2,0,14,7,21,2,Allow string comment when saving GIF,libImaging/PcxDecode.c in Pillow before 6.2.2 has a PCX P mode buffer overflow.,e8bb2dd93ea7ca600e48589e4118ecea2426afbc,0
+0.09846329689025879,0,0.0,3,0,3,3,6,0,"Merge pull request #4324 from radarhere/copyright
+
+Updated copyright year",libImaging/PcxDecode.c in Pillow before 6.2.2 has a PCX P mode buffer overflow.,4bc3b1cdb4c5aed351c973ada61a328369c41fa4,0
+0.16466942429542542,0,0.0,2,0,14,7,21,0,"Merge pull request #4326 from radarhere/comment
+
+Allow string comment when saving GIF",libImaging/PcxDecode.c in Pillow before 6.2.2 has a PCX P mode buffer overflow.,bca14ebf1d3df6fb605ca6f7d37262babd188d6b,0
+0.2914658784866333,0,0.0,9,0,21,18,39,0,"Merge pull request #4320 from uploadcare/rgb2l-rounding-error
+
+Fix rounding error on RGB to L conversion",libImaging/PcxDecode.c in Pillow before 6.2.2 has a PCX P mode buffer overflow.,4203845a244b7ba6bd528c648859962c926690ee,0
+0.14980018138885498,0,0.0,1,0,3,0,3,0,Updated CHANGES.rst [ci skip],libImaging/PcxDecode.c in Pillow before 6.2.2 has a PCX P mode buffer overflow.,37f51a7ec4b7bd163723f3d518a6ef2c4898d813,0
+0.0749814584851265,0,0.0,1,0,21,0,21,0,Added security notes [ci skip],libImaging/PcxDecode.c in Pillow before 6.2.2 has a PCX P mode buffer overflow.,2f508d4467dcf82db01a79f5b11e9244a91921f2,0
+0.11728588491678238,0,0.0,1,0,21,0,21,0,"Merge pull request #4327 from radarhere/releasenotes
+
+Added security changes to past release notes",libImaging/PcxDecode.c in Pillow before 6.2.2 has a PCX P mode buffer overflow.,ac4b7082c1990c8e1ab31da6945776a3cb1aefda,0
+0.2624315619468689,0,0.0,3,0,10,1,11,2,Raise an error for an invalid number of bands in FPX image,libImaging/PcxDecode.c in Pillow before 6.2.2 has a PCX P mode buffer overflow.,138bd714f5cb2346af71447f7ec52ed54037bc0b,0
+0.28967732191085815,0,0.0,3,0,12,2,14,2,Catch FLI buffer overrun,libImaging/PcxDecode.c in Pillow before 6.2.2 has a PCX P mode buffer overflow.,c40bc258472c83168a997a9bf4e4b5934397774a,0
+0.6440441608428955,1,0.33,2,0,9,1,10,2,Catch PCX P mode buffer overrun,libImaging/PcxDecode.c in Pillow before 6.2.2 has a PCX P mode buffer overflow.,8f0c8f731190f761180bed827d07b7a740d8555b,0
+0.32913482189178467,0,0.0,4,0,19,6,25,6,Catch SGI buffer overruns,libImaging/PcxDecode.c in Pillow before 6.2.2 has a PCX P mode buffer overflow.,be44f0d9923485f3ed3a7a9fd479cf8cf69d814a,0
+0.4056051969528198,0,0.0,3,0,24,3,27,2,Overflow checks for realloc for tiff decoding,libImaging/PcxDecode.c in Pillow before 6.2.2 has a PCX P mode buffer overflow.,b9c68540dc7091c644860a7ed31ec4b79dd9363e,0
+0.09334085136651993,0,0.0,2,0,37,1,38,0,Added release notes [ci skip],libImaging/PcxDecode.c in Pillow before 6.2.2 has a PCX P mode buffer overflow.,afc93b0d76f030694de5bbff581be9cd45ea1497,0
+0.160511314868927,0,0.0,2,0,2,2,4,0,7.0.0 version bump,libImaging/PcxDecode.c in Pillow before 6.2.2 has a PCX P mode buffer overflow.,37b1974d305440c3a8848416ec6f1d2aff96c17b,0
+0.13145358860492706,0,0.0,1,0,1,0,1,0,Release notes for 6.2.2,libImaging/PcxDecode.c in Pillow before 6.2.2 has a PCX P mode buffer overflow.,1cecf08d16509c20473766b4cdb7a65169844819,0
+0.23120467364788055,0,0.0,1,0,1,1,2,0,7.1.0.dev0 version bump,libImaging/PcxDecode.c in Pillow before 6.2.2 has a PCX P mode buffer overflow.,46b4caa8e3c47b9b11eb8b54cdad3e05d3ae579a,0
+0.03846396878361702,0,0.0,1,0,1,1,2,0,Fix typo,libImaging/PcxDecode.c in Pillow before 6.2.2 has a PCX P mode buffer overflow.,2545e48079f3e5b8249c0afc5bf24d55043d15ed,0
+0.09457643330097198,0,0.0,1,0,0,1,1,0,Removed unnecessary line,libImaging/PcxDecode.c in Pillow before 6.2.2 has a PCX P mode buffer overflow.,a27f7a72443fdb6b944f97fe9a9e948ac53d3558,0
+0.1810312122106552,0,0.0,1,0,0,1,1,0,"Merge pull request #4330 from radarhere/coverage
+
+Removed unnecessary coverage line",libImaging/PcxDecode.c in Pillow before 6.2.2 has a PCX P mode buffer overflow.,1afc94fd11dafef772bc6add8eca11c7910980b3,0
+0.00728898961097002,0,0.0,2,0,9,10,19,0,Add assigned CVE numbers,libImaging/PcxDecode.c in Pillow before 6.2.2 has a PCX P mode buffer overflow.,81126d147042bd3eaea5a47fdd7e2af32ef49052,0
+0.02721492201089859,0,0.0,2,0,9,10,19,0,"Merge pull request #4332 from hugovk/add-cve-numbers
+
+Add assigned CVE numbers",libImaging/PcxDecode.c in Pillow before 6.2.2 has a PCX P mode buffer overflow.,bfc478c0dbb2cb8265c7787e426e759fb7cdcc16,0
+0.03292497619986534,0,0.0,2,0,4,27,31,0,"Remove Docker from Travis CI, they're run on GHA",libImaging/PcxDecode.c in Pillow before 6.2.2 has a PCX P mode buffer overflow.,9e6b47296806fcb2897a868bd9749aae2d37b120,0
+0.18130403757095337,0,0.0,3,0,65,4,69,3,Only draw each polygon pixel once,libImaging/PcxDecode.c in Pillow before 6.2.2 has a PCX P mode buffer overflow.,8e8f63d4a5408daf8b907163822cad76210da725,0
+0.2862299978733063,0,0.0,6,0,0,6,6,0,"Remove unused, open files at top level of tests.
+
+The data read from the file was unused. The files remained opened and
+were never explicitly closed.
+
+Fixes some instances of warnings during tests:
+
+""ResourceWarning: unclosed file ...""","Pillow before 3.3.2 allows context-dependent attackers to obtain sensitive information by using the ""crafted image file"" approach, related to an ""Integer Overflow"" issue affecting the Image.core.map_buffer in map.c component.",a33939f5c30309475e72ac4a28d0f2e95c18695d,0
+0.09251037985086441,0,0.0,6,0,0,6,6,0,"Merge pull request #2188 from jdufresne/unclosed-files
+
+Remove unused, open files at top level of tests.","Pillow before 3.3.2 allows context-dependent attackers to obtain sensitive information by using the ""crafted image file"" approach, related to an ""Integer Overflow"" issue affecting the Image.core.map_buffer in map.c component.",4b663f32f759d1f029c1bb3b6fb7a55159c6d837,0
+0.0036596194840967655,0,0.0,11,0,20,22,42,0,"Merge pull request #2184 from jdufresne/isinstance
+
+Replace type() equality checks with isinstance","Pillow before 3.3.2 allows context-dependent attackers to obtain sensitive information by using the ""crafted image file"" approach, related to an ""Integer Overflow"" issue affecting the Image.core.map_buffer in map.c component.",48b72eac3498b7fbdaca4c16b21361a57a7d1831,0
+-0.00539707625284791,0,0.0,1,0,6,0,6,0,Update CHANGES.rst [CI skip],"Pillow before 3.3.2 allows context-dependent attackers to obtain sensitive information by using the ""crafted image file"" approach, related to an ""Integer Overflow"" issue affecting the Image.core.map_buffer in map.c component.",5aeb0ed9727a8c51c98d11788c0135c54e88b1b7,0
+0.24540375173091888,0,0.0,2,0,14,5,19,3,Update info.icc_profile when using libtiff reader.,"Pillow before 3.3.2 allows context-dependent attackers to obtain sensitive information by using the ""crafted image file"" approach, related to an ""Integer Overflow"" issue affecting the Image.core.map_buffer in map.c component.",66de02685f947024a340588fac9f5f2ac35882b0,0
+0.1768874078989029,0,0.0,1,0,83,85,168,3,Unified different GIF optimize conditions,"Pillow before 3.3.2 allows context-dependent attackers to obtain sensitive information by using the ""crafted image file"" approach, related to an ""Integer Overflow"" issue affecting the Image.core.map_buffer in map.c component.",a51dc7dcaf70b56538664bb7d8ead2c68a855434,0
+0.29467108845710754,0,0.0,2,0,20,4,24,2,"Fixes TIFFImagePlugin ICC color profile saving.
+
+In the TIFF code saving icc_profile is conditional on tag_v2 being set which doesn't make sense to me. I believe this is merely an indentation typo.
+
+I've been trying to save TIFFs with im.info['icc_profile'] set and compression=raw, but unfortunately this results in TIFFs without ICC color profiles.
+With the attached patch TIFFs with said conditions will be saved with the profile set in im.info['icc_profile'].
+
+Note: There are a number of different conditions that need to be met for code to succeed in saving with the profile since it branches between using libtiff and ImageFile._save(..), and the libtiff code does not currently save the ICC color profile.
+For instance setting compression=tiff_lzw will result in using libtiff and no profile will be saved.","Pillow before 3.3.2 allows context-dependent attackers to obtain sensitive information by using the ""crafted image file"" approach, related to an ""Integer Overflow"" issue affecting the Image.core.map_buffer in map.c component.",caf53b05ec1d8fdb7b19eb2df6d64a56bcb4c916,0
+0.03267800062894821,0,0.0,1,0,2,2,4,1,Replaced range(len()) with enumerate,"Pillow before 3.3.2 allows context-dependent attackers to obtain sensitive information by using the ""crafted image file"" approach, related to an ""Integer Overflow"" issue affecting the Image.core.map_buffer in map.c component.",2ba2763f0bd0a7c0d860a14404b04adc40b8d453,0
+0.04433461278676987,0,0.0,3,0,9,10,19,3,Replaced range(len()),"Pillow before 3.3.2 allows context-dependent attackers to obtain sensitive information by using the ""crafted image file"" approach, related to an ""Integer Overflow"" issue affecting the Image.core.map_buffer in map.c component.",8fc90fe4fac8365b6bc68250c3ad680d774cb5f6,0
+0.021840257570147514,0,0.0,6,0,11,45,56,7,"Replace try/except/fail pattern with TestCase.assertRaises()
+
+Replace pattern with the builtin support for asserting exceptions.","Pillow before 3.3.2 allows context-dependent attackers to obtain sensitive information by using the ""crafted image file"" approach, related to an ""Integer Overflow"" issue affecting the Image.core.map_buffer in map.c component.",f041188050a056913b27c27542fed9ccf7c6cb7d,0
+0.2746734917163849,0,0.0,6,0,0,6,6,0,"Remove unused, open files at top level of tests.
+
+The data read from the file was unused. The files remained opened and
+were never explicitly closed.
+
+Fixes some instances of warnings during tests:
+
+""ResourceWarning: unclosed file ...""","Pillow before 3.3.2 allows context-dependent attackers to execute arbitrary code by using the ""crafted image file"" approach, related to an ""Insecure Sign Extension"" issue affecting the ImagingNew in Storage.c component.",a33939f5c30309475e72ac4a28d0f2e95c18695d,0
+0.10504667460918427,0,0.0,6,0,0,6,6,0,"Merge pull request #2188 from jdufresne/unclosed-files
+
+Remove unused, open files at top level of tests.","Pillow before 3.3.2 allows context-dependent attackers to execute arbitrary code by using the ""crafted image file"" approach, related to an ""Insecure Sign Extension"" issue affecting the ImagingNew in Storage.c component.",4b663f32f759d1f029c1bb3b6fb7a55159c6d837,0
+0.008790000341832638,0,0.0,11,0,20,22,42,0,"Merge pull request #2184 from jdufresne/isinstance
+
+Replace type() equality checks with isinstance","Pillow before 3.3.2 allows context-dependent attackers to execute arbitrary code by using the ""crafted image file"" approach, related to an ""Insecure Sign Extension"" issue affecting the ImagingNew in Storage.c component.",48b72eac3498b7fbdaca4c16b21361a57a7d1831,0
+0.029996296390891075,0,0.0,1,0,6,0,6,0,Update CHANGES.rst [CI skip],"Pillow before 3.3.2 allows context-dependent attackers to execute arbitrary code by using the ""crafted image file"" approach, related to an ""Insecure Sign Extension"" issue affecting the ImagingNew in Storage.c component.",5aeb0ed9727a8c51c98d11788c0135c54e88b1b7,0
+0.23246453702449799,0,0.0,2,0,14,5,19,3,Update info.icc_profile when using libtiff reader.,"Pillow before 3.3.2 allows context-dependent attackers to execute arbitrary code by using the ""crafted image file"" approach, related to an ""Insecure Sign Extension"" issue affecting the ImagingNew in Storage.c component.",66de02685f947024a340588fac9f5f2ac35882b0,0
+0.1549214869737625,0,0.0,1,0,83,85,168,3,Unified different GIF optimize conditions,"Pillow before 3.3.2 allows context-dependent attackers to execute arbitrary code by using the ""crafted image file"" approach, related to an ""Insecure Sign Extension"" issue affecting the ImagingNew in Storage.c component.",a51dc7dcaf70b56538664bb7d8ead2c68a855434,0
+0.29673445224761963,0,0.0,2,0,20,4,24,2,"Fixes TIFFImagePlugin ICC color profile saving.
+
+In the TIFF code saving icc_profile is conditional on tag_v2 being set which doesn't make sense to me. I believe this is merely an indentation typo.
+
+I've been trying to save TIFFs with im.info['icc_profile'] set and compression=raw, but unfortunately this results in TIFFs without ICC color profiles.
+With the attached patch TIFFs with said conditions will be saved with the profile set in im.info['icc_profile'].
+
+Note: There are a number of different conditions that need to be met for code to succeed in saving with the profile since it branches between using libtiff and ImageFile._save(..), and the libtiff code does not currently save the ICC color profile.
+For instance setting compression=tiff_lzw will result in using libtiff and no profile will be saved.","Pillow before 3.3.2 allows context-dependent attackers to execute arbitrary code by using the ""crafted image file"" approach, related to an ""Insecure Sign Extension"" issue affecting the ImagingNew in Storage.c component.",caf53b05ec1d8fdb7b19eb2df6d64a56bcb4c916,0
+-0.046942103654146194,0,0.0,1,0,2,2,4,1,Replaced range(len()) with enumerate,"Pillow before 3.3.2 allows context-dependent attackers to execute arbitrary code by using the ""crafted image file"" approach, related to an ""Insecure Sign Extension"" issue affecting the ImagingNew in Storage.c component.",2ba2763f0bd0a7c0d860a14404b04adc40b8d453,0
+-0.005940780974924564,0,0.0,3,0,9,10,19,3,Replaced range(len()),"Pillow before 3.3.2 allows context-dependent attackers to execute arbitrary code by using the ""crafted image file"" approach, related to an ""Insecure Sign Extension"" issue affecting the ImagingNew in Storage.c component.",8fc90fe4fac8365b6bc68250c3ad680d774cb5f6,0
+0.08041445165872574,0,0.0,6,0,11,45,56,7,"Replace try/except/fail pattern with TestCase.assertRaises()
+
+Replace pattern with the builtin support for asserting exceptions.","Pillow before 3.3.2 allows context-dependent attackers to execute arbitrary code by using the ""crafted image file"" approach, related to an ""Insecure Sign Extension"" issue affecting the ImagingNew in Storage.c component.",f041188050a056913b27c27542fed9ccf7c6cb7d,0
+0.30723029375076294,0,0.0,1,0,87,67,154,16,"Fix docstring printing from __main__, and pyflakes and some pep8","The (1) JpegImagePlugin.py and (2) EpsImagePlugin.py scripts in Python Image Library (PIL) 1.1.7 and earlier and Pillow before 2.3.1 uses the names of temporary files on the command line, which makes it easier for local users to conduct symlink attacks by listing the processes.",5cd454bde27eab02dbcfc0adf0657a018cf5db47,0
+0.22738312184810638,0,0.0,1,0,23,18,41,5,Remove unused _binary import (plus flake8),"The (1) JpegImagePlugin.py and (2) EpsImagePlugin.py scripts in Python Image Library (PIL) 1.1.7 and earlier and Pillow before 2.3.1 uses the names of temporary files on the command line, which makes it easier for local users to conduct symlink attacks by listing the processes.",a97e5039d83bdb862b577196dc0736173f15f09a,0
+0.3118320107460022,0,0.0,2,0,1,0,1,0,Merge branch 'patch-1' of https://github.com/Hijackal/Pillow into Hijackal-patch-1,"The (1) JpegImagePlugin.py and (2) EpsImagePlugin.py scripts in Python Image Library (PIL) 1.1.7 and earlier and Pillow before 2.3.1 uses the names of temporary files on the command line, which makes it easier for local users to conduct symlink attacks by listing the processes.",189c40dc9e5439e2aebb248b7921abeb0e2efed1,0
+0.05604001507163048,0,0.0,1,0,2,2,4,0,"Merge pull request #620 from myint/master
+
+Fix spelling errors in documentation","The (1) JpegImagePlugin.py and (2) EpsImagePlugin.py scripts in Python Image Library (PIL) 1.1.7 and earlier and Pillow before 2.3.1 uses the names of temporary files on the command line, which makes it easier for local users to conduct symlink attacks by listing the processes.",0b402df678d7511d3c22096792c3b0ebbc087224,0
+0.05808286741375923,0,0.0,1,0,1,1,2,0,"Merge pull request #621 from e98cuenc/fixlcmsdoc
+
+Update installation instructions of little cms2 in Mac","The (1) JpegImagePlugin.py and (2) EpsImagePlugin.py scripts in Python Image Library (PIL) 1.1.7 and earlier and Pillow before 2.3.1 uses the names of temporary files on the command line, which makes it easier for local users to conduct symlink attacks by listing the processes.",994c9a7e56a8a74da9044d9a732a29e41b4d30b6,0
+0.007015971466898918,0,0.0,3,0,31,5,36,3,Test j2k,"The (1) JpegImagePlugin.py and (2) EpsImagePlugin.py scripts in Python Image Library (PIL) 1.1.7 and earlier and Pillow before 2.3.1 uses the names of temporary files on the command line, which makes it easier for local users to conduct symlink attacks by listing the processes.",329fd00d3fe2709c043c73e075da03b6d9729a2b,0
+0.04871057718992233,0,0.0,1,0,11,0,11,1,Tests for #614,"The (1) JpegImagePlugin.py and (2) EpsImagePlugin.py scripts in Python Image Library (PIL) 1.1.7 and earlier and Pillow before 2.3.1 uses the names of temporary files on the command line, which makes it easier for local users to conduct symlink attacks by listing the processes.",aba195d35eb343f1142a8a4433c7305c28ea3921,0
+-0.06379573047161102,0,0.0,1,0,2,2,4,2,logic typo fix,"The (1) JpegImagePlugin.py and (2) EpsImagePlugin.py scripts in Python Image Library (PIL) 1.1.7 and earlier and Pillow before 2.3.1 uses the names of temporary files on the command line, which makes it easier for local users to conduct symlink attacks by listing the processes.",d5b09509beb7552e651cbe1db1aeb0f873a490e4,0
+0.1963517665863037,0,0.0,2,0,1,0,1,0,"Merge pull request #614 from Hijackal/patch-1
+
+Add specific 32-bit float tiff format","The (1) JpegImagePlugin.py and (2) EpsImagePlugin.py scripts in Python Image Library (PIL) 1.1.7 and earlier and Pillow before 2.3.1 uses the names of temporary files on the command line, which makes it easier for local users to conduct symlink attacks by listing the processes.",0f2e08dfe0995e0a339fd2f7b2abbccb18b8e94a,0
+0.07847924530506134,0,0.0,1,0,11,0,11,0,"Merge pull request #628 from wiredfool/Hijackal-patch-1
+
+Tests for #614","The (1) JpegImagePlugin.py and (2) EpsImagePlugin.py scripts in Python Image Library (PIL) 1.1.7 and earlier and Pillow before 2.3.1 uses the names of temporary files on the command line, which makes it easier for local users to conduct symlink attacks by listing the processes.",c381b6dbfa8a28b78664470790735a4c58f2ec88,0
+0.10767494887113571,0,0.0,1,0,3,0,3,0,Update CHANGES.rst,"The (1) JpegImagePlugin.py and (2) EpsImagePlugin.py scripts in Python Image Library (PIL) 1.1.7 and earlier and Pillow before 2.3.1 uses the names of temporary files on the command line, which makes it easier for local users to conduct symlink attacks by listing the processes.",6bf95f003bad4a3b1cf162c3f708505f8f168f1f,0
+0.11507900804281235,0,0.0,6,0,555,79,634,0,"Merge pull request #618 from hugovk/master
+
+Add version 0.30 of OleFileIO (2014-02-04)","The (1) JpegImagePlugin.py and (2) EpsImagePlugin.py scripts in Python Image Library (PIL) 1.1.7 and earlier and Pillow before 2.3.1 uses the names of temporary files on the command line, which makes it easier for local users to conduct symlink attacks by listing the processes.",1945fd6cb43e183a3309e2d1d221b2ff4404936e,0
+0.10767494887113571,0,0.0,1,0,3,0,3,0,Update CHANGES.rst,"The (1) JpegImagePlugin.py and (2) EpsImagePlugin.py scripts in Python Image Library (PIL) 1.1.7 and earlier and Pillow before 2.3.1 uses the names of temporary files on the command line, which makes it easier for local users to conduct symlink attacks by listing the processes.",a54754db1f304e0b7b416822b68f455519dcf5eb,0
+0.1276271790266037,0,0.0,4,0,51,2,53,0,"Merge pull request #606 from wiredfool/pgm
+
+16 bit Read/Write PGM support.","The (1) JpegImagePlugin.py and (2) EpsImagePlugin.py scripts in Python Image Library (PIL) 1.1.7 and earlier and Pillow before 2.3.1 uses the names of temporary files on the command line, which makes it easier for local users to conduct symlink attacks by listing the processes.",ca36b6cd36af4bd4a0dd12e82ded44cec5adb628,0
+0.07423141598701477,0,0.0,1,0,3,0,3,0,Updated Changes.rst [ci skip],"The (1) JpegImagePlugin.py and (2) EpsImagePlugin.py scripts in Python Image Library (PIL) 1.1.7 and earlier and Pillow before 2.3.1 uses the names of temporary files on the command line, which makes it easier for local users to conduct symlink attacks by listing the processes.",b182e239bbe77d50d7b60d734b4c421688b2d862,0
+0.09113819897174835,0,0.0,3,0,21,12,33,3,Docs changes for close/context manager,"The (1) JpegImagePlugin.py and (2) EpsImagePlugin.py scripts in Python Image Library (PIL) 1.1.7 and earlier and Pillow before 2.3.1 uses the names of temporary files on the command line, which makes it easier for local users to conduct symlink attacks by listing the processes.",8c6a4c0299f33aa05ddba19041d15b4c10684095,0
+0.03034258633852005,0,0.0,1,0,16,0,16,2,tests for close and context manager,"The (1) JpegImagePlugin.py and (2) EpsImagePlugin.py scripts in Python Image Library (PIL) 1.1.7 and earlier and Pillow before 2.3.1 uses the names of temporary files on the command line, which makes it easier for local users to conduct symlink attacks by listing the processes.",471cecb5237b8481d0ce9469bd4974e6ab299836,0
+0.31425851583480835,0,0.0,6,0,59,12,71,0,"Merge pull request #551 from wiredfool/with
+
+Image.close, Context manager support","The (1) JpegImagePlugin.py and (2) EpsImagePlugin.py scripts in Python Image Library (PIL) 1.1.7 and earlier and Pillow before 2.3.1 uses the names of temporary files on the command line, which makes it easier for local users to conduct symlink attacks by listing the processes.",5ca5652d0bec7b7df6e12b4f86ae985c3751ca36,0
+0.05660489946603775,0,0.0,1,0,3,0,3,0,Update CHANGES.rst [ci skip],"The (1) JpegImagePlugin.py and (2) EpsImagePlugin.py scripts in Python Image Library (PIL) 1.1.7 and earlier and Pillow before 2.3.1 uses the names of temporary files on the command line, which makes it easier for local users to conduct symlink attacks by listing the processes.",8c5ed8a8733483b5d72c72c0e5a13c3e79453b3b,0
+0.18458235263824463,0,0.0,1,0,1,1,2,0,"Run slow pypy first
+
+It's always the slowest and we should give it a head start so we're not waiting for it to finish at the end. It means we're making the most use of our parallel job-runners for the quicker jobs.
+
+See also #632.","The (1) JpegImagePlugin.py and (2) EpsImagePlugin.py scripts in Python Image Library (PIL) 1.1.7 and earlier and Pillow before 2.3.1 uses the names of temporary files on the command line, which makes it easier for local users to conduct symlink attacks by listing the processes.",b917623513466b0067b36964d664228bff34e527,0
+0.19548876583576202,0,0.0,1,0,1,1,2,0,"Merge pull request #633 from hugovk/patch-1
+
+Run slow pypy first","The (1) JpegImagePlugin.py and (2) EpsImagePlugin.py scripts in Python Image Library (PIL) 1.1.7 and earlier and Pillow before 2.3.1 uses the names of temporary files on the command line, which makes it easier for local users to conduct symlink attacks by listing the processes.",f6262505cd185ee6c932d58a3ab6fa639ef891fa,0
+0.31064140796661377,0,0.0,1,0,87,67,154,16,"Fix docstring printing from __main__, and pyflakes and some pep8","The (1) load_djpeg function in JpegImagePlugin.py, (2) Ghostscript function in EpsImagePlugin.py, (3) load function in IptcImagePlugin.py, and (4) _copy function in Image.py in Python Image Library (PIL) 1.1.7 and earlier and Pillow before 2.3.1 do not properly create temporary files, which allow local users to overwrite arbitrary files and obtain sensitive information via a symlink attack on the temporary file.",5cd454bde27eab02dbcfc0adf0657a018cf5db47,0
+0.2544870972633362,0,0.0,1,0,23,18,41,5,Remove unused _binary import (plus flake8),"The (1) load_djpeg function in JpegImagePlugin.py, (2) Ghostscript function in EpsImagePlugin.py, (3) load function in IptcImagePlugin.py, and (4) _copy function in Image.py in Python Image Library (PIL) 1.1.7 and earlier and Pillow before 2.3.1 do not properly create temporary files, which allow local users to overwrite arbitrary files and obtain sensitive information via a symlink attack on the temporary file.",a97e5039d83bdb862b577196dc0736173f15f09a,0
+0.3142309784889221,0,0.0,2,0,1,0,1,0,Merge branch 'patch-1' of https://github.com/Hijackal/Pillow into Hijackal-patch-1,"The (1) load_djpeg function in JpegImagePlugin.py, (2) Ghostscript function in EpsImagePlugin.py, (3) load function in IptcImagePlugin.py, and (4) _copy function in Image.py in Python Image Library (PIL) 1.1.7 and earlier and Pillow before 2.3.1 do not properly create temporary files, which allow local users to overwrite arbitrary files and obtain sensitive information via a symlink attack on the temporary file.",189c40dc9e5439e2aebb248b7921abeb0e2efed1,0
+0.04550202190876007,0,0.0,1,0,2,2,4,0,"Merge pull request #620 from myint/master
+
+Fix spelling errors in documentation","The (1) load_djpeg function in JpegImagePlugin.py, (2) Ghostscript function in EpsImagePlugin.py, (3) load function in IptcImagePlugin.py, and (4) _copy function in Image.py in Python Image Library (PIL) 1.1.7 and earlier and Pillow before 2.3.1 do not properly create temporary files, which allow local users to overwrite arbitrary files and obtain sensitive information via a symlink attack on the temporary file.",0b402df678d7511d3c22096792c3b0ebbc087224,0
+0.013621567748486996,0,0.0,1,0,1,1,2,0,"Merge pull request #621 from e98cuenc/fixlcmsdoc
+
+Update installation instructions of little cms2 in Mac","The (1) load_djpeg function in JpegImagePlugin.py, (2) Ghostscript function in EpsImagePlugin.py, (3) load function in IptcImagePlugin.py, and (4) _copy function in Image.py in Python Image Library (PIL) 1.1.7 and earlier and Pillow before 2.3.1 do not properly create temporary files, which allow local users to overwrite arbitrary files and obtain sensitive information via a symlink attack on the temporary file.",994c9a7e56a8a74da9044d9a732a29e41b4d30b6,0
+0.003779597580432892,0,0.0,3,0,31,5,36,3,Test j2k,"The (1) load_djpeg function in JpegImagePlugin.py, (2) Ghostscript function in EpsImagePlugin.py, (3) load function in IptcImagePlugin.py, and (4) _copy function in Image.py in Python Image Library (PIL) 1.1.7 and earlier and Pillow before 2.3.1 do not properly create temporary files, which allow local users to overwrite arbitrary files and obtain sensitive information via a symlink attack on the temporary file.",329fd00d3fe2709c043c73e075da03b6d9729a2b,0
+0.025227507576346397,0,0.0,1,0,11,0,11,1,Tests for #614,"The (1) load_djpeg function in JpegImagePlugin.py, (2) Ghostscript function in EpsImagePlugin.py, (3) load function in IptcImagePlugin.py, and (4) _copy function in Image.py in Python Image Library (PIL) 1.1.7 and earlier and Pillow before 2.3.1 do not properly create temporary files, which allow local users to overwrite arbitrary files and obtain sensitive information via a symlink attack on the temporary file.",aba195d35eb343f1142a8a4433c7305c28ea3921,0
+-0.07220717519521713,0,0.0,1,0,2,2,4,2,logic typo fix,"The (1) load_djpeg function in JpegImagePlugin.py, (2) Ghostscript function in EpsImagePlugin.py, (3) load function in IptcImagePlugin.py, and (4) _copy function in Image.py in Python Image Library (PIL) 1.1.7 and earlier and Pillow before 2.3.1 do not properly create temporary files, which allow local users to overwrite arbitrary files and obtain sensitive information via a symlink attack on the temporary file.",d5b09509beb7552e651cbe1db1aeb0f873a490e4,0
+0.18922320008277893,0,0.0,2,0,1,0,1,0,"Merge pull request #614 from Hijackal/patch-1
+
+Add specific 32-bit float tiff format","The (1) load_djpeg function in JpegImagePlugin.py, (2) Ghostscript function in EpsImagePlugin.py, (3) load function in IptcImagePlugin.py, and (4) _copy function in Image.py in Python Image Library (PIL) 1.1.7 and earlier and Pillow before 2.3.1 do not properly create temporary files, which allow local users to overwrite arbitrary files and obtain sensitive information via a symlink attack on the temporary file.",0f2e08dfe0995e0a339fd2f7b2abbccb18b8e94a,0
+0.0615207701921463,0,0.0,1,0,11,0,11,0,"Merge pull request #628 from wiredfool/Hijackal-patch-1
+
+Tests for #614","The (1) load_djpeg function in JpegImagePlugin.py, (2) Ghostscript function in EpsImagePlugin.py, (3) load function in IptcImagePlugin.py, and (4) _copy function in Image.py in Python Image Library (PIL) 1.1.7 and earlier and Pillow before 2.3.1 do not properly create temporary files, which allow local users to overwrite arbitrary files and obtain sensitive information via a symlink attack on the temporary file.",c381b6dbfa8a28b78664470790735a4c58f2ec88,0
+0.10195968300104141,0,0.0,1,0,3,0,3,0,Update CHANGES.rst,"The (1) load_djpeg function in JpegImagePlugin.py, (2) Ghostscript function in EpsImagePlugin.py, (3) load function in IptcImagePlugin.py, and (4) _copy function in Image.py in Python Image Library (PIL) 1.1.7 and earlier and Pillow before 2.3.1 do not properly create temporary files, which allow local users to overwrite arbitrary files and obtain sensitive information via a symlink attack on the temporary file.",6bf95f003bad4a3b1cf162c3f708505f8f168f1f,0
+0.07691629230976105,0,0.0,6,0,555,79,634,0,"Merge pull request #618 from hugovk/master
+
+Add version 0.30 of OleFileIO (2014-02-04)","The (1) load_djpeg function in JpegImagePlugin.py, (2) Ghostscript function in EpsImagePlugin.py, (3) load function in IptcImagePlugin.py, and (4) _copy function in Image.py in Python Image Library (PIL) 1.1.7 and earlier and Pillow before 2.3.1 do not properly create temporary files, which allow local users to overwrite arbitrary files and obtain sensitive information via a symlink attack on the temporary file.",1945fd6cb43e183a3309e2d1d221b2ff4404936e,0
+0.10195968300104141,0,0.0,1,0,3,0,3,0,Update CHANGES.rst,"The (1) load_djpeg function in JpegImagePlugin.py, (2) Ghostscript function in EpsImagePlugin.py, (3) load function in IptcImagePlugin.py, and (4) _copy function in Image.py in Python Image Library (PIL) 1.1.7 and earlier and Pillow before 2.3.1 do not properly create temporary files, which allow local users to overwrite arbitrary files and obtain sensitive information via a symlink attack on the temporary file.",a54754db1f304e0b7b416822b68f455519dcf5eb,0
+0.12824523448944092,0,0.0,4,0,51,2,53,0,"Merge pull request #606 from wiredfool/pgm
+
+16 bit Read/Write PGM support.","The (1) load_djpeg function in JpegImagePlugin.py, (2) Ghostscript function in EpsImagePlugin.py, (3) load function in IptcImagePlugin.py, and (4) _copy function in Image.py in Python Image Library (PIL) 1.1.7 and earlier and Pillow before 2.3.1 do not properly create temporary files, which allow local users to overwrite arbitrary files and obtain sensitive information via a symlink attack on the temporary file.",ca36b6cd36af4bd4a0dd12e82ded44cec5adb628,0
+0.06222078204154968,0,0.0,1,0,3,0,3,0,Updated Changes.rst [ci skip],"The (1) load_djpeg function in JpegImagePlugin.py, (2) Ghostscript function in EpsImagePlugin.py, (3) load function in IptcImagePlugin.py, and (4) _copy function in Image.py in Python Image Library (PIL) 1.1.7 and earlier and Pillow before 2.3.1 do not properly create temporary files, which allow local users to overwrite arbitrary files and obtain sensitive information via a symlink attack on the temporary file.",b182e239bbe77d50d7b60d734b4c421688b2d862,0
+0.027164634317159653,0,0.0,3,0,21,12,33,3,Docs changes for close/context manager,"The (1) load_djpeg function in JpegImagePlugin.py, (2) Ghostscript function in EpsImagePlugin.py, (3) load function in IptcImagePlugin.py, and (4) _copy function in Image.py in Python Image Library (PIL) 1.1.7 and earlier and Pillow before 2.3.1 do not properly create temporary files, which allow local users to overwrite arbitrary files and obtain sensitive information via a symlink attack on the temporary file.",8c6a4c0299f33aa05ddba19041d15b4c10684095,0
+-0.003159943502396345,0,0.0,1,0,16,0,16,2,tests for close and context manager,"The (1) load_djpeg function in JpegImagePlugin.py, (2) Ghostscript function in EpsImagePlugin.py, (3) load function in IptcImagePlugin.py, and (4) _copy function in Image.py in Python Image Library (PIL) 1.1.7 and earlier and Pillow before 2.3.1 do not properly create temporary files, which allow local users to overwrite arbitrary files and obtain sensitive information via a symlink attack on the temporary file.",471cecb5237b8481d0ce9469bd4974e6ab299836,0
+0.31690141558647156,0,0.0,6,0,59,12,71,0,"Merge pull request #551 from wiredfool/with
+
+Image.close, Context manager support","The (1) load_djpeg function in JpegImagePlugin.py, (2) Ghostscript function in EpsImagePlugin.py, (3) load function in IptcImagePlugin.py, and (4) _copy function in Image.py in Python Image Library (PIL) 1.1.7 and earlier and Pillow before 2.3.1 do not properly create temporary files, which allow local users to overwrite arbitrary files and obtain sensitive information via a symlink attack on the temporary file.",5ca5652d0bec7b7df6e12b4f86ae985c3751ca36,0
+0.06911800801753998,0,0.0,1,0,3,0,3,0,Update CHANGES.rst [ci skip],"The (1) load_djpeg function in JpegImagePlugin.py, (2) Ghostscript function in EpsImagePlugin.py, (3) load function in IptcImagePlugin.py, and (4) _copy function in Image.py in Python Image Library (PIL) 1.1.7 and earlier and Pillow before 2.3.1 do not properly create temporary files, which allow local users to overwrite arbitrary files and obtain sensitive information via a symlink attack on the temporary file.",8c5ed8a8733483b5d72c72c0e5a13c3e79453b3b,0
+0.1482616364955902,0,0.0,1,0,1,1,2,0,"Run slow pypy first
+
+It's always the slowest and we should give it a head start so we're not waiting for it to finish at the end. It means we're making the most use of our parallel job-runners for the quicker jobs.
+
+See also #632.","The (1) load_djpeg function in JpegImagePlugin.py, (2) Ghostscript function in EpsImagePlugin.py, (3) load function in IptcImagePlugin.py, and (4) _copy function in Image.py in Python Image Library (PIL) 1.1.7 and earlier and Pillow before 2.3.1 do not properly create temporary files, which allow local users to overwrite arbitrary files and obtain sensitive information via a symlink attack on the temporary file.",b917623513466b0067b36964d664228bff34e527,0
+0.18136994540691376,0,0.0,1,0,1,1,2,0,"Merge pull request #633 from hugovk/patch-1
+
+Run slow pypy first","The (1) load_djpeg function in JpegImagePlugin.py, (2) Ghostscript function in EpsImagePlugin.py, (3) load function in IptcImagePlugin.py, and (4) _copy function in Image.py in Python Image Library (PIL) 1.1.7 and earlier and Pillow before 2.3.1 do not properly create temporary files, which allow local users to overwrite arbitrary files and obtain sensitive information via a symlink attack on the temporary file.",f6262505cd185ee6c932d58a3ab6fa639ef891fa,0
