@@ -789,3 +789,2305 @@ See also #632.","The (1) load_djpeg function in JpegImagePlugin.py, (2) Ghostscr
 0.18136994540691376,0,0.0,1,0,1,1,2,0,"Merge pull request #633 from hugovk/patch-1
 
 Run slow pypy first","The (1) load_djpeg function in JpegImagePlugin.py, (2) Ghostscript function in EpsImagePlugin.py, (3) load function in IptcImagePlugin.py, and (4) _copy function in Image.py in Python Image Library (PIL) 1.1.7 and earlier and Pillow before 2.3.1 do not properly create temporary files, which allow local users to overwrite arbitrary files and obtain sensitive information via a symlink attack on the temporary file.",f6262505cd185ee6c932d58a3ab6fa639ef891fa,0
+0.13759955763816833,0,0.0,1,0,1,1,2,0,bug fix e7 (#5672),Authorization Bypass Through User-Controlled Key in GitHub repository openemr/openemr prior to 7.0.0.1.,51385a8d26631f5e150097bf5cfd40966957b40e,0
+0.09668061882257462,0,0.0,1,0,31,2,33,0,bug fix (#5671),Authorization Bypass Through User-Controlled Key in GitHub repository openemr/openemr prior to 7.0.0.1.,86b1f1957e28f574e9f772d84232d0bea8dd7dc2,0
+0.06694690883159637,0,0.0,5,0,96,55,151,6,"Gad7 (#5660)
+
+* gad7.inc.php: improve close without saving button, move q8 strings into this file, require_once patient.inc
+
+* improve layout a little, better close without saving button legend, improved style such as more strings in included files, default for q8 set as no answer, changes-made flag",Authorization Bypass Through User-Controlled Key in GitHub repository openemr/openemr prior to 7.0.0.1.,5feb0b149dcf803df341a4720f2038be902f19d8,0
+0.08830120414495468,0,0.0,13,0,652,54,706,9,"Dynamic Encounter Questionnaires (#5663)
+
+* Questionnaire Response management
+- new table
+- uuid registry
+
+* - new form_questionnaire_assessments table for New Questionnaire and other forms
+- new column to registry for a form foreign id
+- new lform column to questionnaire_repository
+
+* - new dynamic lookup and create encounter questionnaires and assessments forms
+
+* - modify forms to pass form name to load_form. Suprised this was needed!
+- the necessary support services for New Questionnaire
+
+* - fix table stricture
+
+* - add extra value for new registry column inserts
+
+* - collapse encounter view AMC panel
+- add doc blocks to service
+
+* - display disclaimer until persist dismissed by user
+
+* - remove table sql file from form
+- add acl for search to limit to admins
+- refactor coalease
+- fix db issue
+
+* - do auth",Authorization Bypass Through User-Controlled Key in GitHub repository openemr/openemr prior to 7.0.0.1.,68f054d0ba7523d9cf859fa1726222fde9492b63,0
+0.026181267574429512,0,0.0,2,0,8,4,12,1,fix for multiple hcfa pdfs on form (#5680),Authorization Bypass Through User-Controlled Key in GitHub repository openemr/openemr prior to 7.0.0.1.,692311fc02a016e7c5c2c3a2c90cafcdabbf693e,0
+0.07430289685726166,0,0.0,2,0,87,4,91,7,"Fixes #5643 ModulesClassLoader autoload module code without composer install (#5644)
+
+* Fixes #5643 ModulesClassLoader
+
+Implemented a modules class loader that allow module writers to register
+a namespace if its not already been registered.  This makes it so the
+ModuleWriter doesn't have to use requires everywhere and a module can be
+just dropped into the filesystem and execute once its been registered
+and installed from the Manage Modules interface.
+
+* Style fixes",Authorization Bypass Through User-Controlled Key in GitHub repository openemr/openemr prior to 7.0.0.1.,592adae6c1b742b380a8b1a3f61035f9fc2f4bac,0
+0.11040608584880829,0,0.0,1,0,1,1,2,0,bug fix e7 (#5672),Cross-site Scripting (XSS) - Reflected in GitHub repository openemr/openemr prior to 7.0.0.1.,51385a8d26631f5e150097bf5cfd40966957b40e,0
+0.07806146889925003,0,0.0,1,0,31,2,33,0,bug fix (#5671),Cross-site Scripting (XSS) - Reflected in GitHub repository openemr/openemr prior to 7.0.0.1.,86b1f1957e28f574e9f772d84232d0bea8dd7dc2,0
+0.18772315979003906,0,0.0,5,0,96,55,151,6,"Gad7 (#5660)
+
+* gad7.inc.php: improve close without saving button, move q8 strings into this file, require_once patient.inc
+
+* improve layout a little, better close without saving button legend, improved style such as more strings in included files, default for q8 set as no answer, changes-made flag",Cross-site Scripting (XSS) - Reflected in GitHub repository openemr/openemr prior to 7.0.0.1.,5feb0b149dcf803df341a4720f2038be902f19d8,0
+0.12178881466388702,0,0.0,13,0,652,54,706,9,"Dynamic Encounter Questionnaires (#5663)
+
+* Questionnaire Response management
+- new table
+- uuid registry
+
+* - new form_questionnaire_assessments table for New Questionnaire and other forms
+- new column to registry for a form foreign id
+- new lform column to questionnaire_repository
+
+* - new dynamic lookup and create encounter questionnaires and assessments forms
+
+* - modify forms to pass form name to load_form. Suprised this was needed!
+- the necessary support services for New Questionnaire
+
+* - fix table stricture
+
+* - add extra value for new registry column inserts
+
+* - collapse encounter view AMC panel
+- add doc blocks to service
+
+* - display disclaimer until persist dismissed by user
+
+* - remove table sql file from form
+- add acl for search to limit to admins
+- refactor coalease
+- fix db issue
+
+* - do auth",Cross-site Scripting (XSS) - Reflected in GitHub repository openemr/openemr prior to 7.0.0.1.,68f054d0ba7523d9cf859fa1726222fde9492b63,0
+0.026398293673992157,0,0.0,2,0,8,4,12,1,fix for multiple hcfa pdfs on form (#5680),Cross-site Scripting (XSS) - Reflected in GitHub repository openemr/openemr prior to 7.0.0.1.,692311fc02a016e7c5c2c3a2c90cafcdabbf693e,0
+0.07164715230464935,0,0.0,2,0,87,4,91,7,"Fixes #5643 ModulesClassLoader autoload module code without composer install (#5644)
+
+* Fixes #5643 ModulesClassLoader
+
+Implemented a modules class loader that allow module writers to register
+a namespace if its not already been registered.  This makes it so the
+ModuleWriter doesn't have to use requires everywhere and a module can be
+just dropped into the filesystem and execute once its been registered
+and installed from the Manage Modules interface.
+
+* Style fixes",Cross-site Scripting (XSS) - Reflected in GitHub repository openemr/openemr prior to 7.0.0.1.,592adae6c1b742b380a8b1a3f61035f9fc2f4bac,0
+0.2488412708044052,0,0.0,1,0,1,1,2,0,bug fix e7 (#5672),Improper Privilege Management in GitHub repository openemr/openemr prior to 7.0.0.1.,51385a8d26631f5e150097bf5cfd40966957b40e,0
+0.22960330545902252,0,0.0,1,0,31,2,33,0,bug fix (#5671),Improper Privilege Management in GitHub repository openemr/openemr prior to 7.0.0.1.,86b1f1957e28f574e9f772d84232d0bea8dd7dc2,0
+0.11423320323228836,0,0.0,5,0,96,55,151,6,"Gad7 (#5660)
+
+* gad7.inc.php: improve close without saving button, move q8 strings into this file, require_once patient.inc
+
+* improve layout a little, better close without saving button legend, improved style such as more strings in included files, default for q8 set as no answer, changes-made flag",Improper Privilege Management in GitHub repository openemr/openemr prior to 7.0.0.1.,5feb0b149dcf803df341a4720f2038be902f19d8,0
+0.1582416594028473,0,0.0,13,0,652,54,706,9,"Dynamic Encounter Questionnaires (#5663)
+
+* Questionnaire Response management
+- new table
+- uuid registry
+
+* - new form_questionnaire_assessments table for New Questionnaire and other forms
+- new column to registry for a form foreign id
+- new lform column to questionnaire_repository
+
+* - new dynamic lookup and create encounter questionnaires and assessments forms
+
+* - modify forms to pass form name to load_form. Suprised this was needed!
+- the necessary support services for New Questionnaire
+
+* - fix table stricture
+
+* - add extra value for new registry column inserts
+
+* - collapse encounter view AMC panel
+- add doc blocks to service
+
+* - display disclaimer until persist dismissed by user
+
+* - remove table sql file from form
+- add acl for search to limit to admins
+- refactor coalease
+- fix db issue
+
+* - do auth",Improper Privilege Management in GitHub repository openemr/openemr prior to 7.0.0.1.,68f054d0ba7523d9cf859fa1726222fde9492b63,0
+0.017104391008615494,0,0.0,2,0,8,4,12,1,fix for multiple hcfa pdfs on form (#5680),Improper Privilege Management in GitHub repository openemr/openemr prior to 7.0.0.1.,692311fc02a016e7c5c2c3a2c90cafcdabbf693e,0
+0.18141627311706543,0,0.0,2,0,87,4,91,7,"Fixes #5643 ModulesClassLoader autoload module code without composer install (#5644)
+
+* Fixes #5643 ModulesClassLoader
+
+Implemented a modules class loader that allow module writers to register
+a namespace if its not already been registered.  This makes it so the
+ModuleWriter doesn't have to use requires everywhere and a module can be
+just dropped into the filesystem and execute once its been registered
+and installed from the Manage Modules interface.
+
+* Style fixes",Improper Privilege Management in GitHub repository openemr/openemr prior to 7.0.0.1.,592adae6c1b742b380a8b1a3f61035f9fc2f4bac,0
+0.11040608584880829,0,0.0,1,0,1,1,2,0,bug fix e7 (#5672),Cross-site Scripting (XSS) - Reflected in GitHub repository openemr/openemr prior to 7.0.0.1.,51385a8d26631f5e150097bf5cfd40966957b40e,0
+0.07806146889925003,0,0.0,1,0,31,2,33,0,bug fix (#5671),Cross-site Scripting (XSS) - Reflected in GitHub repository openemr/openemr prior to 7.0.0.1.,86b1f1957e28f574e9f772d84232d0bea8dd7dc2,0
+0.18772315979003906,0,0.0,5,0,96,55,151,6,"Gad7 (#5660)
+
+* gad7.inc.php: improve close without saving button, move q8 strings into this file, require_once patient.inc
+
+* improve layout a little, better close without saving button legend, improved style such as more strings in included files, default for q8 set as no answer, changes-made flag",Cross-site Scripting (XSS) - Reflected in GitHub repository openemr/openemr prior to 7.0.0.1.,5feb0b149dcf803df341a4720f2038be902f19d8,0
+0.12178881466388702,0,0.0,13,0,652,54,706,9,"Dynamic Encounter Questionnaires (#5663)
+
+* Questionnaire Response management
+- new table
+- uuid registry
+
+* - new form_questionnaire_assessments table for New Questionnaire and other forms
+- new column to registry for a form foreign id
+- new lform column to questionnaire_repository
+
+* - new dynamic lookup and create encounter questionnaires and assessments forms
+
+* - modify forms to pass form name to load_form. Suprised this was needed!
+- the necessary support services for New Questionnaire
+
+* - fix table stricture
+
+* - add extra value for new registry column inserts
+
+* - collapse encounter view AMC panel
+- add doc blocks to service
+
+* - display disclaimer until persist dismissed by user
+
+* - remove table sql file from form
+- add acl for search to limit to admins
+- refactor coalease
+- fix db issue
+
+* - do auth",Cross-site Scripting (XSS) - Reflected in GitHub repository openemr/openemr prior to 7.0.0.1.,68f054d0ba7523d9cf859fa1726222fde9492b63,0
+0.026398293673992157,0,0.0,2,0,8,4,12,1,fix for multiple hcfa pdfs on form (#5680),Cross-site Scripting (XSS) - Reflected in GitHub repository openemr/openemr prior to 7.0.0.1.,692311fc02a016e7c5c2c3a2c90cafcdabbf693e,0
+0.07164715230464935,0,0.0,2,0,87,4,91,7,"Fixes #5643 ModulesClassLoader autoload module code without composer install (#5644)
+
+* Fixes #5643 ModulesClassLoader
+
+Implemented a modules class loader that allow module writers to register
+a namespace if its not already been registered.  This makes it so the
+ModuleWriter doesn't have to use requires everywhere and a module can be
+just dropped into the filesystem and execute once its been registered
+and installed from the Manage Modules interface.
+
+* Style fixes",Cross-site Scripting (XSS) - Reflected in GitHub repository openemr/openemr prior to 7.0.0.1.,592adae6c1b742b380a8b1a3f61035f9fc2f4bac,0
+0.26460590958595276,0,0.0,1,0,1,1,2,0,bug fix e7 (#5672),Improper Restriction of Rendered UI Layers or Frames in GitHub repository openemr/openemr prior to 7.0.0.1.,51385a8d26631f5e150097bf5cfd40966957b40e,0
+0.28699612617492676,0,0.0,1,0,31,2,33,0,bug fix (#5671),Improper Restriction of Rendered UI Layers or Frames in GitHub repository openemr/openemr prior to 7.0.0.1.,86b1f1957e28f574e9f772d84232d0bea8dd7dc2,0
+0.12468354403972626,0,0.0,5,0,96,55,151,6,"Gad7 (#5660)
+
+* gad7.inc.php: improve close without saving button, move q8 strings into this file, require_once patient.inc
+
+* improve layout a little, better close without saving button legend, improved style such as more strings in included files, default for q8 set as no answer, changes-made flag",Improper Restriction of Rendered UI Layers or Frames in GitHub repository openemr/openemr prior to 7.0.0.1.,5feb0b149dcf803df341a4720f2038be902f19d8,0
+0.08022775501012802,0,0.0,13,0,652,54,706,9,"Dynamic Encounter Questionnaires (#5663)
+
+* Questionnaire Response management
+- new table
+- uuid registry
+
+* - new form_questionnaire_assessments table for New Questionnaire and other forms
+- new column to registry for a form foreign id
+- new lform column to questionnaire_repository
+
+* - new dynamic lookup and create encounter questionnaires and assessments forms
+
+* - modify forms to pass form name to load_form. Suprised this was needed!
+- the necessary support services for New Questionnaire
+
+* - fix table stricture
+
+* - add extra value for new registry column inserts
+
+* - collapse encounter view AMC panel
+- add doc blocks to service
+
+* - display disclaimer until persist dismissed by user
+
+* - remove table sql file from form
+- add acl for search to limit to admins
+- refactor coalease
+- fix db issue
+
+* - do auth",Improper Restriction of Rendered UI Layers or Frames in GitHub repository openemr/openemr prior to 7.0.0.1.,68f054d0ba7523d9cf859fa1726222fde9492b63,0
+0.15611597895622253,0,0.0,2,0,8,4,12,1,fix for multiple hcfa pdfs on form (#5680),Improper Restriction of Rendered UI Layers or Frames in GitHub repository openemr/openemr prior to 7.0.0.1.,692311fc02a016e7c5c2c3a2c90cafcdabbf693e,0
+0.2064545899629593,0,0.0,2,0,87,4,91,7,"Fixes #5643 ModulesClassLoader autoload module code without composer install (#5644)
+
+* Fixes #5643 ModulesClassLoader
+
+Implemented a modules class loader that allow module writers to register
+a namespace if its not already been registered.  This makes it so the
+ModuleWriter doesn't have to use requires everywhere and a module can be
+just dropped into the filesystem and execute once its been registered
+and installed from the Manage Modules interface.
+
+* Style fixes",Improper Restriction of Rendered UI Layers or Frames in GitHub repository openemr/openemr prior to 7.0.0.1.,592adae6c1b742b380a8b1a3f61035f9fc2f4bac,0
+0.09892325848340988,0,0.0,1,0,1,1,2,0,bug fix e7 (#5672),Cross-site Scripting (XSS) - DOM in GitHub repository openemr/openemr prior to 7.0.0.1.,51385a8d26631f5e150097bf5cfd40966957b40e,0
+0.05363896116614342,0,0.0,1,0,31,2,33,0,bug fix (#5671),Cross-site Scripting (XSS) - DOM in GitHub repository openemr/openemr prior to 7.0.0.1.,86b1f1957e28f574e9f772d84232d0bea8dd7dc2,0
+0.1860983669757843,0,0.0,5,0,96,55,151,6,"Gad7 (#5660)
+
+* gad7.inc.php: improve close without saving button, move q8 strings into this file, require_once patient.inc
+
+* improve layout a little, better close without saving button legend, improved style such as more strings in included files, default for q8 set as no answer, changes-made flag",Cross-site Scripting (XSS) - DOM in GitHub repository openemr/openemr prior to 7.0.0.1.,5feb0b149dcf803df341a4720f2038be902f19d8,0
+0.12286245077848434,0,0.0,13,0,652,54,706,9,"Dynamic Encounter Questionnaires (#5663)
+
+* Questionnaire Response management
+- new table
+- uuid registry
+
+* - new form_questionnaire_assessments table for New Questionnaire and other forms
+- new column to registry for a form foreign id
+- new lform column to questionnaire_repository
+
+* - new dynamic lookup and create encounter questionnaires and assessments forms
+
+* - modify forms to pass form name to load_form. Suprised this was needed!
+- the necessary support services for New Questionnaire
+
+* - fix table stricture
+
+* - add extra value for new registry column inserts
+
+* - collapse encounter view AMC panel
+- add doc blocks to service
+
+* - display disclaimer until persist dismissed by user
+
+* - remove table sql file from form
+- add acl for search to limit to admins
+- refactor coalease
+- fix db issue
+
+* - do auth",Cross-site Scripting (XSS) - DOM in GitHub repository openemr/openemr prior to 7.0.0.1.,68f054d0ba7523d9cf859fa1726222fde9492b63,0
+0.021754065528512,0,0.0,2,0,8,4,12,1,fix for multiple hcfa pdfs on form (#5680),Cross-site Scripting (XSS) - DOM in GitHub repository openemr/openemr prior to 7.0.0.1.,692311fc02a016e7c5c2c3a2c90cafcdabbf693e,0
+0.03904655948281288,0,0.0,2,0,87,4,91,7,"Fixes #5643 ModulesClassLoader autoload module code without composer install (#5644)
+
+* Fixes #5643 ModulesClassLoader
+
+Implemented a modules class loader that allow module writers to register
+a namespace if its not already been registered.  This makes it so the
+ModuleWriter doesn't have to use requires everywhere and a module can be
+just dropped into the filesystem and execute once its been registered
+and installed from the Manage Modules interface.
+
+* Style fixes",Cross-site Scripting (XSS) - DOM in GitHub repository openemr/openemr prior to 7.0.0.1.,592adae6c1b742b380a8b1a3f61035f9fc2f4bac,0
+0.06379883736371994,0,0.0,1,0,2,2,4,0,publish menu link fix (#1585),interface/patient_file/letter.php in OpenEMR before 5.0.1 allows remote authenticated users to bypass intended access restrictions via the newtemplatename and form_body parameters.,0fc4aee408527ae1d3cd921b64a06fc39a84a782,0
+0.05323593690991402,0,0.0,5,0,11,5,16,0,prep ubuntu package for a patch release (#1586),interface/patient_file/letter.php in OpenEMR before 5.0.1 allows remote authenticated users to bypass intended access restrictions via the newtemplatename and form_body parameters.,ddd51a2214ba8b50bd036bb1d633fa5e2c9b9439,0
+0.1288481056690216,0,0.0,1,0,7,1,8,0,prepayment test missing in payment validation. (#1589),interface/patient_file/letter.php in OpenEMR before 5.0.1 allows remote authenticated users to bypass intended access restrictions via the newtemplatename and form_body parameters.,9a72ab04e4e3e73e0060eed964dab34e81b2d569,0
+0.25015711784362793,0,0.0,3,0,54,28,82,4,"Recall Populate using $pid from Session (#1588)
+
+Signed-off-by: ophthal <magauran@ophthal.org>",interface/patient_file/letter.php in OpenEMR before 5.0.1 allows remote authenticated users to bypass intended access restrictions via the newtemplatename and form_body parameters.,fe5a07bef409cac794651e76bdaa69152a8449e3,0
+0.06959591060876846,0,0.0,2,0,4,5,9,1,psr2 fixes for prior commit,interface/patient_file/letter.php in OpenEMR before 5.0.1 allows remote authenticated users to bypass intended access restrictions via the newtemplatename and form_body parameters.,0f607e038791746e1d207be81c113b36889a88ee,0
+0.07871122658252716,0,0.0,23,0,2775,2788,5563,1,"Updated ACL help file, minor styling changes (#1590)
+
+* Made minor styling changes to help files, added some css
+classes to flat stylesheets
+Updated ACL help file",interface/patient_file/letter.php in OpenEMR before 5.0.1 allows remote authenticated users to bypass intended access restrictions via the newtemplatename and form_body parameters.,14f501d2579f416afbad82f6f458ff835647eb90,0
+-0.004976554308086634,0,0.0,1,0,1,1,2,1,reverted theme back to style_light,interface/patient_file/letter.php in OpenEMR before 5.0.1 allows remote authenticated users to bypass intended access restrictions via the newtemplatename and form_body parameters.,93dafb8f00fbc26b9c8889a8aad53ff78e0c3d38,0
+-0.09093058854341507,0,0.0,1,0,7,1,8,1,fix dupe display when tag encounters (#1593),interface/patient_file/letter.php in OpenEMR before 5.0.1 allows remote authenticated users to bypass intended access restrictions via the newtemplatename and form_body parameters.,78f4b89ea9eeeff701e93f937ab7aa04785d7be0,0
+0.1275606006383896,0,0.0,1,0,2,2,4,0,show text files in document viewer,interface/patient_file/letter.php in OpenEMR before 5.0.1 allows remote authenticated users to bypass intended access restrictions via the newtemplatename and form_body parameters.,af2812915c3440fed861b63c7a03c7f50fc7cbdb,0
+0.06490036100149155,0,0.0,1,0,29,15,44,4,dlgopen update to allow dynamic variable content in dialog iframe. (#1595),interface/patient_file/letter.php in OpenEMR before 5.0.1 allows remote authenticated users to bypass intended access restrictions via the newtemplatename and form_body parameters.,4f85472a1e664e93804c4d6e044d635fb7c57841,0
+0.077437624335289,0,0.0,1,0,2,2,4,0,fix bug in the permission view of group in the add/edit event popup (#1597),interface/patient_file/letter.php in OpenEMR before 5.0.1 allows remote authenticated users to bypass intended access restrictions via the newtemplatename and form_body parameters.,410bb27a613c0639f1c3fb0bd33177f5d280ac44,0
+0.2175615131855011,0,0.0,1,0,3,1,4,0,custom message to client side validation (#1598),interface/patient_file/letter.php in OpenEMR before 5.0.1 allows remote authenticated users to bypass intended access restrictions via the newtemplatename and form_body parameters.,91e82b251f53ef4b2f8a802aa57fadea5d3cd14b,0
+0.12642203271389008,0,0.0,1,0,1,1,2,0,fix sql query for new.php misc bill options (#1599),interface/patient_file/letter.php in OpenEMR before 5.0.1 allows remote authenticated users to bypass intended access restrictions via the newtemplatename and form_body parameters.,876a0ea868eb008ad6493aafaf735319dc312e6a,0
+0.08866166323423386,0,0.0,1,0,2,2,4,0,publish menu link fix (#1585),interface/fax/fax_dispatch.php in OpenEMR before 5.0.1 allows remote authenticated users to bypass intended access restrictions via the scan parameter.,0fc4aee408527ae1d3cd921b64a06fc39a84a782,0
+0.08922579884529114,0,0.0,5,0,11,5,16,0,prep ubuntu package for a patch release (#1586),interface/fax/fax_dispatch.php in OpenEMR before 5.0.1 allows remote authenticated users to bypass intended access restrictions via the scan parameter.,ddd51a2214ba8b50bd036bb1d633fa5e2c9b9439,0
+0.1330675333738327,0,0.0,1,0,7,1,8,0,prepayment test missing in payment validation. (#1589),interface/fax/fax_dispatch.php in OpenEMR before 5.0.1 allows remote authenticated users to bypass intended access restrictions via the scan parameter.,9a72ab04e4e3e73e0060eed964dab34e81b2d569,0
+0.26899465918540955,0,0.0,3,0,54,28,82,4,"Recall Populate using $pid from Session (#1588)
+
+Signed-off-by: ophthal <magauran@ophthal.org>",interface/fax/fax_dispatch.php in OpenEMR before 5.0.1 allows remote authenticated users to bypass intended access restrictions via the scan parameter.,fe5a07bef409cac794651e76bdaa69152a8449e3,0
+0.04414409399032593,0,0.0,2,0,4,5,9,1,psr2 fixes for prior commit,interface/fax/fax_dispatch.php in OpenEMR before 5.0.1 allows remote authenticated users to bypass intended access restrictions via the scan parameter.,0f607e038791746e1d207be81c113b36889a88ee,0
+0.13128462433815002,0,0.0,23,0,2775,2788,5563,1,"Updated ACL help file, minor styling changes (#1590)
+
+* Made minor styling changes to help files, added some css
+classes to flat stylesheets
+Updated ACL help file",interface/fax/fax_dispatch.php in OpenEMR before 5.0.1 allows remote authenticated users to bypass intended access restrictions via the scan parameter.,14f501d2579f416afbad82f6f458ff835647eb90,0
+-0.017678843811154366,0,0.0,1,0,1,1,2,1,reverted theme back to style_light,interface/fax/fax_dispatch.php in OpenEMR before 5.0.1 allows remote authenticated users to bypass intended access restrictions via the scan parameter.,93dafb8f00fbc26b9c8889a8aad53ff78e0c3d38,0
+0.002168437000364065,0,0.0,1,0,7,1,8,1,fix dupe display when tag encounters (#1593),interface/fax/fax_dispatch.php in OpenEMR before 5.0.1 allows remote authenticated users to bypass intended access restrictions via the scan parameter.,78f4b89ea9eeeff701e93f937ab7aa04785d7be0,0
+0.07979103177785873,0,0.0,1,0,2,2,4,0,show text files in document viewer,interface/fax/fax_dispatch.php in OpenEMR before 5.0.1 allows remote authenticated users to bypass intended access restrictions via the scan parameter.,af2812915c3440fed861b63c7a03c7f50fc7cbdb,0
+0.04521380737423897,0,0.0,1,0,29,15,44,4,dlgopen update to allow dynamic variable content in dialog iframe. (#1595),interface/fax/fax_dispatch.php in OpenEMR before 5.0.1 allows remote authenticated users to bypass intended access restrictions via the scan parameter.,4f85472a1e664e93804c4d6e044d635fb7c57841,0
+0.1294776201248169,0,0.0,1,0,2,2,4,0,fix bug in the permission view of group in the add/edit event popup (#1597),interface/fax/fax_dispatch.php in OpenEMR before 5.0.1 allows remote authenticated users to bypass intended access restrictions via the scan parameter.,410bb27a613c0639f1c3fb0bd33177f5d280ac44,0
+0.13427715003490448,0,0.0,1,0,3,1,4,0,custom message to client side validation (#1598),interface/fax/fax_dispatch.php in OpenEMR before 5.0.1 allows remote authenticated users to bypass intended access restrictions via the scan parameter.,91e82b251f53ef4b2f8a802aa57fadea5d3cd14b,0
+0.11452627182006836,0,0.0,1,0,1,1,2,0,fix sql query for new.php misc bill options (#1599),interface/fax/fax_dispatch.php in OpenEMR before 5.0.1 allows remote authenticated users to bypass intended access restrictions via the scan parameter.,876a0ea868eb008ad6493aafaf735319dc312e6a,0
+0.06445614993572235,0,0.0,1,0,2,2,4,0,publish menu link fix (#1585),"Multiple reflected cross-site scripting (XSS) vulnerabilities in OpenEMR before 5.0.1 allow remote attackers to inject arbitrary web script or HTML via the (1) patient parameter to interface/main/finder/finder_navigation.php; (2) key parameter to interface/billing/get_claim_file.php; (3) formid or (4) formseq parameter to interface/orders/types.php; (5) eraname, (6) paydate, (7) post_to_date, (8) deposit_date, (9) debug, or (10) InsId parameter to interface/billing/sl_eob_process.php; (11) form_source, (12) form_paydate, (13) form_deposit_date, (14) form_amount, (15) form_name, (16) form_pid, (17) form_encounter, (18) form_date, or (19) form_to_date parameter to interface/billing/sl_eob_search.php; (20) codetype or (21) search_term parameter to interface/de_identification_forms/find_code_popup.php; (22) search_term parameter to interface/de_identification_forms/find_drug_popup.php; (23) search_term parameter to interface/de_identification_forms/find_immunization_popup.php; (24) id parameter to interface/forms/CAMOS/view.php; (25) id parameter to interface/forms/reviewofs/view.php; or (26) list_id parameter to library/custom_template/personalize.php.",0fc4aee408527ae1d3cd921b64a06fc39a84a782,0
+0.08245537430047989,0,0.0,5,0,11,5,16,0,prep ubuntu package for a patch release (#1586),"Multiple reflected cross-site scripting (XSS) vulnerabilities in OpenEMR before 5.0.1 allow remote attackers to inject arbitrary web script or HTML via the (1) patient parameter to interface/main/finder/finder_navigation.php; (2) key parameter to interface/billing/get_claim_file.php; (3) formid or (4) formseq parameter to interface/orders/types.php; (5) eraname, (6) paydate, (7) post_to_date, (8) deposit_date, (9) debug, or (10) InsId parameter to interface/billing/sl_eob_process.php; (11) form_source, (12) form_paydate, (13) form_deposit_date, (14) form_amount, (15) form_name, (16) form_pid, (17) form_encounter, (18) form_date, or (19) form_to_date parameter to interface/billing/sl_eob_search.php; (20) codetype or (21) search_term parameter to interface/de_identification_forms/find_code_popup.php; (22) search_term parameter to interface/de_identification_forms/find_drug_popup.php; (23) search_term parameter to interface/de_identification_forms/find_immunization_popup.php; (24) id parameter to interface/forms/CAMOS/view.php; (25) id parameter to interface/forms/reviewofs/view.php; or (26) list_id parameter to library/custom_template/personalize.php.",ddd51a2214ba8b50bd036bb1d633fa5e2c9b9439,0
+0.2309977114200592,0,0.0,1,0,7,1,8,0,prepayment test missing in payment validation. (#1589),"Multiple reflected cross-site scripting (XSS) vulnerabilities in OpenEMR before 5.0.1 allow remote attackers to inject arbitrary web script or HTML via the (1) patient parameter to interface/main/finder/finder_navigation.php; (2) key parameter to interface/billing/get_claim_file.php; (3) formid or (4) formseq parameter to interface/orders/types.php; (5) eraname, (6) paydate, (7) post_to_date, (8) deposit_date, (9) debug, or (10) InsId parameter to interface/billing/sl_eob_process.php; (11) form_source, (12) form_paydate, (13) form_deposit_date, (14) form_amount, (15) form_name, (16) form_pid, (17) form_encounter, (18) form_date, or (19) form_to_date parameter to interface/billing/sl_eob_search.php; (20) codetype or (21) search_term parameter to interface/de_identification_forms/find_code_popup.php; (22) search_term parameter to interface/de_identification_forms/find_drug_popup.php; (23) search_term parameter to interface/de_identification_forms/find_immunization_popup.php; (24) id parameter to interface/forms/CAMOS/view.php; (25) id parameter to interface/forms/reviewofs/view.php; or (26) list_id parameter to library/custom_template/personalize.php.",9a72ab04e4e3e73e0060eed964dab34e81b2d569,0
+0.22811110317707062,0,0.0,3,0,54,28,82,4,"Recall Populate using $pid from Session (#1588)
+
+Signed-off-by: ophthal <magauran@ophthal.org>","Multiple reflected cross-site scripting (XSS) vulnerabilities in OpenEMR before 5.0.1 allow remote attackers to inject arbitrary web script or HTML via the (1) patient parameter to interface/main/finder/finder_navigation.php; (2) key parameter to interface/billing/get_claim_file.php; (3) formid or (4) formseq parameter to interface/orders/types.php; (5) eraname, (6) paydate, (7) post_to_date, (8) deposit_date, (9) debug, or (10) InsId parameter to interface/billing/sl_eob_process.php; (11) form_source, (12) form_paydate, (13) form_deposit_date, (14) form_amount, (15) form_name, (16) form_pid, (17) form_encounter, (18) form_date, or (19) form_to_date parameter to interface/billing/sl_eob_search.php; (20) codetype or (21) search_term parameter to interface/de_identification_forms/find_code_popup.php; (22) search_term parameter to interface/de_identification_forms/find_drug_popup.php; (23) search_term parameter to interface/de_identification_forms/find_immunization_popup.php; (24) id parameter to interface/forms/CAMOS/view.php; (25) id parameter to interface/forms/reviewofs/view.php; or (26) list_id parameter to library/custom_template/personalize.php.",fe5a07bef409cac794651e76bdaa69152a8449e3,0
+0.06262257695198059,0,0.0,2,0,4,5,9,1,psr2 fixes for prior commit,"Multiple reflected cross-site scripting (XSS) vulnerabilities in OpenEMR before 5.0.1 allow remote attackers to inject arbitrary web script or HTML via the (1) patient parameter to interface/main/finder/finder_navigation.php; (2) key parameter to interface/billing/get_claim_file.php; (3) formid or (4) formseq parameter to interface/orders/types.php; (5) eraname, (6) paydate, (7) post_to_date, (8) deposit_date, (9) debug, or (10) InsId parameter to interface/billing/sl_eob_process.php; (11) form_source, (12) form_paydate, (13) form_deposit_date, (14) form_amount, (15) form_name, (16) form_pid, (17) form_encounter, (18) form_date, or (19) form_to_date parameter to interface/billing/sl_eob_search.php; (20) codetype or (21) search_term parameter to interface/de_identification_forms/find_code_popup.php; (22) search_term parameter to interface/de_identification_forms/find_drug_popup.php; (23) search_term parameter to interface/de_identification_forms/find_immunization_popup.php; (24) id parameter to interface/forms/CAMOS/view.php; (25) id parameter to interface/forms/reviewofs/view.php; or (26) list_id parameter to library/custom_template/personalize.php.",0f607e038791746e1d207be81c113b36889a88ee,0
+0.15709325671195984,0,0.0,23,0,2775,2788,5563,1,"Updated ACL help file, minor styling changes (#1590)
+
+* Made minor styling changes to help files, added some css
+classes to flat stylesheets
+Updated ACL help file","Multiple reflected cross-site scripting (XSS) vulnerabilities in OpenEMR before 5.0.1 allow remote attackers to inject arbitrary web script or HTML via the (1) patient parameter to interface/main/finder/finder_navigation.php; (2) key parameter to interface/billing/get_claim_file.php; (3) formid or (4) formseq parameter to interface/orders/types.php; (5) eraname, (6) paydate, (7) post_to_date, (8) deposit_date, (9) debug, or (10) InsId parameter to interface/billing/sl_eob_process.php; (11) form_source, (12) form_paydate, (13) form_deposit_date, (14) form_amount, (15) form_name, (16) form_pid, (17) form_encounter, (18) form_date, or (19) form_to_date parameter to interface/billing/sl_eob_search.php; (20) codetype or (21) search_term parameter to interface/de_identification_forms/find_code_popup.php; (22) search_term parameter to interface/de_identification_forms/find_drug_popup.php; (23) search_term parameter to interface/de_identification_forms/find_immunization_popup.php; (24) id parameter to interface/forms/CAMOS/view.php; (25) id parameter to interface/forms/reviewofs/view.php; or (26) list_id parameter to library/custom_template/personalize.php.",14f501d2579f416afbad82f6f458ff835647eb90,0
+0.03711303323507309,0,0.0,1,0,1,1,2,1,reverted theme back to style_light,"Multiple reflected cross-site scripting (XSS) vulnerabilities in OpenEMR before 5.0.1 allow remote attackers to inject arbitrary web script or HTML via the (1) patient parameter to interface/main/finder/finder_navigation.php; (2) key parameter to interface/billing/get_claim_file.php; (3) formid or (4) formseq parameter to interface/orders/types.php; (5) eraname, (6) paydate, (7) post_to_date, (8) deposit_date, (9) debug, or (10) InsId parameter to interface/billing/sl_eob_process.php; (11) form_source, (12) form_paydate, (13) form_deposit_date, (14) form_amount, (15) form_name, (16) form_pid, (17) form_encounter, (18) form_date, or (19) form_to_date parameter to interface/billing/sl_eob_search.php; (20) codetype or (21) search_term parameter to interface/de_identification_forms/find_code_popup.php; (22) search_term parameter to interface/de_identification_forms/find_drug_popup.php; (23) search_term parameter to interface/de_identification_forms/find_immunization_popup.php; (24) id parameter to interface/forms/CAMOS/view.php; (25) id parameter to interface/forms/reviewofs/view.php; or (26) list_id parameter to library/custom_template/personalize.php.",93dafb8f00fbc26b9c8889a8aad53ff78e0c3d38,0
+0.17251987755298615,0,0.0,1,0,7,1,8,1,fix dupe display when tag encounters (#1593),"Multiple reflected cross-site scripting (XSS) vulnerabilities in OpenEMR before 5.0.1 allow remote attackers to inject arbitrary web script or HTML via the (1) patient parameter to interface/main/finder/finder_navigation.php; (2) key parameter to interface/billing/get_claim_file.php; (3) formid or (4) formseq parameter to interface/orders/types.php; (5) eraname, (6) paydate, (7) post_to_date, (8) deposit_date, (9) debug, or (10) InsId parameter to interface/billing/sl_eob_process.php; (11) form_source, (12) form_paydate, (13) form_deposit_date, (14) form_amount, (15) form_name, (16) form_pid, (17) form_encounter, (18) form_date, or (19) form_to_date parameter to interface/billing/sl_eob_search.php; (20) codetype or (21) search_term parameter to interface/de_identification_forms/find_code_popup.php; (22) search_term parameter to interface/de_identification_forms/find_drug_popup.php; (23) search_term parameter to interface/de_identification_forms/find_immunization_popup.php; (24) id parameter to interface/forms/CAMOS/view.php; (25) id parameter to interface/forms/reviewofs/view.php; or (26) list_id parameter to library/custom_template/personalize.php.",78f4b89ea9eeeff701e93f937ab7aa04785d7be0,0
+0.008337778970599174,0,0.0,1,0,2,2,4,0,show text files in document viewer,"Multiple reflected cross-site scripting (XSS) vulnerabilities in OpenEMR before 5.0.1 allow remote attackers to inject arbitrary web script or HTML via the (1) patient parameter to interface/main/finder/finder_navigation.php; (2) key parameter to interface/billing/get_claim_file.php; (3) formid or (4) formseq parameter to interface/orders/types.php; (5) eraname, (6) paydate, (7) post_to_date, (8) deposit_date, (9) debug, or (10) InsId parameter to interface/billing/sl_eob_process.php; (11) form_source, (12) form_paydate, (13) form_deposit_date, (14) form_amount, (15) form_name, (16) form_pid, (17) form_encounter, (18) form_date, or (19) form_to_date parameter to interface/billing/sl_eob_search.php; (20) codetype or (21) search_term parameter to interface/de_identification_forms/find_code_popup.php; (22) search_term parameter to interface/de_identification_forms/find_drug_popup.php; (23) search_term parameter to interface/de_identification_forms/find_immunization_popup.php; (24) id parameter to interface/forms/CAMOS/view.php; (25) id parameter to interface/forms/reviewofs/view.php; or (26) list_id parameter to library/custom_template/personalize.php.",af2812915c3440fed861b63c7a03c7f50fc7cbdb,0
+0.14292705059051514,0,0.0,1,0,29,15,44,4,dlgopen update to allow dynamic variable content in dialog iframe. (#1595),"Multiple reflected cross-site scripting (XSS) vulnerabilities in OpenEMR before 5.0.1 allow remote attackers to inject arbitrary web script or HTML via the (1) patient parameter to interface/main/finder/finder_navigation.php; (2) key parameter to interface/billing/get_claim_file.php; (3) formid or (4) formseq parameter to interface/orders/types.php; (5) eraname, (6) paydate, (7) post_to_date, (8) deposit_date, (9) debug, or (10) InsId parameter to interface/billing/sl_eob_process.php; (11) form_source, (12) form_paydate, (13) form_deposit_date, (14) form_amount, (15) form_name, (16) form_pid, (17) form_encounter, (18) form_date, or (19) form_to_date parameter to interface/billing/sl_eob_search.php; (20) codetype or (21) search_term parameter to interface/de_identification_forms/find_code_popup.php; (22) search_term parameter to interface/de_identification_forms/find_drug_popup.php; (23) search_term parameter to interface/de_identification_forms/find_immunization_popup.php; (24) id parameter to interface/forms/CAMOS/view.php; (25) id parameter to interface/forms/reviewofs/view.php; or (26) list_id parameter to library/custom_template/personalize.php.",4f85472a1e664e93804c4d6e044d635fb7c57841,0
+0.03162402659654617,0,0.0,1,0,2,2,4,0,fix bug in the permission view of group in the add/edit event popup (#1597),"Multiple reflected cross-site scripting (XSS) vulnerabilities in OpenEMR before 5.0.1 allow remote attackers to inject arbitrary web script or HTML via the (1) patient parameter to interface/main/finder/finder_navigation.php; (2) key parameter to interface/billing/get_claim_file.php; (3) formid or (4) formseq parameter to interface/orders/types.php; (5) eraname, (6) paydate, (7) post_to_date, (8) deposit_date, (9) debug, or (10) InsId parameter to interface/billing/sl_eob_process.php; (11) form_source, (12) form_paydate, (13) form_deposit_date, (14) form_amount, (15) form_name, (16) form_pid, (17) form_encounter, (18) form_date, or (19) form_to_date parameter to interface/billing/sl_eob_search.php; (20) codetype or (21) search_term parameter to interface/de_identification_forms/find_code_popup.php; (22) search_term parameter to interface/de_identification_forms/find_drug_popup.php; (23) search_term parameter to interface/de_identification_forms/find_immunization_popup.php; (24) id parameter to interface/forms/CAMOS/view.php; (25) id parameter to interface/forms/reviewofs/view.php; or (26) list_id parameter to library/custom_template/personalize.php.",410bb27a613c0639f1c3fb0bd33177f5d280ac44,0
+0.18751199543476105,0,0.0,1,0,3,1,4,0,custom message to client side validation (#1598),"Multiple reflected cross-site scripting (XSS) vulnerabilities in OpenEMR before 5.0.1 allow remote attackers to inject arbitrary web script or HTML via the (1) patient parameter to interface/main/finder/finder_navigation.php; (2) key parameter to interface/billing/get_claim_file.php; (3) formid or (4) formseq parameter to interface/orders/types.php; (5) eraname, (6) paydate, (7) post_to_date, (8) deposit_date, (9) debug, or (10) InsId parameter to interface/billing/sl_eob_process.php; (11) form_source, (12) form_paydate, (13) form_deposit_date, (14) form_amount, (15) form_name, (16) form_pid, (17) form_encounter, (18) form_date, or (19) form_to_date parameter to interface/billing/sl_eob_search.php; (20) codetype or (21) search_term parameter to interface/de_identification_forms/find_code_popup.php; (22) search_term parameter to interface/de_identification_forms/find_drug_popup.php; (23) search_term parameter to interface/de_identification_forms/find_immunization_popup.php; (24) id parameter to interface/forms/CAMOS/view.php; (25) id parameter to interface/forms/reviewofs/view.php; or (26) list_id parameter to library/custom_template/personalize.php.",91e82b251f53ef4b2f8a802aa57fadea5d3cd14b,0
+0.29666051268577576,0,0.0,1,0,1,1,2,0,fix sql query for new.php misc bill options (#1599),"Multiple reflected cross-site scripting (XSS) vulnerabilities in OpenEMR before 5.0.1 allow remote attackers to inject arbitrary web script or HTML via the (1) patient parameter to interface/main/finder/finder_navigation.php; (2) key parameter to interface/billing/get_claim_file.php; (3) formid or (4) formseq parameter to interface/orders/types.php; (5) eraname, (6) paydate, (7) post_to_date, (8) deposit_date, (9) debug, or (10) InsId parameter to interface/billing/sl_eob_process.php; (11) form_source, (12) form_paydate, (13) form_deposit_date, (14) form_amount, (15) form_name, (16) form_pid, (17) form_encounter, (18) form_date, or (19) form_to_date parameter to interface/billing/sl_eob_search.php; (20) codetype or (21) search_term parameter to interface/de_identification_forms/find_code_popup.php; (22) search_term parameter to interface/de_identification_forms/find_drug_popup.php; (23) search_term parameter to interface/de_identification_forms/find_immunization_popup.php; (24) id parameter to interface/forms/CAMOS/view.php; (25) id parameter to interface/forms/reviewofs/view.php; or (26) list_id parameter to library/custom_template/personalize.php.",876a0ea868eb008ad6493aafaf735319dc312e6a,0
+0.059290073812007904,0,0.0,2,0,8,7,15,1,"php8 fixes for batch payments (#5689)
+
+* change int cast to ceil for little payments
+
+* simplify with floatval()
+
+* better comment
+
+* fix other php8 maths",Improper Access Control in GitHub repository openemr/openemr prior to 7.0.0.1.,ffc61537c535b47a398c32422cb42aa3e5e5514a,0
+0.1825902909040451,0,0.0,1,0,19,8,27,0,"bug fix (#5674)
+
+* bug fix
+
+* check for empty eid
+
+* consistently null with opener vars",Improper Access Control in GitHub repository openemr/openemr prior to 7.0.0.1.,86c1c443e0643eed82e2a66da4573fb71f73cbcd,0
+0.10608621686697006,0,0.0,2,0,35,16,51,0,also added mariadb-dev docker for future mariadb version testing,interface\super\edit_list.php in OpenEMR before v5_0_1_1 allows remote authenticated users to execute arbitrary SQL commands via the newlistname parameter.,bbbb74500cfcea70604431f67bd206814cc26e1f,0
+0.12434607744216919,0,0.0,2,0,50,14,64,0,"Merge pull request #1630 from bradymiller/add-mysql8-mariadb-dev-docker-environment
+
+add mysql8 option and mariadb-dev option to development docker environment",interface\super\edit_list.php in OpenEMR before v5_0_1_1 allows remote authenticated users to execute arbitrary SQL commands via the newlistname parameter.,98c83f830b992c458fe697ca6f5627787e732bba,0
+0.07670783996582031,0,0.0,2,0,12,42,54,0,decreased development dockers overhead by just using one phpmyadmin docker,interface\super\edit_list.php in OpenEMR before v5_0_1_1 allows remote authenticated users to execute arbitrary SQL commands via the newlistname parameter.,e501771534c0414b9b83f0f5913b6d06c8dd8913,0
+0.20116771757602692,0,0.0,3,0,4,3,7,1,"1. add edit event fails when save edited single provider recurring events for future and current. sql insert fails form_provider is array. (#1633)
+
+2. ensure provider is user.
+3. ensure while loop doesn't race.
+@bradymiller Needs to be in next patch.",interface\super\edit_list.php in OpenEMR before v5_0_1_1 allows remote authenticated users to execute arbitrary SQL commands via the newlistname parameter.,55d3c2b31db415bfdaab0dc3e939ef6399c7bbc5,0
+0.14921773970127106,0,0.0,3,0,3,4,7,1,"Revert ""1. add edit event fails when save edited single provider recurring events for future and current. sql insert fails form_provider is array. (#1633)"" (#1637)
+
+This reverts commit 55d3c2b31db415bfdaab0dc3e939ef6399c7bbc5.",interface\super\edit_list.php in OpenEMR before v5_0_1_1 allows remote authenticated users to execute arbitrary SQL commands via the newlistname parameter.,c124f4040b3788938649f4648aa97402685995ee,0
+0.1898196041584015,0,0.0,2,0,2,1,3,0,"1. add edit event fails when save edited single provider recurring events for future and current. sql insert fails as form_provider is array. (#1638)
+
+2. ensure provider is user.",interface\super\edit_list.php in OpenEMR before v5_0_1_1 allows remote authenticated users to execute arbitrary SQL commands via the newlistname parameter.,23d92184a1c76b9ab33a2a2578475d730fff8d4f,0
+0.16279003024101257,0,0.0,9,0,50,29,79,5,mysql 8 fixes (#1639),interface\super\edit_list.php in OpenEMR before v5_0_1_1 allows remote authenticated users to execute arbitrary SQL commands via the newlistname parameter.,2ac31fa48cbbf856334965bf4f6f3edafaaef386,0
+0.1462813913822174,0,0.0,1,0,6,0,6,0,added orthanc docker to docker development environment (#1642),interface\super\edit_list.php in OpenEMR before v5_0_1_1 allows remote authenticated users to execute arbitrary SQL commands via the newlistname parameter.,433ac734d6696a517897c6a1303daff86b92a673,0
+0.0033675802405923605,0,0.0,1,0,2,0,2,0,Prevent out of memory on download.,interface\super\edit_list.php in OpenEMR before v5_0_1_1 allows remote authenticated users to execute arbitrary SQL commands via the newlistname parameter.,49e7a278e35840f8b0d58df9ede9003a82dbdeba,0
+-0.02191961742937565,0,0.0,1,0,2,0,2,0,"Merge pull request #1643 from sjpadgett/backup-fix
+
+Prevent out of memory on download.",interface\super\edit_list.php in OpenEMR before v5_0_1_1 allows remote authenticated users to execute arbitrary SQL commands via the newlistname parameter.,a7584210db33a213127de841be72bafa6b4d8f6a,0
+0.1997772604227066,0,0.0,1,0,3,3,6,0,acl admin username fix,interface\super\edit_list.php in OpenEMR before v5_0_1_1 allows remote authenticated users to execute arbitrary SQL commands via the newlistname parameter.,6506078ba4bd851a4c670135657e57eefcaf730b,0
+0.1504293531179428,0,0.0,1,0,3,3,6,0,"Merge pull request #1645 from bradymiller/acl-admin-fix_1
+
+acl admin username fix",interface\super\edit_list.php in OpenEMR before v5_0_1_1 allows remote authenticated users to execute arbitrary SQL commands via the newlistname parameter.,714d095d24e53d784dad577e05e1421c44289de6,0
+0.15164735913276672,0,0.0,1,0,16,5,21,0,"Add Recall Data to Appointment Widget
+
+Signed-off-by: ophthal <magauran@ophthal.org>",interface\super\edit_list.php in OpenEMR before v5_0_1_1 allows remote authenticated users to execute arbitrary SQL commands via the newlistname parameter.,7f7e51ab37ed05aa5af0d554bfd93a1bbf34dc21,0
+0.1233915388584137,0,0.0,9,0,799,243,1042,6,"Eye Updates
+
+Add Prior Refraction Panel.
+Trim inline CSS.
+Link image files to documents - start phasing out Anything Slider since documents viewer is adjustable in size and includes a DICOM viewer.
+Link Images reports to document notes.
+Convert PCP/Referrer info to ajax call to auto update Communications Engine.
+Auto-select Target IOP in Glaucoma Flow Board.
+Better sync HPI  panel sizes when PMH is complicated/many entries.
+More logical accordion function in IMP/Plan area.
+Improvements to auto-coding and billing engine.
+Ensure correct Expiration date for Spectable/CTL refraction.
+Ensure Dispensed list of Spectacles is accurate
+
+Signed-off-by: ophthal <magauran@ophthal.org>",interface\super\edit_list.php in OpenEMR before v5_0_1_1 allows remote authenticated users to execute arbitrary SQL commands via the newlistname parameter.,17e7fe06e516c0deb1db3eb35ad4b504a902a1be,0
+0.06555479764938354,0,0.0,4,0,131,130,261,1,psr2 fixes for 2 prior commits,interface\super\edit_list.php in OpenEMR before v5_0_1_1 allows remote authenticated users to execute arbitrary SQL commands via the newlistname parameter.,6d69495fcc8cf28d5c358070f46fe9d1519947dd,0
+0.11040422320365906,0,0.0,1,0,3,0,3,0,added additional testing support for couchdb docker in dev environment,interface\super\edit_list.php in OpenEMR before v5_0_1_1 allows remote authenticated users to execute arbitrary SQL commands via the newlistname parameter.,611a085b32f2b114df490caa8d25599cbf200b0a,0
+0.04962693527340889,0,0.0,1,0,11,1,12,1,couchdb bug fix,interface\super\edit_list.php in OpenEMR before v5_0_1_1 allows remote authenticated users to execute arbitrary SQL commands via the newlistname parameter.,66eedd8f4f3cd8e10a200cf5dbcb3a2305836c1a,0
+0.09444871544837952,0,0.0,13,0,358,35,393,1,Responsive Vertical Menu For Tab Based Layout Take 2 (#2431),An issue was discovered in OpenEMR before 5.0.1 Patch 7. There is SQL Injection in the make_task function in /interface/forms/eye_mag/php/taskman_functions.php via /interface/forms/eye_mag/taskman.php.,3cafc5e6f371be75693bd5043db14a53c51437ec,0
+0.07938277721405029,0,0.0,1,0,1,1,2,0,increment counter for prior commit,An issue was discovered in OpenEMR before 5.0.1 Patch 7. There is SQL Injection in the make_task function in /interface/forms/eye_mag/php/taskman_functions.php via /interface/forms/eye_mag/taskman.php.,fc69c8b59308ffeaf35d55f6e9d06e200f1aa521,0
+0.015741078183054924,0,0.0,1,0,4,4,8,1,default style,An issue was discovered in OpenEMR before 5.0.1 Patch 7. There is SQL Injection in the make_task function in /interface/forms/eye_mag/php/taskman_functions.php via /interface/forms/eye_mag/taskman.php.,1db31ed7687ee43ab9ad54889ff7bdddeb5fc83c,0
+0.19329969584941864,0,0.0,1,0,2,2,4,0,"typo, thank you jit and sherwin (#2435)",An issue was discovered in OpenEMR before 5.0.1 Patch 7. There is SQL Injection in the make_task function in /interface/forms/eye_mag/php/taskman_functions.php via /interface/forms/eye_mag/taskman.php.,c022ddd03bc6bef7932947e90500f0ede545b76b,0
+0.10598583519458771,0,0.0,1,0,7,6,13,0,"use locale for check date, deposit date (#2436)",An issue was discovered in OpenEMR before 5.0.1 Patch 7. There is SQL Injection in the make_task function in /interface/forms/eye_mag/php/taskman_functions.php via /interface/forms/eye_mag/taskman.php.,4aeb27f3b908b09bce93f8fc42b8a927ce297175,0
+0.17166908085346222,0,0.0,9,0,523,449,972,12,"Fix Related Patient Notes (#2433)
+
+* Fix Related Patient Notes
+- in electronic report single results and encounter reports
+- add order diagnosis to reports
+- fix styles
+- fix several bugs
+- redo that once signed will stay in result review as requested
+
+* review fixes
+
+* - think have escapes
+- prevent list_report polling labs on refresh
+- add icon to default close btn dlgopen.",An issue was discovered in OpenEMR before 5.0.1 Patch 7. There is SQL Injection in the make_task function in /interface/forms/eye_mag/php/taskman_functions.php via /interface/forms/eye_mag/taskman.php.,52fb369a2bedb134bc1db3cc634c3d4c2c9eae17,0
+0.014006863348186016,0,0.0,12,0,14,14,28,0,update deprecated jquery (#2438),An issue was discovered in OpenEMR before 5.0.1 Patch 7. There is SQL Injection in the make_task function in /interface/forms/eye_mag/php/taskman_functions.php via /interface/forms/eye_mag/taskman.php.,d6745196f564e492fc433f069cd9c7047596ba36,0
+0.12794820964336395,0,0.0,11,0,347,214,561,37,"api: added support for ajax/fetch calls, csrf security, and test script for local/internal use cases (#2439)",An issue was discovered in OpenEMR before 5.0.1 Patch 7. There is SQL Injection in the make_task function in /interface/forms/eye_mag/php/taskman_functions.php via /interface/forms/eye_mag/taskman.php.,207179570008425787363e87cc9811b20cf5a440,0
+0.061936646699905396,0,0.0,2,0,1,1,2,0,minor filename change,An issue was discovered in OpenEMR before 5.0.1 Patch 7. There is SQL Injection in the make_task function in /interface/forms/eye_mag/php/taskman_functions.php via /interface/forms/eye_mag/taskman.php.,34ae520cc80b5cde192919a871029f01d3ecfd41,0
+0.31599709391593933,0,0.0,3,0,4,3,7,1,some bug fixes (#2442),An issue was discovered in OpenEMR before 5.0.1 Patch 7. There is SQL Injection in the make_task function in /interface/forms/eye_mag/php/taskman_functions.php via /interface/forms/eye_mag/taskman.php.,9d4105ef228c57d79c93bd272dc8a5febb12282b,0
+0.7419036030769348,0,0.0,1,0,11,28,39,1,minor fix since not using cache in openemr; just using compile (#2443),An issue was discovered in OpenEMR before 5.0.1 Patch 7. There is SQL Injection in the make_task function in /interface/forms/eye_mag/php/taskman_functions.php via /interface/forms/eye_mag/taskman.php.,1918e7643b7cb44350ca8e48c1178a012ebc2a2d,0
+0.15051475167274475,0,0.0,1,0,29,11,40,0,Change JS functions for browsers compatibility with ie11 (edit_list.php) (#2415),An issue was discovered in OpenEMR before 5.0.1 Patch 7. There is SQL Injection in the make_task function in /interface/forms/eye_mag/php/taskman_functions.php via /interface/forms/eye_mag/taskman.php.,cf8afd4e3d97c79bbaa304252d8148e0d1b6b23a,0
+0.09444866329431534,0,0.0,13,0,358,35,393,1,Responsive Vertical Menu For Tab Based Layout Take 2 (#2431),An issue was discovered in OpenEMR before 5.0.1 Patch 7. Directory Traversal exists via docid=../ to /portal/lib/download_template.php.,3cafc5e6f371be75693bd5043db14a53c51437ec,0
+0.0793827474117279,0,0.0,1,0,1,1,2,0,increment counter for prior commit,An issue was discovered in OpenEMR before 5.0.1 Patch 7. Directory Traversal exists via docid=../ to /portal/lib/download_template.php.,fc69c8b59308ffeaf35d55f6e9d06e200f1aa521,0
+-0.02183920331299305,0,0.0,1,0,4,4,8,1,default style,An issue was discovered in OpenEMR before 5.0.1 Patch 7. Directory Traversal exists via docid=../ to /portal/lib/download_template.php.,1db31ed7687ee43ab9ad54889ff7bdddeb5fc83c,0
+0.19329971075057983,0,0.0,1,0,2,2,4,0,"typo, thank you jit and sherwin (#2435)",An issue was discovered in OpenEMR before 5.0.1 Patch 7. Directory Traversal exists via docid=../ to /portal/lib/download_template.php.,c022ddd03bc6bef7932947e90500f0ede545b76b,0
+0.07756786793470383,0,0.0,1,0,7,6,13,0,"use locale for check date, deposit date (#2436)",An issue was discovered in OpenEMR before 5.0.1 Patch 7. Directory Traversal exists via docid=../ to /portal/lib/download_template.php.,4aeb27f3b908b09bce93f8fc42b8a927ce297175,0
+0.14708301424980164,0,0.0,9,0,523,449,972,12,"Fix Related Patient Notes (#2433)
+
+* Fix Related Patient Notes
+- in electronic report single results and encounter reports
+- add order diagnosis to reports
+- fix styles
+- fix several bugs
+- redo that once signed will stay in result review as requested
+
+* review fixes
+
+* - think have escapes
+- prevent list_report polling labs on refresh
+- add icon to default close btn dlgopen.",An issue was discovered in OpenEMR before 5.0.1 Patch 7. Directory Traversal exists via docid=../ to /portal/lib/download_template.php.,52fb369a2bedb134bc1db3cc634c3d4c2c9eae17,0
+0.01472744345664978,0,0.0,12,0,14,14,28,0,update deprecated jquery (#2438),An issue was discovered in OpenEMR before 5.0.1 Patch 7. Directory Traversal exists via docid=../ to /portal/lib/download_template.php.,d6745196f564e492fc433f069cd9c7047596ba36,0
+0.1337142437696457,0,0.0,11,0,347,214,561,37,"api: added support for ajax/fetch calls, csrf security, and test script for local/internal use cases (#2439)",An issue was discovered in OpenEMR before 5.0.1 Patch 7. Directory Traversal exists via docid=../ to /portal/lib/download_template.php.,207179570008425787363e87cc9811b20cf5a440,0
+0.18331386148929596,0,0.0,2,0,1,1,2,0,minor filename change,An issue was discovered in OpenEMR before 5.0.1 Patch 7. Directory Traversal exists via docid=../ to /portal/lib/download_template.php.,34ae520cc80b5cde192919a871029f01d3ecfd41,0
+0.31599709391593933,0,0.0,3,0,4,3,7,1,some bug fixes (#2442),An issue was discovered in OpenEMR before 5.0.1 Patch 7. Directory Traversal exists via docid=../ to /portal/lib/download_template.php.,9d4105ef228c57d79c93bd272dc8a5febb12282b,0
+0.7419036030769348,0,0.0,1,0,11,28,39,1,minor fix since not using cache in openemr; just using compile (#2443),An issue was discovered in OpenEMR before 5.0.1 Patch 7. Directory Traversal exists via docid=../ to /portal/lib/download_template.php.,1918e7643b7cb44350ca8e48c1178a012ebc2a2d,0
+0.07548592984676361,0,0.0,1,0,29,11,40,0,Change JS functions for browsers compatibility with ie11 (edit_list.php) (#2415),An issue was discovered in OpenEMR before 5.0.1 Patch 7. Directory Traversal exists via docid=../ to /portal/lib/download_template.php.,cf8afd4e3d97c79bbaa304252d8148e0d1b6b23a,0
+0.09444871544837952,0,0.0,13,0,358,35,393,1,Responsive Vertical Menu For Tab Based Layout Take 2 (#2431),An issue was discovered in OpenEMR before 5.0.1 Patch 7. SQL Injection exists in the SaveAudit function in /portal/lib/paylib.php and the portalAudit function in /portal/lib/appsql.class.php.,3cafc5e6f371be75693bd5043db14a53c51437ec,0
+0.07938277721405029,0,0.0,1,0,1,1,2,0,increment counter for prior commit,An issue was discovered in OpenEMR before 5.0.1 Patch 7. SQL Injection exists in the SaveAudit function in /portal/lib/paylib.php and the portalAudit function in /portal/lib/appsql.class.php.,fc69c8b59308ffeaf35d55f6e9d06e200f1aa521,0
+-0.004796049557626247,0,0.0,1,0,4,4,8,1,default style,An issue was discovered in OpenEMR before 5.0.1 Patch 7. SQL Injection exists in the SaveAudit function in /portal/lib/paylib.php and the portalAudit function in /portal/lib/appsql.class.php.,1db31ed7687ee43ab9ad54889ff7bdddeb5fc83c,0
+0.19329969584941864,0,0.0,1,0,2,2,4,0,"typo, thank you jit and sherwin (#2435)",An issue was discovered in OpenEMR before 5.0.1 Patch 7. SQL Injection exists in the SaveAudit function in /portal/lib/paylib.php and the portalAudit function in /portal/lib/appsql.class.php.,c022ddd03bc6bef7932947e90500f0ede545b76b,0
+0.1968839019536972,0,0.0,1,0,7,6,13,0,"use locale for check date, deposit date (#2436)",An issue was discovered in OpenEMR before 5.0.1 Patch 7. SQL Injection exists in the SaveAudit function in /portal/lib/paylib.php and the portalAudit function in /portal/lib/appsql.class.php.,4aeb27f3b908b09bce93f8fc42b8a927ce297175,0
+0.18671733140945435,0,0.0,9,0,523,449,972,12,"Fix Related Patient Notes (#2433)
+
+* Fix Related Patient Notes
+- in electronic report single results and encounter reports
+- add order diagnosis to reports
+- fix styles
+- fix several bugs
+- redo that once signed will stay in result review as requested
+
+* review fixes
+
+* - think have escapes
+- prevent list_report polling labs on refresh
+- add icon to default close btn dlgopen.",An issue was discovered in OpenEMR before 5.0.1 Patch 7. SQL Injection exists in the SaveAudit function in /portal/lib/paylib.php and the portalAudit function in /portal/lib/appsql.class.php.,52fb369a2bedb134bc1db3cc634c3d4c2c9eae17,0
+0.014006863348186016,0,0.0,12,0,14,14,28,0,update deprecated jquery (#2438),An issue was discovered in OpenEMR before 5.0.1 Patch 7. SQL Injection exists in the SaveAudit function in /portal/lib/paylib.php and the portalAudit function in /portal/lib/appsql.class.php.,d6745196f564e492fc433f069cd9c7047596ba36,0
+0.13659816980361938,0,0.0,11,0,347,214,561,37,"api: added support for ajax/fetch calls, csrf security, and test script for local/internal use cases (#2439)",An issue was discovered in OpenEMR before 5.0.1 Patch 7. SQL Injection exists in the SaveAudit function in /portal/lib/paylib.php and the portalAudit function in /portal/lib/appsql.class.php.,207179570008425787363e87cc9811b20cf5a440,0
+0.033705685287714005,0,0.0,2,0,1,1,2,0,minor filename change,An issue was discovered in OpenEMR before 5.0.1 Patch 7. SQL Injection exists in the SaveAudit function in /portal/lib/paylib.php and the portalAudit function in /portal/lib/appsql.class.php.,34ae520cc80b5cde192919a871029f01d3ecfd41,0
+0.31599709391593933,0,0.0,3,0,4,3,7,1,some bug fixes (#2442),An issue was discovered in OpenEMR before 5.0.1 Patch 7. SQL Injection exists in the SaveAudit function in /portal/lib/paylib.php and the portalAudit function in /portal/lib/appsql.class.php.,9d4105ef228c57d79c93bd272dc8a5febb12282b,0
+0.7419036030769348,0,0.0,1,0,11,28,39,1,minor fix since not using cache in openemr; just using compile (#2443),An issue was discovered in OpenEMR before 5.0.1 Patch 7. SQL Injection exists in the SaveAudit function in /portal/lib/paylib.php and the portalAudit function in /portal/lib/appsql.class.php.,1918e7643b7cb44350ca8e48c1178a012ebc2a2d,0
+0.08051937073469162,0,0.0,1,0,29,11,40,0,Change JS functions for browsers compatibility with ie11 (edit_list.php) (#2415),An issue was discovered in OpenEMR before 5.0.1 Patch 7. SQL Injection exists in the SaveAudit function in /portal/lib/paylib.php and the portalAudit function in /portal/lib/appsql.class.php.,cf8afd4e3d97c79bbaa304252d8148e0d1b6b23a,0
+0.08826089650392532,0,0.0,1,0,5,3,8,1,"Sleob fix (#964)
+
+* test for array",The csv_log_html function in library/edihistory/edih_csv_inc.php in OpenEMR 5.0.0 and prior allows attackers to bypass intended access restrictions via a crafted name.,284dfc3df7cb8f49168a140456bde2b3fdb9d1d3,0
+-0.07816944271326065,0,0.0,7,0,521,435,956,0,complete conversion of practice settings gui to responsive bootstrap,The csv_log_html function in library/edihistory/edih_csv_inc.php in OpenEMR 5.0.0 and prior allows attackers to bypass intended access restrictions via a crafted name.,e16b47cf15686b4504fd97615786445aa87b65cb,0
+-0.08563107997179031,0,0.0,7,0,521,435,956,0,"Merge pull request #967 for bootstrap practice settings gui
+
+bootstrap practice settings gui",The csv_log_html function in library/edihistory/edih_csv_inc.php in OpenEMR 5.0.0 and prior allows attackers to bypass intended access restrictions via a crafted name.,3bba1a1deedf6f145ad98e5eb32fdf8c2a270e81,0
+-0.007628678344190121,0,0.0,5,0,5,5,10,3,minor reorg of menu class,The csv_log_html function in library/edihistory/edih_csv_inc.php in OpenEMR 5.0.0 and prior allows attackers to bypass intended access restrictions via a crafted name.,1962c71b50954a541453bf396af571681b6be863,0
+0.04724790155887604,0,0.0,5,0,5,5,10,0,"Merge pull request #976 for minor reorg of menu class
+
+minor reorg of menu class",The csv_log_html function in library/edihistory/edih_csv_inc.php in OpenEMR 5.0.0 and prior allows attackers to bypass intended access restrictions via a crafted name.,bd3ad703dc6f70fca20190eef7d22d5da55c4ac9,0
+0.13757044076919556,0,0.0,5,0,13,8,21,2,"document notes
+
+Implement method for accessing notes for document object.",The csv_log_html function in library/edihistory/edih_csv_inc.php in OpenEMR 5.0.0 and prior allows attackers to bypass intended access restrictions via a crafted name.,3787c835e563bb4d1f510fdacea0dda3ab3931fe,0
+0.08784882724285126,0,0.0,3,0,9,10,19,1,minor code adjustment related to prior commit,The csv_log_html function in library/edihistory/edih_csv_inc.php in OpenEMR 5.0.0 and prior allows attackers to bypass intended access restrictions via a crafted name.,c449feb17727ac9909961044f371323b60ef8076,0
+0.08770350366830826,0,0.0,7,0,21,17,38,0,"Merge pull request #979 to Implement method for accessing notes for document object
+
+Implement method for accessing notes for document object",The csv_log_html function in library/edihistory/edih_csv_inc.php in OpenEMR 5.0.0 and prior allows attackers to bypass intended access restrictions via a crafted name.,8ab210cf3d36e26031599177b8a78b6fa7ccb0eb,0
+0.14610537886619568,0,0.0,1,0,115,94,209,1,chart_tracker.php bootstrap convertion,The csv_log_html function in library/edihistory/edih_csv_inc.php in OpenEMR 5.0.0 and prior allows attackers to bypass intended access restrictions via a crafted name.,4c23f4b9afadf42fc819630adee1cddb384123a4,0
+0.027149002999067307,0,0.0,1,0,81,105,186,1,adjustments to prior commit,The csv_log_html function in library/edihistory/edih_csv_inc.php in OpenEMR 5.0.0 and prior allows attackers to bypass intended access restrictions via a crafted name.,829ceb743365c58a16f1a3c703e32173b883d151,0
+-0.01375281810760498,0,0.0,1,0,4,2,6,0,couple more minor adjustment to prior commit,The csv_log_html function in library/edihistory/edih_csv_inc.php in OpenEMR 5.0.0 and prior allows attackers to bypass intended access restrictions via a crafted name.,5709f7cb8c8606bac95a5388081651a1cd77e5f6,0
+0.1315634846687317,0,0.0,1,0,101,102,203,0,"Merge pull request #982 for chart_tracker.php bootstrap convertion
+
+chart_tracker.php bootstrap convertion",The csv_log_html function in library/edihistory/edih_csv_inc.php in OpenEMR 5.0.0 and prior allows attackers to bypass intended access restrictions via a crafted name.,cd2296f1a69a7487942ce180f481fbae5fe2ec5b,0
+0.01860269345343113,0,0.0,33,0,49,49,98,6,"php8 fixes (#5222)
+
+* php8 fixes
+
+* other scripts that were in need",Non Privilege User can Enable or Disable Registered in GitHub repository openemr/openemr prior to 6.1.0.1.,a50d1544ded5e88ab1879ec27e045d7ff5bc4204,0
+-0.06610281765460968,0,0.0,1,0,1,1,2,1,string + string operand fix (#5225),Non Privilege User can Enable or Disable Registered in GitHub repository openemr/openemr prior to 6.1.0.1.,1c53ada9be8ef78933ff439a459b5f89e8b71c0b,0
+0.3643580377101898,0,0.0,7,0,1005,10,1015,22,"Openemr fix #5220 direct send attachment (#5226)
+
+* Fixes #5220 Send Trusted Direct Message
+
+Implemented the ability to send messages w/o attachments via the EMR
+Direct service over the Direct protocol.
+
+Built the ability to select a document that has been uploaded to the
+system and send it via EMRDirect.
+
+Built a document finder dialog window so that you can select a patient
+or non-patient document using the finder.  It checks against the current
+user's ACLs and the document category's acos to determine if the user
+can see the document.  It only shows 25 results at a time and requires
+the user to be more specific in their search if they want to see more.
+By default it displays the most recent documents uploaded.
+
+* Direct pdf attachment send.
+
+Made it so we can send a pdf attachment via direct.
+
+Validated the mime types and reject any document that can't be sent via
+Direct.  Interestingly direct supports sending HTML but our default
+OpenEMR whitelist doesn't allow it.
+
+* Fix styles
+
+* Fix case where document is empty.
+
+Changing up the ACL validation broke the functionality for sending a
+single message w/o an attached document.
+
+* Hide alerts before each message send.
+
+If the same message error comes back for each message send it appears
+like the direct message never sent.  Hiding the alerts each time when
+the send button is pushed is a better UX experience.
+
+* Implemented Document File Preview for messages.
+
+Messages was throwing a javascript error if you didn't assign a patient
+for a document.  However, often the document is what contains the
+information about what patient the file should belong to.  I made it so
+that if there is no assigned patient you can at least view the document
+in the Miscellaneous -> New Documents screen.
+
+This also facilitates testing with ONC as we have to demonstrate that
+the Direct file was successfully decrypted and viewable.
+
+* Fix code review issues.",Non Privilege User can Enable or Disable Registered in GitHub repository openemr/openemr prior to 6.1.0.1.,0cf4ce14e9fec4908f5da7b7a4470badc7e7d9c0,0
+0.2312948852777481,0,0.0,2,0,7,5,12,1,"Fixes #5232 android oauth2 authorization issues. (#5233)
+
+Fixes the scope nonce validation so native apps can authorize using the
+nonce from the identity token.
+
+Fixes the css view on mobile native devices so we can see the scope
+authorization screen without half of it cut off.",Non Privilege User can Enable or Disable Registered in GitHub repository openemr/openemr prior to 6.1.0.1.,b4048a4d6b050701b463782fa860ee3c8da9f6f1,0
+0.010444830171763897,0,0.0,165,0,617,1424,2041,56,"cat iii fixes (#5223)
+
+* cat iii fixes
+
+* change medication orders to substance orders
+
+* fix episode results by adding ID to encounters
+
+* fix individual result rendering
+
+* fix bugs in individual result alg, and add extension to root ID
+
+* added codes lookup by OID, added IDs (don't think they are needed except for encounters) and added medication order when substance order, becasue Cypress sends both
+
+* some measures need to be set to calculation_method = PATIENT, some to EPISODE_OF_CARE
+
+* add encounter diagnosis as DiagnosisComponent array, fix discharge codes for snomed on import, allow encounter diags to import without installed codeset
+
+* bug in calculator expects high closed to be true all the time
+
+* needed negationRationale in the copy of substance order for calculator, and change measure calculation method to PATIENT for cms69
+
+* calc method for cms124 needs to be PATIENT
+
+* calc method for cms125 needs to be PATIENT
+
+* calc method for cms127 needs to be PATIENT
+
+* calc method for cms130 needs to be PATIENT
+
+* calc method for cms138 needs to be PATIENT
+
+* fix sdtc:valueSet rendering improperly in immun service, add ID to allergy and device services
+
+* calc method for cms165 needs to be PATIENT
+
+* cleanup and style fixes
+
+* put back packge json files",Non Privilege User can Enable or Disable Registered in GitHub repository openemr/openemr prior to 6.1.0.1.,de85ba4bf9a620eaa014f98c5747a5ae412b3ec1,0
+0.15269291400909424,0,0.0,2,0,267,65,332,0,"Update CQM dependency versioning (#5239)
+
+* Update CQM dependency versioning
+
+* lock to version in package.json",Non Privilege User can Enable or Disable Registered in GitHub repository openemr/openemr prior to 6.1.0.1.,4586c9b113e71757e60295b8d021a8abc8623b03,0
+-0.07155784219503403,0,0.0,2,0,12,6,18,0,fix configure order display (#5245),Non Privilege User can Enable or Disable Registered in GitHub repository openemr/openemr prior to 6.1.0.1.,0ae7ba99ed1b6c115d1ab16f297a3b4d0a19f531,0
+-0.025367526337504387,0,0.0,2,0,43,17,60,7,"x12clean submitter name, and some styling fixes (#5243)",Non Privilege User can Enable or Disable Registered in GitHub repository openemr/openemr prior to 6.1.0.1.,da8d3306567c126458a3f93c8ba8f8cf36656759,0
+0.056870657950639725,0,0.0,2,0,3,3,6,0,"update nodejs version requirement in READMEs (#5231)
+
+* update nodejs version requirement in README
+
+* also update nodejs requirement in ccda README",Non Privilege User can Enable or Disable Registered in GitHub repository openemr/openemr prior to 6.1.0.1.,84e628b6a95d0d109b24c045d39a2010b46f0128,0
+0.059110913425683975,0,0.0,4,0,26,6,32,0,bug fix a1,Non Privilege User can Enable or Disable Registered in GitHub repository openemr/openemr prior to 6.1.0.1.,d68a1e54e40ec5ce8d9ed3da0627f50b605d7216,0
+0.052677541971206665,0,0.0,2,0,13,1,14,0,bug fix a2,Non Privilege User can Enable or Disable Registered in GitHub repository openemr/openemr prior to 6.1.0.1.,3c5fbbc0656c7d42e387a53a1e16689bc0ffaf32,0
+0.049102310091257095,0,0.0,1,0,6,0,6,0,bug fix a3,Non Privilege User can Enable or Disable Registered in GitHub repository openemr/openemr prior to 6.1.0.1.,255afb40b8adada859647da9832eaa8a43553fdd,0
+0.08210576325654984,0,0.0,7,0,45,7,52,0,"Merge pull request #5250 from bradymiller/bug-fix-50_y
+
+bug fixes",Non Privilege User can Enable or Disable Registered in GitHub repository openemr/openemr prior to 6.1.0.1.,44c9b53ed5edb710f084a5b82d35a938d1284f74,0
+0.00632392568513751,0,0.0,33,0,49,49,98,6,"php8 fixes (#5222)
+
+* php8 fixes
+
+* other scripts that were in need",Non-Privilege User Can View Patient’s Disclosures in GitHub repository openemr/openemr prior to 6.1.0.1.,a50d1544ded5e88ab1879ec27e045d7ff5bc4204,0
+-0.09020347893238068,0,0.0,1,0,1,1,2,1,string + string operand fix (#5225),Non-Privilege User Can View Patient’s Disclosures in GitHub repository openemr/openemr prior to 6.1.0.1.,1c53ada9be8ef78933ff439a459b5f89e8b71c0b,0
+0.3970654010772705,0,0.0,7,0,1005,10,1015,22,"Openemr fix #5220 direct send attachment (#5226)
+
+* Fixes #5220 Send Trusted Direct Message
+
+Implemented the ability to send messages w/o attachments via the EMR
+Direct service over the Direct protocol.
+
+Built the ability to select a document that has been uploaded to the
+system and send it via EMRDirect.
+
+Built a document finder dialog window so that you can select a patient
+or non-patient document using the finder.  It checks against the current
+user's ACLs and the document category's acos to determine if the user
+can see the document.  It only shows 25 results at a time and requires
+the user to be more specific in their search if they want to see more.
+By default it displays the most recent documents uploaded.
+
+* Direct pdf attachment send.
+
+Made it so we can send a pdf attachment via direct.
+
+Validated the mime types and reject any document that can't be sent via
+Direct.  Interestingly direct supports sending HTML but our default
+OpenEMR whitelist doesn't allow it.
+
+* Fix styles
+
+* Fix case where document is empty.
+
+Changing up the ACL validation broke the functionality for sending a
+single message w/o an attached document.
+
+* Hide alerts before each message send.
+
+If the same message error comes back for each message send it appears
+like the direct message never sent.  Hiding the alerts each time when
+the send button is pushed is a better UX experience.
+
+* Implemented Document File Preview for messages.
+
+Messages was throwing a javascript error if you didn't assign a patient
+for a document.  However, often the document is what contains the
+information about what patient the file should belong to.  I made it so
+that if there is no assigned patient you can at least view the document
+in the Miscellaneous -> New Documents screen.
+
+This also facilitates testing with ONC as we have to demonstrate that
+the Direct file was successfully decrypted and viewable.
+
+* Fix code review issues.",Non-Privilege User Can View Patient’s Disclosures in GitHub repository openemr/openemr prior to 6.1.0.1.,0cf4ce14e9fec4908f5da7b7a4470badc7e7d9c0,0
+0.1769416481256485,0,0.0,2,0,7,5,12,1,"Fixes #5232 android oauth2 authorization issues. (#5233)
+
+Fixes the scope nonce validation so native apps can authorize using the
+nonce from the identity token.
+
+Fixes the css view on mobile native devices so we can see the scope
+authorization screen without half of it cut off.",Non-Privilege User Can View Patient’s Disclosures in GitHub repository openemr/openemr prior to 6.1.0.1.,b4048a4d6b050701b463782fa860ee3c8da9f6f1,0
+0.1816086769104004,0,0.0,165,0,617,1424,2041,56,"cat iii fixes (#5223)
+
+* cat iii fixes
+
+* change medication orders to substance orders
+
+* fix episode results by adding ID to encounters
+
+* fix individual result rendering
+
+* fix bugs in individual result alg, and add extension to root ID
+
+* added codes lookup by OID, added IDs (don't think they are needed except for encounters) and added medication order when substance order, becasue Cypress sends both
+
+* some measures need to be set to calculation_method = PATIENT, some to EPISODE_OF_CARE
+
+* add encounter diagnosis as DiagnosisComponent array, fix discharge codes for snomed on import, allow encounter diags to import without installed codeset
+
+* bug in calculator expects high closed to be true all the time
+
+* needed negationRationale in the copy of substance order for calculator, and change measure calculation method to PATIENT for cms69
+
+* calc method for cms124 needs to be PATIENT
+
+* calc method for cms125 needs to be PATIENT
+
+* calc method for cms127 needs to be PATIENT
+
+* calc method for cms130 needs to be PATIENT
+
+* calc method for cms138 needs to be PATIENT
+
+* fix sdtc:valueSet rendering improperly in immun service, add ID to allergy and device services
+
+* calc method for cms165 needs to be PATIENT
+
+* cleanup and style fixes
+
+* put back packge json files",Non-Privilege User Can View Patient’s Disclosures in GitHub repository openemr/openemr prior to 6.1.0.1.,de85ba4bf9a620eaa014f98c5747a5ae412b3ec1,0
+0.13418340682983398,0,0.0,2,0,267,65,332,0,"Update CQM dependency versioning (#5239)
+
+* Update CQM dependency versioning
+
+* lock to version in package.json",Non-Privilege User Can View Patient’s Disclosures in GitHub repository openemr/openemr prior to 6.1.0.1.,4586c9b113e71757e60295b8d021a8abc8623b03,0
+-0.042741093784570694,0,0.0,2,0,12,6,18,0,fix configure order display (#5245),Non-Privilege User Can View Patient’s Disclosures in GitHub repository openemr/openemr prior to 6.1.0.1.,0ae7ba99ed1b6c115d1ab16f297a3b4d0a19f531,0
+-0.014237428084015846,0,0.0,2,0,43,17,60,7,"x12clean submitter name, and some styling fixes (#5243)",Non-Privilege User Can View Patient’s Disclosures in GitHub repository openemr/openemr prior to 6.1.0.1.,da8d3306567c126458a3f93c8ba8f8cf36656759,0
+0.119796521961689,0,0.0,2,0,3,3,6,0,"update nodejs version requirement in READMEs (#5231)
+
+* update nodejs version requirement in README
+
+* also update nodejs requirement in ccda README",Non-Privilege User Can View Patient’s Disclosures in GitHub repository openemr/openemr prior to 6.1.0.1.,84e628b6a95d0d109b24c045d39a2010b46f0128,0
+0.05733935534954071,0,0.0,4,0,26,6,32,0,bug fix a1,Non-Privilege User Can View Patient’s Disclosures in GitHub repository openemr/openemr prior to 6.1.0.1.,d68a1e54e40ec5ce8d9ed3da0627f50b605d7216,0
+0.033789828419685364,0,0.0,2,0,13,1,14,0,bug fix a2,Non-Privilege User Can View Patient’s Disclosures in GitHub repository openemr/openemr prior to 6.1.0.1.,3c5fbbc0656c7d42e387a53a1e16689bc0ffaf32,0
+0.06969500333070755,0,0.0,1,0,6,0,6,0,bug fix a3,Non-Privilege User Can View Patient’s Disclosures in GitHub repository openemr/openemr prior to 6.1.0.1.,255afb40b8adada859647da9832eaa8a43553fdd,0
+0.09236620366573334,0,0.0,7,0,45,7,52,0,"Merge pull request #5250 from bradymiller/bug-fix-50_y
+
+bug fixes",Non-Privilege User Can View Patient’s Disclosures in GitHub repository openemr/openemr prior to 6.1.0.1.,44c9b53ed5edb710f084a5b82d35a938d1284f74,0
+0.16029109060764313,0,0.0,33,0,49,49,98,6,"php8 fixes (#5222)
+
+* php8 fixes
+
+* other scripts that were in need",Stored XSS Leads To Session Hijacking in GitHub repository openemr/openemr prior to 6.1.0.1.,a50d1544ded5e88ab1879ec27e045d7ff5bc4204,0
+-0.018927399069070816,0,0.0,1,0,1,1,2,1,string + string operand fix (#5225),Stored XSS Leads To Session Hijacking in GitHub repository openemr/openemr prior to 6.1.0.1.,1c53ada9be8ef78933ff439a459b5f89e8b71c0b,0
+0.41612952947616577,0,0.0,7,0,1005,10,1015,22,"Openemr fix #5220 direct send attachment (#5226)
+
+* Fixes #5220 Send Trusted Direct Message
+
+Implemented the ability to send messages w/o attachments via the EMR
+Direct service over the Direct protocol.
+
+Built the ability to select a document that has been uploaded to the
+system and send it via EMRDirect.
+
+Built a document finder dialog window so that you can select a patient
+or non-patient document using the finder.  It checks against the current
+user's ACLs and the document category's acos to determine if the user
+can see the document.  It only shows 25 results at a time and requires
+the user to be more specific in their search if they want to see more.
+By default it displays the most recent documents uploaded.
+
+* Direct pdf attachment send.
+
+Made it so we can send a pdf attachment via direct.
+
+Validated the mime types and reject any document that can't be sent via
+Direct.  Interestingly direct supports sending HTML but our default
+OpenEMR whitelist doesn't allow it.
+
+* Fix styles
+
+* Fix case where document is empty.
+
+Changing up the ACL validation broke the functionality for sending a
+single message w/o an attached document.
+
+* Hide alerts before each message send.
+
+If the same message error comes back for each message send it appears
+like the direct message never sent.  Hiding the alerts each time when
+the send button is pushed is a better UX experience.
+
+* Implemented Document File Preview for messages.
+
+Messages was throwing a javascript error if you didn't assign a patient
+for a document.  However, often the document is what contains the
+information about what patient the file should belong to.  I made it so
+that if there is no assigned patient you can at least view the document
+in the Miscellaneous -> New Documents screen.
+
+This also facilitates testing with ONC as we have to demonstrate that
+the Direct file was successfully decrypted and viewable.
+
+* Fix code review issues.",Stored XSS Leads To Session Hijacking in GitHub repository openemr/openemr prior to 6.1.0.1.,0cf4ce14e9fec4908f5da7b7a4470badc7e7d9c0,0
+0.21295666694641113,0,0.0,2,0,7,5,12,1,"Fixes #5232 android oauth2 authorization issues. (#5233)
+
+Fixes the scope nonce validation so native apps can authorize using the
+nonce from the identity token.
+
+Fixes the css view on mobile native devices so we can see the scope
+authorization screen without half of it cut off.",Stored XSS Leads To Session Hijacking in GitHub repository openemr/openemr prior to 6.1.0.1.,b4048a4d6b050701b463782fa860ee3c8da9f6f1,0
+0.0581434927880764,0,0.0,165,0,617,1424,2041,56,"cat iii fixes (#5223)
+
+* cat iii fixes
+
+* change medication orders to substance orders
+
+* fix episode results by adding ID to encounters
+
+* fix individual result rendering
+
+* fix bugs in individual result alg, and add extension to root ID
+
+* added codes lookup by OID, added IDs (don't think they are needed except for encounters) and added medication order when substance order, becasue Cypress sends both
+
+* some measures need to be set to calculation_method = PATIENT, some to EPISODE_OF_CARE
+
+* add encounter diagnosis as DiagnosisComponent array, fix discharge codes for snomed on import, allow encounter diags to import without installed codeset
+
+* bug in calculator expects high closed to be true all the time
+
+* needed negationRationale in the copy of substance order for calculator, and change measure calculation method to PATIENT for cms69
+
+* calc method for cms124 needs to be PATIENT
+
+* calc method for cms125 needs to be PATIENT
+
+* calc method for cms127 needs to be PATIENT
+
+* calc method for cms130 needs to be PATIENT
+
+* calc method for cms138 needs to be PATIENT
+
+* fix sdtc:valueSet rendering improperly in immun service, add ID to allergy and device services
+
+* calc method for cms165 needs to be PATIENT
+
+* cleanup and style fixes
+
+* put back packge json files",Stored XSS Leads To Session Hijacking in GitHub repository openemr/openemr prior to 6.1.0.1.,de85ba4bf9a620eaa014f98c5747a5ae412b3ec1,0
+0.13460968434810638,0,0.0,2,0,267,65,332,0,"Update CQM dependency versioning (#5239)
+
+* Update CQM dependency versioning
+
+* lock to version in package.json",Stored XSS Leads To Session Hijacking in GitHub repository openemr/openemr prior to 6.1.0.1.,4586c9b113e71757e60295b8d021a8abc8623b03,0
+0.07802043110132217,0,0.0,2,0,12,6,18,0,fix configure order display (#5245),Stored XSS Leads To Session Hijacking in GitHub repository openemr/openemr prior to 6.1.0.1.,0ae7ba99ed1b6c115d1ab16f297a3b4d0a19f531,0
+0.12348543852567673,0,0.0,2,0,43,17,60,7,"x12clean submitter name, and some styling fixes (#5243)",Stored XSS Leads To Session Hijacking in GitHub repository openemr/openemr prior to 6.1.0.1.,da8d3306567c126458a3f93c8ba8f8cf36656759,0
+0.11397551000118256,0,0.0,2,0,3,3,6,0,"update nodejs version requirement in READMEs (#5231)
+
+* update nodejs version requirement in README
+
+* also update nodejs requirement in ccda README",Stored XSS Leads To Session Hijacking in GitHub repository openemr/openemr prior to 6.1.0.1.,84e628b6a95d0d109b24c045d39a2010b46f0128,0
+0.10015540570020676,0,0.0,4,0,26,6,32,0,bug fix a1,Stored XSS Leads To Session Hijacking in GitHub repository openemr/openemr prior to 6.1.0.1.,d68a1e54e40ec5ce8d9ed3da0627f50b605d7216,0
+0.09296735376119614,0,0.0,2,0,13,1,14,0,bug fix a2,Stored XSS Leads To Session Hijacking in GitHub repository openemr/openemr prior to 6.1.0.1.,3c5fbbc0656c7d42e387a53a1e16689bc0ffaf32,0
+0.11684346944093704,0,0.0,1,0,6,0,6,0,bug fix a3,Stored XSS Leads To Session Hijacking in GitHub repository openemr/openemr prior to 6.1.0.1.,255afb40b8adada859647da9832eaa8a43553fdd,0
+0.16376708447933197,0,0.0,7,0,45,7,52,0,"Merge pull request #5250 from bradymiller/bug-fix-50_y
+
+bug fixes",Stored XSS Leads To Session Hijacking in GitHub repository openemr/openemr prior to 6.1.0.1.,44c9b53ed5edb710f084a5b82d35a938d1284f74,0
+0.048377625644207,0,0.0,3,0,131,42,173,6,fix some handling of empties (#5041),Stored Cross Site Scripting in GitHub repository openemr/openemr prior to 6.0.0.4.,a2129eb062145b73741737734abd2f112eaa02b8,0
+0.1417887657880783,0,0.0,1,0,7,0,7,1,Introduce machine_name as a global option (#5038),Stored Cross Site Scripting in GitHub repository openemr/openemr prior to 6.0.0.4.,5dadc88984ae0265bd084104458ceb785c5bbd29,0
+0.02933679148554802,0,0.0,2,0,9,7,16,2,"fix race import (#5045)
+
+* fix race import
+
+* file name change",Stored Cross Site Scripting in GitHub repository openemr/openemr prior to 6.0.0.4.,c2e94bb4f63aa9e20f48075333f7c95500ce6a33,0
+0.0765938013792038,0,0.0,3,0,39,38,77,2,"Fixed missing field in NM1*41 field. (#5022)
+
+Replaced ClearingHouseETIN with billingFacilityETIN where billing facility ETIN is expected.
+Ignore X12_submitter_name if 'bill directly to ins co' is not checked.
+Replaced '0000-00-00' dates in the sample patient data sql file to prevent sql errors due to invalid date",Stored Cross Site Scripting in GitHub repository openemr/openemr prior to 6.0.0.4.,f3a8c6a469228bf9da30f12a5cd5f8fbe2dafd7f,0
+0.03031371347606182,0,0.0,1,0,2,2,4,0,bug fix (#5047),Stored Cross Site Scripting in GitHub repository openemr/openemr prior to 6.0.0.4.,ef4a62e68d5c5563fa5b9624508c76c0c50bb792,0
+0.009710177779197693,0,0.0,1,0,3,3,6,0,ci e2e fix(#5055),Stored Cross Site Scripting in GitHub repository openemr/openemr prior to 6.0.0.4.,570c23856240a8280cefc7e904f0692134447d2b,0
+0.0347118079662323,0,0.0,2,0,7,7,14,1,clean up insurance company service and validator (#5052),Stored Cross Site Scripting in GitHub repository openemr/openemr prior to 6.0.0.4.,40631ab23a0fce5686345437aaa5bdb49ff58ab8,0
+0.2648133635520935,0,0.0,16,0,935,329,1264,22,"Openemr fix 5003 group calculation (#5020)
+
+* Refactored clinical rules
+
+Refactored some of the batch rules so we can expand it later for the
+group calculation.
+
+* Converted CQM results to twig.
+
+Broke up the CQM/AMC/Standard reports into their own twig files that we
+can easily expand / add additional report item types such as the group
+calculation method.
+
+* Fix CQM formatting and data display problems.
+
+Fix the old CQM reports for formatting and data display problems.  We
+want to make sure we don't break the old reports.
+
+* Fix CDR result links,formatting
+
+* Refactored CDR Twig to be more DRY
+
+* CDR provider,plans result report fixes
+
+* Group Calculation Initial Support
+
+Initial support for group calculation method
+
+* More work on group calculation
+
+* Group Calculation Encounter Relationship
+
+Implemented the group calculation encounter relationship.  The primary
+relationship is stubbed out but has some bugs I'll need to work on
+fixing.
+
+Also moved the patient report item tracker into a class relationship
+that could eventually be used to streamline bulk inserts on the report
+items.
+
+Added some basic documentation and broke the group calculation pieces
+out into their own functions.  Would love for these to be classes but
+that'd be a pretty big architectural change right now.
+
+* Change TID to TIN for groups
+
+In order to match the reports we are pushing this out.
+
+* CDR Group Calculation with Provider Sub Scores
+
+Got the group calculations and provider sub calculations correctly working and displaying.
+
+Documented functions and removed unused code.
+
+Added missing escape functions.  Moved the itemized item links to a central location.
+
+* Fix escaping issues and parameter order
+
+Fixed an issue with the group calc having the wrong parameter order.
+Also fixed some escaping issues and alphabetize imports.
+
+* Fix limit issues, remove todo
+
+Co-authored-by: Stephen Nielson <snielson@discoverandchange.com>",Stored Cross Site Scripting in GitHub repository openemr/openemr prior to 6.0.0.4.,c45b3864525137d4e87d1f829c82f4a0b53a92cc,0
+0.2874244451522827,0,0.0,222,0,8350,1564,9914,131,"Qdm 2022 qrda export (#5046)
+
+* Added 5.6 QDM models, and a readme how to generate new models
+
+* merge date helper
+
+* Intermediate
+
+* intermediate
+
+* ported a bunch of Ruby code to support Cat III to PHP
+
+* intermediate
+
+* finished porting coding only, haven't run/tested
+
+* Hook up basic rendering of Cat3 XML
+
+* intermediate, walking through template population
+
+* intermediate
+
+* intermedite: added in result calculator
+
+* fix input to export service, now just requires array of measure strings
+
+* added patient addresses and telcoms for qrda cat 1 export
+
+* Updated mustache templates to 3.1.8 qrda-reports
+
+Found we were using a newer version of the mustache templates then what
+we will test against for ONC.  I've gone ahead and changed those to the
+old version for the Cat 3 reports.  Also found that the templates using
+the ruby-ism of ? to denote a boolean question can't be processed in PHP.
+So I've switched the templates that use the functionName? to drop the
+question mark which allows those functions to actually execute
+correctly.
+
+* Updated to latest oe-cqm-module version.
+
+* resolve patient extension
+
+* fix date format for JSON cqm calculation, add result to procedure QDM
+
+* fix typos in query
+
+* fix styling
+
+* trying to fix styles again
+
+* try fixing style again
+
+Co-authored-by: Stephen Nielson <snielson@discoverandchange.com>",Stored Cross Site Scripting in GitHub repository openemr/openemr prior to 6.0.0.4.,5ff37bc8a746e1c66427e74b9173efc28b9612d1,0
+0.07756314426660538,0,0.0,4,0,43,1,44,1,"Fixes #5048 - Add Encounter to Transaction Form (#5049)
+
+* Fixes #5048 - Add Encounter to Transaction Form
+
+Fixes #5048 Added a Patient Encounters List to the transaction form.
+
+Added an encounter's list dropdown.
+
+* LBT Fix xlt, translations, db
+
+Co-authored-by: Stephen Nielson <snielson@discoverandchange.com>",Stored Cross Site Scripting in GitHub repository openemr/openemr prior to 6.0.0.4.,90db1b72613e468cd16008aa9080c4331fde5aef,0
+0.2190471738576889,0,0.0,2,0,4,4,8,0,increment v_database for prior commit and quick fix to upgrade script,Stored Cross Site Scripting in GitHub repository openemr/openemr prior to 6.0.0.4.,5dc7658d48a1fc30b67b413279857217d864fa06,0
+0.020267700776457787,0,0.0,2,0,4,134,138,0,revert composer from PR #5046 (#5058),Stored Cross Site Scripting in GitHub repository openemr/openemr prior to 6.0.0.4.,f68fc0dfcfceff98a9c0ab539f00494b729aa30c,0
+0.08542215079069138,0,0.0,3,0,58,26,84,5,"Add new QRDA Report to Export (#5050)
+
+* Add new QRDA Report to Export
+
+* fix some misdeeds pathing",Stored Cross Site Scripting in GitHub repository openemr/openemr prior to 6.0.0.4.,64659685e1d0fbafaa2430d07f0f8c5243991bcc,0
+0.04662974178791046,0,0.0,1,0,11,0,11,2,bug fix (#5062),Stored Cross Site Scripting in GitHub repository openemr/openemr prior to 6.0.0.4.,619db1d7d7bf5e6a31e7d0489c068998bc9e9327,0
+0.1605614274740219,0,0.0,54,0,210,180,390,6,"Revert Cat1 mustache to cqm-report version 3.1.8 (#5061)
+
+* Revert Cat1 mustache to cqm-report version 3.1.8
+
+* worked on result_values template helper
+
+* revert result
+
+* more fine tuning resulting
+
+* import discharge disposition
+
+* Add new discharge dispositions to lists",Stored Cross Site Scripting in GitHub repository openemr/openemr prior to 6.0.0.4.,5288665cc780e6e22f22035ad639e04abfe2ce49,0
+-0.015606273896992207,0,0.0,3,0,131,42,173,6,fix some handling of empties (#5041),Accounting User Can Download Patient Reports in openemr in GitHub repository openemr/openemr prior to 6.1.0.,a2129eb062145b73741737734abd2f112eaa02b8,0
+-0.0001470227725803852,0,0.0,1,0,7,0,7,1,Introduce machine_name as a global option (#5038),Accounting User Can Download Patient Reports in openemr in GitHub repository openemr/openemr prior to 6.1.0.,5dadc88984ae0265bd084104458ceb785c5bbd29,0
+0.009385206736624241,0,0.0,2,0,9,7,16,2,"fix race import (#5045)
+
+* fix race import
+
+* file name change",Accounting User Can Download Patient Reports in openemr in GitHub repository openemr/openemr prior to 6.1.0.,c2e94bb4f63aa9e20f48075333f7c95500ce6a33,0
+0.2243722677230835,0,0.0,3,0,39,38,77,2,"Fixed missing field in NM1*41 field. (#5022)
+
+Replaced ClearingHouseETIN with billingFacilityETIN where billing facility ETIN is expected.
+Ignore X12_submitter_name if 'bill directly to ins co' is not checked.
+Replaced '0000-00-00' dates in the sample patient data sql file to prevent sql errors due to invalid date",Accounting User Can Download Patient Reports in openemr in GitHub repository openemr/openemr prior to 6.1.0.,f3a8c6a469228bf9da30f12a5cd5f8fbe2dafd7f,0
+0.030164042487740517,0,0.0,1,0,2,2,4,0,bug fix (#5047),Accounting User Can Download Patient Reports in openemr in GitHub repository openemr/openemr prior to 6.1.0.,ef4a62e68d5c5563fa5b9624508c76c0c50bb792,0
+0.04936806485056877,0,0.0,1,0,3,3,6,0,ci e2e fix(#5055),Accounting User Can Download Patient Reports in openemr in GitHub repository openemr/openemr prior to 6.1.0.,570c23856240a8280cefc7e904f0692134447d2b,0
+0.1931236982345581,0,0.0,2,0,7,7,14,1,clean up insurance company service and validator (#5052),Accounting User Can Download Patient Reports in openemr in GitHub repository openemr/openemr prior to 6.1.0.,40631ab23a0fce5686345437aaa5bdb49ff58ab8,0
+0.42442843317985535,0,0.0,16,0,935,329,1264,22,"Openemr fix 5003 group calculation (#5020)
+
+* Refactored clinical rules
+
+Refactored some of the batch rules so we can expand it later for the
+group calculation.
+
+* Converted CQM results to twig.
+
+Broke up the CQM/AMC/Standard reports into their own twig files that we
+can easily expand / add additional report item types such as the group
+calculation method.
+
+* Fix CQM formatting and data display problems.
+
+Fix the old CQM reports for formatting and data display problems.  We
+want to make sure we don't break the old reports.
+
+* Fix CDR result links,formatting
+
+* Refactored CDR Twig to be more DRY
+
+* CDR provider,plans result report fixes
+
+* Group Calculation Initial Support
+
+Initial support for group calculation method
+
+* More work on group calculation
+
+* Group Calculation Encounter Relationship
+
+Implemented the group calculation encounter relationship.  The primary
+relationship is stubbed out but has some bugs I'll need to work on
+fixing.
+
+Also moved the patient report item tracker into a class relationship
+that could eventually be used to streamline bulk inserts on the report
+items.
+
+Added some basic documentation and broke the group calculation pieces
+out into their own functions.  Would love for these to be classes but
+that'd be a pretty big architectural change right now.
+
+* Change TID to TIN for groups
+
+In order to match the reports we are pushing this out.
+
+* CDR Group Calculation with Provider Sub Scores
+
+Got the group calculations and provider sub calculations correctly working and displaying.
+
+Documented functions and removed unused code.
+
+Added missing escape functions.  Moved the itemized item links to a central location.
+
+* Fix escaping issues and parameter order
+
+Fixed an issue with the group calc having the wrong parameter order.
+Also fixed some escaping issues and alphabetize imports.
+
+* Fix limit issues, remove todo
+
+Co-authored-by: Stephen Nielson <snielson@discoverandchange.com>",Accounting User Can Download Patient Reports in openemr in GitHub repository openemr/openemr prior to 6.1.0.,c45b3864525137d4e87d1f829c82f4a0b53a92cc,0
+0.3215928077697754,0,0.0,222,0,8350,1564,9914,131,"Qdm 2022 qrda export (#5046)
+
+* Added 5.6 QDM models, and a readme how to generate new models
+
+* merge date helper
+
+* Intermediate
+
+* intermediate
+
+* ported a bunch of Ruby code to support Cat III to PHP
+
+* intermediate
+
+* finished porting coding only, haven't run/tested
+
+* Hook up basic rendering of Cat3 XML
+
+* intermediate, walking through template population
+
+* intermediate
+
+* intermedite: added in result calculator
+
+* fix input to export service, now just requires array of measure strings
+
+* added patient addresses and telcoms for qrda cat 1 export
+
+* Updated mustache templates to 3.1.8 qrda-reports
+
+Found we were using a newer version of the mustache templates then what
+we will test against for ONC.  I've gone ahead and changed those to the
+old version for the Cat 3 reports.  Also found that the templates using
+the ruby-ism of ? to denote a boolean question can't be processed in PHP.
+So I've switched the templates that use the functionName? to drop the
+question mark which allows those functions to actually execute
+correctly.
+
+* Updated to latest oe-cqm-module version.
+
+* resolve patient extension
+
+* fix date format for JSON cqm calculation, add result to procedure QDM
+
+* fix typos in query
+
+* fix styling
+
+* trying to fix styles again
+
+* try fixing style again
+
+Co-authored-by: Stephen Nielson <snielson@discoverandchange.com>",Accounting User Can Download Patient Reports in openemr in GitHub repository openemr/openemr prior to 6.1.0.,5ff37bc8a746e1c66427e74b9173efc28b9612d1,0
+0.24630379676818848,0,0.0,4,0,43,1,44,1,"Fixes #5048 - Add Encounter to Transaction Form (#5049)
+
+* Fixes #5048 - Add Encounter to Transaction Form
+
+Fixes #5048 Added a Patient Encounters List to the transaction form.
+
+Added an encounter's list dropdown.
+
+* LBT Fix xlt, translations, db
+
+Co-authored-by: Stephen Nielson <snielson@discoverandchange.com>",Accounting User Can Download Patient Reports in openemr in GitHub repository openemr/openemr prior to 6.1.0.,90db1b72613e468cd16008aa9080c4331fde5aef,0
+0.09349379688501358,0,0.0,2,0,4,4,8,0,increment v_database for prior commit and quick fix to upgrade script,Accounting User Can Download Patient Reports in openemr in GitHub repository openemr/openemr prior to 6.1.0.,5dc7658d48a1fc30b67b413279857217d864fa06,0
+0.02920171059668064,0,0.0,2,0,4,134,138,0,revert composer from PR #5046 (#5058),Accounting User Can Download Patient Reports in openemr in GitHub repository openemr/openemr prior to 6.1.0.,f68fc0dfcfceff98a9c0ab539f00494b729aa30c,0
+0.20694851875305176,0,0.0,3,0,58,26,84,5,"Add new QRDA Report to Export (#5050)
+
+* Add new QRDA Report to Export
+
+* fix some misdeeds pathing",Accounting User Can Download Patient Reports in openemr in GitHub repository openemr/openemr prior to 6.1.0.,64659685e1d0fbafaa2430d07f0f8c5243991bcc,0
+0.026951145380735397,0,0.0,1,0,11,0,11,2,bug fix (#5062),Accounting User Can Download Patient Reports in openemr in GitHub repository openemr/openemr prior to 6.1.0.,619db1d7d7bf5e6a31e7d0489c068998bc9e9327,0
+0.2555157244205475,0,0.0,54,0,210,180,390,6,"Revert Cat1 mustache to cqm-report version 3.1.8 (#5061)
+
+* Revert Cat1 mustache to cqm-report version 3.1.8
+
+* worked on result_values template helper
+
+* revert result
+
+* more fine tuning resulting
+
+* import discharge disposition
+
+* Add new discharge dispositions to lists",Accounting User Can Download Patient Reports in openemr in GitHub repository openemr/openemr prior to 6.1.0.,5288665cc780e6e22f22035ad639e04abfe2ce49,0
+0.057596128433942795,0,0.0,3,0,131,42,173,6,fix some handling of empties (#5041),Non-Privilege User Can Created New Rule and Lead to Stored Cross Site Scripting in GitHub repository openemr/openemr prior to 6.0.0.4.,a2129eb062145b73741737734abd2f112eaa02b8,0
+0.06487534195184708,0,0.0,1,0,7,0,7,1,Introduce machine_name as a global option (#5038),Non-Privilege User Can Created New Rule and Lead to Stored Cross Site Scripting in GitHub repository openemr/openemr prior to 6.0.0.4.,5dadc88984ae0265bd084104458ceb785c5bbd29,0
+0.044630371034145355,0,0.0,2,0,9,7,16,2,"fix race import (#5045)
+
+* fix race import
+
+* file name change",Non-Privilege User Can Created New Rule and Lead to Stored Cross Site Scripting in GitHub repository openemr/openemr prior to 6.0.0.4.,c2e94bb4f63aa9e20f48075333f7c95500ce6a33,0
+0.1624053567647934,0,0.0,3,0,39,38,77,2,"Fixed missing field in NM1*41 field. (#5022)
+
+Replaced ClearingHouseETIN with billingFacilityETIN where billing facility ETIN is expected.
+Ignore X12_submitter_name if 'bill directly to ins co' is not checked.
+Replaced '0000-00-00' dates in the sample patient data sql file to prevent sql errors due to invalid date",Non-Privilege User Can Created New Rule and Lead to Stored Cross Site Scripting in GitHub repository openemr/openemr prior to 6.0.0.4.,f3a8c6a469228bf9da30f12a5cd5f8fbe2dafd7f,0
+0.05237603187561035,0,0.0,1,0,2,2,4,0,bug fix (#5047),Non-Privilege User Can Created New Rule and Lead to Stored Cross Site Scripting in GitHub repository openemr/openemr prior to 6.0.0.4.,ef4a62e68d5c5563fa5b9624508c76c0c50bb792,0
+0.06833600252866745,0,0.0,1,0,3,3,6,0,ci e2e fix(#5055),Non-Privilege User Can Created New Rule and Lead to Stored Cross Site Scripting in GitHub repository openemr/openemr prior to 6.0.0.4.,570c23856240a8280cefc7e904f0692134447d2b,0
+0.14769887924194336,0,0.0,2,0,7,7,14,1,clean up insurance company service and validator (#5052),Non-Privilege User Can Created New Rule and Lead to Stored Cross Site Scripting in GitHub repository openemr/openemr prior to 6.0.0.4.,40631ab23a0fce5686345437aaa5bdb49ff58ab8,0
+0.38290300965309143,0,0.0,16,0,935,329,1264,22,"Openemr fix 5003 group calculation (#5020)
+
+* Refactored clinical rules
+
+Refactored some of the batch rules so we can expand it later for the
+group calculation.
+
+* Converted CQM results to twig.
+
+Broke up the CQM/AMC/Standard reports into their own twig files that we
+can easily expand / add additional report item types such as the group
+calculation method.
+
+* Fix CQM formatting and data display problems.
+
+Fix the old CQM reports for formatting and data display problems.  We
+want to make sure we don't break the old reports.
+
+* Fix CDR result links,formatting
+
+* Refactored CDR Twig to be more DRY
+
+* CDR provider,plans result report fixes
+
+* Group Calculation Initial Support
+
+Initial support for group calculation method
+
+* More work on group calculation
+
+* Group Calculation Encounter Relationship
+
+Implemented the group calculation encounter relationship.  The primary
+relationship is stubbed out but has some bugs I'll need to work on
+fixing.
+
+Also moved the patient report item tracker into a class relationship
+that could eventually be used to streamline bulk inserts on the report
+items.
+
+Added some basic documentation and broke the group calculation pieces
+out into their own functions.  Would love for these to be classes but
+that'd be a pretty big architectural change right now.
+
+* Change TID to TIN for groups
+
+In order to match the reports we are pushing this out.
+
+* CDR Group Calculation with Provider Sub Scores
+
+Got the group calculations and provider sub calculations correctly working and displaying.
+
+Documented functions and removed unused code.
+
+Added missing escape functions.  Moved the itemized item links to a central location.
+
+* Fix escaping issues and parameter order
+
+Fixed an issue with the group calc having the wrong parameter order.
+Also fixed some escaping issues and alphabetize imports.
+
+* Fix limit issues, remove todo
+
+Co-authored-by: Stephen Nielson <snielson@discoverandchange.com>",Non-Privilege User Can Created New Rule and Lead to Stored Cross Site Scripting in GitHub repository openemr/openemr prior to 6.0.0.4.,c45b3864525137d4e87d1f829c82f4a0b53a92cc,0
+0.20757003128528595,0,0.0,222,0,8350,1564,9914,131,"Qdm 2022 qrda export (#5046)
+
+* Added 5.6 QDM models, and a readme how to generate new models
+
+* merge date helper
+
+* Intermediate
+
+* intermediate
+
+* ported a bunch of Ruby code to support Cat III to PHP
+
+* intermediate
+
+* finished porting coding only, haven't run/tested
+
+* Hook up basic rendering of Cat3 XML
+
+* intermediate, walking through template population
+
+* intermediate
+
+* intermedite: added in result calculator
+
+* fix input to export service, now just requires array of measure strings
+
+* added patient addresses and telcoms for qrda cat 1 export
+
+* Updated mustache templates to 3.1.8 qrda-reports
+
+Found we were using a newer version of the mustache templates then what
+we will test against for ONC.  I've gone ahead and changed those to the
+old version for the Cat 3 reports.  Also found that the templates using
+the ruby-ism of ? to denote a boolean question can't be processed in PHP.
+So I've switched the templates that use the functionName? to drop the
+question mark which allows those functions to actually execute
+correctly.
+
+* Updated to latest oe-cqm-module version.
+
+* resolve patient extension
+
+* fix date format for JSON cqm calculation, add result to procedure QDM
+
+* fix typos in query
+
+* fix styling
+
+* trying to fix styles again
+
+* try fixing style again
+
+Co-authored-by: Stephen Nielson <snielson@discoverandchange.com>",Non-Privilege User Can Created New Rule and Lead to Stored Cross Site Scripting in GitHub repository openemr/openemr prior to 6.0.0.4.,5ff37bc8a746e1c66427e74b9173efc28b9612d1,0
+0.07914522290229797,0,0.0,4,0,43,1,44,1,"Fixes #5048 - Add Encounter to Transaction Form (#5049)
+
+* Fixes #5048 - Add Encounter to Transaction Form
+
+Fixes #5048 Added a Patient Encounters List to the transaction form.
+
+Added an encounter's list dropdown.
+
+* LBT Fix xlt, translations, db
+
+Co-authored-by: Stephen Nielson <snielson@discoverandchange.com>",Non-Privilege User Can Created New Rule and Lead to Stored Cross Site Scripting in GitHub repository openemr/openemr prior to 6.0.0.4.,90db1b72613e468cd16008aa9080c4331fde5aef,0
+0.037919364869594574,0,0.0,2,0,4,4,8,0,increment v_database for prior commit and quick fix to upgrade script,Non-Privilege User Can Created New Rule and Lead to Stored Cross Site Scripting in GitHub repository openemr/openemr prior to 6.0.0.4.,5dc7658d48a1fc30b67b413279857217d864fa06,0
+0.01590566337108612,0,0.0,2,0,4,134,138,0,revert composer from PR #5046 (#5058),Non-Privilege User Can Created New Rule and Lead to Stored Cross Site Scripting in GitHub repository openemr/openemr prior to 6.0.0.4.,f68fc0dfcfceff98a9c0ab539f00494b729aa30c,0
+0.11053865402936935,0,0.0,3,0,58,26,84,5,"Add new QRDA Report to Export (#5050)
+
+* Add new QRDA Report to Export
+
+* fix some misdeeds pathing",Non-Privilege User Can Created New Rule and Lead to Stored Cross Site Scripting in GitHub repository openemr/openemr prior to 6.0.0.4.,64659685e1d0fbafaa2430d07f0f8c5243991bcc,0
+0.06327556073665619,0,0.0,1,0,11,0,11,2,bug fix (#5062),Non-Privilege User Can Created New Rule and Lead to Stored Cross Site Scripting in GitHub repository openemr/openemr prior to 6.0.0.4.,619db1d7d7bf5e6a31e7d0489c068998bc9e9327,0
+0.10059294104576111,0,0.0,54,0,210,180,390,6,"Revert Cat1 mustache to cqm-report version 3.1.8 (#5061)
+
+* Revert Cat1 mustache to cqm-report version 3.1.8
+
+* worked on result_values template helper
+
+* revert result
+
+* more fine tuning resulting
+
+* import discharge disposition
+
+* Add new discharge dispositions to lists",Non-Privilege User Can Created New Rule and Lead to Stored Cross Site Scripting in GitHub repository openemr/openemr prior to 6.0.0.4.,5288665cc780e6e22f22035ad639e04abfe2ce49,0
+0.04325468838214874,0,0.0,3,0,131,42,173,6,fix some handling of empties (#5041),Stored Cross Site Scripting in GitHub repository openemr/openemr prior to 6.0.0.2.,a2129eb062145b73741737734abd2f112eaa02b8,0
+0.13933300971984863,0,0.0,1,0,7,0,7,1,Introduce machine_name as a global option (#5038),Stored Cross Site Scripting in GitHub repository openemr/openemr prior to 6.0.0.2.,5dadc88984ae0265bd084104458ceb785c5bbd29,0
+0.025236357003450394,0,0.0,2,0,9,7,16,2,"fix race import (#5045)
+
+* fix race import
+
+* file name change",Stored Cross Site Scripting in GitHub repository openemr/openemr prior to 6.0.0.2.,c2e94bb4f63aa9e20f48075333f7c95500ce6a33,0
+0.07520946115255356,0,0.0,3,0,39,38,77,2,"Fixed missing field in NM1*41 field. (#5022)
+
+Replaced ClearingHouseETIN with billingFacilityETIN where billing facility ETIN is expected.
+Ignore X12_submitter_name if 'bill directly to ins co' is not checked.
+Replaced '0000-00-00' dates in the sample patient data sql file to prevent sql errors due to invalid date",Stored Cross Site Scripting in GitHub repository openemr/openemr prior to 6.0.0.2.,f3a8c6a469228bf9da30f12a5cd5f8fbe2dafd7f,0
+0.02692437544465065,0,0.0,1,0,2,2,4,0,bug fix (#5047),Stored Cross Site Scripting in GitHub repository openemr/openemr prior to 6.0.0.2.,ef4a62e68d5c5563fa5b9624508c76c0c50bb792,0
+0.009398388676345348,0,0.0,1,0,3,3,6,0,ci e2e fix(#5055),Stored Cross Site Scripting in GitHub repository openemr/openemr prior to 6.0.0.2.,570c23856240a8280cefc7e904f0692134447d2b,0
+0.03049260750412941,0,0.0,2,0,7,7,14,1,clean up insurance company service and validator (#5052),Stored Cross Site Scripting in GitHub repository openemr/openemr prior to 6.0.0.2.,40631ab23a0fce5686345437aaa5bdb49ff58ab8,0
+0.25867003202438354,0,0.0,16,0,935,329,1264,22,"Openemr fix 5003 group calculation (#5020)
+
+* Refactored clinical rules
+
+Refactored some of the batch rules so we can expand it later for the
+group calculation.
+
+* Converted CQM results to twig.
+
+Broke up the CQM/AMC/Standard reports into their own twig files that we
+can easily expand / add additional report item types such as the group
+calculation method.
+
+* Fix CQM formatting and data display problems.
+
+Fix the old CQM reports for formatting and data display problems.  We
+want to make sure we don't break the old reports.
+
+* Fix CDR result links,formatting
+
+* Refactored CDR Twig to be more DRY
+
+* CDR provider,plans result report fixes
+
+* Group Calculation Initial Support
+
+Initial support for group calculation method
+
+* More work on group calculation
+
+* Group Calculation Encounter Relationship
+
+Implemented the group calculation encounter relationship.  The primary
+relationship is stubbed out but has some bugs I'll need to work on
+fixing.
+
+Also moved the patient report item tracker into a class relationship
+that could eventually be used to streamline bulk inserts on the report
+items.
+
+Added some basic documentation and broke the group calculation pieces
+out into their own functions.  Would love for these to be classes but
+that'd be a pretty big architectural change right now.
+
+* Change TID to TIN for groups
+
+In order to match the reports we are pushing this out.
+
+* CDR Group Calculation with Provider Sub Scores
+
+Got the group calculations and provider sub calculations correctly working and displaying.
+
+Documented functions and removed unused code.
+
+Added missing escape functions.  Moved the itemized item links to a central location.
+
+* Fix escaping issues and parameter order
+
+Fixed an issue with the group calc having the wrong parameter order.
+Also fixed some escaping issues and alphabetize imports.
+
+* Fix limit issues, remove todo
+
+Co-authored-by: Stephen Nielson <snielson@discoverandchange.com>",Stored Cross Site Scripting in GitHub repository openemr/openemr prior to 6.0.0.2.,c45b3864525137d4e87d1f829c82f4a0b53a92cc,0
+0.2841624617576599,0,0.0,222,0,8350,1564,9914,131,"Qdm 2022 qrda export (#5046)
+
+* Added 5.6 QDM models, and a readme how to generate new models
+
+* merge date helper
+
+* Intermediate
+
+* intermediate
+
+* ported a bunch of Ruby code to support Cat III to PHP
+
+* intermediate
+
+* finished porting coding only, haven't run/tested
+
+* Hook up basic rendering of Cat3 XML
+
+* intermediate, walking through template population
+
+* intermediate
+
+* intermedite: added in result calculator
+
+* fix input to export service, now just requires array of measure strings
+
+* added patient addresses and telcoms for qrda cat 1 export
+
+* Updated mustache templates to 3.1.8 qrda-reports
+
+Found we were using a newer version of the mustache templates then what
+we will test against for ONC.  I've gone ahead and changed those to the
+old version for the Cat 3 reports.  Also found that the templates using
+the ruby-ism of ? to denote a boolean question can't be processed in PHP.
+So I've switched the templates that use the functionName? to drop the
+question mark which allows those functions to actually execute
+correctly.
+
+* Updated to latest oe-cqm-module version.
+
+* resolve patient extension
+
+* fix date format for JSON cqm calculation, add result to procedure QDM
+
+* fix typos in query
+
+* fix styling
+
+* trying to fix styles again
+
+* try fixing style again
+
+Co-authored-by: Stephen Nielson <snielson@discoverandchange.com>",Stored Cross Site Scripting in GitHub repository openemr/openemr prior to 6.0.0.2.,5ff37bc8a746e1c66427e74b9173efc28b9612d1,0
+0.07590660452842712,0,0.0,4,0,43,1,44,1,"Fixes #5048 - Add Encounter to Transaction Form (#5049)
+
+* Fixes #5048 - Add Encounter to Transaction Form
+
+Fixes #5048 Added a Patient Encounters List to the transaction form.
+
+Added an encounter's list dropdown.
+
+* LBT Fix xlt, translations, db
+
+Co-authored-by: Stephen Nielson <snielson@discoverandchange.com>",Stored Cross Site Scripting in GitHub repository openemr/openemr prior to 6.0.0.2.,90db1b72613e468cd16008aa9080c4331fde5aef,0
+0.22037442028522491,0,0.0,2,0,4,4,8,0,increment v_database for prior commit and quick fix to upgrade script,Stored Cross Site Scripting in GitHub repository openemr/openemr prior to 6.0.0.2.,5dc7658d48a1fc30b67b413279857217d864fa06,0
+0.019309701398015022,0,0.0,2,0,4,134,138,0,revert composer from PR #5046 (#5058),Stored Cross Site Scripting in GitHub repository openemr/openemr prior to 6.0.0.2.,f68fc0dfcfceff98a9c0ab539f00494b729aa30c,0
+0.0829768180847168,0,0.0,3,0,58,26,84,5,"Add new QRDA Report to Export (#5050)
+
+* Add new QRDA Report to Export
+
+* fix some misdeeds pathing",Stored Cross Site Scripting in GitHub repository openemr/openemr prior to 6.0.0.2.,64659685e1d0fbafaa2430d07f0f8c5243991bcc,0
+0.04346325993537903,0,0.0,1,0,11,0,11,2,bug fix (#5062),Stored Cross Site Scripting in GitHub repository openemr/openemr prior to 6.0.0.2.,619db1d7d7bf5e6a31e7d0489c068998bc9e9327,0
+0.15944163501262665,0,0.0,54,0,210,180,390,6,"Revert Cat1 mustache to cqm-report version 3.1.8 (#5061)
+
+* Revert Cat1 mustache to cqm-report version 3.1.8
+
+* worked on result_values template helper
+
+* revert result
+
+* more fine tuning resulting
+
+* import discharge disposition
+
+* Add new discharge dispositions to lists",Stored Cross Site Scripting in GitHub repository openemr/openemr prior to 6.0.0.2.,5288665cc780e6e22f22035ad639e04abfe2ce49,0
+0.0789135992527008,0,0.0,3,0,131,42,173,6,fix some handling of empties (#5041),Reflected Cross Site Scripting in GitHub repository openemr/openemr prior to 6.0.0.4.,a2129eb062145b73741737734abd2f112eaa02b8,0
+0.14624297618865967,0,0.0,1,0,7,0,7,1,Introduce machine_name as a global option (#5038),Reflected Cross Site Scripting in GitHub repository openemr/openemr prior to 6.0.0.4.,5dadc88984ae0265bd084104458ceb785c5bbd29,0
+0.06142494082450867,0,0.0,2,0,9,7,16,2,"fix race import (#5045)
+
+* fix race import
+
+* file name change",Reflected Cross Site Scripting in GitHub repository openemr/openemr prior to 6.0.0.4.,c2e94bb4f63aa9e20f48075333f7c95500ce6a33,0
+0.0914149358868599,0,0.0,3,0,39,38,77,2,"Fixed missing field in NM1*41 field. (#5022)
+
+Replaced ClearingHouseETIN with billingFacilityETIN where billing facility ETIN is expected.
+Ignore X12_submitter_name if 'bill directly to ins co' is not checked.
+Replaced '0000-00-00' dates in the sample patient data sql file to prevent sql errors due to invalid date",Reflected Cross Site Scripting in GitHub repository openemr/openemr prior to 6.0.0.4.,f3a8c6a469228bf9da30f12a5cd5f8fbe2dafd7f,0
+0.10726188868284225,0,0.0,1,0,2,2,4,0,bug fix (#5047),Reflected Cross Site Scripting in GitHub repository openemr/openemr prior to 6.0.0.4.,ef4a62e68d5c5563fa5b9624508c76c0c50bb792,0
+0.06554165482521057,0,0.0,1,0,3,3,6,0,ci e2e fix(#5055),Reflected Cross Site Scripting in GitHub repository openemr/openemr prior to 6.0.0.4.,570c23856240a8280cefc7e904f0692134447d2b,0
+0.056826479732990265,0,0.0,2,0,7,7,14,1,clean up insurance company service and validator (#5052),Reflected Cross Site Scripting in GitHub repository openemr/openemr prior to 6.0.0.4.,40631ab23a0fce5686345437aaa5bdb49ff58ab8,0
+0.29807010293006897,0,0.0,16,0,935,329,1264,22,"Openemr fix 5003 group calculation (#5020)
+
+* Refactored clinical rules
+
+Refactored some of the batch rules so we can expand it later for the
+group calculation.
+
+* Converted CQM results to twig.
+
+Broke up the CQM/AMC/Standard reports into their own twig files that we
+can easily expand / add additional report item types such as the group
+calculation method.
+
+* Fix CQM formatting and data display problems.
+
+Fix the old CQM reports for formatting and data display problems.  We
+want to make sure we don't break the old reports.
+
+* Fix CDR result links,formatting
+
+* Refactored CDR Twig to be more DRY
+
+* CDR provider,plans result report fixes
+
+* Group Calculation Initial Support
+
+Initial support for group calculation method
+
+* More work on group calculation
+
+* Group Calculation Encounter Relationship
+
+Implemented the group calculation encounter relationship.  The primary
+relationship is stubbed out but has some bugs I'll need to work on
+fixing.
+
+Also moved the patient report item tracker into a class relationship
+that could eventually be used to streamline bulk inserts on the report
+items.
+
+Added some basic documentation and broke the group calculation pieces
+out into their own functions.  Would love for these to be classes but
+that'd be a pretty big architectural change right now.
+
+* Change TID to TIN for groups
+
+In order to match the reports we are pushing this out.
+
+* CDR Group Calculation with Provider Sub Scores
+
+Got the group calculations and provider sub calculations correctly working and displaying.
+
+Documented functions and removed unused code.
+
+Added missing escape functions.  Moved the itemized item links to a central location.
+
+* Fix escaping issues and parameter order
+
+Fixed an issue with the group calc having the wrong parameter order.
+Also fixed some escaping issues and alphabetize imports.
+
+* Fix limit issues, remove todo
+
+Co-authored-by: Stephen Nielson <snielson@discoverandchange.com>",Reflected Cross Site Scripting in GitHub repository openemr/openemr prior to 6.0.0.4.,c45b3864525137d4e87d1f829c82f4a0b53a92cc,0
+0.30598723888397217,0,0.0,222,0,8350,1564,9914,131,"Qdm 2022 qrda export (#5046)
+
+* Added 5.6 QDM models, and a readme how to generate new models
+
+* merge date helper
+
+* Intermediate
+
+* intermediate
+
+* ported a bunch of Ruby code to support Cat III to PHP
+
+* intermediate
+
+* finished porting coding only, haven't run/tested
+
+* Hook up basic rendering of Cat3 XML
+
+* intermediate, walking through template population
+
+* intermediate
+
+* intermedite: added in result calculator
+
+* fix input to export service, now just requires array of measure strings
+
+* added patient addresses and telcoms for qrda cat 1 export
+
+* Updated mustache templates to 3.1.8 qrda-reports
+
+Found we were using a newer version of the mustache templates then what
+we will test against for ONC.  I've gone ahead and changed those to the
+old version for the Cat 3 reports.  Also found that the templates using
+the ruby-ism of ? to denote a boolean question can't be processed in PHP.
+So I've switched the templates that use the functionName? to drop the
+question mark which allows those functions to actually execute
+correctly.
+
+* Updated to latest oe-cqm-module version.
+
+* resolve patient extension
+
+* fix date format for JSON cqm calculation, add result to procedure QDM
+
+* fix typos in query
+
+* fix styling
+
+* trying to fix styles again
+
+* try fixing style again
+
+Co-authored-by: Stephen Nielson <snielson@discoverandchange.com>",Reflected Cross Site Scripting in GitHub repository openemr/openemr prior to 6.0.0.4.,5ff37bc8a746e1c66427e74b9173efc28b9612d1,0
+0.10045058280229568,0,0.0,4,0,43,1,44,1,"Fixes #5048 - Add Encounter to Transaction Form (#5049)
+
+* Fixes #5048 - Add Encounter to Transaction Form
+
+Fixes #5048 Added a Patient Encounters List to the transaction form.
+
+Added an encounter's list dropdown.
+
+* LBT Fix xlt, translations, db
+
+Co-authored-by: Stephen Nielson <snielson@discoverandchange.com>",Reflected Cross Site Scripting in GitHub repository openemr/openemr prior to 6.0.0.4.,90db1b72613e468cd16008aa9080c4331fde5aef,0
+0.1925128698348999,0,0.0,2,0,4,4,8,0,increment v_database for prior commit and quick fix to upgrade script,Reflected Cross Site Scripting in GitHub repository openemr/openemr prior to 6.0.0.4.,5dc7658d48a1fc30b67b413279857217d864fa06,0
+0.057390451431274414,0,0.0,2,0,4,134,138,0,revert composer from PR #5046 (#5058),Reflected Cross Site Scripting in GitHub repository openemr/openemr prior to 6.0.0.4.,f68fc0dfcfceff98a9c0ab539f00494b729aa30c,0
+0.11757729202508926,0,0.0,3,0,58,26,84,5,"Add new QRDA Report to Export (#5050)
+
+* Add new QRDA Report to Export
+
+* fix some misdeeds pathing",Reflected Cross Site Scripting in GitHub repository openemr/openemr prior to 6.0.0.4.,64659685e1d0fbafaa2430d07f0f8c5243991bcc,0
+0.13117818534374237,0,0.0,1,0,11,0,11,2,bug fix (#5062),Reflected Cross Site Scripting in GitHub repository openemr/openemr prior to 6.0.0.4.,619db1d7d7bf5e6a31e7d0489c068998bc9e9327,0
+0.1716178059577942,0,0.0,54,0,210,180,390,6,"Revert Cat1 mustache to cqm-report version 3.1.8 (#5061)
+
+* Revert Cat1 mustache to cqm-report version 3.1.8
+
+* worked on result_values template helper
+
+* revert result
+
+* more fine tuning resulting
+
+* import discharge disposition
+
+* Add new discharge dispositions to lists",Reflected Cross Site Scripting in GitHub repository openemr/openemr prior to 6.0.0.4.,5288665cc780e6e22f22035ad639e04abfe2ce49,0
+0.23600071668624878,0,0.0,3,0,47,4,51,5,"add password max length setting (#4287)
+
+* add password max length setting
+
+* comment fix","In OpenEMR, versions 5.0.2 to 6.0.0 are vulnerable to Stored Cross-Site-Scripting (XSS) due to user input not being validated properly. A highly privileged attacker could inject arbitrary code into input fields when creating a new user.",4c7d7418ccfc3d84aed889828a36a58cc4744a76,0
+0.12191034108400345,0,0.0,5,0,5,0,5,0,docker dev fix (#4294),"In OpenEMR, versions 5.0.2 to 6.0.0 are vulnerable to Stored Cross-Site-Scripting (XSS) due to user input not being validated properly. A highly privileged attacker could inject arbitrary code into input fields when creating a new user.",fe61175c8f0cc33552004ddc122b0722043f0d29,0
+0.09174726903438568,0,0.0,1,0,4,1,5,0,Fix sql error with MySQL 8 when viewing event log. (#4295),"In OpenEMR, versions 5.0.2 to 6.0.0 are vulnerable to Stored Cross-Site-Scripting (XSS) due to user input not being validated properly. A highly privileged attacker could inject arbitrary code into input fields when creating a new user.",a77505b2e5b54ad1160600b39b34cbeb34824631,0
+0.25215983390808105,0,0.0,2,0,510,50,560,1,"Multiple improvements for backup and configuration export/import. (#4293)
+
+* Multiple improvements for backup script.
+
+Fix for logged error with MySQL 8.
+Added feature to backup and/or delete log data.
+Added feature to export lists and layouts as CSV.
+Added option to export lab configuration.
+Added SQL to insert missing patient_data and history_data columns when importing layouts.
+Fixed some logged warnings.","In OpenEMR, versions 5.0.2 to 6.0.0 are vulnerable to Stored Cross-Site-Scripting (XSS) due to user input not being validated properly. A highly privileged attacker could inject arbitrary code into input fields when creating a new user.",c264c8d3e198fd93b67cbcf747fbd57dd845bd4a,0
+0.1063413992524147,0,0.0,2,0,12,6,18,1,"billing fix for corrected claims alphanumeric claim no. (#4292)
+
+* fix for corrected claims alphanumeric claim no.
+
+* display tax id and npi for easy view
+
+* update (c)
+
+* remove null test","In OpenEMR, versions 5.0.2 to 6.0.0 are vulnerable to Stored Cross-Site-Scripting (XSS) due to user input not being validated properly. A highly privileged attacker could inject arbitrary code into input fields when creating a new user.",e08b28887ffef1195c86c5403915a7cfe7d1c9cd,0
+0.18286113440990448,0,0.0,1,0,4,2,6,0,Fix bug in demographics layout that causes checkboxes to ALWAYS be Yes (#4298),"In OpenEMR, versions 5.0.2 to 6.0.0 are vulnerable to Stored Cross-Site-Scripting (XSS) due to user input not being validated properly. A highly privileged attacker could inject arbitrary code into input fields when creating a new user.",417e64c151ea0ddca63c8cca0ce7a73c628e88a5,0
+0.09590407460927963,0,0.0,3,0,28,7,35,0,"fix mbo button in billing manager (#4296)
+
+* fix for corrected claims alphanumeric claim no.
+
+* display tax id and npi for easy view
+
+* update (c)
+
+* remove null test
+
+* fix mbo to set pid encounter from billing manager, fix a couple of headers
+
+* remove uneeded param
+
+* setSession
+
+* psr12","In OpenEMR, versions 5.0.2 to 6.0.0 are vulnerable to Stored Cross-Site-Scripting (XSS) due to user input not being validated properly. A highly privileged attacker could inject arbitrary code into input fields when creating a new user.",7b650acc43a55a7d74771b8d6bbf4d8e655513ac,0
+0.14179009199142456,0,0.0,2,0,24,4,28,3,"Noc (#4300)
+
+* not otherwise classified codes need description of service
+
+* psr12","In OpenEMR, versions 5.0.2 to 6.0.0 are vulnerable to Stored Cross-Site-Scripting (XSS) due to user input not being validated properly. A highly privileged attacker could inject arbitrary code into input fields when creating a new user.",c876b63b45d3fec96f14af7540796e8dbdfd7cd1,0
+0.23600071668624878,0,0.0,3,0,47,4,51,5,"add password max length setting (#4287)
+
+* add password max length setting
+
+* comment fix","In OpenEMR, versions 5.0.2 to 6.0.0 are vulnerable to Stored Cross-Site-Scripting (XSS) due to user input not being validated properly and rendered in the TOTP Authentication method page. A highly privileged attacker could inject arbitrary code into input fields when creating a new user.",4c7d7418ccfc3d84aed889828a36a58cc4744a76,0
+0.10219959914684296,0,0.0,5,0,5,0,5,0,docker dev fix (#4294),"In OpenEMR, versions 5.0.2 to 6.0.0 are vulnerable to Stored Cross-Site-Scripting (XSS) due to user input not being validated properly and rendered in the TOTP Authentication method page. A highly privileged attacker could inject arbitrary code into input fields when creating a new user.",fe61175c8f0cc33552004ddc122b0722043f0d29,0
+0.09504760801792145,0,0.0,1,0,4,1,5,0,Fix sql error with MySQL 8 when viewing event log. (#4295),"In OpenEMR, versions 5.0.2 to 6.0.0 are vulnerable to Stored Cross-Site-Scripting (XSS) due to user input not being validated properly and rendered in the TOTP Authentication method page. A highly privileged attacker could inject arbitrary code into input fields when creating a new user.",a77505b2e5b54ad1160600b39b34cbeb34824631,0
+0.2440846860408783,0,0.0,2,0,510,50,560,1,"Multiple improvements for backup and configuration export/import. (#4293)
+
+* Multiple improvements for backup script.
+
+Fix for logged error with MySQL 8.
+Added feature to backup and/or delete log data.
+Added feature to export lists and layouts as CSV.
+Added option to export lab configuration.
+Added SQL to insert missing patient_data and history_data columns when importing layouts.
+Fixed some logged warnings.","In OpenEMR, versions 5.0.2 to 6.0.0 are vulnerable to Stored Cross-Site-Scripting (XSS) due to user input not being validated properly and rendered in the TOTP Authentication method page. A highly privileged attacker could inject arbitrary code into input fields when creating a new user.",c264c8d3e198fd93b67cbcf747fbd57dd845bd4a,0
+0.1113341897726059,0,0.0,2,0,12,6,18,1,"billing fix for corrected claims alphanumeric claim no. (#4292)
+
+* fix for corrected claims alphanumeric claim no.
+
+* display tax id and npi for easy view
+
+* update (c)
+
+* remove null test","In OpenEMR, versions 5.0.2 to 6.0.0 are vulnerable to Stored Cross-Site-Scripting (XSS) due to user input not being validated properly and rendered in the TOTP Authentication method page. A highly privileged attacker could inject arbitrary code into input fields when creating a new user.",e08b28887ffef1195c86c5403915a7cfe7d1c9cd,0
+0.18286113440990448,0,0.0,1,0,4,2,6,0,Fix bug in demographics layout that causes checkboxes to ALWAYS be Yes (#4298),"In OpenEMR, versions 5.0.2 to 6.0.0 are vulnerable to Stored Cross-Site-Scripting (XSS) due to user input not being validated properly and rendered in the TOTP Authentication method page. A highly privileged attacker could inject arbitrary code into input fields when creating a new user.",417e64c151ea0ddca63c8cca0ce7a73c628e88a5,0
+0.09590407460927963,0,0.0,3,0,28,7,35,0,"fix mbo button in billing manager (#4296)
+
+* fix for corrected claims alphanumeric claim no.
+
+* display tax id and npi for easy view
+
+* update (c)
+
+* remove null test
+
+* fix mbo to set pid encounter from billing manager, fix a couple of headers
+
+* remove uneeded param
+
+* setSession
+
+* psr12","In OpenEMR, versions 5.0.2 to 6.0.0 are vulnerable to Stored Cross-Site-Scripting (XSS) due to user input not being validated properly and rendered in the TOTP Authentication method page. A highly privileged attacker could inject arbitrary code into input fields when creating a new user.",7b650acc43a55a7d74771b8d6bbf4d8e655513ac,0
+0.14179009199142456,0,0.0,2,0,24,4,28,3,"Noc (#4300)
+
+* not otherwise classified codes need description of service
+
+* psr12","In OpenEMR, versions 5.0.2 to 6.0.0 are vulnerable to Stored Cross-Site-Scripting (XSS) due to user input not being validated properly and rendered in the TOTP Authentication method page. A highly privileged attacker could inject arbitrary code into input fields when creating a new user.",c876b63b45d3fec96f14af7540796e8dbdfd7cd1,0
+0.1534988135099411,0,0.0,3,0,47,4,51,5,"add password max length setting (#4287)
+
+* add password max length setting
+
+* comment fix","In OpenEMR, versions 2.7.3-rc1 to 6.0.0 are vulnerable to Stored Cross-Site-Scripting (XSS) due to user input not being validated properly in the `Allergies` section. An attacker could lure an admin to enter a malicious payload and by that initiate the exploit.",4c7d7418ccfc3d84aed889828a36a58cc4744a76,0
+0.1512681245803833,0,0.0,5,0,5,0,5,0,docker dev fix (#4294),"In OpenEMR, versions 2.7.3-rc1 to 6.0.0 are vulnerable to Stored Cross-Site-Scripting (XSS) due to user input not being validated properly in the `Allergies` section. An attacker could lure an admin to enter a malicious payload and by that initiate the exploit.",fe61175c8f0cc33552004ddc122b0722043f0d29,0
+0.08332669734954834,0,0.0,1,0,4,1,5,0,Fix sql error with MySQL 8 when viewing event log. (#4295),"In OpenEMR, versions 2.7.3-rc1 to 6.0.0 are vulnerable to Stored Cross-Site-Scripting (XSS) due to user input not being validated properly in the `Allergies` section. An attacker could lure an admin to enter a malicious payload and by that initiate the exploit.",a77505b2e5b54ad1160600b39b34cbeb34824631,0
+0.2691631317138672,0,0.0,2,0,510,50,560,1,"Multiple improvements for backup and configuration export/import. (#4293)
+
+* Multiple improvements for backup script.
+
+Fix for logged error with MySQL 8.
+Added feature to backup and/or delete log data.
+Added feature to export lists and layouts as CSV.
+Added option to export lab configuration.
+Added SQL to insert missing patient_data and history_data columns when importing layouts.
+Fixed some logged warnings.","In OpenEMR, versions 2.7.3-rc1 to 6.0.0 are vulnerable to Stored Cross-Site-Scripting (XSS) due to user input not being validated properly in the `Allergies` section. An attacker could lure an admin to enter a malicious payload and by that initiate the exploit.",c264c8d3e198fd93b67cbcf747fbd57dd845bd4a,0
+0.060512952506542206,0,0.0,2,0,12,6,18,1,"billing fix for corrected claims alphanumeric claim no. (#4292)
+
+* fix for corrected claims alphanumeric claim no.
+
+* display tax id and npi for easy view
+
+* update (c)
+
+* remove null test","In OpenEMR, versions 2.7.3-rc1 to 6.0.0 are vulnerable to Stored Cross-Site-Scripting (XSS) due to user input not being validated properly in the `Allergies` section. An attacker could lure an admin to enter a malicious payload and by that initiate the exploit.",e08b28887ffef1195c86c5403915a7cfe7d1c9cd,0
+0.17349310219287872,0,0.0,1,0,4,2,6,0,Fix bug in demographics layout that causes checkboxes to ALWAYS be Yes (#4298),"In OpenEMR, versions 2.7.3-rc1 to 6.0.0 are vulnerable to Stored Cross-Site-Scripting (XSS) due to user input not being validated properly in the `Allergies` section. An attacker could lure an admin to enter a malicious payload and by that initiate the exploit.",417e64c151ea0ddca63c8cca0ce7a73c628e88a5,0
+0.11801464855670929,0,0.0,3,0,28,7,35,0,"fix mbo button in billing manager (#4296)
+
+* fix for corrected claims alphanumeric claim no.
+
+* display tax id and npi for easy view
+
+* update (c)
+
+* remove null test
+
+* fix mbo to set pid encounter from billing manager, fix a couple of headers
+
+* remove uneeded param
+
+* setSession
+
+* psr12","In OpenEMR, versions 2.7.3-rc1 to 6.0.0 are vulnerable to Stored Cross-Site-Scripting (XSS) due to user input not being validated properly in the `Allergies` section. An attacker could lure an admin to enter a malicious payload and by that initiate the exploit.",7b650acc43a55a7d74771b8d6bbf4d8e655513ac,0
+0.10396120697259903,0,0.0,2,0,24,4,28,3,"Noc (#4300)
+
+* not otherwise classified codes need description of service
+
+* psr12","In OpenEMR, versions 2.7.3-rc1 to 6.0.0 are vulnerable to Stored Cross-Site-Scripting (XSS) due to user input not being validated properly in the `Allergies` section. An attacker could lure an admin to enter a malicious payload and by that initiate the exploit.",c876b63b45d3fec96f14af7540796e8dbdfd7cd1,0
+0.1882207989692688,0,0.0,3,0,47,4,51,5,"add password max length setting (#4287)
+
+* add password max length setting
+
+* comment fix","In OpenEMR, versions v2.7.2-rc1 to 6.0.0 are vulnerable to Improper Access Control when creating a new user, which leads to a malicious user able to read and send sensitive messages on behalf of the victim user.",4c7d7418ccfc3d84aed889828a36a58cc4744a76,0
+0.1146252229809761,0,0.0,5,0,5,0,5,0,docker dev fix (#4294),"In OpenEMR, versions v2.7.2-rc1 to 6.0.0 are vulnerable to Improper Access Control when creating a new user, which leads to a malicious user able to read and send sensitive messages on behalf of the victim user.",fe61175c8f0cc33552004ddc122b0722043f0d29,0
+0.07143561542034149,0,0.0,1,0,4,1,5,0,Fix sql error with MySQL 8 when viewing event log. (#4295),"In OpenEMR, versions v2.7.2-rc1 to 6.0.0 are vulnerable to Improper Access Control when creating a new user, which leads to a malicious user able to read and send sensitive messages on behalf of the victim user.",a77505b2e5b54ad1160600b39b34cbeb34824631,0
+0.26111865043640137,0,0.0,2,0,510,50,560,1,"Multiple improvements for backup and configuration export/import. (#4293)
+
+* Multiple improvements for backup script.
+
+Fix for logged error with MySQL 8.
+Added feature to backup and/or delete log data.
+Added feature to export lists and layouts as CSV.
+Added option to export lab configuration.
+Added SQL to insert missing patient_data and history_data columns when importing layouts.
+Fixed some logged warnings.","In OpenEMR, versions v2.7.2-rc1 to 6.0.0 are vulnerable to Improper Access Control when creating a new user, which leads to a malicious user able to read and send sensitive messages on behalf of the victim user.",c264c8d3e198fd93b67cbcf747fbd57dd845bd4a,0
+0.07309824228286743,0,0.0,2,0,12,6,18,1,"billing fix for corrected claims alphanumeric claim no. (#4292)
+
+* fix for corrected claims alphanumeric claim no.
+
+* display tax id and npi for easy view
+
+* update (c)
+
+* remove null test","In OpenEMR, versions v2.7.2-rc1 to 6.0.0 are vulnerable to Improper Access Control when creating a new user, which leads to a malicious user able to read and send sensitive messages on behalf of the victim user.",e08b28887ffef1195c86c5403915a7cfe7d1c9cd,0
+0.11600998789072037,0,0.0,1,0,4,2,6,0,Fix bug in demographics layout that causes checkboxes to ALWAYS be Yes (#4298),"In OpenEMR, versions v2.7.2-rc1 to 6.0.0 are vulnerable to Improper Access Control when creating a new user, which leads to a malicious user able to read and send sensitive messages on behalf of the victim user.",417e64c151ea0ddca63c8cca0ce7a73c628e88a5,0
+0.11407192796468735,0,0.0,3,0,28,7,35,0,"fix mbo button in billing manager (#4296)
+
+* fix for corrected claims alphanumeric claim no.
+
+* display tax id and npi for easy view
+
+* update (c)
+
+* remove null test
+
+* fix mbo to set pid encounter from billing manager, fix a couple of headers
+
+* remove uneeded param
+
+* setSession
+
+* psr12","In OpenEMR, versions v2.7.2-rc1 to 6.0.0 are vulnerable to Improper Access Control when creating a new user, which leads to a malicious user able to read and send sensitive messages on behalf of the victim user.",7b650acc43a55a7d74771b8d6bbf4d8e655513ac,0
+0.1450921595096588,0,0.0,2,0,24,4,28,3,"Noc (#4300)
+
+* not otherwise classified codes need description of service
+
+* psr12","In OpenEMR, versions v2.7.2-rc1 to 6.0.0 are vulnerable to Improper Access Control when creating a new user, which leads to a malicious user able to read and send sensitive messages on behalf of the victim user.",c876b63b45d3fec96f14af7540796e8dbdfd7cd1,0
+0.23600071668624878,0,0.0,3,0,47,4,51,5,"add password max length setting (#4287)
+
+* add password max length setting
+
+* comment fix","In OpenEMR, versions 5.0.2 to 6.0.0 are vulnerable to Stored Cross-Site-Scripting (XSS) due to user input not being validated properly and rendered in the U2F USB Device authentication method page. A highly privileged attacker could inject arbitrary code into input fields when creating a new user.",4c7d7418ccfc3d84aed889828a36a58cc4744a76,0
+0.146683007478714,0,0.0,5,0,5,0,5,0,docker dev fix (#4294),"In OpenEMR, versions 5.0.2 to 6.0.0 are vulnerable to Stored Cross-Site-Scripting (XSS) due to user input not being validated properly and rendered in the U2F USB Device authentication method page. A highly privileged attacker could inject arbitrary code into input fields when creating a new user.",fe61175c8f0cc33552004ddc122b0722043f0d29,0
+0.11296231299638748,0,0.0,1,0,4,1,5,0,Fix sql error with MySQL 8 when viewing event log. (#4295),"In OpenEMR, versions 5.0.2 to 6.0.0 are vulnerable to Stored Cross-Site-Scripting (XSS) due to user input not being validated properly and rendered in the U2F USB Device authentication method page. A highly privileged attacker could inject arbitrary code into input fields when creating a new user.",a77505b2e5b54ad1160600b39b34cbeb34824631,0
+0.2333579957485199,0,0.0,2,0,510,50,560,1,"Multiple improvements for backup and configuration export/import. (#4293)
+
+* Multiple improvements for backup script.
+
+Fix for logged error with MySQL 8.
+Added feature to backup and/or delete log data.
+Added feature to export lists and layouts as CSV.
+Added option to export lab configuration.
+Added SQL to insert missing patient_data and history_data columns when importing layouts.
+Fixed some logged warnings.","In OpenEMR, versions 5.0.2 to 6.0.0 are vulnerable to Stored Cross-Site-Scripting (XSS) due to user input not being validated properly and rendered in the U2F USB Device authentication method page. A highly privileged attacker could inject arbitrary code into input fields when creating a new user.",c264c8d3e198fd93b67cbcf747fbd57dd845bd4a,0
+0.1424911618232727,0,0.0,2,0,12,6,18,1,"billing fix for corrected claims alphanumeric claim no. (#4292)
+
+* fix for corrected claims alphanumeric claim no.
+
+* display tax id and npi for easy view
+
+* update (c)
+
+* remove null test","In OpenEMR, versions 5.0.2 to 6.0.0 are vulnerable to Stored Cross-Site-Scripting (XSS) due to user input not being validated properly and rendered in the U2F USB Device authentication method page. A highly privileged attacker could inject arbitrary code into input fields when creating a new user.",e08b28887ffef1195c86c5403915a7cfe7d1c9cd,0
+0.18286113440990448,0,0.0,1,0,4,2,6,0,Fix bug in demographics layout that causes checkboxes to ALWAYS be Yes (#4298),"In OpenEMR, versions 5.0.2 to 6.0.0 are vulnerable to Stored Cross-Site-Scripting (XSS) due to user input not being validated properly and rendered in the U2F USB Device authentication method page. A highly privileged attacker could inject arbitrary code into input fields when creating a new user.",417e64c151ea0ddca63c8cca0ce7a73c628e88a5,0
+0.13110460340976715,0,0.0,3,0,28,7,35,0,"fix mbo button in billing manager (#4296)
+
+* fix for corrected claims alphanumeric claim no.
+
+* display tax id and npi for easy view
+
+* update (c)
+
+* remove null test
+
+* fix mbo to set pid encounter from billing manager, fix a couple of headers
+
+* remove uneeded param
+
+* setSession
+
+* psr12","In OpenEMR, versions 5.0.2 to 6.0.0 are vulnerable to Stored Cross-Site-Scripting (XSS) due to user input not being validated properly and rendered in the U2F USB Device authentication method page. A highly privileged attacker could inject arbitrary code into input fields when creating a new user.",7b650acc43a55a7d74771b8d6bbf4d8e655513ac,0
+0.1477781981229782,0,0.0,2,0,24,4,28,3,"Noc (#4300)
+
+* not otherwise classified codes need description of service
+
+* psr12","In OpenEMR, versions 5.0.2 to 6.0.0 are vulnerable to Stored Cross-Site-Scripting (XSS) due to user input not being validated properly and rendered in the U2F USB Device authentication method page. A highly privileged attacker could inject arbitrary code into input fields when creating a new user.",c876b63b45d3fec96f14af7540796e8dbdfd7cd1,0
+0.16589924693107605,0,0.0,12,0,94,89,183,7,"Portal fix for PHP 8 and CC style (#4476)
+
+* Portal fix for PHP 8 and CC style
+
+* - not sure did marital ever work or was it change
+- fix for cc validation replace error
+
+* - got rid of BS sidebar collapse
+- added new sidebar toggle to nav
+- fix document scroll for IOS
+
+* - switch portal dashboard and template management to use core themes.
+- prevent user from uploading template for individual patients to a category. (only all patients allowed a category)
+- change default 'From Provider' cat to 'Priority Request' for individual patient templates and hide cat if empty","In OpenEMR, versions 5.0.0 to 6.0.0.1 are vulnerable to weak password requirements as it does not enforce a maximum password length limit. If a malicious user is aware of the first 72 characters of the victim user’s password, he can leverage it to an account takeover.",9df0e98a6734efa20aede08147b5792cb89f6615,0
+0.1543227732181549,0,0.0,3,0,47,4,51,5,"add password max length setting (#4287)
+
+* add password max length setting
+
+* comment fix","In OpenEMR, versions 4.2.0 to 6.0.0 are vulnerable to Reflected Cross-Site-Scripting (XSS) due to user input not being validated properly. An attacker could trick a user to click on a malicious url and execute malicious code.",4c7d7418ccfc3d84aed889828a36a58cc4744a76,0
+0.13712503015995026,0,0.0,5,0,5,0,5,0,docker dev fix (#4294),"In OpenEMR, versions 4.2.0 to 6.0.0 are vulnerable to Reflected Cross-Site-Scripting (XSS) due to user input not being validated properly. An attacker could trick a user to click on a malicious url and execute malicious code.",fe61175c8f0cc33552004ddc122b0722043f0d29,0
+0.11221607029438019,0,0.0,1,0,4,1,5,0,Fix sql error with MySQL 8 when viewing event log. (#4295),"In OpenEMR, versions 4.2.0 to 6.0.0 are vulnerable to Reflected Cross-Site-Scripting (XSS) due to user input not being validated properly. An attacker could trick a user to click on a malicious url and execute malicious code.",a77505b2e5b54ad1160600b39b34cbeb34824631,0
+0.2550065815448761,0,0.0,2,0,510,50,560,1,"Multiple improvements for backup and configuration export/import. (#4293)
+
+* Multiple improvements for backup script.
+
+Fix for logged error with MySQL 8.
+Added feature to backup and/or delete log data.
+Added feature to export lists and layouts as CSV.
+Added option to export lab configuration.
+Added SQL to insert missing patient_data and history_data columns when importing layouts.
+Fixed some logged warnings.","In OpenEMR, versions 4.2.0 to 6.0.0 are vulnerable to Reflected Cross-Site-Scripting (XSS) due to user input not being validated properly. An attacker could trick a user to click on a malicious url and execute malicious code.",c264c8d3e198fd93b67cbcf747fbd57dd845bd4a,0
+0.12996873259544373,0,0.0,2,0,12,6,18,1,"billing fix for corrected claims alphanumeric claim no. (#4292)
+
+* fix for corrected claims alphanumeric claim no.
+
+* display tax id and npi for easy view
+
+* update (c)
+
+* remove null test","In OpenEMR, versions 4.2.0 to 6.0.0 are vulnerable to Reflected Cross-Site-Scripting (XSS) due to user input not being validated properly. An attacker could trick a user to click on a malicious url and execute malicious code.",e08b28887ffef1195c86c5403915a7cfe7d1c9cd,0
+0.18343213200569153,0,0.0,1,0,4,2,6,0,Fix bug in demographics layout that causes checkboxes to ALWAYS be Yes (#4298),"In OpenEMR, versions 4.2.0 to 6.0.0 are vulnerable to Reflected Cross-Site-Scripting (XSS) due to user input not being validated properly. An attacker could trick a user to click on a malicious url and execute malicious code.",417e64c151ea0ddca63c8cca0ce7a73c628e88a5,0
+0.13658033311367035,0,0.0,3,0,28,7,35,0,"fix mbo button in billing manager (#4296)
+
+* fix for corrected claims alphanumeric claim no.
+
+* display tax id and npi for easy view
+
+* update (c)
+
+* remove null test
+
+* fix mbo to set pid encounter from billing manager, fix a couple of headers
+
+* remove uneeded param
+
+* setSession
+
+* psr12","In OpenEMR, versions 4.2.0 to 6.0.0 are vulnerable to Reflected Cross-Site-Scripting (XSS) due to user input not being validated properly. An attacker could trick a user to click on a malicious url and execute malicious code.",7b650acc43a55a7d74771b8d6bbf4d8e655513ac,0
+0.08660513907670975,0,0.0,2,0,24,4,28,3,"Noc (#4300)
+
+* not otherwise classified codes need description of service
+
+* psr12","In OpenEMR, versions 4.2.0 to 6.0.0 are vulnerable to Reflected Cross-Site-Scripting (XSS) due to user input not being validated properly. An attacker could trick a user to click on a malicious url and execute malicious code.",c876b63b45d3fec96f14af7540796e8dbdfd7cd1,0
+0.05161556228995323,0,0.0,2,0,3,3,6,0,update versions in the production docker compose scripts (#5617),Data Access from Outside Expected Data Manager Component in GitHub repository openemr/openemr prior to 7.0.0.,be84c93d193400174e4a5f8d04dd9443938529fa,0
+0.09113252907991409,0,0.0,9,0,44,44,88,0,"update easy dev, flex docker, ci for alpine 3.16 and php 8.1 (#5618)",Data Access from Outside Expected Data Manager Component in GitHub repository openemr/openemr prior to 7.0.0.,8bd7acbb1ee79ee5cd82a706574d435ca63890d8,0
+0.2280518114566803,0,0.0,2,0,3,3,6,0,update versions in the production docker compose scripts (#5617),Cross-site Scripting (XSS) - Stored in GitHub repository openemr/openemr prior to 7.0.0.,be84c93d193400174e4a5f8d04dd9443938529fa,0
+0.1335074007511139,0,0.0,9,0,44,44,88,0,"update easy dev, flex docker, ci for alpine 3.16 and php 8.1 (#5618)",Cross-site Scripting (XSS) - Stored in GitHub repository openemr/openemr prior to 7.0.0.,8bd7acbb1ee79ee5cd82a706574d435ca63890d8,0
+0.11755512654781342,0,0.0,3,0,776,645,1421,0,"composer packages update (#6006)
+
+* composer packages update
+
+* odd bug fix
+
+* Fix for the particle/validator package that appears stale and breaks in php 8.2
+
+* better fix for setIsEnabled call",Cross-site Scripting (XSS) - Reflected in GitHub repository openemr/openemr prior to 7.0.0.2.,5b056c57b9b3d292a277f2b1d5b060af35a373bc,0
+0.06691548228263855,0,0.0,1,0,53,2,55,0,add new remit and claim advice remark codes (#6002),Cross-site Scripting (XSS) - Reflected in GitHub repository openemr/openemr prior to 7.0.0.2.,3d5ffd46354e21309ecb7a94ce1b6636d0b9ad3f,0
+0.18356537818908691,0,0.0,24,0,4986,39,5025,13087,"New LHC-Forms version (#5999)
+
+* New LHC-Forms version
+- fix lform import for skip laogic and scoring in same form.
+
+* - fix lform detect if form has groups
+
+* - change paths for new version
+
+* - change how imports save to repository if multiple files.
+The preview tool will no longer popup if the are more than one file import.
+Now clicking the new Questionnaire Repository All Button will import all pending files.
+
+* - remove old button",Cross-site Scripting (XSS) - Reflected in GitHub repository openemr/openemr prior to 7.0.0.2.,80f91a072637352005e8ca82a28a02b74e303f18,0
+0.13862864673137665,0,0.0,2,0,35,51,86,0,update composer particle/validator package to 2.3.5 (#6011),Cross-site Scripting (XSS) - Reflected in GitHub repository openemr/openemr prior to 7.0.0.2.,36cd596f268c799eabe4a4c46d8cb090247c5d41,0
+-0.004518457688391209,0,0.0,1,0,9,0,9,1,"Fix #6009 send telehealth user role (#6010)
+
+Send the user role in the telehealth registration request.",Cross-site Scripting (XSS) - Reflected in GitHub repository openemr/openemr prior to 7.0.0.2.,164a70603cc9b4471d65b48cbc346f5601ded226,0
+-0.040222082287073135,0,0.0,51,0,416,564,980,12,upgrade symfony from 4.4 to 5.4 (#6012),Cross-site Scripting (XSS) - Reflected in GitHub repository openemr/openemr prior to 7.0.0.2.,9dc161d8d5b3fa71508b3e9f23b7c3e4aea49b97,0
+0.12193132191896439,0,0.0,4,0,892,858,1750,0,Update npm packages (#6020),Cross-site Scripting (XSS) - Reflected in GitHub repository openemr/openemr prior to 7.0.0.2.,5b079fa52c42025c846d1a940f3c8360616a66b1,0
+0.16555452346801758,0,0.0,4,0,37,12,49,4,"Signature in portal pdf fix and Template import changes (#6018)
+
+* Signature in portal pdf fix
+- added a HTMLPurifier config option for base64 data in img src
+- reconfiged template editor to use <br> tag instead of auto <p> on enter. Works much better.
+
+* - improve when and how import review utility shows. Will no longer show if multi questionnaires are imported to allow quick save to repository or auto templates.
+- added top level action buttons for ease of use.
+- nested the two forms to outer for submit inner for questionnaire",Cross-site Scripting (XSS) - Reflected in GitHub repository openemr/openemr prior to 7.0.0.2.,0a550ecb7a47025108e20e7a2dd8ae89e9221601,0
+0.08958243578672409,0,0.0,3,0,776,645,1421,0,"composer packages update (#6006)
+
+* composer packages update
+
+* odd bug fix
+
+* Fix for the particle/validator package that appears stale and breaks in php 8.2
+
+* better fix for setIsEnabled call",Cross-site Scripting (XSS) - Generic in GitHub repository openemr/openemr prior to 7.0.0.2.,5b056c57b9b3d292a277f2b1d5b060af35a373bc,0
+0.058676932007074356,0,0.0,1,0,53,2,55,0,add new remit and claim advice remark codes (#6002),Cross-site Scripting (XSS) - Generic in GitHub repository openemr/openemr prior to 7.0.0.2.,3d5ffd46354e21309ecb7a94ce1b6636d0b9ad3f,0
+0.16730378568172455,0,0.0,24,0,4986,39,5025,13087,"New LHC-Forms version (#5999)
+
+* New LHC-Forms version
+- fix lform import for skip laogic and scoring in same form.
+
+* - fix lform detect if form has groups
+
+* - change paths for new version
+
+* - change how imports save to repository if multiple files.
+The preview tool will no longer popup if the are more than one file import.
+Now clicking the new Questionnaire Repository All Button will import all pending files.
+
+* - remove old button",Cross-site Scripting (XSS) - Generic in GitHub repository openemr/openemr prior to 7.0.0.2.,80f91a072637352005e8ca82a28a02b74e303f18,0
+0.10451247543096542,0,0.0,2,0,35,51,86,0,update composer particle/validator package to 2.3.5 (#6011),Cross-site Scripting (XSS) - Generic in GitHub repository openemr/openemr prior to 7.0.0.2.,36cd596f268c799eabe4a4c46d8cb090247c5d41,0
+0.0010298059787601233,0,0.0,1,0,9,0,9,1,"Fix #6009 send telehealth user role (#6010)
+
+Send the user role in the telehealth registration request.",Cross-site Scripting (XSS) - Generic in GitHub repository openemr/openemr prior to 7.0.0.2.,164a70603cc9b4471d65b48cbc346f5601ded226,0
+-0.04271510988473892,0,0.0,51,0,416,564,980,12,upgrade symfony from 4.4 to 5.4 (#6012),Cross-site Scripting (XSS) - Generic in GitHub repository openemr/openemr prior to 7.0.0.2.,9dc161d8d5b3fa71508b3e9f23b7c3e4aea49b97,0
+0.0996890440583229,0,0.0,4,0,892,858,1750,0,Update npm packages (#6020),Cross-site Scripting (XSS) - Generic in GitHub repository openemr/openemr prior to 7.0.0.2.,5b079fa52c42025c846d1a940f3c8360616a66b1,0
+0.16251713037490845,0,0.0,4,0,37,12,49,4,"Signature in portal pdf fix and Template import changes (#6018)
+
+* Signature in portal pdf fix
+- added a HTMLPurifier config option for base64 data in img src
+- reconfiged template editor to use <br> tag instead of auto <p> on enter. Works much better.
+
+* - improve when and how import review utility shows. Will no longer show if multi questionnaires are imported to allow quick save to repository or auto templates.
+- added top level action buttons for ease of use.
+- nested the two forms to outer for submit inner for questionnaire",Cross-site Scripting (XSS) - Generic in GitHub repository openemr/openemr prior to 7.0.0.2.,0a550ecb7a47025108e20e7a2dd8ae89e9221601,0
+0.3546401560306549,0,0.0,3,0,776,645,1421,0,"composer packages update (#6006)
+
+* composer packages update
+
+* odd bug fix
+
+* Fix for the particle/validator package that appears stale and breaks in php 8.2
+
+* better fix for setIsEnabled call",Improper Input Validation in GitHub repository openemr/openemr prior to 7.0.0.2.,5b056c57b9b3d292a277f2b1d5b060af35a373bc,0
+0.17330898344516754,0,0.0,1,0,53,2,55,0,add new remit and claim advice remark codes (#6002),Improper Input Validation in GitHub repository openemr/openemr prior to 7.0.0.2.,3d5ffd46354e21309ecb7a94ce1b6636d0b9ad3f,0
+0.27168944478034973,0,0.0,24,0,4986,39,5025,13087,"New LHC-Forms version (#5999)
+
+* New LHC-Forms version
+- fix lform import for skip laogic and scoring in same form.
+
+* - fix lform detect if form has groups
+
+* - change paths for new version
+
+* - change how imports save to repository if multiple files.
+The preview tool will no longer popup if the are more than one file import.
+Now clicking the new Questionnaire Repository All Button will import all pending files.
+
+* - remove old button",Improper Input Validation in GitHub repository openemr/openemr prior to 7.0.0.2.,80f91a072637352005e8ca82a28a02b74e303f18,0
+0.44923490285873413,0,0.0,2,0,35,51,86,0,update composer particle/validator package to 2.3.5 (#6011),Improper Input Validation in GitHub repository openemr/openemr prior to 7.0.0.2.,36cd596f268c799eabe4a4c46d8cb090247c5d41,0
+0.19073015451431274,0,0.0,1,0,9,0,9,1,"Fix #6009 send telehealth user role (#6010)
+
+Send the user role in the telehealth registration request.",Improper Input Validation in GitHub repository openemr/openemr prior to 7.0.0.2.,164a70603cc9b4471d65b48cbc346f5601ded226,0
+0.08053877204656601,0,0.0,51,0,416,564,980,12,upgrade symfony from 4.4 to 5.4 (#6012),Improper Input Validation in GitHub repository openemr/openemr prior to 7.0.0.2.,9dc161d8d5b3fa71508b3e9f23b7c3e4aea49b97,0
+0.16060951352119446,0,0.0,4,0,892,858,1750,0,Update npm packages (#6020),Improper Input Validation in GitHub repository openemr/openemr prior to 7.0.0.2.,5b079fa52c42025c846d1a940f3c8360616a66b1,0
+0.26634758710861206,0,0.0,4,0,37,12,49,4,"Signature in portal pdf fix and Template import changes (#6018)
+
+* Signature in portal pdf fix
+- added a HTMLPurifier config option for base64 data in img src
+- reconfiged template editor to use <br> tag instead of auto <p> on enter. Works much better.
+
+* - improve when and how import review utility shows. Will no longer show if multi questionnaires are imported to allow quick save to repository or auto templates.
+- added top level action buttons for ease of use.
+- nested the two forms to outer for submit inner for questionnaire",Improper Input Validation in GitHub repository openemr/openemr prior to 7.0.0.2.,0a550ecb7a47025108e20e7a2dd8ae89e9221601,0
+0.2301042228937149,0,0.0,3,0,776,645,1421,0,"composer packages update (#6006)
+
+* composer packages update
+
+* odd bug fix
+
+* Fix for the particle/validator package that appears stale and breaks in php 8.2
+
+* better fix for setIsEnabled call",Improper Access Control in GitHub repository openemr/openemr prior to 7.0.0.2.,5b056c57b9b3d292a277f2b1d5b060af35a373bc,0
+0.11508271843194962,0,0.0,1,0,53,2,55,0,add new remit and claim advice remark codes (#6002),Improper Access Control in GitHub repository openemr/openemr prior to 7.0.0.2.,3d5ffd46354e21309ecb7a94ce1b6636d0b9ad3f,0
+0.20657235383987427,0,0.0,24,0,4986,39,5025,13087,"New LHC-Forms version (#5999)
+
+* New LHC-Forms version
+- fix lform import for skip laogic and scoring in same form.
+
+* - fix lform detect if form has groups
+
+* - change paths for new version
+
+* - change how imports save to repository if multiple files.
+The preview tool will no longer popup if the are more than one file import.
+Now clicking the new Questionnaire Repository All Button will import all pending files.
+
+* - remove old button",Improper Access Control in GitHub repository openemr/openemr prior to 7.0.0.2.,80f91a072637352005e8ca82a28a02b74e303f18,0
+0.25826796889305115,0,0.0,2,0,35,51,86,0,update composer particle/validator package to 2.3.5 (#6011),Improper Access Control in GitHub repository openemr/openemr prior to 7.0.0.2.,36cd596f268c799eabe4a4c46d8cb090247c5d41,0
+0.14015193283557892,0,0.0,1,0,9,0,9,1,"Fix #6009 send telehealth user role (#6010)
+
+Send the user role in the telehealth registration request.",Improper Access Control in GitHub repository openemr/openemr prior to 7.0.0.2.,164a70603cc9b4471d65b48cbc346f5601ded226,0
+0.059115294367074966,0,0.0,51,0,416,564,980,12,upgrade symfony from 4.4 to 5.4 (#6012),Improper Access Control in GitHub repository openemr/openemr prior to 7.0.0.2.,9dc161d8d5b3fa71508b3e9f23b7c3e4aea49b97,0
+0.15030083060264587,0,0.0,4,0,892,858,1750,0,Update npm packages (#6020),Improper Access Control in GitHub repository openemr/openemr prior to 7.0.0.2.,5b079fa52c42025c846d1a940f3c8360616a66b1,0
+0.12224790453910828,0,0.0,4,0,37,12,49,4,"Signature in portal pdf fix and Template import changes (#6018)
+
+* Signature in portal pdf fix
+- added a HTMLPurifier config option for base64 data in img src
+- reconfiged template editor to use <br> tag instead of auto <p> on enter. Works much better.
+
+* - improve when and how import review utility shows. Will no longer show if multi questionnaires are imported to allow quick save to repository or auto templates.
+- added top level action buttons for ease of use.
+- nested the two forms to outer for submit inner for questionnaire",Improper Access Control in GitHub repository openemr/openemr prior to 7.0.0.2.,0a550ecb7a47025108e20e7a2dd8ae89e9221601,0
+0.2643524706363678,0,0.0,3,0,776,645,1421,0,"composer packages update (#6006)
+
+* composer packages update
+
+* odd bug fix
+
+* Fix for the particle/validator package that appears stale and breaks in php 8.2
+
+* better fix for setIsEnabled call",Unrestricted Upload of File with Dangerous Type in GitHub repository openemr/openemr prior to 7.0.0.2.,5b056c57b9b3d292a277f2b1d5b060af35a373bc,0
+0.11738470196723938,0,0.0,1,0,53,2,55,0,add new remit and claim advice remark codes (#6002),Unrestricted Upload of File with Dangerous Type in GitHub repository openemr/openemr prior to 7.0.0.2.,3d5ffd46354e21309ecb7a94ce1b6636d0b9ad3f,0
+0.2606515884399414,0,0.0,24,0,4986,39,5025,13087,"New LHC-Forms version (#5999)
+
+* New LHC-Forms version
+- fix lform import for skip laogic and scoring in same form.
+
+* - fix lform detect if form has groups
+
+* - change paths for new version
+
+* - change how imports save to repository if multiple files.
+The preview tool will no longer popup if the are more than one file import.
+Now clicking the new Questionnaire Repository All Button will import all pending files.
+
+* - remove old button",Unrestricted Upload of File with Dangerous Type in GitHub repository openemr/openemr prior to 7.0.0.2.,80f91a072637352005e8ca82a28a02b74e303f18,0
+0.3217611610889435,0,0.0,2,0,35,51,86,0,update composer particle/validator package to 2.3.5 (#6011),Unrestricted Upload of File with Dangerous Type in GitHub repository openemr/openemr prior to 7.0.0.2.,36cd596f268c799eabe4a4c46d8cb090247c5d41,0
+0.12635639309883118,0,0.0,1,0,9,0,9,1,"Fix #6009 send telehealth user role (#6010)
+
+Send the user role in the telehealth registration request.",Unrestricted Upload of File with Dangerous Type in GitHub repository openemr/openemr prior to 7.0.0.2.,164a70603cc9b4471d65b48cbc346f5601ded226,0
+0.08431370556354523,0,0.0,51,0,416,564,980,12,upgrade symfony from 4.4 to 5.4 (#6012),Unrestricted Upload of File with Dangerous Type in GitHub repository openemr/openemr prior to 7.0.0.2.,9dc161d8d5b3fa71508b3e9f23b7c3e4aea49b97,0
+0.1515030562877655,0,0.0,4,0,892,858,1750,0,Update npm packages (#6020),Unrestricted Upload of File with Dangerous Type in GitHub repository openemr/openemr prior to 7.0.0.2.,5b079fa52c42025c846d1a940f3c8360616a66b1,0
+0.24230895936489105,0,0.0,4,0,37,12,49,4,"Signature in portal pdf fix and Template import changes (#6018)
+
+* Signature in portal pdf fix
+- added a HTMLPurifier config option for base64 data in img src
+- reconfiged template editor to use <br> tag instead of auto <p> on enter. Works much better.
+
+* - improve when and how import review utility shows. Will no longer show if multi questionnaires are imported to allow quick save to repository or auto templates.
+- added top level action buttons for ease of use.
+- nested the two forms to outer for submit inner for questionnaire",Unrestricted Upload of File with Dangerous Type in GitHub repository openemr/openemr prior to 7.0.0.2.,0a550ecb7a47025108e20e7a2dd8ae89e9221601,0
+0.15030083060264587,0,0.0,4,0,892,858,1750,0,Update npm packages (#6020),Improper Access Control in GitHub repository openemr/openemr prior to 7.0.0.2.,5b079fa52c42025c846d1a940f3c8360616a66b1,0
+0.12224790453910828,0,0.0,4,0,37,12,49,4,"Signature in portal pdf fix and Template import changes (#6018)
+
+* Signature in portal pdf fix
+- added a HTMLPurifier config option for base64 data in img src
+- reconfiged template editor to use <br> tag instead of auto <p> on enter. Works much better.
+
+* - improve when and how import review utility shows. Will no longer show if multi questionnaires are imported to allow quick save to repository or auto templates.
+- added top level action buttons for ease of use.
+- nested the two forms to outer for submit inner for questionnaire",Improper Access Control in GitHub repository openemr/openemr prior to 7.0.0.2.,0a550ecb7a47025108e20e7a2dd8ae89e9221601,0
+0.12171296030282974,0,0.0,2,0,278,207,485,2,"fixes #5996, clarifies method of payment in Pmt method financial report (#5997)
+
+* fixes #5996
+
+* bootstrap params and add provider
+
+* more bootstrap, open invoice from report
+
+* typo",Improper Access Control in GitHub repository openemr/openemr prior to 7.0.0.2.,7d05b098ae143e3f85073de769a60fd6dce15f98,0
+0.1848893016576767,0,0.0,3,0,36,15,51,2,"Fix templates and pdf to allow images and barcodes (#6033)
+
+* Fix templates and pdf to allow images and barcodes
+- add config items to HTML Purifier
+
+* - restyle signature ped",Improper Access Control in GitHub repository openemr/openemr prior to 7.0.0.2.,bc4c1362839dfcd7d2b06199b3193b63e0940784,0
+0.13325652480125427,0,0.0,1,0,1,0,1,0,"Update stale.yml (#6037)
+
+Add a new label to have stablebot ignore issue",Improper Access Control in GitHub repository openemr/openemr prior to 7.0.0.2.,59fcff70097874dc5636303c288cac5b97dc077d,0
+0.15292976796627045,0,0.0,1,0,1,1,2,0,"Update stale.yml
+
+Fix typo, use ""stalebot-ignore"" and not ""staBLEbot-ignore""",Improper Access Control in GitHub repository openemr/openemr prior to 7.0.0.2.,e17a6b74a8a4282cc91a69d828e7ac49e4ce3c77,0
+0.033455751836299896,0,0.0,2,0,278,207,485,2,"fixes #5996, clarifies method of payment in Pmt method financial report (#5997)
+
+* fixes #5996
+
+* bootstrap params and add provider
+
+* more bootstrap, open invoice from report
+
+* typo",Cross-site Scripting (XSS) - Reflected in GitHub repository openemr/openemr prior to 7.0.0.2.,7d05b098ae143e3f85073de769a60fd6dce15f98,0
+0.15195006132125854,0,0.0,3,0,36,15,51,2,"Fix templates and pdf to allow images and barcodes (#6033)
+
+* Fix templates and pdf to allow images and barcodes
+- add config items to HTML Purifier
+
+* - restyle signature ped",Cross-site Scripting (XSS) - Reflected in GitHub repository openemr/openemr prior to 7.0.0.2.,bc4c1362839dfcd7d2b06199b3193b63e0940784,0
+0.11802250891923904,0,0.0,1,0,1,0,1,0,"Update stale.yml (#6037)
+
+Add a new label to have stablebot ignore issue",Cross-site Scripting (XSS) - Reflected in GitHub repository openemr/openemr prior to 7.0.0.2.,59fcff70097874dc5636303c288cac5b97dc077d,0
+0.17293645441532135,0,0.0,1,0,1,1,2,0,"Update stale.yml
+
+Fix typo, use ""stalebot-ignore"" and not ""staBLEbot-ignore""",Cross-site Scripting (XSS) - Reflected in GitHub repository openemr/openemr prior to 7.0.0.2.,e17a6b74a8a4282cc91a69d828e7ac49e4ce3c77,0
+-0.059745412319898605,0,0.0,1,0,12,12,24,1,Fix overflowing columns (#6041),Cross-site Scripting (XSS) - Reflected in GitHub repository openemr/openemr prior to 7.0.0.2.,f30281e9a61c28da58104c211f65df1f522bfba9,0
+0.0832858756184578,0,0.0,19,0,619,10088,10707,0,transition to alpine 3.17 (and to nodejs 18) (#6034),Cross-site Scripting (XSS) - Reflected in GitHub repository openemr/openemr prior to 7.0.0.2.,1ea6db3efeeac735cc96670516061c280209371d,0
+0.12092508375644684,0,0.0,8,0,6018,0,6018,0,add php8.3-dev to ci (#6042),Cross-site Scripting (XSS) - Reflected in GitHub repository openemr/openemr prior to 7.0.0.2.,9b032fa04842893f7cc7e1655e718ae264d7ff2e,0
+0.0916576161980629,0,0.0,5,0,27,35,62,0,"fix ccda import dupl category (#6039)
+
+* fix ccda import dupl category
+
+* - restyle import progress and status bar
+- fix javascript document type import delimit",Cross-site Scripting (XSS) - Reflected in GitHub repository openemr/openemr prior to 7.0.0.2.,b454fb61669072ee7a0e40331bd5d932ba088744,0
+0.01916232518851757,0,0.0,1,0,3,0,3,0,add patient portal link to admin page (#6007),Cross-site Scripting (XSS) - Reflected in GitHub repository openemr/openemr prior to 7.0.0.2.,25e44f33dc914abe6cbe35ab2394a45b16fee7ec,0
+0.21380692720413208,0,0.0,3,0,48,0,48,0,added php 8.3-dev to insane docker dev environment (#6043),Cross-site Scripting (XSS) - Reflected in GitHub repository openemr/openemr prior to 7.0.0.2.,2c9207924c0212ec058820597b436fc1144818e9,0
+0.14819875359535217,0,0.0,2,0,4,4,8,0,minor documentation fixes (#6046),Cross-site Scripting (XSS) - Reflected in GitHub repository openemr/openemr prior to 7.0.0.2.,43f9a39974402540a29e00a904729cf5fe05b140,0
+0.0661405473947525,0,0.0,5,0,124,9,133,0,add apache php 8.2 to ci (#6047),Cross-site Scripting (XSS) - Reflected in GitHub repository openemr/openemr prior to 7.0.0.2.,fb3d21bab9d42f69773293ba68414991dd0eeac8,0
+0.15753084421157837,0,0.0,4,0,247,102,349,8,"add csv export to appt report (#5974)
+
+* add csv export to appt report
+
+* use oeformat date instead of custom csvdate function
+
+* minor formatting
+
+* php8 warnings
+
+* minor formatting
+
+* csvEscape
+
+* re-do csvEscape
+
+* export as xls so can open in spreadsheet app
+
+* fixup phpoffice export, add DOB and option for day of week
+
+* own psr12 fix :)
+
+* csvEscape with new surroundQuotes param
+
+* use a spreadsheet service
+
+* name of report
+
+* undo change to csvEscape function
+
+* final fixes
+
+* fix output and null coalesce in csvEscape()
+
+* limit csv by fields
+
+* reorder class arguments and fix docblock comment",Cross-site Scripting (XSS) - Reflected in GitHub repository openemr/openemr prior to 7.0.0.2.,b3dc5acf1afccc4a798c02982e74b6ff32fc66b8,0
