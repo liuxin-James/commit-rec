@@ -1,5 +1,5 @@
 import torch.nn as nn
-
+import torch.nn.functional as F
 class RecNet(nn.Module):
     def __init__(self,n_features) -> None:
         super(RecNet,self).__init__()
@@ -30,3 +30,18 @@ class WideComponent(nn.Module):
     def forward(self,x):
         return self.linear(x)
     
+class DnnComponent(nn.Module):
+    def __init__(self,hidden_units,dropout=0.):
+        super(DnnComponent,self).__init__()
+
+        self.dnn = nn.ModuleList([nn.Linear(layer[0],layer[1])for layer in list(zip(hidden_units[:-1],hidden_units[1:]))])
+        self.dropout = nn.Dropout(p=dropout)
+    def forward(self,x):
+
+        for linear in self.dnn:
+            x = linear(x)
+            x = F.relu(x)
+        
+        x = self.dropout(x)
+
+        return x
