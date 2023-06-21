@@ -6,6 +6,7 @@ import pandas as pd
 import concurrent.futures
 
 from tqdm import tqdm
+from torch.utils.data import Dataset
 from utils.class_data import NVD,Commit
 from utils.utils import extract_files, mining_commit_single, merge_feature, mining_commit
 
@@ -147,6 +148,7 @@ def build_dataset(max_workers,out_path, is_positive=True):
                 df_data = pd.DataFrame(features)
                 df_data.to_csv(out_path, mode='a',
                                header=False, index=None)
+            features.clear()
     end_time = time.perf_counter()
     print(f"mining {len(nvds)} projects in {end_time-start_time} seconds")
 
@@ -182,6 +184,19 @@ def build_features(nvd:NVD,commit:Commit,vul:dict):
     else:
         featrue.append(0)
     return featrue
+
+
+class CommitDataset(Dataset):
+    def __init__(self,csv_file:str,) -> None:
+        super(CommitDataset,self).__init__()
+        self.data = pd.read_csv(csv_file)
+
+    def __len__(self):
+        return len(self.data)
+
+    def __getitem__(self, index):
+        return self.data[index]
+    
 
 if __name__ == "__main__":
     build_dataset(max_workers=5,out_path="train_p_bak.csv",is_positive=False)
