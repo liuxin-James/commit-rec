@@ -17,11 +17,15 @@ class RecNet(nn.Module):
             nn.Linear(8,2)
         )
 
-        self.output = nn.CrossEntropyLoss()
+        self.loss = nn.CrossEntropyLoss()
 
-    def forward(self,x):
-        s = self.model(x)
-        o = self.output(s)
+    def forward(self,x,y=None):
+        logits = self.model(x)
+        outputs = (logits,)
+        if y:
+            loss_value = self.loss(logits,y)
+            outputs = (loss_value,)+outputs
+        return outputs
 
 class WideComponent(nn.Module):
     def __init__(self,n_features):

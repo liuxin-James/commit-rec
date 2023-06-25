@@ -2,12 +2,13 @@ import os
 import re
 import time
 import json
+import torch
 import pandas as pd
 import concurrent.futures
 
 from tqdm import tqdm
 from torch.utils.data import Dataset
-from utils.class_data import NVD,Commit
+from utils.class_data import NVD, Commit
 from utils.utils import extract_files, mining_commit_single, merge_feature, mining_commit
 
 FILE_PATH = "rec_models/data_source/b_ext_vul.json"
@@ -128,7 +129,7 @@ def build_train_dataset():
     print(f"mining {len(nvds)} projects in {end_time-start_time} seconds")
 
 
-def build_dataset(max_workers,out_path, is_positive=True):
+def build_dataset(max_workers, out_path, is_positive=True):
     nvds = None
     with open(OUT_FILE_PATH, "r", encoding="utf-8") as f:
         nvds = json.load(f)
@@ -164,17 +165,18 @@ def do_mining(proj: str, vuls: list[dict], is_single=True):
                 commit_data = mining_commit_single(
                     repos=f"repos/{proj}", commit_id=commit_id)
                 if commit_data:
-                    featrue = build_features(nvd,commit_data,vul)
+                    featrue = build_features(nvd, commit_data, vul)
                     featrues.append(featrue)
             else:
                 commit_data = mining_commit(
                     nvd=nvd, repos=f"repos/{proj}")
                 for commit in commit_data:
-                    featrue = build_features(nvd,commit,vul)
+                    featrue = build_features(nvd, commit, vul)
                     featrues.append(featrue)
     return featrues
 
-def build_features(nvd:NVD,commit:Commit,vul:dict):
+
+def build_features(nvd: NVD, commit: Commit, vul: dict):
     featrue = merge_feature(nvd, commit=commit)
     featrue.append(commit.subject)
     featrue.append(nvd.description)
@@ -187,16 +189,17 @@ def build_features(nvd:NVD,commit:Commit,vul:dict):
 
 
 class CommitDataset(Dataset):
-    def __init__(self,csv_file:str,) -> None:
-        super(CommitDataset,self).__init__()
-        self.data = pd.read_csv(csv_file)
+    def __init__(self, x_features, y_target) -> None:
+        super(CommitDataset, self).__init__()
+        self.x_features = x_features
+        self.y_target = y_target
 
     def __len__(self):
-        return len(self.data)
+        return len(self.x_features)
 
     def __getitem__(self, index):
-        return self.data[index]
-    
+        return torch.FloatTensor(self.x_features[index]), torch.LongTensor([self.y_target[index]])
+
 
 if __name__ == "__main__":
-    build_dataset(max_workers=5,out_path="train_p_bak.csv",is_positive=False)
+    build_dataset(max_workers=5, out_path="train_p_bak.csv", is_positive=False)
