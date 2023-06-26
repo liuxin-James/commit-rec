@@ -1,5 +1,7 @@
-import pandas as pd
+import os
+import time
 import torch
+import pandas as pd
 
 from utils.common_utils import init_logger
 from models import RecNet
@@ -28,15 +30,35 @@ config = {
     "seed": 42,
     "batch_size": 4,
     "ratio": 0.2,
-    "eval_step": 4185
+    "eval_step": 4185,
+    "save_dir": "rec_models/saved",
+    "focus_metrics": "precision"
 }
 
-logger = init_logger(__name__)
+time_ = time.strftime("%Y-%m-%d-%H-%M-%S", time.localtime())
+log_dir = config["save_dir"] + "/log"
+if not os.path.exists(log_dir):
+    os.makedirs(log_dir)
+logger = init_logger(__name__, log_file=log_dir+f"/recnet-{time_}.log")
+
+max_metrics = 0.0
+
+
+def save_model(model: torch.nn.Module, config: dict):
+    if not os.path.exists(config["save_dir"]):
+        os.makedirs(config["save_dir"])
+
+    model_name = "RecNet_"+time_+".pt"
+
+    save_path = config["save_dir"]+"/"+model_name
+    torch.save(model, save_path)
+    logger.info(f"saving model to {config['save_dir']}")
 
 
 def train(model: torch.nn.Module, train_dataloader: DataLoader, config: dict, eval_dataloader: DataLoader = None):
     global_step = 0
     tr_loss = 0.0
+    global max_metrics
 
     logger.info("\n")
     logger.info(
@@ -81,19 +103,24 @@ def train(model: torch.nn.Module, train_dataloader: DataLoader, config: dict, ev
             global_step += 1
 
             if config["eval_step"] > 0 and global_step % config["eval_step"] == 0 and eval_dataloader is not None:
-                evaluate(model=model, eval_dataloader=eval_dataloader,
-                         config=config)
+                metrics = evaluate(model=model, eval_dataloader=eval_dataloader,
+                                   config=config)
+                if metrics[config["focus_metrics"]] > max_metrics:
+                    max_metrics = metrics[config["focus_metrics"]]
+                    save_model(model=model, config=config)
                 model.train()
 
-        logger.info("\n")
         logger.info(
             f"Epoch {epoch+1}/{config['epochs']}: loss value:{tr_loss/global_step}")
+
+    logger.info(
+        f"focus metrics:{config['focus_metrics']},max value:{max_metrics}")
 
 
 def evaluate(model: torch.nn.Module, eval_dataloader: DataLoader, config: dict):
     klasses, predictions = [], []
     model.eval()
-
+    logger.info("\n")
     logger.info("start evaluate model...")
 
     with torch.no_grad():
@@ -117,7 +144,11 @@ def evaluate(model: torch.nn.Module, eval_dataloader: DataLoader, config: dict):
         recall_value = recall_score(klasses, predictions)
         accuracy_value = accuracy_score(klasses, predictions)
         logger.info(
-            f"f1 value:{f1_value},\nprecision value:{precision_value},\nrecall value:{recall_value},\naccuracy value:{accuracy_value}\n")
+            f"\nf1 value:{f1_value},\nprecision value:{precision_value},\nrecall value:{recall_value},\naccuracy value:{accuracy_value}\n")
+
+        metrics = {"f1": f1_value, "precision": precision_value,
+                   "recall": recall_value, "accuracy": accuracy_value}
+        return metrics
 
 
 def predict():
