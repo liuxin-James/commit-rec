@@ -64,6 +64,7 @@ def train(model: torch.nn.Module, train_dataloader: DataLoader, config: dict, ev
     logger.info(
         "*****************Training Parameters Information*****************")
     logger.info(f"Current learning rate:{config['lr']}")
+    logger.info(f"Training device:{config['device']}")
     logger.info(
         f"Training datasize:{len(train_dataloader)*config['batch_size']}")
     logger.info(f"Training epochs:{config['epochs']}")
