@@ -28,7 +28,7 @@ PRJ_SAMPLES = ["FFmpeg",
 COLS = ["text_sim", "share_files_nums", "share_files_rate", "only_commit_files_nums", "exist_cve",
         "insert_loc_nums", "delete_loc_nums", "all_loc_nums", "all_method_nums", "commit_msg", "cve_desc", "commit_id", "is_right"]
 
-max_workers = 5
+max_workers = 3
 
 
 def extract_commit_id():
