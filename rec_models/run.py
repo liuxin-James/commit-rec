@@ -1,6 +1,7 @@
 import os
 import time
 import torch
+import datetime
 import pandas as pd
 
 from utils.common_utils import init_logger
@@ -14,10 +15,10 @@ from tqdm import tqdm
 from sentence_transformers import SentenceTransformer
 from sklearn.metrics import accuracy_score, recall_score, precision_score, f1_score, classification_report
 
-COLS = ["share_files_nums", "share_files_rate", "only_commit_files_nums", "exist_cve",
+COLS = ["text_sim","share_files_nums", "share_files_rate", "only_commit_files_nums", "exist_cve",
         "insert_loc_nums", "delete_loc_nums", "all_loc_nums", "all_method_nums", "commit_msg", "cve_desc", "commit_id", "is_right"]
 
-X_COLS = ["share_files_nums", "share_files_rate", "only_commit_files_nums", "exist_cve",
+X_COLS = ["text_sim", "share_files_nums", "share_files_rate", "only_commit_files_nums", "exist_cve",
           "insert_loc_nums", "delete_loc_nums", "all_loc_nums", "all_method_nums"]
 Y_COLS = ["is_right"]
 
@@ -158,14 +159,14 @@ def predict():
 
 def main():
     # read data
-    x_df = pd.read_csv("train_dataset.csv", usecols=X_COLS).values
-    y_df = pd.read_csv("train_dataset.csv", usecols=Y_COLS).values[:, 0]
+    x_df = pd.read_csv("train_dataset_v2.csv", usecols=X_COLS).values
+    y_df = pd.read_csv("train_dataset_v2.csv", usecols=Y_COLS).values[:, 0]
 
     # resampling using SMOTE
     x_resampled, y_resampled = BorderlineSMOTE().fit_resample(X=x_df, y=y_df)
 
-    print(sorted(Counter(y_df).items()))
-    print(sorted(Counter(y_resampled).items()))
+    logger.info(f"label distribution before resample:{sorted(Counter(y_df).items())},total:{len(y_df)}")
+    logger.info(f"label distribution after resample:{sorted(Counter(y_resampled).items())},total:{len(y_resampled)}")
 
     # train & test dataset split
     x_train, x_test, y_train, y_test = train_test_split(
@@ -181,15 +182,22 @@ def main():
     test_dataloader = DataLoader(
         dataset=test_dataset, batch_size=config["batch_size"], shuffle=True)
 
+    logger.info(
+        f"Training datasize:{len(train_dataloader)*config['batch_size']}")
+    logger.info(
+        f"Testing datasize:{len(test_dataloader)*config['batch_size']}")
+    
     config["device"] = "cuda" if torch.cuda.is_available() else "cpu"
     # build rec model
-    model = RecNet(8)
+    model = RecNet(9)
     model.to(config["device"])
 
     # model training
+    start_time = datetime.datetime.now()
     train(model=model, train_dataloader=train_dataloader,
           config=config, eval_dataloader=test_dataloader)
-
+    end_time = datetime.datetime.now()
+    logger.info(f"take {end_time-start_time} seconds")
 
 if __name__ == "__main__":
     main()
