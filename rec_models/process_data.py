@@ -189,7 +189,7 @@ def build_features(nvd: NVD, commit: Commit, vul: dict):
 
 
 class CommitDataset(Dataset):
-    def __init__(self, x_features, y_target) -> None:
+    def __init__(self, x_features, y_target=None) -> None:
         super(CommitDataset, self).__init__()
         self.x_features = x_features
         self.y_target = y_target
@@ -198,6 +198,8 @@ class CommitDataset(Dataset):
         return len(self.x_features)
 
     def __getitem__(self, index):
+        if self.y_target is None:
+            return torch.FloatTensor(self.x_features[index])
         return torch.FloatTensor(self.x_features[index]), torch.LongTensor([self.y_target[index]])
 
 
