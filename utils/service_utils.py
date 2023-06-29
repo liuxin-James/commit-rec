@@ -1,10 +1,32 @@
 import datetime
 
-
+from nltk import sent_tokenize, word_tokenize
+from nltk.corpus import stopwords
 from utils.service_data import RequestData,Commit
 from pydriller import Repository
+from sentence_transformers import SentenceTransformer, util
 
 time_delta = 5
+model = SentenceTransformer(
+    "models/base-models/sentence-transformers/all-MiniLM-L6-v2")
+
+def compute_text_similarity(sentence1: str, sentence2: str):
+    sentence1 = sent_tokenize(preprocess_sentence(sentence1))
+    sentence2 = sent_tokenize(preprocess_sentence(sentence2))
+
+    embedding1 = model.encode(sentences=sentence1, convert_to_tensor=True)
+    embedding2 = model.encode(sentences=sentence2, convert_to_tensor=True)
+
+    cosine_scores = util.cos_sim(embedding1, embedding2)
+
+    return cosine_scores
+
+def preprocess_sentence(sentence: str):
+    before_words = word_tokenize(sentence)
+    after_words = [
+        word for word in before_words if word not in stopwords.words("english")]
+    sentence_ = " ".join(after_words)
+    return sentence_
 
 def gen_input_data(request:RequestData):
     commits_info = get_commits_info(request.pub_date,request.repos)
@@ -18,7 +40,13 @@ def gen_input_data(request:RequestData):
     return featrues
 
 def merge_featrue(request:RequestData,commit:Commit)->list:
-    featrues = []
+    features = []
+
+    text_sim = 0.0
+    if request.description and commit.subject:
+        text_sim = compute_text_similarity(
+            request.description, commit.subject).max().item()
+    features = features + [text_sim]
 
     share_files = list(set(request.files) & set(commit.changed_files))
     share_files_nums = len(share_files)
@@ -26,23 +54,23 @@ def merge_featrue(request:RequestData,commit:Commit)->list:
     share_files_rate = round(
         share_files_nums / commit.a_file_nums, 2) if commit.a_file_nums > 0 else 0
 
-    featrues = featrues + [share_files_nums,
+    features = features + [share_files_nums,
                            share_files_rate, only_commit_files_nums]
 
     # whether contain cve_id in commit description (featrues:1)
     if request.cve_id.lower() in commit.subject.lower():
-        featrues.append(1)
+        features.append(1)
     else:
-        featrues.append(0)
+        features.append(0)
 
     #  loc(line of code) (featrues:3)
-    featrues = featrues + [commit.i_line_nums,
+    features = features + [commit.i_line_nums,
                            commit.d_line_nums, commit.a_line_nums]
 
     # method nums (featrues:1)
-    featrues = featrues + [commit.a_method_nums]
+    features = features + [commit.a_method_nums]
 
-    return featrues
+    return features
 
 def get_commits_info(pub_date:str,repos:str):
     since , to = gen_time_range(pub_date)
@@ -78,7 +106,6 @@ def get_commits_info(pub_date:str,repos:str):
                     a_file_nums=a_file_nums,
                     a_method_nums=a_method_nums))
     return commits
-
 
 def gen_time_range(pub_date:str):
     pub_date = pub_date.split(" ")[0]
