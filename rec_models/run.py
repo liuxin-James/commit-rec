@@ -52,7 +52,7 @@ def save_model(model: torch.nn.Module, config: dict):
     model_name = "RecNet_"+time_+".pt"
 
     save_path = config["save_dir"]+"/"+model_name
-    torch.save(model, save_path)
+    torch.save(model.state_dict(), save_path)
     logger.info(f"saving model to {config['save_dir']}")
 
 

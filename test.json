@@ -1,0 +1,12 @@
+[
+    {
+        "cve_id": "CVE-2023-22884",
+        "description": "Improper Neutralization of Special Elements used in a Command ('Command Injection') vulnerability in Apache Software Foundation Apache Airflow, Apache Software Foundation Apache Airflow MySQL Provider.This issue affects Apache Airflow: before 2.5.1; Apache Airflow MySQL Provider: before 4.0.0.",
+        "pub_date": "2023-01-21 00:15:00",
+        "cwe_type": [
+            "CWE-77"
+        ],
+        "repos": "repos/airflow",
+        "files": []
+    }
+]
