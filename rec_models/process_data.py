@@ -8,8 +8,8 @@ import concurrent.futures
 
 from tqdm import tqdm
 from torch.utils.data import Dataset
-from utils.class_data import NVD, Commit
-from utils.utils import extract_files, mining_commit_single, merge_feature, mining_commit
+from rec_models.utils.class_data import NVD, Commit
+from rec_models.utils.utils import extract_files, mining_commit_single, merge_feature, mining_commit
 
 FILE_PATH = "rec_models/data_source/b_ext_vul.json"
 OUT_FILE_PATH = "rec_models/data_source/ext_vul.json"

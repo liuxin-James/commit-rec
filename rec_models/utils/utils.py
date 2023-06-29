@@ -3,9 +3,9 @@ import datetime
 
 from pydriller import Repository
 from nltk.corpus import stopwords
-from utils.class_data import Commit, NVD
+from rec_models.utils.class_data import Commit, NVD
 from nltk import sent_tokenize, word_tokenize
-from utils.common_utils import init_logger
+from rec_models.utils.common_utils import init_logger
 from sentence_transformers import SentenceTransformer, util
 
 model = SentenceTransformer(

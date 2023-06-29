@@ -16,6 +16,8 @@ from models.rank_net import BertTokenizer, BertModel
 from sentence_transformers import SentenceTransformer
 from models.utils.text_utils import compute_text_similarity
 from utils.service_data import ResponseCode, Response
+from rec_models.process_data import CommitDataset
+from torch.utils.data import DataLoader
 
 # get model ref from bentoml
 sbert_ref = bentoml.models.get("sbert:latest")
@@ -124,15 +126,22 @@ class MLPRunnable(bentoml.Runnable):
         self.model = bentoml.pytorch.load_model(rec_ref)
         self.cols = ["text_sim", "share_files_nums", "share_files_rate", "only_commit_files_nums", "exist_cve",
                      "insert_loc_nums", "delete_loc_nums", "all_loc_nums", "all_method_nums", "commit_msg", "cve_desc", "commit_id"]
+        self.x_cols = ["text_sim", "share_files_nums", "share_files_rate", "only_commit_files_nums", "exist_cve",
+                       "insert_loc_nums", "delete_loc_nums", "all_loc_nums", "all_method_nums"]
 
-    def commit_sort(self, X_wide, X_text, y_df):
-        trainer = Trainer(self.widedeep, objective="binary",
-                          metrics=[Precision])
-        preds = trainer.predict_proba(X_wide=X_wide, X_text=X_text)
-        pred_commit_class = np.argmax(preds, 1).reshape(-1, 1)
-        pred_prob = np.max(preds, axis=1).reshape(-1, 1)
-        y_df["klass"] = pred_commit_class
-        y_df["prob"] = pred_prob
+    def classify(self, dataloader: DataLoader, y_df: pd.DataFrame):
+        self.model.eval()
+        preds, probs = [], []
+
+        for X in dataloader:
+            X = X.to(self.SUPPORTED_RESOURCES)
+            pred = self.model(X)
+            pred_ = pred[0].argmax(dim=-1).cpu().numpy().tolist()
+            prob = pred[0].max(dim=-1).values.detach().cpu().numpy().tolist()
+            preds += pred_
+            probs += prob
+        y_df["klass"] = preds
+        y_df["prob"] = probs
         return y_df
 
     @bentoml.Runnable.method(batchable=False)
@@ -140,19 +149,15 @@ class MLPRunnable(bentoml.Runnable):
         featrues = gen_input_data(request=request)
         df_data = pd.DataFrame(featrues, columns=self.cols)
 
-        # compute text similarity & filter
-        df_data = self.rough_sort(df_data=df_data)
-        df_data.drop(df_data[df_data.text_sim <
-                     sim_threshold].index, inplace=True)
-
-        X_wide = wide_preprocess.transform(df_data)
-
         res_df = df_data[["commit_id", "commit_msg"]]
+        x_df_data = df_data[self.x_cols]
+        # prepare dataset
+        data = x_df_data.values
+        dataset = CommitDataset(x_features=data)
+        dataloader = DataLoader(dataset=dataset, batch_size=4)
 
-        X_text = tokenizer_z.fit(df_data["cve_desc"].tolist()).transform(
-            df_data["cve_desc"].tolist())
-
-        res_df = self.fine_sort(X_wide=X_wide, X_text=X_text, y_df=res_df)
+        # compute text similarity & filter
+        res_df = self.classify(dataloader=dataloader, y_df=res_df)
 
         res_df.drop(res_df[res_df.klass == 0].index, inplace=True)
         res_df.sort_values(by="prob", ascending=False)
@@ -167,10 +172,15 @@ class MLPRunnable(bentoml.Runnable):
 
 
 # load custom commit rec runner
-commit_rec_runner = bentoml.Runner(
-    CommitRecRunnable, name="commit_rec_runner", models=[sbert_ref, tokenizer_ref, wide_ref, deep_ref, wd_ref])
+# commit_rec_runner = bentoml.Runner(
+#     CommitRecRunnable, name="commit_rec_runner", models=[sbert_ref, tokenizer_ref, wide_ref, deep_ref, wd_ref])
 
-svc = bentoml.Service("commit_rec", runners=[commit_rec_runner])
+# svc = bentoml.Service("commit_rec", runners=[commit_rec_runner])
+
+mlp_rec_runner = bentoml.Runner(
+    MLPRunnable, name="mlp_rec_runner", models=[rec_ref])
+
+svc = bentoml.Service("mlp_rec", runners=[mlp_rec_runner])
 
 # check request parameters TODO
 
@@ -190,7 +200,7 @@ def rank(request: dict):
 
     try:
         __check_inputs(request=request)
-        res_df = commit_rec_runner.rec.run(request)
+        res_df = mlp_rec_runner.rec.run(request)
         response.status = ResponseCode.Success.value
         response.msg = "Success"
         response.result = res_df

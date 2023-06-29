@@ -5,13 +5,13 @@ if __name__ == "__main__":
         runner.init_local()
 
     request = {
-    "cve_id": "CVE-2023-22884",
-    "description": "Improper Neutralization of Special Elements used in a Command ('Command Injection') vulnerability in Apache Software Foundation Apache Airflow, Apache Software Foundation Apache Airflow MySQL Provider.This issue affects Apache Airflow: before 2.5.1; Apache Airflow MySQL Provider: before 4.0.0.",
-    "pub_date": "2023-01-21 00:15:00",
+    "cve_id": "CVE-2022-40743",
+    "description": "Improper Input Validation vulnerability for the xdebug plugin in Apache Software Foundation Apache Traffic Server can lead to cross site scripting and cache poisoning attacks.This issue affects Apache Traffic Server: 9.0.0 to 9.1.3. Users should upgrade to 9.1.4 or later versions.",
+    "pub_date": "2022-12-19 00:15:00",
     "cwe_type": [
-        "CWE-77"
+        "CWE-20"
     ],
-    "repos": "repos/airflow",
+    "repos": "repos/trafficserver",
     "files": []
 }
 
