@@ -16,13 +16,14 @@ from models.rank_net import BertTokenizer, BertModel
 from sentence_transformers import SentenceTransformer
 from models.utils.text_utils import compute_text_similarity
 from utils.service_data import ResponseCode, Response
+
 # get model ref from bentoml
 sbert_ref = bentoml.models.get("sbert:latest")
 tokenizer_ref = bentoml.models.get("sbert-tokenizer:latest")
 wd_ref = bentoml.models.get("widedeep:latest")
 wide_ref = bentoml.models.get("wide:latest")
 deep_ref = bentoml.models.get("deep:latest")
-
+rec_ref = bentoml.models.get("rec:latest")
 sentence_bert = SentenceTransformer(
     "models/base-models/sentence-transformers/all-MiniLM-L6-v2")
 tokenizer_z = BertTokenizer()
@@ -105,9 +106,59 @@ class CommitRecRunnable(bentoml.Runnable):
 
         res_df.drop(res_df[res_df.klass == 0].index, inplace=True)
         res_df.sort_values(by="prob", ascending=False)
-        
-        fine_sort_top_n = res_df.iloc[:fine_n_top,:]
-        
+
+        fine_sort_top_n = res_df.iloc[:fine_n_top, :]
+
+        results = []
+        for index, row in fine_sort_top_n.iterrows():
+            results.append(
+                {"commit_id": row["commit_id"], "prob": row["prob"], "klass": row["klass"]})
+        return results
+
+
+class MLPRunnable(bentoml.Runnable):
+    SUPPORTED_RESOURCES = ("cuda" if torch.cuda.is_available() else "cpu")
+    SUPPORTS_CPU_MULTI_THREADING = False
+
+    def __init__(self):
+        self.model = bentoml.pytorch.load_model(rec_ref)
+        self.cols = ["text_sim", "share_files_nums", "share_files_rate", "only_commit_files_nums", "exist_cve",
+                     "insert_loc_nums", "delete_loc_nums", "all_loc_nums", "all_method_nums", "commit_msg", "cve_desc", "commit_id"]
+
+    def commit_sort(self, X_wide, X_text, y_df):
+        trainer = Trainer(self.widedeep, objective="binary",
+                          metrics=[Precision])
+        preds = trainer.predict_proba(X_wide=X_wide, X_text=X_text)
+        pred_commit_class = np.argmax(preds, 1).reshape(-1, 1)
+        pred_prob = np.max(preds, axis=1).reshape(-1, 1)
+        y_df["klass"] = pred_commit_class
+        y_df["prob"] = pred_prob
+        return y_df
+
+    @bentoml.Runnable.method(batchable=False)
+    def rec(self, request: RequestData):
+        featrues = gen_input_data(request=request)
+        df_data = pd.DataFrame(featrues, columns=self.cols)
+
+        # compute text similarity & filter
+        df_data = self.rough_sort(df_data=df_data)
+        df_data.drop(df_data[df_data.text_sim <
+                     sim_threshold].index, inplace=True)
+
+        X_wide = wide_preprocess.transform(df_data)
+
+        res_df = df_data[["commit_id", "commit_msg"]]
+
+        X_text = tokenizer_z.fit(df_data["cve_desc"].tolist()).transform(
+            df_data["cve_desc"].tolist())
+
+        res_df = self.fine_sort(X_wide=X_wide, X_text=X_text, y_df=res_df)
+
+        res_df.drop(res_df[res_df.klass == 0].index, inplace=True)
+        res_df.sort_values(by="prob", ascending=False)
+
+        fine_sort_top_n = res_df.iloc[:fine_n_top, :]
+
         results = []
         for index, row in fine_sort_top_n.iterrows():
             results.append(
@@ -124,12 +175,12 @@ svc = bentoml.Service("commit_rec", runners=[commit_rec_runner])
 # check request parameters TODO
 
 
-def __check_inputs(request:RequestData):
+def __check_inputs(request: RequestData):
     if not request.cve_id:
         raise ValueError("cve_id is invalid!please check...")
     if not request.repos:
         raise ValueError("repos is invalid!please check...")
-    
+
 
 @svc.api(input=JSON(), output=JSON(), route=ROUTE+"rank")
 def rank(request: dict):
