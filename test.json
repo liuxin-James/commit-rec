@@ -1,5 +1,85 @@
 [
     {
+        "cve_id": "CVE-2023-0464",
+        "description": "A security vulnerability has been identified in all supported versions of OpenSSL related to the verification of X.509 certificate chains that include policy constraints. Attackers may be able to exploit this vulnerability by creating a malicious certificate chain that triggers exponential use of computational resources, leading to a denial-of-service (DoS) attack on affected systems. Policy processing is disabled by default but can be enabled by passing the `-policy' argument to the command line utilities or by calling the `X509_VERIFY_PARAM_set1_policies()' function.",
+        "pub_date": "2023-03-22 00:15:00",
+        "cwe_type": [
+            "CWE-295"
+        ],
+        "repos": "repos/openssl",
+        "files": []
+    },
+    {
+        "cve_id": "CVE-2023-0216",
+        "description": "An invalid pointer dereference on read can be triggered when an application tries to load malformed PKCS7 data with the d2i_PKCS7(), d2i_PKCS7_bio() or d2i_PKCS7_fp() functions. The result of the dereference is an application crash which could lead to a denial of service attack. The TLS implementation in OpenSSL does not call this function however third party applications might call these functions on untrusted data.",
+        "pub_date": "2023-03-22 00:15:00",
+        "cwe_type": [
+            "CWE-476"
+        ],
+        "repos": "repos/openssl",
+        "files": []
+    },
+    {
+        "cve_id": "CVE-2023-0417",
+        "description": "Memory leak in the NFS dissector in Wireshark 4.0.0 to 4.0.2 and 3.6.0 to 3.6.10 and allows denial of service via packet injection or crafted capture file",
+        "pub_date": "2023-01-26 00:15:00",
+        "cwe_type": [
+            "CWE-404"
+        ],
+        "repos": "repos/wireshark",
+        "files": []
+    },
+    {
+        "cve_id": "CVE-2023-0411",
+        "description": "Excessive loops in multiple dissectors in Wireshark 4.0.0 to 4.0.2 and 3.6.0 to 3.6.10 and allows denial of service via packet injection or crafted capture file",
+        "pub_date": "2023-01-26 00:15:00",
+        "cwe_type": [
+            "CWE-834"
+        ],
+        "repos": "repos/wireshark",
+        "files": []
+    },
+    {
+        "cve_id": "CVE-2023-25727",
+        "description": "In phpMyAdmin before 4.9.11 and 5.x before 5.2.1, an authenticated user can trigger XSS by uploading a crafted .sql file through the drag-and-drop interface.",
+        "pub_date": "2023-02-13 00:15:00",
+        "cwe_type": [
+            "CWE-79"
+        ],
+        "repos": "repos/phpmyadmin",
+        "files": []
+    },
+    {
+        "cve_id": "CVE-2022-0813",
+        "description": "PhpMyAdmin 5.1.1 and before allows an attacker to retrieve potentially sensitive information by creating invalid requests. This affects the lang parameter, the pma_parameter, and the cookie section.",
+        "pub_date": "2023-03-10 00:15:00",
+        "cwe_type": [
+            "CWE-200"
+        ],
+        "repos": "repos/phpmyadmin",
+        "files": []
+    },
+    {
+        "cve_id": "CVE-2023-23969",
+        "description": "In Django 3.2 before 3.2.17, 4.0 before 4.0.9, and 4.1 before 4.1.6, the parsed values of Accept-Language headers are cached in order to avoid repetitive parsing. This leads to a potential denial-of-service vector via excessive memory usage if the raw value of Accept-Language headers is very large.",
+        "pub_date": "2023-02-01 00:15:00",
+        "cwe_type": [
+            "CWE-770"
+        ],
+        "repos": "repos/django",
+        "files": []
+    },
+    {
+        "cve_id": "CVE-2023-25695",
+        "description": "Generation of Error Message Containing Sensitive Information vulnerability in Apache Software Foundation Apache Airflow.This issue affects Apache Airflow: before 2.5.2.",
+        "pub_date": "2023-03-15 00:15:00",
+        "cwe_type": [
+            "CWE-209"
+        ],
+        "repos": "repos/airflow",
+        "files": []
+    },
+    {
         "cve_id": "CVE-2023-22884",
         "description": "Improper Neutralization of Special Elements used in a Command ('Command Injection') vulnerability in Apache Software Foundation Apache Airflow, Apache Software Foundation Apache Airflow MySQL Provider.This issue affects Apache Airflow: before 2.5.1; Apache Airflow MySQL Provider: before 4.0.0.",
         "pub_date": "2023-01-21 00:15:00",
@@ -15,6 +95,26 @@
         "pub_date": "2022-12-19 00:15:00",
         "cwe_type": [
             "CWE-20"
+        ],
+        "repos": "repos/trafficserver",
+        "files": []
+    },
+    {
+        "cve_id": "CVE-2022-37392",
+        "description": "Improper Check for Unusual or Exceptional Conditions vulnerability in handling the requests to Apache Traffic Server. This issue affects Apache Traffic Server 8.0.0 to 9.1.2.",
+        "pub_date": "2022-12-19 00:15:00",
+        "cwe_type": [
+            "CWE-754"
+        ],
+        "repos": "repos/trafficserver",
+        "files": []
+    },
+    {
+        "cve_id": "CVE-2022-32749",
+        "description": "Improper Check for Unusual or Exceptional Conditions vulnerability handling requests in Apache Traffic Server allows an attacker to crash the server under certain conditions. This issue affects Apache Traffic Server: from 8.0.0 through 9.1.3.",
+        "pub_date": "2022-12-19 00:15:00",
+        "cwe_type": [
+            "CWE-754"
         ],
         "repos": "repos/trafficserver",
         "files": []
